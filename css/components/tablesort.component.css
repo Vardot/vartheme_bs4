@@ -1,0 +1,13 @@
+/**
+ * @file
+ * Table sort indicator.
+ */
+/* VARIABLES */
+/* MIXINS */
+/* TYPOGRAPHY */
+/* Google Fonts */
+th.is-active img {
+  display: inline; }
+
+td.is-active {
+  background-color: #dee2e6; }

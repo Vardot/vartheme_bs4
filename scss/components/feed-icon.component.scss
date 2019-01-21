@@ -1,0 +1,17 @@
+/**
+ * @file
+ * Feed icon styles for Bootstrap Barrio.
+ */
+
+ @import "../../node_modules/bootstrap/scss/functions";  // Bootstrap variables.
+ @import "../../node_modules/bootstrap/scss/variables";  // Bootstrap variables.
+ @import "../../node_modules/bootstrap/scss/mixins";  // Bootstrap variables.
+ @import "../variables";                              // Vartheme variables.
+ @import "../mixins";                               // Vartheme mixins.
+ @import "../typography";                           // Vartheme typography.
+ 
+.feed-icon {
+    border-bottom: none;
+    display: inline-block;
+    padding: $spacer 0 0 0;
+}

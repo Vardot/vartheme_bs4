@@ -1,0 +1,92 @@
+name: Varbase bootstrap 4 theme
+type: theme
+description: 'Varbase bootstrap 4 theme.'
+# version: VERSION
+core: 8.x
+base theme: bootstrap_barrio
+
+libraries:
+# Bootstrap styles and scripts libraries.
+  - vartheme_bs4/bootstrap-styles
+  # - vartheme/bootstrap-scripts
+
+# Boostrap component libraries.
+  - vartheme_bs4/affix
+  - vartheme_bs4/alert
+  - vartheme_bs4/book-navigation
+  - vartheme_bs4/book
+  - vartheme_bs4/breadcrumb
+  - vartheme_bs4/comments
+  - vartheme_bs4/contextual
+  - vartheme_bs4/details
+  - vartheme_bs4/dropbutton
+  - vartheme_bs4/feed-icon
+  - vartheme_bs4/field
+  - vartheme_bs4/file
+  - vartheme_bs4/form
+  - vartheme_bs4/header
+  - vartheme_bs4/help
+  - vartheme_bs4/icons
+  - vartheme_bs4/image-button
+  - vartheme_bs4/indented
+  - vartheme_bs4/item-list
+  - vartheme_bs4/list-group
+  - vartheme_bs4/node-preview
+  - vartheme_bs4/node
+  - vartheme_bs4/page
+  - vartheme_bs4/search-form
+  - vartheme_bs4/shortcut
+  - vartheme_bs4/sidebar-collapse
+  - vartheme_bs4/sidebar
+  - vartheme_bs4/site-footer
+  - vartheme_bs4/skip-link
+  - vartheme_bs4/table
+  - vartheme_bs4/tabledrag
+  - vartheme_bs4/tableselect
+  - vartheme_bs4/tablesort-indicator
+  - vartheme_bs4/tablesort
+  - vartheme_bs4/tabs
+  - vartheme_bs4/textarea
+  - vartheme_bs4/ui-dialog
+  - vartheme_bs4/ui-widget
+  - vartheme_bs4/user
+  - vartheme_bs4/vertical-tabs
+  - vartheme_bs4/views
+
+# Vartheme custom theme, layout, and component libraries.
+  # - vartheme_bs4/navbar-admin
+  # - vartheme_bs4/bs-callouts
+  # - vartheme_bs4/vb-tags
+  # - vartheme_bs4/card
+  # - vartheme_bs4/outside-in
+  - vartheme_bs4/edge2edge
+  # - vartheme_bs4/equal-height
+  # - vartheme_bs4/spacing
+  # - vartheme_bs4/bootstrap-print
+  # - vartheme_bs4/bootstrap-no-spacing
+
+# Vartheme general global styles and scripts libraries.
+  - vartheme_bs4/global-styles
+  - vartheme_bs4/global-scripts
+
+# Vartheme Varbase Bootstrap Paragraphs colors theme.
+  # - vartheme_bs4/vbp-colors
+
+# Vartheme Better Login theme.
+  # - vartheme_bs4/betterlogin
+libraries-override:
+  bootstrap_barrio/global-styling: false
+  bootstrap_barrio/file: false
+regions:
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  header: 'Top Bar'
+  hero_slider: 'Media Hero Slider'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'Footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'

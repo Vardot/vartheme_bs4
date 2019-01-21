@@ -1,0 +1,13 @@
+/**
+ * @file
+ * Visual styles for a resizable textarea.
+ */
+/* VARIABLES */
+/* MIXINS */
+/* TYPOGRAPHY */
+/* Google Fonts */
+.form-textarea-wrapper textarea {
+  display: block;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box; }

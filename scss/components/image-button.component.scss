@@ -1,0 +1,20 @@
+/**
+ * @file
+ * Styles for Bootstrap Barrio's image buttons.
+ */
+
+ @import "../../node_modules/bootstrap/scss/functions";  // Bootstrap variables.
+ @import "../../node_modules/bootstrap/scss/variables";  // Bootstrap variables.
+ @import "../../node_modules/bootstrap/scss/mixins";  // Bootstrap variables.
+ @import "../variables";                              // Vartheme variables.
+ @import "../mixins";                               // Vartheme mixins.
+ @import "../typography";                           // Vartheme typography.
+
+.image-button.is-disabled:hover,
+.image-button.is-disabled:active,
+.image-button.is-disabled:focus,
+.image-button.is-disabled {
+  background: transparent;
+  opacity: 0.5;
+  cursor: default;
+}

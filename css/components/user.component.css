@@ -1,0 +1,74 @@
+/**
+ * @file
+ * Theme styling for user module.
+ */
+/* VARIABLES */
+/* MIXINS */
+/* TYPOGRAPHY */
+/* Google Fonts */
+/* Visual styling for the Password strength indicator */
+.password-strength__meter {
+  margin-top: 0.5em;
+  background-color: #e9ecef; }
+
+.password-strength__indicator {
+  background-color: #28a745;
+  -webkit-transition: width 0.5s ease-out;
+  transition: width 0.5s ease-out; }
+
+.password-strength__indicator.is-weak {
+  background-color: #dc3545; }
+
+.password-strength__indicator.is-fair {
+  background-color: #ffc107; }
+
+.password-strength__indicator.is-good {
+  background-color: #17a2b8; }
+
+.password-strength__indicator.is-strong {
+  background-color: #28a745; }
+
+.password-confirm,
+.password-field,
+.password-strength,
+.password-confirm-match {
+  width: 55%; }
+
+.password-suggestions {
+  padding: 0.2em 0.5em;
+  margin: 0.7em 0;
+  max-width: 34.7em;
+  border: 1px solid #dee2e6; }
+
+.password-suggestions ul {
+  margin-bottom: 0; }
+
+.confirm-parent,
+.password-parent {
+  clear: left;
+  /* LTR */
+  margin: 0;
+  max-width: 33em;
+  overflow: hidden; }
+
+[dir="rtl"] .confirm-parent,
+[dir="rtl"] .password-parent {
+  clear: right; }
+
+/* Styling for the status indicator of the passwords match test.  */
+.password-confirm .ok {
+  color: #28a745;
+  font-weight: bold; }
+
+.password-confirm .error {
+  color: #dc3545;
+  font-weight: bold; }
+
+/* Login page stype */
+.page-user-login main .region-content,
+.page-user-password main .region-content {
+  max-width: 400px;
+  background: white;
+  padding: 1rem 1rem;
+  margin: 0 auto;
+  border-radius: 0.3rem; }
