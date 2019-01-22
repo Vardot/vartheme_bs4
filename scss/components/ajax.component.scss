@@ -1,0 +1,50 @@
+// AJAX (throbber) styling.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap variables.
+@import "../../node_modules/bootstrap/scss/variables";  // Bootstrap variables.
+@import "../../node_modules/bootstrap/scss/mixins";  // Bootstrap variables.
+@import "../variables";                              // Vartheme variables.
+@import "../mixins";                               // Vartheme mixins.
+@import "../typography";                           // Vartheme typography.
+// -----------------------------------------------------------------------------
+
+// $todo This should probably be it's own mixin/component?
+@keyframes glyphicon-adjust-hue {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+.glyphicon-adjust-hue {
+  display: inline-block;
+  animation: glyphicon-adjust-hue 1s infinite linear;
+}
+a .glyphicon-adjust-hue {
+  display: inline-block;
+  text-decoration: none;
+}
+
+html.js {
+  .btn .ajax-throbber {
+    margin-left: .5em;
+    margin-right: -.25em;
+  }
+
+  .form-item .input-group-addon {
+    .glyphicon {
+      color: $gray-light;
+      opacity: .5;
+      transition: 150ms color, 150ms opacity;
+      &.glyphicon-adjust-hue {
+        color: $brand-primary;
+        opacity: 1;
+      }
+    }
+    .input-group-addon {
+      background-color: rgb(255, 255, 255);
+    }
+  }
+
+  // Hide empty wrappers from AJAX/Field APIs.
+  .ajax-new-content:empty {
+    display: none !important;
+  }
+}

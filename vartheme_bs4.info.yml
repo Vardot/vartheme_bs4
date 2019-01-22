@@ -12,6 +12,7 @@ libraries:
 
 # Boostrap component libraries.
   - vartheme_bs4/affix
+  - vartheme_bs4/ajax
   - vartheme_bs4/alert
   - vartheme_bs4/book-navigation
   - vartheme_bs4/book
@@ -23,6 +24,7 @@ libraries:
   - vartheme_bs4/feed-icon
   - vartheme_bs4/field
   - vartheme_bs4/file
+  - vartheme_bs4/filter
   - vartheme_bs4/form
   - vartheme_bs4/header
   - vartheme_bs4/help
@@ -31,9 +33,12 @@ libraries:
   - vartheme_bs4/indented
   - vartheme_bs4/item-list
   - vartheme_bs4/list-group
+  - vartheme_bs4/navbar
   - vartheme_bs4/node-preview
   - vartheme_bs4/node
   - vartheme_bs4/page
+  - vartheme_bs4/panel
+  - vartheme_bs4/progress-bar
   - vartheme_bs4/search-form
   - vartheme_bs4/shortcut
   - vartheme_bs4/sidebar-collapse
@@ -46,12 +51,14 @@ libraries:
   - vartheme_bs4/tablesort-indicator
   - vartheme_bs4/tablesort
   - vartheme_bs4/tabs
+  - vartheme_bs4/toolbar
   - vartheme_bs4/textarea
   - vartheme_bs4/ui-dialog
   - vartheme_bs4/ui-widget
   - vartheme_bs4/user
   - vartheme_bs4/vertical-tabs
   - vartheme_bs4/views
+  - vartheme_bs4/autocomplete
 
 # Vartheme custom theme, layout, and component libraries.
   # - vartheme_bs4/navbar-admin

@@ -1,0 +1,17 @@
+/**
+ * @file
+ * Styles for the help block.
+ */
+
+ @import "../../node_modules/bootstrap/scss/functions";  // Bootstrap variables.
+ @import "../../node_modules/bootstrap/scss/variables";  // Bootstrap variables.
+ @import "../../node_modules/bootstrap/scss/mixins";  // Bootstrap variables.
+ @import "../variables";                              // Vartheme variables.
+ @import "../mixins";                               // Vartheme mixins.
+ @import "../typography";                           // Vartheme typography.
+
+.block-help {
+    border: $border-width solid $border-color;
+    padding: 0 ($spacer * 1.5);
+    margin-bottom: ($spacer * 2);
+}

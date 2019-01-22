@@ -1,0 +1,23 @@
+/**
+ * @file
+ * Visual styles for table drag.
+ */
+
+ @import "../../node_modules/bootstrap/scss/functions";  // Bootstrap variables.
+ @import "../../node_modules/bootstrap/scss/variables";  // Bootstrap variables.
+ @import "../../node_modules/bootstrap/scss/mixins";  // Bootstrap variables.
+ @import "../variables";                              // Vartheme variables.
+ @import "../mixins";                               // Vartheme mixins.
+ @import "../typography";                           // Vartheme typography.
+ 
+tr.drag {
+    background-color: #fffff0;
+}
+
+tr.drag-previous {
+    background-color: #ffd;
+}
+
+body div.tabledrag-changed-warning {
+    margin-bottom: ($spacer / 2);
+}

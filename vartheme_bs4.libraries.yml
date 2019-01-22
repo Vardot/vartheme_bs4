@@ -117,11 +117,11 @@ navbar-admin:
 # Bootstrap starterkit components.
 # ------------------------------------------------------------------------------
 
-# # Vartheme ajax component library.
-# ajax:
-#   css:
-#     component:
-#       css/component/ajax.component.css: {}
+# Vartheme ajax component library.
+ajax:
+  css:
+    component:
+      css/component/ajax.component.css: {}
 
 # Vartheme affix component library.
 affix:
@@ -195,11 +195,11 @@ file:
     component:
       css/component/file.component.css: {}
 
-# # Vartheme Bootstrap Filter styles component library.
-# filter:
-#   css:
-#     component:
-#       css/component/filter.component.css: {}
+# Vartheme Bootstrap Filter styles component library.
+filter:
+  css:
+    component:
+      css/component/filter.component.css: {}
 
 # Vartheme Bootstrap Form styles component library.
 form:
@@ -255,11 +255,11 @@ node-preview:
     component:
       css/component/node-preview.component.css: {}
 
-# # Vartheme Bootstrap Navbar styles component library.
-# navbar:
-#   css:
-#     component:
-#       css/component/navbar.component.css: {}
+# Vartheme Bootstrap Navbar styles component library.
+navbar:
+  css:
+    component:
+      css/component/navbar.component.css: {}
 
 # Vartheme Bootstrap Node styles component library.
 node:
@@ -273,17 +273,17 @@ page:
     component:
       css/component/page.component.css: {}
 
-# # Vartheme Bootstrap Panel styles component library.
-# panel:
-#   css:
-#     component:
-#       css/component/panel.component.css: {}
+# Vartheme Bootstrap Panel styles component library.
+panel:
+  css:
+    component:
+      css/component/panel.component.css: {}
 
-# # Vartheme Bootstrap Progress bar styles component library.
-# progress-bar:
-#   css:
-#     component:
-#       css/component/progress-bar.component.css: {}
+# Vartheme Bootstrap Progress bar styles component library.
+progress-bar:
+  css:
+    component:
+      css/component/progress-bar.component.css: {}
 
 # Vartheme help component library.
 search-form:
@@ -392,14 +392,14 @@ views:
   css:
     component:
       css/component/views.component.css: {}
-# # Vartheme Bootstrap Toolbar module styles component library.
-# toolbar:
-#   css:
-#     component:
-#       css/component/toolbar.component.css: {}
+# Vartheme Bootstrap Toolbar module styles component library.
+toolbar:
+  css:
+    component:
+      css/component/toolbar.component.css: {}
 
 # Vartheme jQuery UI autocomplete widget style overrides component library.
-# autocomplete:
-#   css:
-#     component:
-#       css/component/autocomplete.component.css: {}
+autocomplete:
+  css:
+    component:
+      css/component/autocomplete.component.css: {}

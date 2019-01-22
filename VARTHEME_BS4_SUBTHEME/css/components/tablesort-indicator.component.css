@@ -1,0 +1,19 @@
+/**
+ * @file
+ * Tablesort indicator styles.
+ */
+/* VARIABLES */
+/* MIXINS */
+/* TYPOGRAPHY */
+/* Google Fonts */
+.tablesort {
+  width: 14px;
+  height: 14px;
+  vertical-align: top;
+  margin: 1px 0 0 5px; }
+
+.tablesort--asc {
+  background-image: url(../../../../misc/icons/ffffff/twistie-down.svg); }
+
+.tablesort--desc {
+  background-image: url(../../../../misc/icons/ffffff/twistie-up.svg); }

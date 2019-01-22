@@ -1,0 +1,18 @@
+/**
+ * @file
+ * Visual styles for a resizable textarea.
+ */
+
+ @import "../../node_modules/bootstrap/scss/functions";  // Bootstrap variables.
+ @import "../../node_modules/bootstrap/scss/variables";  // Bootstrap variables.
+ @import "../../node_modules/bootstrap/scss/mixins";  // Bootstrap variables.
+ @import "../variables";                              // Vartheme variables.
+ @import "../mixins";                               // Vartheme mixins.
+ @import "../typography";                           // Vartheme typography.
+ 
+.form-textarea-wrapper textarea {
+  display: block;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}

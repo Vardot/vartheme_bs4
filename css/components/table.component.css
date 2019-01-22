@@ -8,9 +8,9 @@
 /* Google Fonts */
 .sticky-header thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid #dee2e6; }
+  border-bottom: 2px solid #ddd; }
 
 .sticky-header th {
-  padding: 0.75rem;
+  padding: 8px;
   vertical-align: top;
-  border-top: 1px solid #dee2e6; }
+  border-top: 1px solid #ddd; }

@@ -1,0 +1,103 @@
+name: Varbase bootstrap 4 starterkit
+type: theme
+description: 'Varbase bootstrap starterkit'
+# version: VERSION
+core: 8.x
+base theme: vartheme_bs4
+
+regions:
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  header: 'Top Bar'
+  hero_slider: 'Media Hero Slider'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'Footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  
+libraries:
+# Bootstrap styles and scripts libraries.
+  - VARTHEME_BS4_SUBTHEME/bootstrap-styles
+  # - vartheme/bootstrap-scripts
+
+# Boostrap component libraries.
+  - VARTHEME_BS4_SUBTHEME/affix
+  - VARTHEME_BS4_SUBTHEME/ajax
+  - VARTHEME_BS4_SUBTHEME/alert
+  - VARTHEME_BS4_SUBTHEME/book-navigation
+  - VARTHEME_BS4_SUBTHEME/book
+  - VARTHEME_BS4_SUBTHEME/breadcrumb
+  - VARTHEME_BS4_SUBTHEME/comments
+  - VARTHEME_BS4_SUBTHEME/contextual
+  - VARTHEME_BS4_SUBTHEME/details
+  - VARTHEME_BS4_SUBTHEME/dropbutton
+  - VARTHEME_BS4_SUBTHEME/feed-icon
+  - VARTHEME_BS4_SUBTHEME/field
+  - VARTHEME_BS4_SUBTHEME/file
+  - VARTHEME_BS4_SUBTHEME/filter
+  - VARTHEME_BS4_SUBTHEME/form
+  - VARTHEME_BS4_SUBTHEME/header
+  - VARTHEME_BS4_SUBTHEME/help
+  - VARTHEME_BS4_SUBTHEME/icons
+  - VARTHEME_BS4_SUBTHEME/image-button
+  - VARTHEME_BS4_SUBTHEME/indented
+  - VARTHEME_BS4_SUBTHEME/item-list
+  - VARTHEME_BS4_SUBTHEME/list-group
+  - VARTHEME_BS4_SUBTHEME/navbar
+  - VARTHEME_BS4_SUBTHEME/node-preview
+  - VARTHEME_BS4_SUBTHEME/node
+  - VARTHEME_BS4_SUBTHEME/page
+  - VARTHEME_BS4_SUBTHEME/panel
+  - VARTHEME_BS4_SUBTHEME/progress-bar
+  - VARTHEME_BS4_SUBTHEME/search-form
+  - VARTHEME_BS4_SUBTHEME/shortcut
+  - VARTHEME_BS4_SUBTHEME/sidebar-collapse
+  - VARTHEME_BS4_SUBTHEME/sidebar
+  - VARTHEME_BS4_SUBTHEME/site-footer
+  - VARTHEME_BS4_SUBTHEME/skip-link
+  - VARTHEME_BS4_SUBTHEME/table
+  - VARTHEME_BS4_SUBTHEME/tabledrag
+  - VARTHEME_BS4_SUBTHEME/tableselect
+  - VARTHEME_BS4_SUBTHEME/tablesort-indicator
+  - VARTHEME_BS4_SUBTHEME/tablesort
+  - VARTHEME_BS4_SUBTHEME/tabs
+  - VARTHEME_BS4_SUBTHEME/toolbar
+  - VARTHEME_BS4_SUBTHEME/textarea
+  - VARTHEME_BS4_SUBTHEME/ui-dialog
+  - VARTHEME_BS4_SUBTHEME/ui-widget
+  - VARTHEME_BS4_SUBTHEME/user
+  - VARTHEME_BS4_SUBTHEME/vertical-tabs
+  - VARTHEME_BS4_SUBTHEME/views
+  - VARTHEME_BS4_SUBTHEME/autocomplete
+
+# Vartheme custom theme, layout, and component libraries.
+  # - VARTHEME_BS4_SUBTHEME/navbar-admin
+  # - VARTHEME_BS4_SUBTHEME/bs-callouts
+  # - VARTHEME_BS4_SUBTHEME/vb-tags
+  # - VARTHEME_BS4_SUBTHEME/card
+  # - VARTHEME_BS4_SUBTHEME/outside-in
+  - VARTHEME_BS4_SUBTHEME/edge2edge
+  # - VARTHEME_BS4_SUBTHEME/equal-height
+  # - VARTHEME_BS4_SUBTHEME/spacing
+  # - VARTHEME_BS4_SUBTHEME/bootstrap-print
+  # - VARTHEME_BS4_SUBTHEME/bootstrap-no-spacing
+
+# Vartheme general global styles and scripts libraries.
+  - VARTHEME_BS4_SUBTHEME/global-styles
+  - VARTHEME_BS4_SUBTHEME/global-scripts
+
+# Vartheme Varbase Bootstrap Paragraphs colors theme.
+  # - VARTHEME_BS4_SUBTHEME/vbp-colors
+
+# Vartheme Better Login theme.
+  # - VARTHEME_BS4_SUBTHEME/betterlogin
+libraries-override:
+  bootstrap_library/bootstrap-cdn: false
+  bootstrap_library/bootstrap: false
+  bootstrap_library/bootstrap-dev: false
+  vartheme_bs4/global-styling: false
+  vartheme_bs4/file: false

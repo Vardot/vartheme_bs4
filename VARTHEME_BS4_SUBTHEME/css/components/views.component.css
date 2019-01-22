@@ -1,0 +1,34 @@
+/**
+ * @file
+ * Styling for Views in Bartik.
+ */
+/* VARIABLES */
+/* MIXINS */
+/* TYPOGRAPHY */
+/* Google Fonts */
+/* Tab styles */
+.views-displays .tabs .open > a {
+  border-radius: 0.3rem 0.3rem 0 0; }
+
+.views-displays .tabs .open > a:hover,
+.views-displays .tabs .open > a:focus {
+  color: #0079C0; }
+
+.views-displays .secondary .form-submit {
+  font-size: 0.875rem; }
+
+/* Tabs action list styles */
+.views-displays .tabs .action-list {
+  padding: 0; }
+
+/* Contextual filter options styles */
+.views-filterable-options .filterable-option:nth-of-type(even) .form-type-checkbox {
+  background-color: #F9F9F9; }
+
+/* Views action dropbutton styles */
+.views-ui-display-tab-actions .dropbutton .form-submit {
+  color: #005283; }
+
+.views-ui-display-tab-actions .dropbutton .form-submit:hover,
+.views-ui-display-tab-actions .dropbutton .form-submit:focus {
+  color: #0079C0; }

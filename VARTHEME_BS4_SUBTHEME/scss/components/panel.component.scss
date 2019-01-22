@@ -1,0 +1,21 @@
+// Panel styling.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap variables.
+@import "../../node_modules/bootstrap/scss/variables";  // Bootstrap variables.
+@import "../../node_modules/bootstrap/scss/mixins";  // Bootstrap variables.
+@import "../variables";                              // Vartheme variables.
+@import "../mixins";                               // Vartheme mixins.
+@import "../typography";                           // Vartheme typography.
+// -----------------------------------------------------------------------------
+
+.panel-title {
+  display: block;
+  margin: -10px -15px;
+  padding: 10px 15px;
+  &, &:hover, &:focus, &:hover:focus {
+    color: inherit;
+  }
+  &:focus, &:hover {
+    text-decoration: none;
+  }
+}

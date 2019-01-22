@@ -1,0 +1,27 @@
+/**
+ * @file
+ * Visual styles for Bootstrap Barrio's form components.
+ */
+/* VARIABLES */
+/* MIXINS */
+/* TYPOGRAPHY */
+/* Google Fonts */
+.form-required::after {
+  content: '';
+  vertical-align: super;
+  display: inline-block;
+  background-image: url(../../images/required.svg);
+  background-repeat: no-repeat;
+  background-size: calc(2.25rem + 2px)/2 calc(2.25rem + 2px)/2;
+  width: calc(2.25rem + 2px)/2;
+  height: calc(2.25rem + 2px)/2;
+  margin: 0 0.3em; }
+
+form .filter-wrapper {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 1rem;
+  margin-right: 1rem; }
+
+form .form-type-textarea {
+  margin-bottom: 0; }
