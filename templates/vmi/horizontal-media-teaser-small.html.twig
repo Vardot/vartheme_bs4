@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * View modes inventory - Horizontal media teaser - small template.
+ */
+#}
+{% if title_suffix.contextual_links is not null %}
+  {{ title_suffix.contextual_links }}
+{% endif %}
+<{{ outer_wrapper }}{{ attributes.addClass('horizontal-media-teaser-view-mode', 'small', 'anchor-all', 'clearfix') }}>
+  {% if left is not null %}
+    <{{ left_wrapper }} class="left col-6 col-sm-6">
+      {{ content.left }}
+    </{{ left_wrapper }}>
+  {% endif %}
+  {% if right is not null %}
+    <{{ right_wrapper }} class="right col-6 col-sm-6">
+      {{ content.right }}
+    </{{ right_wrapper }}>
+  {% endif %}
+</{{ outer_wrapper }}>

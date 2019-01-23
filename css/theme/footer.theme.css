@@ -15,9 +15,6 @@
       font-size: 12px; }
       .footer-wrapper .footer section[id$="-copyright"] > div {
         padding: 14px 0 10px 0; }
-    .footer-wrapper .footer ul.nav {
-      float: right;
-      padding: 17px 0 17px 0; }
-      .footer-wrapper .footer ul.nav li {
-        display: inline-block;
-        list-style: none; }
+    .footer-wrapper .footer ul.nav li {
+      display: inline-block;
+      list-style: none; }

@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Default theme implementation to display a paragraph in Bootstrap Paragraphs.
+ * Bootstrap Paragraphs template for displaying a Three Columns Uneven layout.
  *
  * Available variables:
  * - paragraph: Full paragraph entity.
@@ -46,6 +46,39 @@
   {% set layout_background_classes = [ layout_background ] %}
 {% endif %}
 
+{# Renders Column Style field. #}
+{# Sets class name from values in database. #}
+{% if content.bp_column_style_3|render %}
+  {%  set column_style_3 = content.bp_column_style_3['#items'].getString() %}
+  {% set col_1 = [
+    'paragraph--style--25-50-25' == column_style_3 ? 'col-lg-3',
+    'paragraph--style--50-25-25' == column_style_3 ? 'col-lg-6',
+    'paragraph--style--25-25-50' == column_style_3 ? 'col-lg-3',
+    'paragraph--style--16-66-16' == column_style_3 ? 'col-lg-2 col-6',
+    'paragraph--style--66-16-16' == column_style_3 ? 'col-lg-8',
+    'paragraph--style--16-16-66' == column_style_3 ? 'col-lg-2 col-6',
+  ]
+  %}
+  {% set col_2 = [
+    'paragraph--style--25-50-25' == column_style_3 ? 'col-lg-6',
+    'paragraph--style--50-25-25' == column_style_3 ? 'col-lg-3',
+    'paragraph--style--25-25-50' == column_style_3 ? 'col-lg-3',
+    'paragraph--style--16-66-16' == column_style_3 ? 'col-lg-8',
+    'paragraph--style--66-16-16' == column_style_3 ? 'col-lg-2 col-6',
+    'paragraph--style--16-16-66' == column_style_3 ? 'col-lg-2 col-6',
+  ]
+  %}
+  {% set col_3 = [
+    'paragraph--style--25-50-25' == column_style_3 ? 'col-lg-3',
+    'paragraph--style--50-25-25' == column_style_3 ? 'col-lg-3',
+    'paragraph--style--25-25-50' == column_style_3 ? 'col-lg-6',
+    'paragraph--style--16-66-16' == column_style_3 ? 'col-lg-2 col-6',
+    'paragraph--style--66-16-16' == column_style_3 ? 'col-lg-2 col-6',
+    'paragraph--style--16-16-66' == column_style_3 ? 'col-lg-8',
+  ]
+  %}
+{% endif %}
+
 {# The template default set classes. #}
 {%
 set classes = [
@@ -54,6 +87,10 @@ set classes = [
 view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
 ]
 %}
+
+{# col classes #}
+{% set col_attribute = create_attribute() %}
+{% set col_classes = [] %}
 
 {# Merges Background color with classes. #}
 {% set background_field = content.bp_background|render %}
@@ -77,12 +114,6 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
 
 {% if VBP.background_image.url %}
   {% set attributes = attributes.addClass('background-style') %}
-{% endif %}
-
-{# Merges Background color with classes. #}
-{% set background_field = content.bp_background|render %}
-{% if background_field %}
-  {% set classes = classes|merge(layout_background_classes) %}
 {% endif %}
 
 {# Sets Unique ID for paragraph from Paragraph ID. #}
@@ -110,11 +141,32 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
 {# Prints div with classes, and content without Width and Background. #}
 <div{{ attributes.addClass(classes).setAttribute('id', paragraph_id) }} {% if VBP.background_image.url %} style="background-image:url({{- VBP.background_image.url -}});" {% endif %}>
   {% if add_container %}<div class="container">{% endif %}
-    <div class="{{- VBP.bp_width.value }} row">
-      {% if paragraph_title and paragraph_title_status %}<h2 class="text-center">{{- paragraph_title -}}</h2>{% endif %}
-      {% set attributes = attributes.removeClass('bg-edge2edge') %}
-      {{ title_suffix }}
-      {{ content|without('bp_title', 'bp_title_status', 'bp_width', 'bp_background', 'bp_image_field', 'bp_classes', 'bp_gutter') }}
+    <div class="row">
+      <div class="{{- VBP.bp_width.value -}}">
+        {% if paragraph_title and paragraph_title_status %}<h2 class="text-center">{{- paragraph_title -}}</h2>{% endif %}
+        <div class="row">
+          {% for key, item in content.bp_column_content_3 if key|first != '#' %}
+            {% set attributes = attributes.removeClass('bg-edge2edge') %}
+            {% set column_style_field = content.bp_column_content_3|render %}
+            {% set col_classes= "" %}
+            {% if column_style_field %}
+              {% if loop.index  == 1 %}
+                  {% set col_classes = col_1 %}
+              {% endif %}
+              {% if loop.index  == 2 %}
+                  {% set attributes = attributes.removeClass(col_1) %}
+                  {% set col_classes = col_2 %}
+              {% endif %}
+              {% if loop.index  == 3 %}
+                  {% set attributes = attributes.removeClass(col_1) %}
+                  {% set attributes = attributes.removeClass(col_2) %}
+                  {% set col_classes = col_3 %}
+              {% endif %}
+            {% endif %}
+            <div{{ attributes.removeClass(classes).addClass(col_classes).addClass('p-0') }}>{{ item }}</div>
+          {% endfor %}
+        </div>
+      </div>
     </div>
   {% if add_container %}</div>{% endif %}
 </div>

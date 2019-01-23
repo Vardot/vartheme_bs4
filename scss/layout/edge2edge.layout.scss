@@ -15,7 +15,9 @@
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-
+  flex: 0 0 100vw;
+  max-width: none;
+  
   &:before {
     content: " ";
     display: table;

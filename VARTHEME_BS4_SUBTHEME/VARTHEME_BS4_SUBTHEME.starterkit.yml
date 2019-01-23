@@ -1,9 +1,9 @@
-name: Varbase bootstrap 4 starterkit
+name: Varbase bootstrap 4 theme
 type: theme
-description: 'Varbase bootstrap starterkit'
+description: 'Varbase bootstrap 4 theme.'
 # version: VERSION
 core: 8.x
-base theme: vartheme_bs4
+base theme: bootstrap_barrio
 
 regions:
   navigation: 'Navigation'

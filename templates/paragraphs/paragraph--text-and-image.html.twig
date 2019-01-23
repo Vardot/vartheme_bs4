@@ -1,0 +1,128 @@
+{#
+/**
+ * @file
+ * Varbase Bootstrap Paragraphs template for displaying a Text and Image layout.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{{ attach_library('varbase_bootstrap_paragraphs/vbp-default') }}
+{{ attach_library('varbase_bootstrap_paragraphs/vbp-colors') }}
+{{ attach_library('vbp_text_and_image/vbp_text_and_image_default') }}
+
+{# Background color. #}
+{% if content.bp_background|render %}
+    {% set layout_background = content.bp_background['#items'].getString() %}
+    {% set layout_background_classes = [ layout_background ] %}
+{% endif %}
+
+{# Renders Column Style field. #}
+{# Sets class name from values in database. #}
+{% if content.text_and_image_style|render %}
+    {% set fields_style = content.text_and_image_style['#items'].getString() %}
+    {% set col_1 = [
+    'paragraph--style--50-50' == fields_style ? 'col-lg-6',
+    'paragraph--style--75-25' == fields_style ? 'col-lg-9',
+    'paragraph--style--66-33' == fields_style ? 'col-lg-8',
+    'paragraph--style--25-75' == fields_style ? 'col-lg-3',
+    'paragraph--style--33-66' == fields_style ? 'col-lg-4',
+    ]
+    %}
+    {% set col_2 = [
+    'paragraph--style--50-50' == fields_style ? 'col-lg-6',
+    'paragraph--style--75-25' == fields_style ? 'col-lg-3',
+    'paragraph--style--66-33' == fields_style ? 'col-lg-4',
+    'paragraph--style--25-75' == fields_style ? 'col-lg-9',
+    'paragraph--style--33-66' == fields_style ? 'col-lg-8',
+    ]
+    %}
+{% endif %}
+
+{# The template default set classes. #}
+{%
+set classes = [
+'paragraph',
+'paragraph--type--' ~ paragraph.bundle|clean_class,
+view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+]
+%}
+
+{# Merges Background color with classes. #}
+{% set background_field = content.bp_background|render %}
+{% if background_field %}
+    {% set classes = classes|merge(layout_background_classes) %}
+{% endif %}
+
+{# No container by default. #}
+{% set add_container = false %}
+
+{# If there is BG image it's always edge to edge #}
+{% if (VBP.background_image.url or content.bp_background|render) %}
+    {% set attributes = attributes.addClass('bg-edge2edge') %}
+    {% set add_container = true %}
+{% endif %}
+
+{# If gutter option were selected. #}
+{% if VBP.bp_gutter.value %}
+  {% set add_container = true %}
+{% endif %}
+
+{% if VBP.background_image.url %}
+    {% set attributes = attributes.addClass('background-style') %}
+{% endif %}
+
+{# Sets Unique ID for paragraph from Paragraph ID. #}
+{% set paragraph_id = 'vbp-' ~ paragraph.id.value %}
+
+{# Sets paragraph title for paragraph. #}
+{% set paragraph_title = content.bp_title|render %}
+
+{# Sets paragraph title status for paragraph. #}
+{% set paragraph_title_status = true %}
+{% if VBP.bp_title_status.value %}
+  {% set paragraph_title_status = false %}
+{% endif %}
+
+{# Add custom paragraph CSS class(es). #}
+{% if VBP.bp_classes.value %}
+  {% set striped_custom_classes = VBP.bp_classes.value|striptags|lower %}
+  {% set split_custom_classes = striped_custom_classes|split(' ') %}
+  {% for custom_class in split_custom_classes %}
+    {% set clened_custom_class = [ custom_class|clean_class ] %}
+    {% set classes = classes|merge(clened_custom_class) %}
+  {%  endfor %}
+{% endif %}
+
+{# Prints div with classes, and content. #}
+<div{{ attributes.addClass(classes).setAttribute('id', paragraph_id) }} {% if VBP.background_image.url %} style="background-image:url({{- VBP.background_image.url -}});" {% endif %}>
+  {% if add_container %}<div class="container">{% endif %}
+    <div class="row">
+      <div class="{{- VBP.bp_width.value -}}">
+          {% if paragraph_title and paragraph_title_status %}<h2 class="text-center">{{- paragraph_title -}}</h2>{% endif %}
+          {# Check the Image position field. #}
+          {% set align = content.field_image_position['#items'].getString() %}
+          {% if align == "left"%}
+              {% set img_align = 'align2left' %}
+              {% set txt_align = 'align2right' %}
+          {% else %}
+              {% set img_align = 'align2right' %}
+              {% set txt_align = 'align2left' %}
+          {% endif %}
+
+          {% set image_attr = create_attribute() %}
+          {% set image_attr = image_attr.addClass('no-spacing').addClass(img_align) %}
+
+          {# Set text field attributes. #}
+          {% set text_attr = create_attribute() %}
+          {% set text_attr = text_attr.addClass(txt_align).addClass('wrapper') %}
+        <div class="row">
+          <div{{ image_attr.addClass(col_1) }}>{{ content.field_image|render }}</div>
+          <div{{ text_attr.addClass(col_2) }}>{{ content.field_text_content|render }}</div>
+        </div>
+      </div>
+    </div>
+  {% if add_container %}</div>{% endif %}
+</div>

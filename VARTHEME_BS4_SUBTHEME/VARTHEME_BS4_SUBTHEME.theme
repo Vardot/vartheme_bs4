@@ -45,7 +45,7 @@ function VARTHEME_BS4_SUBTHEME_preprocess_paragraph(&$variables) {
     'paragraph--width--medium' => 'col-md-8 offset-md-2',
     'paragraph--width--wide' => 'col-md-10 offset-md-1',
     'paragraph--width--full' => 'col-12',
-    'bg-edge2edge' => 'bg-edge2edge col-12 no-padding',
+    'bg-edge2edge' => 'bg-edge2edge col-12 p-0',
   ];
 
 
