@@ -8,6 +8,39 @@
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
 use Drupal\image\Entity\ImageStyle;
+use Drupal\views_bootstrap\ViewsBootstrap;
+use Drupal\Core\Template\Attribute;
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function vartheme_bs4_theme_registry_alter(&$theme_registry) {
+  // Varbase media path.
+  $vartheme_bs4_path = Drupal::service('theme_handler')->getTheme('vartheme_bs4')->getPath();
+  $theme_registry['entity_embed_container']['path'] = $vartheme_bs4_path . '/templates/entity-embed';
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function vartheme_bs4_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    if(is_numeric($node)) {
+      $node = \Drupal\node\Entity\Node::load($node);
+    }
+    if($node instanceof \Drupal\node\NodeInterface) {
+      array_splice($suggestions, 1, 0, 'page__' . $node->bundle());
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function vartheme_bs4_preprocess_page(&$variables) {
+  $variables['logo_print'] = \Drupal::request()->getBaseUrl() . '/' . drupal_get_path('theme', 'vartheme') . '/logo-print.png';
+}
+
 /**
  * Implements hook_preprocess_paragraph().
  */
@@ -120,4 +153,35 @@ function vartheme_bs4_form_system_theme_settings_alter(&$form, FormStateInterfac
       'bg-white' => t('White'),
       'bg-transparent' => t('Transparent'),
   );
+}
+
+/**
+ * Prepares variables for views grid templates.
+ *
+ * Default template: views-bootstrap-grid.html.twig.
+ *
+ * @param array $vars
+ *   An associative array containing:
+ *   - view: A ViewExecutable object.
+ *   - rows: The raw row data.
+ */
+function vartheme_bs4_preprocess_views_bootstrap_grid(array &$vars) {
+  $view = $vars['view'];
+  $vars['id'] = ViewsBootstrap::getUniqueId($view);
+  $vars['attributes']['class'][] = 'grid';
+  $options = $view->style_plugin->options;
+  $options['automatic_width'] = ['default' => TRUE];
+  $horizontal = ($options['alignment'] === 'horizontal');
+
+  if(isset($options["col_xs"])){
+    $options["col_xs"] = str_replace("xs-","",$options["col_xs"]);
+  }
+
+  foreach (['xs', 'sm', 'md', 'lg'] as $size) {
+    $vars["col_" . $size] = $options["col_" . $size];
+    // Get the value from the size sting.
+    $vars['sizes'][$size] = ViewsBootstrap::getColSize($options["col_" . $size]);
+  }
+  $vars['options'] = $options;
+
 }

@@ -10,9 +10,6 @@
  @import "../mixins";                               // Vartheme mixins.
  @import "../typography";                           // Vartheme typography.
 
-.field--type-entity-reference {
-    margin: 0 0 ($spacer * 1.2);
-}
 
 .field--type-entity-reference .field__label {
     font-weight: normal;

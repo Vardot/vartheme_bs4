@@ -5,9 +5,36 @@
  * Functions to support theming in the SASS Starterkit subtheme.
  */
 
-use Drupal\Core\Form\FormStateInterface;
-use Drupal\file\Entity\File;
-use Drupal\image\Entity\ImageStyle;
+ use Drupal\Core\Form\FormStateInterface;
+ use Drupal\file\Entity\File;
+ use Drupal\image\Entity\ImageStyle;
+ use Drupal\views_bootstrap\ViewsBootstrap;
+ use Drupal\Core\Template\Attribute;
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function VARTHEME_BS4_SUBTHEME_theme_registry_alter(&$theme_registry) {
+  // Varbase media path.
+  $vartheme_bs4_path = Drupal::service('theme_handler')->getTheme('VARTHEME_BS4_SUBTHEME')->getPath();
+  $theme_registry['entity_embed_container']['path'] = $vartheme_bs4_path . '/templates/entity-embed';
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function VARTHEME_BS4_SUBTHEME_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    if(is_numeric($node)) {
+      $node = \Drupal\node\Entity\Node::load($node);
+    }
+    if($node instanceof \Drupal\node\NodeInterface) {
+      array_splice($suggestions, 1, 0, 'page__' . $node->bundle());
+    }
+  }
+}
+
+
 /**
  * Implements hook_preprocess_paragraph().
  */
@@ -45,7 +72,7 @@ function VARTHEME_BS4_SUBTHEME_preprocess_paragraph(&$variables) {
     'paragraph--width--medium' => 'col-md-8 offset-md-2',
     'paragraph--width--wide' => 'col-md-10 offset-md-1',
     'paragraph--width--full' => 'col-12',
-    'bg-edge2edge' => 'bg-edge2edge col-12 p-0',
+    'bg-edge2edge' => 'bg-edge2edge col-12 no-padding',
   ];
 
 

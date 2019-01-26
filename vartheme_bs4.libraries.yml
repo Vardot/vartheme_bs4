@@ -92,26 +92,26 @@ spacing:
 bs-callouts:
   css:
     component:
-      css/component/bs-callouts.component.css: {}
+      css/components/bs-callouts.component.css: {}
 
 # Vartheme bootstrap tags component.
 vb-tags:
   css:
     component:
-      css/component/vb-tags.component.css: {}
+      css/components/vb-tags.component.css: {}
 
 
 # Vartheme Outside in component library.
 outside-in:
   css:
     component:
-      css/component/outside-in.component.css: {}
+      css/components/outside-in.component.css: {}
 
 # Vartheme Navbar Administration component library.
 navbar-admin:
   css:
     component:
-      css/component/navbar.admin.component.css: {}
+      css/components/navbar.admin.component.css: {}
 
 # ------------------------------------------------------------------------------
 # Bootstrap starterkit components.
@@ -121,285 +121,285 @@ navbar-admin:
 ajax:
   css:
     component:
-      css/component/ajax.component.css: {}
+      css/components/ajax.component.css: {}
 
 # Vartheme affix component library.
 affix:
   css:
     component:
-      css/component/affix.component.css: {}
+      css/components/affix.component.css: {}
 
 # Vartheme Bootstrap Alert styles component library.
 alert:
   css:
     component:
-      css/component/alert.component.css: {}
+      css/components/alerts.component.css: {}
 
 # Vartheme book-navigation component library.
 book-navigation:
   css:
     component:
-      css/component/book-navigation.component.css: {}
+      css/components/book-navigation.component.css: {}
 
 # Vartheme book component library.
 book:
   css:
     component:
-      css/component/book.component.css: {}
+      css/components/book.component.css: {}
 
 # Vartheme breadcrumb component library.
 breadcrumb:
   css:
     component:
-      css/component/breadcrumb.component.css: {}
+      css/components/breadcrumb.component.css: {}
 
 # Vartheme comments component library.
 comments:
   css:
     component:
-      css/component/comments.component.css: {}
+      css/components/comments.component.css: {}
 
 # Vartheme contextual component library.
 contextual:
   css:
     component:
-      css/component/contextual.component.css: {}
+      css/components/contextual.component.css: {}
 
 # Vartheme details component library.
 details:
   css:
     component:
-      css/component/details.component.css: {}
+      css/components/details.component.css: {}
 
 # Vartheme dropbutton component library.
 dropbutton:
   css:
     component:
-      css/component/dropbutton.component.css: {}
+      css/components/dropbutton.component.css: {}
 
 # Vartheme feed-icon component library.
 feed-icon:
   css:
     component:
-      css/component/feed-icon.component.css: {}
+      css/components/feed-icon.component.css: {}
 
 # Vartheme Bootstrap Visual styles for fields component library.
 field:
   css:
     component:
-      css/component/field.component.css: {}
+      css/components/field.component.css: {}
 
 # Vartheme Bootstrap File (and Image Widget) styles component library.
 file:
   css:
     component:
-      css/component/file.component.css: {}
+      css/components/file.component.css: {}
 
 # Vartheme Bootstrap Filter styles component library.
 filter:
   css:
     component:
-      css/component/filter.component.css: {}
+      css/components/filter.component.css: {}
 
 # Vartheme Bootstrap Form styles component library.
 form:
   css:
     component:
-      css/component/form.component.css: {}
+      css/components/form.component.css: {}
 
 # Vartheme header component library.
 header:
   css:
     component:
-      css/component/header.component.css: {}
+      css/components/header.component.css: {}
 
 # Vartheme help component library.
 help:
   css:
     component:
-      css/component/help.component.css: {}
+      css/components/help.component.css: {}
 
 # Vartheme Bootstrap Icon styles component library.
 icons:
   css:
     component:
-      css/component/icons.component.css: {}
+      css/components/icons.component.css: {}
 
 # Vartheme help component library.
 image-button:
   css:
     component:
-      css/component/image-button.component.css: {}
+      css/components/image-button.component.css: {}
 
 # Vartheme help component library.
 indented:
   css:
     component:
-      css/component/indented.component.css: {}
+      css/components/indented.component.css: {}
 
 # Vartheme help component library.
 item-list:
   css:
     component:
-      css/component/item-list.component.css: {}
+      css/components/item-list.component.css: {}
 
 # Vartheme help component library.
 list-group:
   css:
     component:
-      css/component/list-group.component.css: {}
+      css/components/list-group.component.css: {}
 
 # Vartheme help component library.
 node-preview:
   css:
     component:
-      css/component/node-preview.component.css: {}
+      css/components/node-preview.component.css: {}
 
 # Vartheme Bootstrap Navbar styles component library.
 navbar:
   css:
     component:
-      css/component/navbar.component.css: {}
+      css/components/navbar.component.css: {}
 
 # Vartheme Bootstrap Node styles component library.
 node:
   css:
     component:
-      css/component/node.component.css: {}
+      css/components/node.component.css: {}
 
 # Vartheme help component library.
 page:
   css:
     component:
-      css/component/page.component.css: {}
+      css/components/page.component.css: {}
 
 # Vartheme Bootstrap Panel styles component library.
 panel:
   css:
     component:
-      css/component/panel.component.css: {}
+      css/components/panel.component.css: {}
 
 # Vartheme Bootstrap Progress bar styles component library.
 progress-bar:
   css:
     component:
-      css/component/progress-bar.component.css: {}
+      css/components/progress-bar.component.css: {}
 
 # Vartheme help component library.
 search-form:
   css:
     component:
-      css/component/search-form.component.css: {}
+      css/components/search-form.component.css: {}
 
 # Vartheme help component library.
 shortcut:
   css:
     component:
-      css/component/shortcut.component.css: {}
+      css/components/shortcut.component.css: {}
 
 # Vartheme help component library.
 sidebar-collapse:
   css:
     component:
-      css/component/sidebar-collapse.component.css: {}
+      css/components/sidebar-collapse.component.css: {}
 
 # Vartheme help component library.
 sidebar:
   css:
     component:
-      css/component/sidebar.component.css: {}
+      css/components/sidebar.component.css: {}
 
 # Vartheme help component library.
 site-footer:
   css:
     component:
-      css/component/site-footer.component.css: {}
+      css/components/site-footer.component.css: {}
 
 # Vartheme help component library.
 skip-link:
   css:
     component:
-      css/component/skip-link.component.css: {}
+      css/components/skip-link.component.css: {}
 
 # Vartheme help component library.
 table:
   css:
     component:
-      css/component/table.component.css: {}
+      css/components/table.component.css: {}
 
 # Vartheme Bootstrap Table drag styles component library.
 tabledrag:
   css:
     component:
-      css/component/tabledrag.component.css: {}
+      css/components/tabledrag.component.css: {}
 
 # Vartheme help component library.
 tableselect:
   css:
     component:
-      css/component/tableselect.component.css: {}
+      css/components/tableselect.component.css: {}
 
 # Vartheme help component library.
 tablesort-indicator:
   css:
     component:
-      css/component/tablesort-indicator.component.css: {}
+      css/components/tablesort-indicator.component.css: {}
 
 # Vartheme help component library.
 tablesort:
   css:
     component:
-      css/component/tablesort.component.css: {}
+      css/components/tablesort.component.css: {}
 
 # Vartheme Bootstrap Tabs component library.
 tabs:
   css:
     component:
-      css/component/tabs.component.css: {}
+      css/components/tabs.component.css: {}
 
 # Vartheme help component library.
 textarea:
   css:
     component:
-      css/component/textarea.component.css: {}
+      css/components/textarea.component.css: {}
 
 # Vartheme help component library.
 ui-dialog:
   css:
     component:
-      css/component/ui-dialog.component.css: {}
+      css/components/ui-dialog.component.css: {}
 
 # Vartheme help component library.
 ui-widget:
   css:
     component:
-      css/component/ui-widget.component.css: {}
+      css/components/ui-widget.component.css: {}
 
 # Vartheme help component library.
 user:
   css:
     component:
-      css/component/user.component.css: {}
+      css/components/user.component.css: {}
 
 # Vartheme help component library.
 vertical-tabs:
   css:
     component:
-      css/component/vertical-tabs.component.css: {}
+      css/components/vertical-tabs.component.css: {}
 
 # Vartheme help component library.
 views:
   css:
     component:
-      css/component/views.component.css: {}
+      css/components/views.component.css: {}
 # Vartheme Bootstrap Toolbar module styles component library.
 toolbar:
   css:
     component:
-      css/component/toolbar.component.css: {}
+      css/components/toolbar.component.css: {}
 
 # Vartheme jQuery UI autocomplete widget style overrides component library.
 autocomplete:
   css:
     component:
-      css/component/autocomplete.component.css: {}
+      css/components/autocomplete.component.css: {}
