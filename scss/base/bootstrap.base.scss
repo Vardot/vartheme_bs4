@@ -1,3 +1,7 @@
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap variables.
+@import "../../node_modules/bootstrap/scss/variables";  // Bootstrap variables.
+@import "../../node_modules/bootstrap/scss/mixins";  // Bootstrap variables.
 @import "../variables";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../mixins";
+@import "../aliases";

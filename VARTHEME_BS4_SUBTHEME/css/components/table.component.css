@@ -3,9 +3,6 @@
  * Styles for Bootstrap Barrio's tables.
  */
 /* VARIABLES */
-/* MIXINS */
-/* TYPOGRAPHY */
-/* Google Fonts */
 .sticky-header thead th {
   vertical-align: bottom;
   border-bottom: 2px solid #ddd; }

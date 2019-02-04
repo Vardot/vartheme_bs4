@@ -7,7 +7,7 @@ var uglify = require("gulp-uglify");
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
-    return gulp.src(['scss/*/*.scss'])
+    return gulp.src(['scss/**/*/*.scss'])
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest("css"))
         .pipe(sass({ outputStyle: 'compressed' }))
@@ -26,7 +26,7 @@ gulp.task('js', function() {
 gulp.task('serve', gulp.series('sass', function() {
 
     browserSync.init({
-        proxy: "http://127.0.0.1:8080/varbase-demo1/docroot/",
+        proxy: "http://127.0.0.1:8080/varbase-demo/docroot/",
     });
 
     gulp.watch(['node_modules/bootstrap/scss/bootstrap.scss', 'scss/*.scss'], gulp.series('sass'));

@@ -1,15 +1,12 @@
 /* ------------------ Sidebar ----------------- */
 /* VARIABLES */
-/* MIXINS */
-/* TYPOGRAPHY */
-/* Google Fonts */
 .sidebar .block {
   border-style: solid;
   border-width: 1px;
   padding: 1rem 1rem;
   margin: 0 0 1rem; }
   .sidebar .block .content {
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.5; }
 
 .sidebar h2 {

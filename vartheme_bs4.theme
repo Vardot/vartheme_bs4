@@ -18,7 +18,19 @@ function vartheme_bs4_theme_registry_alter(&$theme_registry) {
   // Varbase media path.
   $vartheme_bs4_path = Drupal::service('theme_handler')->getTheme('vartheme_bs4')->getPath();
   $theme_registry['entity_embed_container']['path'] = $vartheme_bs4_path . '/templates/entity-embed';
+
+  $pages = [
+    'page__user__login' => 'page--user--login',
+    'page__user__register' => 'page--user--register',
+    'page__user__password' => 'page--user--password',
+    'page__user__reset' => 'page--user--reset',
+  ];
+
+  foreach ($pages as $key => $template) {
+    $theme_registry[$key]['path'] = $vartheme_bs4_path  . '/templates/betterlogin';
+  }
 }
+
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
@@ -31,6 +43,14 @@ function vartheme_bs4_theme_suggestions_page_alter(array &$suggestions, array $v
     if($node instanceof \Drupal\node\NodeInterface) {
       array_splice($suggestions, 1, 0, 'page__' . $node->bundle());
     }
+  }
+}
+
+
+function vartheme_bs4_preprocess_html(&$variables) {
+  // Add information about the number of sidebars.
+  if (theme_get_setting('bootstrap_barrio_navbar_position')) {
+    $variables['navbar_position'] = theme_get_setting('bootstrap_barrio_navbar_position');
   }
 }
 

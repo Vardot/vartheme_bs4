@@ -63,36 +63,31 @@
   {% block navbar %}
     {%
       set navbar_classes = [
-        'navbar',
-        theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
-        theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : header_container,
-        header_container,
+        'mb-4',
+        'border-bottom',
+        'shadow-sm',
       ]
     %}
     <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
-      {% if not navbar_attributes.hasClass(header_container) %}
-        <div class="{{ container }}">
+      {% if container_navbar %}
+        <div class="container">
       {% endif %}
-      <div class="navbar-header">
+      <div class="navbar-brand mr-md-auto">
         {{ page.navigation }}
-        {# .btn-navbar is used as the toggle for collapsed navbar content #}
-        {% if page.navigation_collapsible %}
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-            <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        {% endif %}
       </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-      {# Navigation (collapsible) #}
+
       {% if page.navigation_collapsible %}
-        <div id="navbar-collapse" class="navbar-collapse collapse navbar-right">
-          {{ page.navigation_collapsible }}
+        <div id="navbar-collapse" class="navbar-collapse collapse">
+          <div class="navbar-nav ml-auto">
+            {{ page.navigation_collapsible }}
+          </div>
         </div>
       {% endif %}
-      {% if not navbar_attributes.hasClass(header_container) %}
+      {% if container_navbar %}
         </div>
       {% endif %}
     </header>
@@ -100,23 +95,23 @@
 {% endif %}
 
 {# Header print #}
-<div class="visible-print-block header-print page-header">
+<div class="d-none d-print-block header-print page-header mt-4 mb-3">
   <div class="{{ container }}">
     <div class="row">
       <div class="col-sm-12">
         {# Logo print #}
         {% if logo_print %}
-          <img class="logo pull-left visible-print-inline-block" src="{{ logo_print }}" />
+          <img class="logo pull-left d-none d-print-inline-block" src="{{ logo_print }}" />
         {% endif %}
       </div>
     </div>
   </div>
 </div>
-        
+
 {# hero_slider #}
 {% if page.hero_slider %}
 {% block hero_slider %}
-  <div class="hero_slider">
+  <div class="hero_slider mt-n4">
     {{ page.hero_slider }}
   </div>
 {% endblock %}
@@ -212,4 +207,3 @@
     </div>
   {% endblock %}
 {% endif %}
-

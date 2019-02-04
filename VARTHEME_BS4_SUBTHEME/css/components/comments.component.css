@@ -3,9 +3,6 @@
  * Visual styles for comments in Bartik.
  */
 /* VARIABLES */
-/* MIXINS */
-/* TYPOGRAPHY */
-/* Google Fonts */
 /* This is required to win over specificity of #content h2 */
 #content .comment-wrapper h2 {
   margin-bottom: 1em; }
@@ -27,7 +24,7 @@
 .comment__meta {
   padding: 0 30px 0 0;
   /* LTR */
-  font-size: 1rem; }
+  font-size: 0.9rem; }
 
 [dir="rtl"] .comment__meta {
   padding: 0 0 0 30px; }
@@ -123,7 +120,7 @@
 .comment .links-inline span {
   padding: 0 0.5em 0 0;
   /* LTR */
-  font-size: 1rem; }
+  font-size: 0.9rem; }
 
 [dir="rtl"] .comment .links-inline span {
   padding: 0 0 0 0.5em; }

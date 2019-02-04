@@ -1,0 +1,100 @@
+// no-margin and no-padding and no-spacing
+.pull-right{
+  float: right !important;
+}
+
+.pull-left{
+  float: left !important;
+}
+
+[dir="rtl"] {
+  .pull-right{
+    float: left !important;
+  }
+
+  .pull-left{
+    float: right !important;
+  }
+}
+
+.img-responsive{
+  @extend .img-fluid;
+}
+
+blockquote{
+  @extend .blockquote;
+
+  h6{
+    @extend .blockquote-footer;
+  }
+}
+
+.well{
+  @extend .card;
+  @extend .p-3;
+  @extend .mb-3;
+  background-color: #f5f5f5;
+
+  &.well-lg{
+    @extend .p-4;
+  }
+
+  &.well-sm{
+    @extend .p-2;
+  }
+}
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $prop, $abbrev in (margin: "no-margin", padding: "no-padding") {
+      .#{$abbrev}#{$infix} {
+        #{$prop}: 0 !important;
+      }
+      .#{$abbrev}-top#{$infix}{
+        #{$prop}-top: 0 !important;
+      }
+      .#{$abbrev}-right#{$infix} {
+        #{$prop}-right: 0 !important;
+      }
+      .#{$abbrev}-bottom#{$infix} {
+        #{$prop}-bottom: 0 !important;
+      }
+      .#{$abbrev}-left#{$infix} {
+        #{$prop}-left: 0 !important;
+      }
+      .#{$abbrev}-v#{$infix} {
+        #{$prop}-top: 0 !important;
+        #{$prop}-bottom: 0 !important;
+      }
+      .#{$abbrev}-h#{$infix} {
+        #{$prop}-left: 0 !important;
+        #{$prop}-right: 0 !important;
+      }
+    }
+
+    @each $prop, $abbrev in (margin: "no-spacing", padding: "no-spacing") {
+      .#{$abbrev}#{$infix} { #{$prop}: 0 !important; }
+      .#{$abbrev}-top#{$infix} {
+        #{$prop}-top: 0 !important;
+      }
+      .#{$abbrev}-right#{$infix} {
+        #{$prop}-right: 0 !important;
+      }
+      .#{$abbrev}-bottom#{$infix} {
+        #{$prop}-bottom: 0 !important;
+      }
+      .#{$abbrev}-left#{$infix} {
+        #{$prop}-left: 0 !important;
+      }
+      .#{$abbrev}-v#{$infix} {
+        #{$prop}-top: 0 !important;
+        #{$prop}-bottom: 0 !important;
+      }
+      .#{$abbrev}-h#{$infix} {
+        #{$prop}-right: 0 !important;
+        #{$prop}-left: 0 !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph in Bootstrap Paragraphs.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ *   - id: The paragraph ID.
+ *   - bundle: The type of the paragraph, for example, "image" or "text".
+ *   - authorid: The user ID of the paragraph author.
+ *   - createdtime: Formatted creation date. Preprocess functions can
+ *     reformat it by calling format_date() with the desired parameters on
+ *     $variables['paragraph']->getCreatedTime().
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - paragraphs: The current template type (also known as a "theming hook").
+ *   - paragraphs--type-[type]: The current paragraphs type. For example, if the paragraph is an
+ *     "Image" it would result in "paragraphs--type--image". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - paragraphs--view-mode--[view_mode]: The View Mode of the paragraph; for example, a
+ *     preview would result in: "paragraphs--view-mode--preview", and
+ *     default: "paragraphs--view-mode--default".
+ * - view_mode: View mode; for example, "preview" or "full".
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{{ attach_library('varbase_bootstrap_paragraphs/vbp-default') }}
+{{ attach_library('varbase_bootstrap_paragraphs/vbp-colors') }}
+
+{# Background color. #}
+{% if content.bp_background|render %}
+  {% set layout_background = content.bp_background['#items'].getString() %}
+  {% set layout_background_classes = [ layout_background ] %}
+{% endif %}
+
+{# The template default set classes. #}
+{%
+set classes = [
+'paragraph',
+'paragraph--type--' ~ paragraph.bundle|clean_class,
+view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+]
+%}
+
+{# Merges Background color with classes. #}
+{% set background_field = content.bp_background|render %}
+{% if background_field %}
+  {% set classes = classes|merge(layout_background_classes) %}
+{% endif %}
+
+{# No container by default. #}
+{% set add_container = false %}
+
+{# If there is BG image it's always edge to edge #}
+{% if (VBP.background_image.url or content.bp_background|render) %}
+    {% set attributes = attributes.addClass('bg-edge2edge') %}
+    {% set add_container = true %}
+{% endif %}
+
+{# If gutter option were selected. #}
+{% if VBP.bp_gutter.value %}
+  {% set add_container = true %}
+{% endif %}
+
+{% if VBP.background_image.url %}
+  {% set attributes = attributes.addClass('background-style') %}
+{% endif %}
+
+{# Merges Background color with classes. #}
+{% set background_field = content.bp_background|render %}
+{% if background_field %}
+  {% set classes = classes|merge(layout_background_classes) %}
+{% endif %}
+
+{# Sets Unique ID for paragraph from Paragraph ID. #}
+{% set paragraph_id = 'vbp-' ~ paragraph.id.value %}
+
+{# Sets paragraph title for paragraph. #}
+{% set paragraph_title = content.bp_title|render %}
+
+{# Sets paragraph title status for paragraph. #}
+{% set paragraph_title_status = true %}
+{% if VBP.bp_title_status.value %}
+  {% set paragraph_title_status = false %}
+{% endif %}
+
+{# Add custom paragraph CSS class(es). #}
+{% if VBP.bp_classes.value %}
+  {% set striped_custom_classes = VBP.bp_classes.value|striptags|lower %}
+  {% set split_custom_classes = striped_custom_classes|split(' ') %}
+  {% for custom_class in split_custom_classes %}
+    {% set clened_custom_class = [ custom_class|clean_class ] %}
+    {% set classes = classes|merge(clened_custom_class) %}
+  {%  endfor %}
+{% endif %}
+
+{# Prints div with classes, and content without Width and Background. #}
+<div{{ attributes.addClass(classes).setAttribute('id', paragraph_id) }} {% if VBP.background_image.url %} style="background-image:url({{- VBP.background_image.url -}});" {% endif %}>
+  {% if add_container %}<div class="container">{% endif %}
+    <div class="row">
+      <div class="{{- VBP.bp_width.value -}}">
+        {% if paragraph_title and paragraph_title_status %}<h2 class="text-center">{{- paragraph_title -}}</h2>{% endif %}
+        {% set attributes = attributes.removeClass('bg-edge2edge') %}
+        {{ title_suffix }}
+        {{ content|without('bp_title', 'bp_title_status', 'bp_width', 'bp_background', 'bp_image_field', 'bp_classes', 'bp_gutter') }}
+      </div>
+    </div>
+  {% if add_container %}</div>{% endif %}
+</div>

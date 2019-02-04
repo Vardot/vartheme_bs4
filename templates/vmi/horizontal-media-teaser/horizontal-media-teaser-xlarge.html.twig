@@ -1,20 +1,20 @@
 {#
 /**
  * @file
- * View modes inventory - Horizontal media teaser - large template.
+ * View modes inventory - Horizontal media teaser - xlarge template.
  */
 #}
 {% if title_suffix.contextual_links is not null %}
   {{ title_suffix.contextual_links }}
 {% endif %}
-<{{ outer_wrapper }}{{ attributes.addClass('horizontal-media-teaser-view-mode', 'large', 'clearfix') }}>
+<{{ outer_wrapper }}{{ attributes.addClass('row', 'mx-0', 'mt-15', 'horizontal-media-teaser-view-mode', 'xlarge', 'clearfix') }}>
   {% if left is not null %}
-    <{{ left_wrapper }} class="left col-6 col-sm-6">
+    <{{ left_wrapper }} class="left col-sm-8">
       {{ content.left }}
     </{{ left_wrapper }}>
   {% endif %}
   {% if right is not null %}
-    <{{ right_wrapper }} class="right col-6 col-sm-6">
+    <{{ right_wrapper }} class="right col-sm-4">
       {{ content.right }}
     </{{ right_wrapper }}>
   {% endif %}

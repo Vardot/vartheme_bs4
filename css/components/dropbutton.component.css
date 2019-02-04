@@ -3,9 +3,6 @@
  * Visual styles for Bartik's dropbutton component.
  */
 /* VARIABLES */
-/* MIXINS */
-/* TYPOGRAPHY */
-/* Google Fonts */
 .js .dropbutton-wrapper .dropbutton-widget {
   /* This is required to win over specifity of .js td .dropbutton-widget */
   position: relative; }

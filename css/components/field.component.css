@@ -3,9 +3,6 @@
  * Visual styles for Bootstrap Barrio's field components.
  */
 /* VARIABLES */
-/* MIXINS */
-/* TYPOGRAPHY */
-/* Google Fonts */
 .field--type-entity-reference .field__label {
   font-weight: normal;
   margin: 0;
@@ -35,10 +32,6 @@
 @media all and (min-width: 560px) {
   .node .field--type-image + .field--type-image {
     clear: both; } }
-
-.field--type-image img,
-.field--name-field-user-picture img {
-  margin: 0 0 1rem; }
 
 .field--type-image a {
   border-bottom: none; }

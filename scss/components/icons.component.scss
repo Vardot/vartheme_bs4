@@ -11,7 +11,7 @@
  @import "../typography";                           // Vartheme typography.
 
 .icon-help {
-    background: url(/../../images/help.png) 0 50% no-repeat;
+    background: url(../../images/help.png) 0 50% no-repeat;
     /* LTR */
     padding: 1px 0 1px ($spacer * 1.5);
     /* LTR */
@@ -23,7 +23,7 @@
 }
 
 .feed-icon {
-    background: url(/../../images/feed.svg) no-repeat;
+    background: url(../../images/feed.svg) no-repeat;
     overflow: hidden;
     text-indent: -9999px;
     display: block;

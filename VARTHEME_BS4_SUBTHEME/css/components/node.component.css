@@ -3,11 +3,8 @@
  * Visual styles for Bootstrap Barrio's node component.
  */
 /* VARIABLES */
-/* MIXINS */
-/* TYPOGRAPHY */
-/* Google Fonts */
 .node__content {
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin-top: 1rem; }
 
 /* View mode teaser styles. */
@@ -28,8 +25,8 @@
 
 .node--view-mode-teaser .node__content {
   clear: none;
-  font-size: 1rem;
-  line-height: 1.5; }
+  font-size: 0.9rem;
+  line-height: 1.42857; }
 
 /* Node metadata styles. */
 .node__meta {
@@ -51,7 +48,7 @@
 .node__links {
   text-align: right;
   /* LTR */
-  font-size: 1rem; }
+  font-size: 0.9rem; }
 
 [dir="rtl"] .node__links {
   text-align: left; }

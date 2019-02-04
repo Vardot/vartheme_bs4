@@ -4,9 +4,6 @@
  * A list of links, grouped together.
  */
 /* VARIABLES */
-/* MIXINS */
-/* TYPOGRAPHY */
-/* Google Fonts */
 .list-group__link {
   border-top: 1px solid #dee2e6;
   padding: 0.75rem 0 0; }

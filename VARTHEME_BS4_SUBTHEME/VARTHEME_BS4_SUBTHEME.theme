@@ -5,20 +5,32 @@
  * Functions to support theming in the SASS Starterkit subtheme.
  */
 
- use Drupal\Core\Form\FormStateInterface;
- use Drupal\file\Entity\File;
- use Drupal\image\Entity\ImageStyle;
- use Drupal\views_bootstrap\ViewsBootstrap;
- use Drupal\Core\Template\Attribute;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\file\Entity\File;
+use Drupal\image\Entity\ImageStyle;
+use Drupal\views_bootstrap\ViewsBootstrap;
+use Drupal\Core\Template\Attribute;
 
 /**
  * Implements hook_theme_registry_alter().
  */
 function VARTHEME_BS4_SUBTHEME_theme_registry_alter(&$theme_registry) {
   // Varbase media path.
-  $vartheme_bs4_path = Drupal::service('theme_handler')->getTheme('VARTHEME_BS4_SUBTHEME')->getPath();
-  $theme_registry['entity_embed_container']['path'] = $vartheme_bs4_path . '/templates/entity-embed';
+  $VARTHEME_BS4_SUBTHEME_path = Drupal::service('theme_handler')->getTheme('VARTHEME_BS4_SUBTHEME')->getPath();
+  $theme_registry['entity_embed_container']['path'] = $VARTHEME_BS4_SUBTHEME_path . '/templates/entity-embed';
+
+  $pages = [
+    'page__user__login' => 'page--user--login',
+    'page__user__register' => 'page--user--register',
+    'page__user__password' => 'page--user--password',
+    'page__user__reset' => 'page--user--reset',
+  ];
+
+  foreach ($pages as $key => $template) {
+    $theme_registry[$key]['path'] = $VARTHEME_BS4_SUBTHEME_path  . '/templates/betterlogin';
+  }
 }
+
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
@@ -34,6 +46,20 @@ function VARTHEME_BS4_SUBTHEME_theme_suggestions_page_alter(array &$suggestions,
   }
 }
 
+
+function VARTHEME_BS4_SUBTHEME_preprocess_html(&$variables) {
+  // Add information about the number of sidebars.
+  if (theme_get_setting('bootstrap_barrio_navbar_position')) {
+    $variables['navbar_position'] = theme_get_setting('bootstrap_barrio_navbar_position');
+  }
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function VARTHEME_BS4_SUBTHEME_preprocess_page(&$variables) {
+  $variables['logo_print'] = \Drupal::request()->getBaseUrl() . '/' . drupal_get_path('theme', 'vartheme') . '/logo-print.png';
+}
 
 /**
  * Implements hook_preprocess_paragraph().
@@ -72,7 +98,7 @@ function VARTHEME_BS4_SUBTHEME_preprocess_paragraph(&$variables) {
     'paragraph--width--medium' => 'col-md-8 offset-md-2',
     'paragraph--width--wide' => 'col-md-10 offset-md-1',
     'paragraph--width--full' => 'col-12',
-    'bg-edge2edge' => 'bg-edge2edge col-12 no-padding',
+    'bg-edge2edge' => 'bg-edge2edge col-12 p-0',
   ];
 
 
@@ -147,4 +173,35 @@ function VARTHEME_BS4_SUBTHEME_form_system_theme_settings_alter(&$form, FormStat
       'bg-white' => t('White'),
       'bg-transparent' => t('Transparent'),
   );
+}
+
+/**
+ * Prepares variables for views grid templates.
+ *
+ * Default template: views-bootstrap-grid.html.twig.
+ *
+ * @param array $vars
+ *   An associative array containing:
+ *   - view: A ViewExecutable object.
+ *   - rows: The raw row data.
+ */
+function VARTHEME_BS4_SUBTHEME_preprocess_views_bootstrap_grid(array &$vars) {
+  $view = $vars['view'];
+  $vars['id'] = ViewsBootstrap::getUniqueId($view);
+  $vars['attributes']['class'][] = 'grid';
+  $options = $view->style_plugin->options;
+  $options['automatic_width'] = ['default' => TRUE];
+  $horizontal = ($options['alignment'] === 'horizontal');
+
+  if(isset($options["col_xs"])){
+    $options["col_xs"] = str_replace("xs-","",$options["col_xs"]);
+  }
+
+  foreach (['xs', 'sm', 'md', 'lg'] as $size) {
+    $vars["col_" . $size] = $options["col_" . $size];
+    // Get the value from the size sting.
+    $vars['sizes'][$size] = ViewsBootstrap::getColSize($options["col_" . $size]);
+  }
+  $vars['options'] = $options;
+
 }

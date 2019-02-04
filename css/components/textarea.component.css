@@ -3,9 +3,6 @@
  * Visual styles for a resizable textarea.
  */
 /* VARIABLES */
-/* MIXINS */
-/* TYPOGRAPHY */
-/* Google Fonts */
 .form-textarea-wrapper textarea {
   display: block;
   margin: 0;

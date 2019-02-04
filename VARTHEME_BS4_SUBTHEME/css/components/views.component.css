@@ -3,9 +3,6 @@
  * Styling for Views in Bartik.
  */
 /* VARIABLES */
-/* MIXINS */
-/* TYPOGRAPHY */
-/* Google Fonts */
 /* Tab styles */
 .views-displays .tabs .open > a {
   border-radius: 0.3rem 0.3rem 0 0; }

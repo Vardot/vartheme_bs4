@@ -11,7 +11,7 @@
 {% block main %}
 <div role="main" class="main-container {{ container }}">
   <div class="row">
-    <div id="auth-box" class="login col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4">
+    <div id="auth-box" class="login col-10 offset-1 col-sm-4 offset-sm-4">
       <h1 id="page-user-reset-title" class="sr-only">{{ title }}</h1>
       <div id="top-part">
         {# Highlighted #}
@@ -23,10 +23,10 @@
       </div>
       <div id="middle-part">
         {% if logged_in %}
-          {{ page.header|without('vartheme_local_tasks', 'vartheme_breadcrumbs', 'vartheme_local_actions') }}
+          {{ page.header|without('vartheme_bs4_local_tasks', 'vartheme_bs4_breadcrumbs', 'vartheme_bs4_local_actions') }}
         {% else %}
           <h2 class="title">{{ title }}</h2>
-          {{ page.header|without('vartheme_local_tasks', 'vartheme_breadcrumbs', 'vartheme_local_actions', 'vartheme_page_title') }}
+          {{ page.header|without('vartheme_bs4_local_tasks', 'vartheme_bs4_breadcrumbs', 'vartheme_bs4_local_actions', 'vartheme_bs4_page_title') }}
         {% endif %}
         {{ page.content }}
       </div>

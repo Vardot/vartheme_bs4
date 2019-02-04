@@ -42,7 +42,7 @@
 
     {% set bp_col_value = (12/loop.length)|round %}
 
-    <div class="col-lg-{{ bp_col_value }} p-0" {% if VBP.background_image.url %} style="background-image:url({{- VBP.background_image.url -}});" {% endif %}>
+    <div class="col-lg-{{ bp_col_value }}" {% if VBP.background_image.url %} style="background-image:url({{- VBP.background_image.url -}});" {% endif %}>
       {{ item.content }}
     </div>
   {%- endfor -%}

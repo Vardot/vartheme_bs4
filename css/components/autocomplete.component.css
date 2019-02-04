@@ -1,7 +1,4 @@
 /* VARIABLES */
-/* MIXINS */
-/* TYPOGRAPHY */
-/* Google Fonts */
 .ui-autocomplete {
   background: #fff;
   background-clip: padding-box;
@@ -10,8 +7,8 @@
   border-radius: 4px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   color: inherit;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.9rem;
   list-style: none;
   min-width: 160px;
   padding: 5px 0;
@@ -25,7 +22,7 @@
     cursor: pointer;
     display: block;
     font-weight: normal;
-    line-height: 1.5;
+    line-height: 1.42857;
     margin: 0;
     outline: 0;
     padding: 3px 20px;
