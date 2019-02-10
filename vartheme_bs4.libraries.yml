@@ -5,7 +5,6 @@
 #                             + vartheme_bs4/varbase_bs4-styles
 #                             + vartheme_bs4/global-styles
 #                             + vartheme_bs4/global-scripts
-
 framework:
   css: {}
   js: {}
@@ -21,7 +20,6 @@ framework:
 # Vartheme framework RTL as which could be used to extend bootstrap/framework
 #          vartheme/framework-rtl = vartheme_bs4/bootstrap-styles-rtl
 #                                 + vartheme_bs4/global-styles-rtl
-
 framework-rtl:
   css: {}
   js: {}
