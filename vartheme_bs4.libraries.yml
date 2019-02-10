@@ -42,7 +42,7 @@ bootstrap-styles-rtl:
     base:
       css/rtl/base/bootstrap-rtl.base.css: {}
 
-# bootstrap scripts library.
+# Bootstrap scripts library.
 bootstrap-scripts:
   js:
     js/popper.min.js: {}
@@ -104,7 +104,7 @@ bootstrap-override-styles:
       css/components/views.component.css: {}
       css/components/toolbar.component.css: {}
       css/components/autocomplete.component.css: {}
-#Vartheme componenets
+# Vartheme componenets
       css/components/ajax.component.css: {}
       #css/components/filter.component.css: {}
 
