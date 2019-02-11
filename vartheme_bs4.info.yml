@@ -8,18 +8,59 @@ base theme: bootstrap_barrio
 libraries:
 # Bootstrap styles and scripts libraries.
   - vartheme_bs4/bootstrap-styles
-  - vartheme_bs4/bootstrap-override-styles
   - vartheme_bs4/bootstrap-scripts
-# vartheme_bs4 styles libraries.
-  - vartheme_bs4/varbase_bs4-styles
+# vartheme_bs4 styles and scripts libraries.
+  - vartheme_bs4/vartheme_bs4-styles
+  - vartheme_bs4/vartheme_bs4-scripts
 # Global styles and scripts libraries.
   - vartheme_bs4/global-styles
   - vartheme_bs4/global-scripts
+#Icons
+  #- vartheme_bs4/material_design_icons
+  #- vartheme_bs4/fontawesome
 
 libraries-override:
+  #barrio theme
   bootstrap_barrio/global-styling: false
-  bootstrap_barrio/form: false
-  vbp_text_and_image/vbp_text_and_image_default: vartheme_bs4/vbp_text_and_image_default
+  bootstrap_barrio/messages_dark: false
+  bootstrap_barrio/messages_light: false
+  #barrio fonts
+  bootstrap_barrio/monserrat_lato: false
+  bootstrap_barrio/vollkorn_exo: false
+  bootstrap_barrio/philosopher_muli: false
+  bootstrap_barrio/coustard_leckerli: false
+  bootstrap_barrio/fjalla_cantarell: false
+  bootstrap_barrio/medula_abel: false
+  bootstrap_barrio/lato_hotel: false
+  bootstrap_barrio/dosis_opensans: false
+  bootstrap_barrio/playfair_alice: false
+  bootstrap_barrio/oswald_droid: false
+  bootstrap_barrio/amatic_josefin: false
+  bootstrap_barrio/dancing_garamond: false
+  bootstrap_barrio/alegreya_roboto: false
+  bootstrap_barrio/roboto: false
+  #barrio components
+  bootstrap_barrio/verticaltabs: vartheme_bs4/verticaltabs
+  bootstrap_barrio/tabs: vartheme_bs4/tabs
+  bootstrap_barrio/sidebar-collapse: vartheme_bs4/sidebar-collapse
+  bootstrap_barrio/node: vartheme_bs4/node
+  bootstrap_barrio/maintenance_page: vartheme_bs4/maintenance_page
+  bootstrap_barrio/indented: vartheme_bs4/indented
+  bootstrap_barrio/form: vartheme_bs4/form
+  bootstrap_barrio/file: vartheme_bs4/file
+  bootstrap_barrio/dropbutton: vartheme_bs4/dropbutton
+  bootstrap_barrio/book-navigation: vartheme_bs4/book-navigation
+  bootstrap_barrio/affix: vartheme_bs4/affix
+
+  #varbase overrides
+  varbase_bootstrap_paragraphs/vbp-colors:
+    css:
+      theme:
+        css/theme/vbp-colors.theme.css: css/theme/vbp-colors.theme.css
+  vbp_text_and_image/vbp_text_and_image_default:
+    css:
+      layout:
+        css/layout/vbp_text_and_image_default.layout.css: css/layout/vbp_text_and_image_default.layout.css
   varbase_media/varbase_video_player:
     css:
       theme:

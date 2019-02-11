@@ -11,12 +11,12 @@ framework:
   js: {}
   dependencies:
     - core/jquery
-    - vartheme_bs4/bootstrap-styles
-    - vartheme_bs4/bootstrap-override-styles
-    - vartheme_bs4/bootstrap-scripts
-    - vartheme_bs4/varbase_bs4-styles
-    - vartheme_bs4/global-styles
-    - vartheme_bs4/global-scripts
+    - VARTHEME_BS4_SUBTHEME/bootstrap-styles
+    - VARTHEME_BS4_SUBTHEME/bootstrap-scripts
+    - VARTHEME_BS4_SUBTHEME/vartheme_bs4-styles
+    - VARTHEME_BS4_SUBTHEME/vartheme_bs4-scripts
+    - VARTHEME_BS4_SUBTHEME/global-styles
+    - VARTHEME_BS4_SUBTHEME/global-scripts
 
 # Vartheme framework RTL as which could be used to extend bootstrap/framework
 #          vartheme/framework-rtl = vartheme_bs4/bootstrap-styles-rtl
@@ -27,37 +27,15 @@ framework-rtl:
   js: {}
   dependencies:
     - core/jquery
-    - vartheme_bs4/bootstrap-styles-rtl
-    - vartheme_bs4/global-styles-rtl
+    - VARTHEME_BS4_SUBTHEME/bootstrap-styles-rtl
+    - VARTHEME_BS4_SUBTHEME/global-styles-rtl
 
 # Bootstrap global styles library.
 bootstrap-styles:
   css:
     base:
       css/base/bootstrap.base.css: {}
-
-# Bootstrap global styles RTL library.
-bootstrap-styles-rtl:
-  css:
-    base:
-      css/rtl/base/bootstrap-rtl.base.css: {}
-
-# bootstrap scripts library.
-bootstrap-scripts:
-  js:
-    js/popper.min.js: {}
-    js/bootstrap.min.js: {}
-  dependencies:
-    - core/jquery
-    - core/drupal
-
-# Bootstrap global styles library.
-bootstrap-override-styles:
-  css:
     component:
-      css/components/bs-callouts.component.css: {}
-      css/components/vb-tags.component.css: {}
-      css/components/navbar.admin.component.css: {}
       css/components/affix.component.css: {}
       css/components/alerts.component.css: {}
       css/components/book-navigation.component.css: {}
@@ -79,11 +57,8 @@ bootstrap-override-styles:
       css/components/item-list.component.css: {}
       css/components/list-group.component.css: {}
       css/components/node-preview.component.css: {}
-      css/components/navbar.component.css: {}
       css/components/node.component.css: {}
       css/components/page.component.css: {}
-      css/components/panel.component.css: {}
-      css/components/progress-bar.component.css: {}
       css/components/search-form.component.css: {}
       css/components/shortcut.component.css: {}
       css/components/sidebar-collapse.component.css: {}
@@ -102,31 +77,58 @@ bootstrap-override-styles:
       css/components/user.component.css: {}
       css/components/vertical-tabs.component.css: {}
       css/components/views.component.css: {}
-      css/components/toolbar.component.css: {}
-      css/components/autocomplete.component.css: {}
-#Vartheme componenets
-      css/components/ajax.component.css: {}
-      #css/components/filter.component.css: {}
+
+# Bootstrap global styles RTL library.
+bootstrap-styles-rtl:
+  css:
+    base:
+      css/rtl/base/bootstrap-rtl.base.css: {}
+
+# bootstrap scripts library.
+bootstrap-scripts:
+  js:
+    js/popper.min.js: {}
+    js/bootstrap.min.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
 
 # Varbase styles library.
-varbase_bs4-styles:
+vartheme_bs4-styles:
   css:
-    theme:
-      css/theme/betterlogin.theme.css: {}
-      css/theme/varbase-video-player.theme.css: {}
-      css/theme/vbp-colors.theme.css: {}
+    component:
+      css/components/ajax.component.css: {}
+      css/components/autocomplete.component.css: {}
+      css/components/bs-callouts.component.css: {}
+      css/components/navbar.admin.component.css: {}
+      css/components/navbar.component.css: {}
+      css/components/progress-bar.component.css: {}
+      css/components/varicons.component.css: {}
+      css/components/vb-tags.component.css: {}
     layout:
       css/layout/aliases.layout.css: {}
       css/layout/edge2edge.layout.css: {}
-      css/layout/print.layout.css: {}
       css/layout/spacing.layout.css: {}
       css/layout/vbp_text_and_image_default.layout.css: {}
+    theme:
+      css/theme/betterlogin.theme.css: {}
+
+# Varbase styles library.
+vartheme_bs4-scripts:
+  js:
+   js/attributes.js: {}
+   js/theme.js: {}
+   js/misc/ajax.js: {}
+  dependencies:
+    - core/jquery
 
 # Vartheme global styles library.
 global-styles:
   css:
     base:
       css/base/vartheme_bs4.base.css: {}
+    layout:
+      css/layout/print.layout.css: {}
     theme:
       css/theme/header.theme.css: {}
       css/theme/content.theme.css: {}
@@ -153,3 +155,15 @@ global-scripts:
   dependencies:
     - core/jquery
     - core/drupal
+
+# icons
+
+material_design_icons:
+  css:
+    component:
+      //fonts.googleapis.com/icon?family=Material+Icons: {}
+
+fontawesome:
+  css:
+    component:
+      //use.fontawesome.com/releases/v5.0.13/css/all.css: {}

@@ -1,32 +1,21 @@
 /* VARIABLES */
-@keyframes glyphicon-adjust-hue {
-  0% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(359deg); } }
+.js-form-managed-file {
+  position: relative; }
+  .js-form-managed-file input[type='file'] + .varicon {
+    position: absolute;
+    top: 50%;
+    right: 6px;
+    transform: translateY(-50%); }
 
-.glyphicon-adjust-hue {
-  display: inline-block;
-  animation: glyphicon-adjust-hue 1s infinite linear; }
+.throbber-added {
+  position: relative;
+  padding-right: 50px;
+  position: relative; }
 
-a .glyphicon-adjust-hue {
-  display: inline-block;
-  text-decoration: none; }
-
-html.js .btn .ajax-throbber {
-  margin-left: .5em;
-  margin-right: -.25em; }
-
-html.js .form-item .input-group-addon .glyphicon {
-  color: #777777;
-  opacity: .5;
-  transition: 150ms color, 150ms opacity; }
-  html.js .form-item .input-group-addon .glyphicon.glyphicon-adjust-hue {
-    color: #0079C0;
-    opacity: 1; }
-
-html.js .form-item .input-group-addon .input-group-addon {
-  background-color: white; }
-
-html.js .ajax-new-content:empty {
-  display: none !important; }
+.btn .ajax-throbber {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%); }
+  .btn .ajax-throbber::before {
+    background-image: url("../../images/icons/refresh-white.svg") !important; }

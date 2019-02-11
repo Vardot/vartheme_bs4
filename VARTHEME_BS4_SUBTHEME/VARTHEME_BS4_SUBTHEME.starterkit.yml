@@ -8,32 +8,131 @@ base theme: vartheme_bs4
 libraries:
 # Bootstrap styles and scripts libraries.
   - VARTHEME_BS4_SUBTHEME/bootstrap-styles
-  - VARTHEME_BS4_SUBTHEME/bootstrap-override-styles
   - VARTHEME_BS4_SUBTHEME/bootstrap-scripts
-# vartheme_bs4 styles libraries.
-  - VARTHEME_BS4_SUBTHEME/varbase_bs4-styles
+# vartheme_bs4 styles and scripts libraries.
+  - VARTHEME_BS4_SUBTHEME/vartheme_bs4-styles
+  - VARTHEME_BS4_SUBTHEME/vartheme_bs4-scripts
 # Global styles and scripts libraries.
   - VARTHEME_BS4_SUBTHEME/global-styles
   - VARTHEME_BS4_SUBTHEME/global-scripts
+#Icons
+  #- vartheme_bs4/material_design_icons
+  #- vartheme_bs4/fontawesome
 
 libraries-override:
-  bootstrap_barrio/global-styling: false
-  bootstrap_barrio/form: false
-  vartheme_bs4/bootstrap-styles: false
-  vartheme_bs4/bootstrap-override-styles: false
-  vartheme_bs4/bootstrap-scripts: false
-  vartheme_bs4/varbase_bs4-styles: false
-  vartheme_bs4/global-styling: false
-  vartheme_bs4/global-scripts: false
-  vbp_text_and_image/vbp_text_and_image_default: vartheme_bs4/vbp_text_and_image_default
-  varbase_media/varbase_video_player:
+  #barrio theme
+  varbase_bs4/global-styling: false
+  varbase_bs4/global-scripts: false
+  varbase_bs4/bootstrap-styles: false
+
+  varbase_bs4/vartheme_bs4-styles:
+    css:
+      component:
+        #css/components/ajax.component.css: css/components/ajax.component.css
+        #css/components/autocomplete.component.css: css/components/autocomplete.component.css:
+        css/components/bs-callouts.component.css: css/components/bs-callouts.component.css
+        #css/components/navbar.admin.component.css: css/components/navbar.admin.component.css
+        #css/components/navbar.component.css: css/components/navbar.component.css
+        #css/components/progress-bar.component.css: css/components/progress-bar.component.css
+        #css/components/varicons.component.css: css/components/varicons.component.css
+        css/components/vb-tags.component.css: css/components/vb-tags.component.css
+      layout:
+        #css/layout/edge2edge.layout.css: css/layout/edge2edge.layout.css
+        #css/layout/spacing.layout.css: css/layout/spacing.layout.css
+      theme:
+        css/theme/betterlogin.theme.css: {}
+  #vartheme_bs4 components
+
+  # vartheme_bs4/affix:
+  #   js:
+  #     js/affix.js: js/affix.js
+  #   css:
+  #     component:
+  #       css/components/affix.css: css/components/affix.css
+
+  # vartheme_bs4/book-navigation:
+  #   css:
+  #     component:
+  #       css/components/book-navigation.css: css/components/book-navigation.css
+
+  vartheme_bs4/breadcrumb:
+    css:
+      component:
+        css/components/breadcrumb.css: css/components/breadcrumb.css
+
+  # vartheme_bs4/dropbutton:
+  #   css:
+  #     component:
+  #       css/components/dropbutton.component.css: css/components/dropbutton.component.css
+  #       css/components/dropbutton.css: css/components/dropbutton.css
+
+  # vartheme_bs4/file:
+  #   css:
+  #     component:
+  #       css/components/file.css: css/components/file.css
+
+  # vartheme_bs4/form:
+  #   css:
+  #     component:
+  #       css/components/form.css: css/components/form.css
+
+  # vartheme_bs4/indented:
+  #   css:
+  #     component:
+  #       css/components/indented.css: css/components/indented.css
+
+  vartheme_bs4/maintenance_page:
     css:
       theme:
-        css/theme/varbase-video-player.theme.css: css/theme/varbase-video-player.theme.css
-  varbase_heroslider_media/general-styling:
+        css/maintenance-page.css: css/maintenance-page.css
+    dependencies:
+      - system/maintenance
+      - varbase_bs4/global-styling
+
+  # vartheme_bs4/node:
+  #   css:
+  #     component:
+  #       css/components/node.css: css/components/node.css
+
+  # vartheme_bs4/sidebar-collapse:
+  #   js:
+  #     js/sidebar-collapse.js: js/sidebar-collapse.js
+  #   css:
+  #     component:
+  #       css/components/sidebar-collapse.css: css/components/sidebar-collapse.css
+
+  # vartheme_bs4/tabs:
+  #   css:
+  #     component:
+  #       css/components/tabs.css: css/components/tabs.css
+
+  # vartheme_bs4/verticaltabs:
+  #   css:
+  #     component:
+  #       css/components/vertical-tabs.css: css/components/vertical-tabs.css
+
+
+  #varbase overrides
+  varbase_bootstrap_paragraphs/vbp-colors:
     css:
       theme:
-        css/theme/varbase-heroslider-media.theme.css: css/theme/varbase-heroslider-media.theme.css
+        css/theme/vbp-colors.theme.css: css/theme/vbp-colors.theme.css
+
+  vbp_text_and_image/vbp_text_and_image_default:
+    css:
+      layout:
+        css/layout/vbp_text_and_image_default.layout.css: css/layout/vbp_text_and_image_default.layout.css
+
+  # varbase_media/varbase_video_player:
+  #   css:
+  #     theme:
+  #       css/theme/varbase-video-player.theme.css: css/theme/varbase-video-player.theme.css
+
+  # varbase_heroslider_media/general-styling:
+  #   css:
+  #     theme:
+  #       css/theme/varbase-heroslider-media.theme.css: css/theme/varbase-heroslider-media.theme.css
+
 
 regions:
   navigation: 'Navigation'

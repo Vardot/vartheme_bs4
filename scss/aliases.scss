@@ -1,22 +1,20 @@
-// no-margin and no-padding and no-spacing
 .pull-right{
-  float: right !important;
+  @extend .float-right;
 }
 
 .pull-left{
-  float: left !important;
+  @extend .float-left;
 }
 
 [dir="rtl"] {
   .pull-right{
-    float: left !important;
+    @extend .float-left;
   }
 
   .pull-left{
-    float: right !important;
+    @extend .float-right;
   }
 }
-
 .img-responsive{
   @extend .img-fluid;
 }
@@ -43,6 +41,8 @@ blockquote{
     @extend .p-2;
   }
 }
+
+// no-margin and no-padding and no-spacing
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
