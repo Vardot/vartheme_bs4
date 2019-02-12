@@ -16,8 +16,10 @@ libraries:
   - VARTHEME_BS4_SUBTHEME/global-styles
   - VARTHEME_BS4_SUBTHEME/global-scripts
 #Icons
-  #- vartheme_bs4/material_design_icons
-  #- vartheme_bs4/fontawesome
+  #- VARTHEME_BS4_SUBTHEME/material_design_icons
+  #- VARTHEME_BS4_SUBTHEME/fontawesome
+# Fonts
+  #- VARTHEME_BS4_SUBTHEME/roboto   
 
 libraries-override:
   #barrio theme

@@ -15,30 +15,15 @@ libraries:
 # Global styles and scripts libraries.
   - vartheme_bs4/global-styles
   - vartheme_bs4/global-scripts
-#Icons
+# Icons
   #- vartheme_bs4/material_design_icons
   #- vartheme_bs4/fontawesome
+# Fonts
+  #- vartheme_bs4/roboto
 
 libraries-override:
   #barrio theme
   bootstrap_barrio/global-styling: false
-  bootstrap_barrio/messages_dark: false
-  bootstrap_barrio/messages_light: false
-  #barrio fonts
-  bootstrap_barrio/monserrat_lato: false
-  bootstrap_barrio/vollkorn_exo: false
-  bootstrap_barrio/philosopher_muli: false
-  bootstrap_barrio/coustard_leckerli: false
-  bootstrap_barrio/fjalla_cantarell: false
-  bootstrap_barrio/medula_abel: false
-  bootstrap_barrio/lato_hotel: false
-  bootstrap_barrio/dosis_opensans: false
-  bootstrap_barrio/playfair_alice: false
-  bootstrap_barrio/oswald_droid: false
-  bootstrap_barrio/amatic_josefin: false
-  bootstrap_barrio/dancing_garamond: false
-  bootstrap_barrio/alegreya_roboto: false
-  bootstrap_barrio/roboto: false
   #barrio components
   bootstrap_barrio/verticaltabs: vartheme_bs4/verticaltabs
   bootstrap_barrio/tabs: vartheme_bs4/tabs

@@ -22,13 +22,13 @@ framework:
 #          vartheme/framework-rtl = vartheme_bs4/bootstrap-styles-rtl
 #                                 + vartheme_bs4/global-styles-rtl
 
-framework-rtl:
-  css: {}
-  js: {}
-  dependencies:
-    - core/jquery
-    - VARTHEME_BS4_SUBTHEME/bootstrap-styles-rtl
-    - VARTHEME_BS4_SUBTHEME/global-styles-rtl
+# framework-rtl:
+#   css: {}
+#   js: {}
+#   dependencies:
+#     - core/jquery
+#     - VARTHEME_BS4_SUBTHEME/bootstrap-styles-rtl
+#     - VARTHEME_BS4_SUBTHEME/global-styles-rtl
 
 # Bootstrap global styles library.
 bootstrap-styles:
@@ -78,11 +78,11 @@ bootstrap-styles:
       css/components/vertical-tabs.component.css: {}
       css/components/views.component.css: {}
 
-# Bootstrap global styles RTL library.
-bootstrap-styles-rtl:
-  css:
-    base:
-      css/rtl/base/bootstrap-rtl.base.css: {}
+# # Bootstrap global styles RTL library.
+# bootstrap-styles-rtl:
+#   css:
+#     base:
+#       css/rtl/base/bootstrap-rtl.base.css: {}
 
 # bootstrap scripts library.
 bootstrap-scripts:
@@ -126,7 +126,7 @@ vartheme_bs4-scripts:
 global-styles:
   css:
     base:
-      css/base/vartheme_bs4.base.css: {}
+      css/base/VARTHEME_BS4_SUBTHEME.base.css: {}
     layout:
       css/layout/print.layout.css: {}
     theme:
@@ -136,17 +136,17 @@ global-styles:
   dependencies:
     - core/jquery
 
-# Vartheme global (RTL) styles library.
-global-styles-rtl:
-  css:
-    base:
-      css/rtl/base/vartheme_bs4-rtl.base.css: {}
-    theme:
-      css/rtl/theme/header-rtl.theme.css: {}
-      css/rtl/theme/content-rtl.theme.css: {}
-      css/rtl/theme/footer-rtl.theme.css: {}
-  dependencies:
-    - core/jquery
+# # Vartheme global (RTL) styles library.
+# global-styles-rtl:
+#   css:
+#     base:
+#       css/rtl/base/VARTHEME_BS4_SUBTHEME-rtl.base.css: {}
+#     theme:
+#       css/rtl/theme/header-rtl.theme.css: {}
+#       css/rtl/theme/content-rtl.theme.css: {}
+#       css/rtl/theme/footer-rtl.theme.css: {}
+#   dependencies:
+#     - core/jquery
 
 # Vartheme global scripts library.
 global-scripts:
@@ -155,6 +155,14 @@ global-scripts:
   dependencies:
     - core/jquery
     - core/drupal
+
+# Fonts
+
+roboto:
+  css:
+    component:
+      fonts/roboto.css: {}
+      //fonts.googleapis.com/css?family=Roboto|Roboto+Condensed:700: {}
 
 # icons
 
