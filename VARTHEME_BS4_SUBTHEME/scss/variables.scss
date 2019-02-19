@@ -58,6 +58,7 @@ $comment-spacer-y: 1.25em;
 $navbar-height: 50px;
 
 //font sizes
+$enable-responsive-font-sizes: true;
 $font-size-base: 0.9rem;
 $font-size-large:         ceil(($font-size-base * 1.25)); // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)); // ~12px

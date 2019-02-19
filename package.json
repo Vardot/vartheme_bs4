@@ -15,7 +15,7 @@
     "author": "waleedq",
     "license": "MIT",
     "dependencies": {
-        "bootstrap": "~4.2.0",
+        "bootstrap": "^4.2.0",
         "popper.js": "^1.14.6"
     },
     "devDependencies": {
