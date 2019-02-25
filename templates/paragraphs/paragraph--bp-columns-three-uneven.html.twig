@@ -143,7 +143,7 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
   {% if add_container %}<div class="container">{% endif %}
     <div class="row">
       <div class="{{- VBP.bp_width.value -}}">
-        {% if paragraph_title and paragraph_title_status %}<h2 class="text-center">{{- paragraph_title -}}</h2>{% endif %}
+        {% if paragraph_title and paragraph_title_status %}<h2 class="text-center">{{- paragraph_title|striptags -}}</h2>{% endif %}
         <div class="row">
           {% for key, item in content.bp_column_content_3 if key|first != '#' %}
             {% set attributes = attributes.removeClass('bg-edge2edge') %}
