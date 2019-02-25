@@ -805,6 +805,6 @@ pre {
 // Fixed hidden tour list group as bootstrap base is forcing list group to flex.
 #tour {
   &.hidden.list-group {
-    display: none
+    display: none;
   }
 }

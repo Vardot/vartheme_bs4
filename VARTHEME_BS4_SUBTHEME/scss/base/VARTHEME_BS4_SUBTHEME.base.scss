@@ -801,3 +801,10 @@ pre {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+// Fixed hidden tour list group as bootstrap base is forcing list group to flex.
+#tour {
+  &.hidden.list-group {
+    display: none;
+  }
+}
