@@ -22,7 +22,6 @@ const paths = {
 // Compile sass into CSS & auto-inject into browsers
 function styles () {
   return gulp.src([paths.scss.bootstrap, paths.scss.src])
-    .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([autoprefixer({
       browsers: [
@@ -36,7 +35,6 @@ function styles () {
         'Android >= 4',
         'Opera >= 12']
     })]))
-    .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.scss.dest))
     .pipe(browserSync.stream())
 }
