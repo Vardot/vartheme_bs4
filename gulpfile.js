@@ -26,7 +26,7 @@ gulp.task('js', function() {
 gulp.task('serve', gulp.series('sass', function() {
 
     browserSync.init({
-        proxy: "http://127.0.0.1:8080/varbase-demo/docroot/",
+        proxy: 'http://yourdomain.com',
     });
 
     gulp.watch(['node_modules/bootstrap/scss/bootstrap.scss', 'scss/*.scss'], gulp.series('sass'));
