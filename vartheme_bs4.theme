@@ -47,7 +47,7 @@ function vartheme_bs4_theme_suggestions_page_alter(array &$suggestions, array $v
 }
 
 /**
- * Implements hoo_preprocess_page_title
+ * Implements hook_preprocess_page_title().
  */
 function vartheme_bs4_preprocess_page_title(&$variables) {
 
@@ -58,6 +58,9 @@ function vartheme_bs4_preprocess_page_title(&$variables) {
   }
 }
 
+/**
+ * Implements hook_preprocess_html().
+ */
 function vartheme_bs4_preprocess_html(&$variables) {
   // Add information about the number of sidebars.
   if (theme_get_setting('bootstrap_barrio_navbar_position')) {
