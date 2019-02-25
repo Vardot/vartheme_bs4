@@ -46,6 +46,17 @@ function vartheme_bs4_theme_suggestions_page_alter(array &$suggestions, array $v
   }
 }
 
+/**
+ * Implements hoo_preprocess_page_title
+ */
+function vartheme_bs4_preprocess_page_title(&$variables) {
+
+  // Hide page title for the front page and let screen readers only see it.
+  if(\Drupal::service('path.matcher')->isFrontPage()) {
+    $variables['title_attributes']['class'][] = 'page-title';
+    $variables['title_attributes']['class'][] = 'sr-only';
+  }
+}
 
 function vartheme_bs4_preprocess_html(&$variables) {
   // Add information about the number of sidebars.
