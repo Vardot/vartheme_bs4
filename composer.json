@@ -1,10 +1,47 @@
 {
-    "name": "drupal/vartheme_bs4",
-    "type": "drupal-theme",
-    "description": "Vartheme bootstrap 4 Theme.",
-    "homepage": "http://drupal.org/project/vartheme_bs4",
-    "license": "GPL-2.0+",
-    "require": {
-        "drupal/bootstrap_barrio": "^4.8.0"
+  "name": "drupal/vartheme_bs4",
+  "description": "A SASS base theme for Varbase standard websites. Based on Barrio (Bootstrap 4) theme.",
+  "type": "drupal-theme",
+  "homepage": "https://www.drupal.org/project/vartheme",
+  "license": "GPL-2.0-or-later",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Vardot",
+      "homepage": "https://www.drupal.org/vardot",
+      "role": "Maintainer"
     }
+  ],
+  "support": {
+    "issues": "http://drupal.org/project/issues/vartheme_bs4",
+    "source": "http://cgit.drupalcode.org/vartheme_bs4"
+  },
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+      },
+    "assets": {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  },
+  "require": {
+    "composer/installers": "~1.0",
+    "oomphinc/composer-installers-extender": "~1.0",
+    "cweagans/composer-patches": "~1.0",
+    "drupal/drupal-library-installer-plugin": "^0.3",
+    "drupal/bootstrap_barrio": "~4.0"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-8.x-6.x": "8.6.x-dev"
+    },
+    "installer-types": [
+      "bower-asset",
+      "npm-asset"
+    ],
+    "enable-patching": true,
+    "composer-exit-on-patch-failure": true
+  }
 }
