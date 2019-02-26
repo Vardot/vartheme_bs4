@@ -1,7 +1,3 @@
-/**
- * @file
- * Visual styles for Bartik's dropbutton component.
- */
 .js .dropbutton-wrapper .dropbutton-widget {
   /* This is required to win over specifity of .js td .dropbutton-widget */
   position: relative; }
@@ -59,10 +55,6 @@
   background: #dedede;
   border-bottom: 0 none; }
 
-/**
- * @file
- * General styles for dropbuttons.
- */
 .js .dropbutton-widget {
   background-color: white;
   border: 1px solid #cccccc; }

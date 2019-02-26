@@ -14,8 +14,9 @@
     "author": "Vardot",
     "license": "GPL-2.0",
     "dependencies": {
-        "bootstrap": "^4.2.0",
-        "popper.js": "^1.14.6"
+        "bootstrap": "^4.3.1",
+        "jquery": "^3.3.1",
+        "popper.js": "^1.14.3"
     },
     "devDependencies": {
         "browser-sync": "^2.24.7",

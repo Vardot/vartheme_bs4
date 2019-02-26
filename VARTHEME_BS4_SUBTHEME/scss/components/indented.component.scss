@@ -1,25 +1,21 @@
-/**
- * @file
- * Basic styling for comment module.
- */
+// Basic styling for comment module.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/variables";  // Bootstrap variables.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // VARTHEME_BS4_SUBTHEME variables.
+@import "../mixins";                      // VARTHEME_BS4_SUBTHEME mixins.
+@import "../typography";                  // VARTHEME_BS4_SUBTHEME typography.
+// -----------------------------------------------------------------------------
 
- @import "../../node_modules/bootstrap/scss/functions";  // Bootstrap variables.
- @import "../../node_modules/bootstrap/scss/variables";  // Bootstrap variables.
- @import "../../node_modules/bootstrap/scss/mixins";  // Bootstrap variables.
- @import "../variables";                              // Vartheme variables.
- @import "../mixins";                               // Vartheme mixins.
- @import "../typography";                           // Vartheme typography.
-
-/**
- * Indent threaded comments.
- */
+// Indent threaded comments.
 
 .indented {
-    margin-left: ($spacer * 1.5);
-    /* LTR */
+  margin-left: ($spacer * 1.5);
+  /* LTR */
 }
 
 [dir="rtl"] .indented {
-    margin-left: 0;
-    margin-right: ($spacer * 1.5);
+  margin-left: 0;
+  margin-right: ($spacer * 1.5);
 }

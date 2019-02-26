@@ -1,12 +1,15 @@
-// // Vartheme (RTL) base, which Bootstrap (RTL) overrides.
-// // -----------------------------------------------------------------------------
-// @import "../../../node_modules/bootstrap/scss/variables";  // Bootstrap variables.
-// @import "../../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
-// @import "../../variables";                    // Vartheme variables.
-// @import "../../mixins";                       // Vartheme mixins.
-//
-// // Insert your Bootstrap (RTL) overrides for bootstrap-rtl library.
-//
+// Vartheme (RTL) base, which Bootstrap (RTL) overrides.
+// -----------------------------------------------------------------------------
+@import "../../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../../node_modules/bootstrap/scss/variables";  // Bootstrap variables.
+@import "../../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../../variables";                // VARTHEME_BS4_SUBTHEME variables.
+@import "../../mixins";                   // VARTHEME_BS4_SUBTHEME mixins.
+@import "../../typography";               // VARTHEME_BS4_SUBTHEME typography.
+// -----------------------------------------------------------------------------
+
+// Insert your Bootstrap (RTL) overrides for bootstrap-rtl library.
+
 // Justify content center.
 [dir="rtl"] .justify-content-center {
   &.nav-pills > li + li {

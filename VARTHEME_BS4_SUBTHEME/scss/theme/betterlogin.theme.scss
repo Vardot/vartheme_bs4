@@ -1,16 +1,15 @@
-// Vartheme Better Login styling.
+// VARTHEME_BS4_SUBTHEME Better Login styling.
 // -----------------------------------------------------------------------------
-@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap variables.
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
 @import "../../node_modules/bootstrap/scss/variables";  // Bootstrap variables.
-@import "../../node_modules/bootstrap/scss/mixins";  // Bootstrap variables.
-@import "../variables";                              // Vartheme variables.
-@import "../mixins";                               // Vartheme mixins.
-@import "../typography";                           // Vartheme typography.
-
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // VARTHEME_BS4_SUBTHEME variables.
+@import "../mixins";                      // VARTHEME_BS4_SUBTHEME mixins.
+@import "../typography";                  // VARTHEME_BS4_SUBTHEME typography.
 // -----------------------------------------------------------------------------
 
 #auth-box {
-  padding: $navbar-height 0 0;
+  padding: $navbar-brand-height 0 0;
 
   h1 {
     &#the-logo {
@@ -31,7 +30,7 @@
     background: $body-bg;
     padding: 15px;
     overflow: hidden;
-    box-shadow: 0 0 3px 1px $popover-fallback-border-color;
+    box-shadow: 0 0 3px 1px $box-shadow;
   }
 
   .back-link {

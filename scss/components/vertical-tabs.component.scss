@@ -1,16 +1,14 @@
-/**
- * @file
- * Vertical tabs component.
- */
-
- @import "../../node_modules/bootstrap/scss/functions";  // Bootstrap variables.
- @import "../../node_modules/bootstrap/scss/variables";  // Bootstrap variables.
- @import "../../node_modules/bootstrap/scss/mixins";  // Bootstrap variables.
- @import "../variables";                              // Vartheme variables.
- @import "../mixins";                               // Vartheme mixins.
- @import "../typography";                           // Vartheme typography.
+// Vertical tabs component.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions"; // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/variables"; // Bootstrap variables.
+@import "../../node_modules/bootstrap/scss/mixins";    // Bootstrap mixins.
+@import "../variables";                                // Vartheme variables.
+@import "../mixins";                                   // Vartheme mixins.
+@import "../typography";                               // Vartheme typography.
+// -----------------------------------------------------------------------------
  
-/* Vertical Tabs Reset */
+// Vertical Tabs Reset
 .vertical-tabs__menu {
   margin: -1px 0 -1px; /* LTR */
   padding: 0;
@@ -22,95 +20,87 @@
   padding: 0;
 }
 
-/**
- * @file
- * Vertical Tabs.
- */
-
+// Vertical Tabs.
 .vertical-tabs {
-    margin: 0;
-    /* LTR */
-    border: $border-width solid $border-color;
-    display: flex;
-    flex-direction: row;
-    font-size: $font-size-sm;
+  margin: 0;
+  /* LTR */
+  border: $border-width solid $border-color;
+  display: flex;
+  flex-direction: row;
+  font-size: $font-size-sm;
 }
-
 [dir="rtl"] .vertical-tabs {
-    flex-direction: row-reverse;
-    margin-left: 0;
-    margin-right: 0;
+  flex-direction: row-reverse;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .vertical-tabs__menu {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    /* LTR */
-    width: 15em;
-    margin: 0;
-    /* LTR */
-    padding: 0;
-    border-top: $border-width solid $border-color;
-    list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  /* LTR */
+  width: 15em;
+  margin: 0;
+  /* LTR */
+  padding: 0;
+  border-top: $border-width solid $border-color;
+  list-style: none;
 }
-
 [dir="rtl"] .vertical-tabs__menu {
-    margin-left: 0;
-    margin-right: -15em;
+  margin-left: 0;
+  margin-right: -15em;
 }
 
 .vertical-tabs__pane {
-    margin: 0;
-    border: 0;
+  margin: 0;
+  border: 0;
 }
 
 .vertical-tabs__pane>summary {
-    display: none;
+  display: none;
 }
 
 
-/* Layout of each tab. */
-
+// Layout of each tab.
 .vertical-tabs__menu-item {
-    border: $border-width solid $border-color;
-    border-top: 0;
-    background: #eee;
+  border: $border-width solid $border-color;
+  border-top: 0;
+  background: #eee;
 }
 
 .vertical-tabs__menu-item a {
-    display: block;
-    padding: 0.5em 0.6em;
-    text-decoration: none;
+  display: block;
+  padding: 0.5em 0.6em;
+  text-decoration: none;
 }
 
 .vertical-tabs__menu-item a:focus .vertical-tabs__menu-item-title,
 .vertical-tabs__menu-item a:active .vertical-tabs__menu-item-title,
 .vertical-tabs__menu-item a:hover .vertical-tabs__menu-item-title {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .vertical-tabs__menu-item a:hover {
-    outline: $border-width dotted;
+  outline: $border-width dotted;
 }
 
 .vertical-tabs__menu-item.is-selected {
-    border-right-width: 0;
-    /* LTR */
-    background-color: $white;
+  border-right-width: 0;
+  /* LTR */
+  background-color: $white;
 }
-
 [dir="rtl"] .vertical-tabs__menu-item.is-selected {
-    border-left-width: 0;
-    border-right-width: $border-width;
+  border-left-width: 0;
+  border-right-width: $border-width;
 }
 
 .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-item-title {
-    color: $black;
+  color: $black;
 }
 
 .vertical-tabs__menu-item-summary {
-    display: block;
-    margin-bottom: 0;
-    line-height: normal;
+  display: block;
+  margin-bottom: 0;
+  line-height: normal;
 }

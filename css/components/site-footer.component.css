@@ -1,17 +1,11 @@
-/**
- * @file
- * Footer Styling.
- */
 .site-footer {
   padding: 1rem 0; }
   .site-footer .layout-container {
     padding: 0 1rem; }
 
-/* Footer Top Styling. */
 .site-footer__top .content {
   margin-top: 0; }
 
-/* Footer Bottom Styling. */
 .site-footer__bottom .block {
   margin: 0.5rem 0; }
 

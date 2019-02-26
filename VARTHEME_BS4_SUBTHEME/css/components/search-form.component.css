@@ -1,7 +1,3 @@
-/**
- * @file
- * The visual styles for Bootstrap Barrio's search form(s).
- */
 input[type="search"] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }

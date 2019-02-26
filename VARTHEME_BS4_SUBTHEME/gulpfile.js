@@ -7,10 +7,9 @@ let gulp = require('gulp'),
 
 const paths = {
   scss: {
-    src: 'scss/**/*/*.scss',
+    src: 'sass/**/*.scss',
     dest: 'css',
-    watch: 'scss/**/*/*.scss',
-    bootstrap: './node_modules/bootstrap/scss/bootstrap.scss'
+    watch: 'sass/**/*.scss'
   },
   js: {
     bootstrap: './node_modules/bootstrap/dist/js/bootstrap.min.js',
@@ -21,7 +20,7 @@ const paths = {
 
 // Compile sass into CSS & auto-inject into browsers
 function styles () {
-  return gulp.src([paths.scss.bootstrap, paths.scss.src])
+  return gulp.src([paths.scss.src])
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([autoprefixer({
       browsers: [
@@ -52,7 +51,7 @@ function serve () {
 //    proxy: 'http://yourdomain.com',
 //  })
 
-  gulp.watch([paths.scss.watch, paths.scss.bootstrap], styles).on('change', browserSync.reload)
+  gulp.watch([paths.scss.watch], styles).on('change', browserSync.reload)
 }
 
 const build = gulp.series(styles, gulp.parallel(js, serve))

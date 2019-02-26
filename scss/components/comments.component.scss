@@ -1,17 +1,15 @@
-/**
- * @file
- * Visual styles for comments in Bartik.
- */
-
- @import "../../node_modules/bootstrap/scss/functions";  // Bootstrap variables.
- @import "../../node_modules/bootstrap/scss/variables";  // Bootstrap variables.
- @import "../../node_modules/bootstrap/scss/mixins";  // Bootstrap variables.
- @import "../variables";                              // Vartheme variables.
- @import "../mixins";                               // Vartheme mixins.
- @import "../typography";                           // Vartheme typography.
+// Visual styles for comments in Bartik.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions"; // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/variables"; // Bootstrap variables.
+@import "../../node_modules/bootstrap/scss/mixins";    // Bootstrap mixins.
+@import "../variables";                                // Vartheme variables.
+@import "../mixins";                                   // Vartheme mixins.
+@import "../typography";                               // Vartheme typography.
+// -----------------------------------------------------------------------------
  
 
-/* This is required to win over specificity of #content h2 */
+// This is required to win over specificity of #content h2
 
 #content .comment-wrapper h2 {
     margin-bottom: 1em;
@@ -175,11 +173,8 @@
     padding: 5px 5px 5px 2px;
 }
 
-
-/**
- * @todo: unpublished nodes have class .node--unpublished.
- * change this to .comment--unpublished.
- */
+// @todo: unpublished nodes have class .node--unpublished.
+// change this to .comment--unpublished.
 
 .unpublished .comment-text .comment-arrow {
     border-left: 1px solid $accent-light;

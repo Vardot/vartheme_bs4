@@ -1,13 +1,8 @@
-/**
- * @file
- * Default style for file module.
- */
-/* File icons.*/
 .file {
   padding-left: 1.5rem;
   /* LTR */
   display: inline-block;
-  min-height: 0.9rem;
+  min-height: 1rem;
   background-repeat: no-repeat;
   background-position: left center;
   /* LTR */ }

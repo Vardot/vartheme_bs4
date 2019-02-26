@@ -1,23 +1,22 @@
-/**
- * @file
- * The visual styles for Bootstrap Barrio's search form(s).
- */
- @import "../../node_modules/bootstrap/scss/functions";  // Bootstrap variables.
- @import "../../node_modules/bootstrap/scss/variables";  // Bootstrap variables.
- @import "../../node_modules/bootstrap/scss/mixins";  // Bootstrap variables.
- @import "../variables";                              // Vartheme variables.
- @import "../mixins";                               // Vartheme mixins.
- @import "../typography";                           // Vartheme typography.
+// The visual styles for Bootstrap Barrio's search form(s).
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions"; // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/variables"; // Bootstrap variables.
+@import "../../node_modules/bootstrap/scss/mixins";    // Bootstrap mixins.
+@import "../variables";                                // Vartheme variables.
+@import "../mixins";                                   // Vartheme mixins.
+@import "../typography";                               // Vartheme typography.
+// -----------------------------------------------------------------------------
 
 input[type="search"] {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 header #search-block-form {
-    padding: 5px 15px;
-    flex-flow: row wrap;
+  padding: 5px 15px;
+  flex-flow: row wrap;
 }
 
 #search-block-form {
-    display: flex;
+  display: flex;
 }

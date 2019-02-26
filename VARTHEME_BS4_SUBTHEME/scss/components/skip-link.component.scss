@@ -1,31 +1,29 @@
-/**
- * @file
- * Styles for the skip link.
- */
-
- @import "../../node_modules/bootstrap/scss/functions";  // Bootstrap variables.
- @import "../../node_modules/bootstrap/scss/variables";  // Bootstrap variables.
- @import "../../node_modules/bootstrap/scss/mixins";  // Bootstrap variables.
- @import "../variables";                              // Vartheme variables.
- @import "../mixins";                               // Vartheme mixins.
- @import "../typography";                           // Vartheme typography.
+// Styles for the skip link.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/variables";  // Bootstrap variables.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // VARTHEME_BS4_SUBTHEME variables.
+@import "../mixins";                      // VARTHEME_BS4_SUBTHEME mixins.
+@import "../typography";                  // VARTHEME_BS4_SUBTHEME typography.
+// -----------------------------------------------------------------------------
  
 .skip-link {
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    z-index: 50;
-    background: $gray-700;
-    font-size: $font-size-base;
-    line-height: $line-height-lg;
-    padding: 1px $spacer 2px;
-    border-radius: 0 0 $border-radius-lg $border-radius-lg;
-    border-bottom-width: 0;
-    outline: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 50;
+  background: $gray-700;
+  font-size: $font-size-base;
+  line-height: $line-height-lg;
+  padding: 1px $spacer 2px;
+  border-radius: 0 0 $border-radius-lg $border-radius-lg;
+  border-bottom-width: 0;
+  outline: 0;
 }
 
 .skip-link.visually-hidden.focusable:focus {
-    position: absolute !important;
-    color: $white;
+  position: absolute !important;
+  color: $white;
 }

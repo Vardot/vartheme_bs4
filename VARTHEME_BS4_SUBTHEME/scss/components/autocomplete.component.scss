@@ -1,20 +1,19 @@
 // jQuery UI autocomplete widget style overrides.
 // -----------------------------------------------------------------------------
-@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap variables.
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
 @import "../../node_modules/bootstrap/scss/variables";  // Bootstrap variables.
-@import "../../node_modules/bootstrap/scss/mixins";  // Bootstrap variables.
-@import "../variables";                              // Vartheme variables.
-@import "../mixins";                               // Vartheme mixins.
-@import "../typography";                           // Vartheme typography.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // VARTHEME_BS4_SUBTHEME variables.
+@import "../mixins";                      // VARTHEME_BS4_SUBTHEME mixins.
+@import "../typography";                  // VARTHEME_BS4_SUBTHEME typography.
 // -----------------------------------------------------------------------------
 
 // Mimics .dropdown-menu styles.
 .ui-autocomplete {
   background: $dropdown-bg;
   background-clip: padding-box;
-  border: 1px solid $dropdown-fallback-border;
-  border: 1px solid $dropdown-border;
-  border-radius: $border-radius-base;
+  border: $dropdown-border-width solid $dropdown-border-color;
+  border-radius: $dropdown-border-radius;
   box-shadow: 0 6px 12px rgba(0,0,0,.175);
   color: inherit;
   font-family: $font-family-base;

@@ -1,4 +1,3 @@
-/* Varbase Hero slider media style */
 .varbase-heroslider-media .slide__caption .slide__title a {
   color: #fff; }
 
@@ -152,12 +151,3 @@
       font-size: 17pt;
       -webkit-background-size: 100px 100px;
               background-size: 100px; } }
-
-body .hero_slider {
-  color: #fff;
-  margin-bottom: 50px;
-  position: relative;
-  top: 0px; }
-  @media screen and (max-width: 576px) {
-    body .hero_slider {
-      margin-top: 50px; } }

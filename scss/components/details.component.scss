@@ -1,34 +1,32 @@
-/**
- * @file
- * Collapsible details.
- *
- * @see collapse.js
- * @see http://nicolasgallagher.com/css-background-image-hacks/
- */
 
- @import "../../node_modules/bootstrap/scss/functions";  // Bootstrap variables.
- @import "../../node_modules/bootstrap/scss/variables";  // Bootstrap variables.
- @import "../../node_modules/bootstrap/scss/mixins";  // Bootstrap variables.
- @import "../variables";                              // Vartheme variables.
- @import "../mixins";                               // Vartheme mixins.
- @import "../typography";                           // Vartheme typography.
+// Collapsible details.
+// @see collapse.js
+// @see http://nicolasgallagher.com/css-background-image-hacks/
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions"; // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/variables"; // Bootstrap variables.
+@import "../../node_modules/bootstrap/scss/mixins";    // Bootstrap mixins.
+@import "../variables";                                // Vartheme variables.
+@import "../mixins";                                   // Vartheme mixins.
+@import "../typography";                               // Vartheme typography.
+// -----------------------------------------------------------------------------
 
 details {
-    border: 1px solid $border-color;
-    margin-top: $spacer;
-    margin-bottom: $spacer;
+  border: 1px solid $border-color;
+  margin-top: $spacer;
+  margin-bottom: $spacer;
 }
 
 details>.details-wrapper {
-    padding: 0.5em 1.5em;
+  padding: 0.5em 1.5em;
 }
 
 
-/* @todo Regression: The summary of uncollapsible details are no longer
-     vertically aligned with the .details-wrapper in browsers without native
-     details support. */
+// @todo Regression: The summary of uncollapsible details are no longer
+//     vertically aligned with the .details-wrapper in browsers without native
+//     details support.
 
 summary {
-    cursor: pointer;
-    padding: 0.2em 0.5em;
+  cursor: pointer;
+  padding: 0.2em 0.5em;
 }

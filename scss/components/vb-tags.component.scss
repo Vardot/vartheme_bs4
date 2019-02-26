@@ -3,17 +3,14 @@
 // vb-tags: Styles a list of tags, which much looks like the pager with
 //          rounded borders.
 // -----------------------------------------------------------------------------
-@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap variables.
-@import "../../node_modules/bootstrap/scss/variables";  // Bootstrap variables.
-@import "../../node_modules/bootstrap/scss/mixins";  // Bootstrap variables.
-@import "../variables";                              // Vartheme variables.
-@import "../mixins";                               // Vartheme mixins.
-@import "../typography";                           // Vartheme typography.
+@import "../../node_modules/bootstrap/scss/functions"; // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/variables"; // Bootstrap variables.
+@import "../../node_modules/bootstrap/scss/mixins";    // Bootstrap mixins.
+@import "../variables";                                // Vartheme variables.
+@import "../mixins";                                   // Vartheme mixins.
+@import "../typography";                               // Vartheme typography.
 // -----------------------------------------------------------------------------
 
-//
-// Vartheme Bootstrap tags component styling.
-// --------------------------------------------------
 .vb-tags {
   padding-left: 0;
   list-style: none;
@@ -24,22 +21,18 @@
     > span {
       display: inline-block;
       padding: 5px 14px;
-      background-color: $pager-bg;
-      border: 1px solid $pager-border;
-      border-radius: $pager-border-radius;
+      background-color: $pagination-bg;
+      border: $pagination-border-width solid $pagination-border-color;
+      border-radius: $border-radius;
     }
 
     > a:hover,
     > a:focus {
       text-decoration: none;
-      background-color: $pager-hover-bg;
+      background-color: $pagination-hover-bg;
     }
   }
 }
-
-//
-// Vartheme Material Bootstrap tags component RTL styling.
-// --------------------------------------------------
 [dir="rtl"] .vb-tags {
   padding-right: 0;
   padding-left: initial;

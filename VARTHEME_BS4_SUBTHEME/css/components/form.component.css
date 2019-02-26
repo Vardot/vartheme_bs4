@@ -1,7 +1,3 @@
-/**
- * @file
- * Visual styles for Bootstrap Barrio's form components.
- */
 .form-required::after {
   content: '';
   vertical-align: super;

@@ -1,7 +1,7 @@
 .bs-callout {
   padding: 20px;
   margin: 20px 0;
-  border: 1px solid #eeeeee;
+  border: 1px solid #e9ecef;
   border-left-width: 5px;
   border-radius: 3px;
   border-radius: 3px; }
@@ -22,32 +22,32 @@
   margin-top: -5px; }
 
 .bs-callout-danger {
-  border-left-color: #d9534f; }
+  border-left-color: #dc3545; }
   .bs-callout-danger h4 {
-    color: #d9534f; }
+    color: #dc3545; }
 
 .bs-callout-warning {
-  border-left-color: #f0ad4e; }
+  border-left-color: #ffc107; }
   .bs-callout-warning h4 {
-    color: #f0ad4e; }
+    color: #ffc107; }
 
 .bs-callout-info {
-  border-left-color: #5bc0de; }
+  border-left-color: #17a2b8; }
   .bs-callout-info h4 {
-    color: #5bc0de; }
+    color: #17a2b8; }
 
 [dir="rtl"] .bs-callout {
   border-left-width: 1px;
   border-right-width: 5px; }
 
 [dir="rtl"] .bs-callout-danger {
-  border-left-color: #eeeeee;
-  border-right-color: #d9534f; }
+  border-left-color: #e9ecef;
+  border-right-color: #dc3545; }
 
 [dir="rtl"] .bs-callout-warning {
-  border-left-color: #eeeeee;
-  border-right-color: #f0ad4e; }
+  border-left-color: #e9ecef;
+  border-right-color: #ffc107; }
 
 [dir="rtl"] .bs-callout-info {
-  border-left-color: #eeeeee;
-  border-right-color: #5bc0de; }
+  border-left-color: #e9ecef;
+  border-right-color: #17a2b8; }

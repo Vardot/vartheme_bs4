@@ -1,9 +1,3 @@
-/**
- * @file
- * Table select behavior.
- *
- * @see tableselect.js
- */
 tr.selected td {
   background: #ffc; }
 
@@ -13,5 +7,4 @@ th.checkbox {
 
 [dir="rtl"] td.checkbox,
 [dir="rtl"] th.checkbox {
-  /* This is required to win over specificity of [dir="rtl"] td */
   text-align: center; }

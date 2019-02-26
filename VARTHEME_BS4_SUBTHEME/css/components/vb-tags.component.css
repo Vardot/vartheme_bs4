@@ -12,12 +12,12 @@
       display: inline-block;
       padding: 5px 14px;
       background-color: #fff;
-      border: 1px solid #ddd;
-      border-radius: 15px; }
+      border: 1px solid #dee2e6;
+      border-radius: 0.25rem; }
     .vb-tags li > a:hover,
     .vb-tags li > a:focus {
       text-decoration: none;
-      background-color: #eeeeee; }
+      background-color: #e9ecef; }
 
 [dir="rtl"] .vb-tags {
   padding-right: 0;

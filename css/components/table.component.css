@@ -1,12 +1,8 @@
-/**
- * @file
- * Styles for Bootstrap Barrio's tables.
- */
 .sticky-header thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid #ddd; }
+  border-bottom: 2px solid #dee2e6; }
 
 .sticky-header th {
-  padding: 8px;
+  padding: 0.75rem;
   vertical-align: top;
-  border-top: 1px solid #ddd; }
+  border-top: 1px solid #dee2e6; }

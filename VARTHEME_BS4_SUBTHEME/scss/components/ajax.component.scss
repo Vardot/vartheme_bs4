@@ -1,11 +1,11 @@
 // AJAX (throbber) styling.
 // -----------------------------------------------------------------------------
-@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap variables.
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
 @import "../../node_modules/bootstrap/scss/variables";  // Bootstrap variables.
-@import "../../node_modules/bootstrap/scss/mixins";  // Bootstrap variables.
-@import "../variables";                              // Vartheme variables.
-@import "../mixins";                               // Vartheme mixins.
-@import "../typography";                           // Vartheme typography.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // VARTHEME_BS4_SUBTHEME variables.
+@import "../mixins";                      // VARTHEME_BS4_SUBTHEME mixins.
+@import "../typography";                  // VARTHEME_BS4_SUBTHEME typography.
 // -----------------------------------------------------------------------------
 
 .js-form-managed-file {

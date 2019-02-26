@@ -1,12 +1,13 @@
-// Vartheme base, which Bootstrap overrides.
+// VARTHEME_BS4_SUBTHEME base, which Bootstrap overrides.
 // -----------------------------------------------------------------------------
-@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap variables.
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
 @import "../../node_modules/bootstrap/scss/variables";  // Bootstrap variables.
-@import "../../node_modules/bootstrap/scss/mixins";  // Bootstrap variables.
-@import "../variables";                              // Vartheme variables.
-@import "../mixins";                               // Vartheme mixins.
-@import "../typography";                           // Vartheme typography.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // VARTHEME_BS4_SUBTHEME variables.
+@import "../mixins";                      // VARTHEME_BS4_SUBTHEME mixins.
+@import "../typography";                  // VARTHEME_BS4_SUBTHEME typography.
 // -----------------------------------------------------------------------------
+
 
 html {
   &.overlay-open .navbar-fixed-top {
@@ -102,50 +103,6 @@ p:last-child,
   margin-bottom: 0;
 }
 
-// Help region.
-.region-help {
-  > .glyphicon {
-    font-size: $font-size-large;
-    float: left;
-    margin: -0.05em 0.5em 0 0;
-  }
-  .block {
-    overflow: hidden;
-  }
-}
-
-// Search form.
-form#search-block-form {
-  margin: 0;
-}
-
-.navbar #block-search-form {
-  float: none;
-  margin: 5px 0 5px 5px;
-
-  .input-group-btn {
-    width: auto;
-  }
-}
-
-.navbar-search .control-group {
-  margin-bottom:0px;
-}
-
-// Action Links
-ul.action-links {
-  margin: $padding-base-horizontal 0;
-  padding: 0;
-  li {
-    display: inline;
-    margin: 0;
-    padding: 0 $padding-base-vertical 0 0;
-  }
-  .glyphicon {
-    padding-right: 0.5em;
-  }
-}
-
 // Form elements.
 input,
 textarea,
@@ -153,11 +110,6 @@ select,
 .uneditable-input {
   max-width: 100%;
   width: auto;
-}
-
-input.error {
-  color: $state-danger-text;
-  border-color: $state-danger-border;
 }
 
 fieldset legend.panel-heading {
@@ -206,43 +158,12 @@ div.image-widget-data {
   overflow: hidden;
 }
 
-table.sticky-header {
-  z-index: 1;
-}
-
-.resizable-textarea textarea {
-  border-radius: $border-radius-base $border-radius-base 0 0;
-}
-
 .text-format-wrapper {
   // Use same value as .form-group.
   margin-bottom: 15px;
   > .form-type-textarea,
   .filter-wrapper {
     margin-bottom: 0;
-  }
-}
-
-.filter-wrapper {
-  border-radius: 0 0 $border-radius-base $border-radius-base;
-  .panel-body {
-    padding: 7px;
-  }
-  .form-type-select {
-    min-width: 30%;
-    .filter-list {
-      width: 100%;
-    }
-  }
-}
-
-.filter-help {
-  margin-top: 5px;
-  text-align: center;
-
-  .glyphicon {
-    margin: 0 5px 0 0;
-    vertical-align: text-top;
   }
 }
 
@@ -256,13 +177,6 @@ table.sticky-header {
   }
 }
 
-.help-block, .control-group .help-inline {
-  color: $gray-light;
-  font-size: 12px;
-  margin: 5px 0 10px;
-  padding: 0;
-}
-
 .panel-heading {
   display: block;
 }
@@ -270,39 +184,6 @@ table.sticky-header {
 a.tabledrag-handle .handle {
   height: auto;
   width: auto;
-}
-
-// Error containers.
-.error {
-  color: $state-danger-text;
-}
-
-div.error,
-table tr.error {
-  background-color: $state-danger-bg;
-  color: $state-danger-text;
-}
-
-.form-group.error,
-.form-group.has-error {
-  background: none;
-
-  label,
-  .control-label {
-    color: $state-danger-text;
-    font-weight: 600;
-  }
-
-  input,
-  textarea,
-  select,
-  .uneditable-input {
-    color: $input-color;
-  }
-
-  .help-block, .help-inline {
-    color: $text-muted;
-  }
 }
 
 // Lists.
@@ -372,58 +253,6 @@ ul.pagination li > a {
   &.progress-disabled {
     float: left;
   }
-}
-
-// Autocomplete and throbber.
-.form-autocomplete {
-  .glyphicon {
-    color: $gray-light;
-    font-size: 120%;
-
-    &.glyphicon-adjust-hue {
-      color: $brand-primary;
-    }
-  }
-
-  .input-group-addon {
-    background-color: rgb(255, 255, 255);
-  }
-}
-
-// AJAX "Progress bar".
-.ajax-progress-bar {
-  border-radius: 0 0 $border-radius-base $border-radius-base;
-  border: 1px solid $input-group-addon-border-color;
-  margin: -1px 0 0;
-  padding: $padding-base-vertical $padding-base-horizontal;
-  width: 100%;
-
-  .progress {
-    height: 8px;
-    margin: 0;
-  }
-
-  .percentage,
-  .message {
-    color: $text-muted;
-    font-size: $font-size-small;
-    line-height: 1em;
-    margin: 5px 0 0;
-    padding: 0;
-  }
-}
-
-.glyphicon-adjust-hue {
-  display: inline-block;
-  -moz-animation: adjust-hue 1s infinite linear;
-  -o-animation: adjust-hue 1s infinite linear;
-  -webkit-animation: adjust-hue 1s infinite linear;
-  animation: adjust-hue 1s infinite linear;
-}
-
-a .glyphicon-adjust-hue {
-  display: inline-block;
-  text-decoration: none;
 }
 
 @-moz-keyframes adjust-hue {
@@ -556,7 +385,6 @@ td.module,
     @include box-shadow(none);
     border: 0;
     display: block;
-    font-size: $font-size-small;
     margin: 0;
     padding: 0;
     position: static;
@@ -581,16 +409,10 @@ td.module,
 }
 
 fieldset.features-export-component {
-  font-size: $font-size-small;
-
-  html.js #features-export-form &, & {
-    margin: 0 0 ($line-height-computed / 2);
-  }
 
   .panel-heading {
     padding: 5px 10px;
     a.panel-title {
-      font-size: $font-size-small;
       font-weight: 500;
       margin: -5px -10px;
       padding: 5px 10px;
@@ -727,7 +549,6 @@ img {
 
 .modal-content .panels-add-content-modal {
   background: white;
-  border-left: 1px solid $gray-lighter;
   margin-left: 175px;
   padding-left: 0;
 

@@ -1,8 +1,3 @@
-/**
- * @file
- * Theme styling for user module.
- */
-/* Visual styling for the Password strength indicator */
 .password-strength__meter {
   margin-top: 0.5em;
   background-color: #e9ecef; }
@@ -52,7 +47,6 @@
 [dir="rtl"] .password-parent {
   clear: right; }
 
-/* Styling for the status indicator of the passwords match test.  */
 .password-confirm .ok {
   color: #28a745;
   font-weight: bold; }
@@ -61,7 +55,6 @@
   color: #dc3545;
   font-weight: bold; }
 
-/* Login page stype */
 .page-user-login main .region-content,
 .page-user-password main .region-content {
   max-width: 400px;
