@@ -23,11 +23,11 @@ libraries:
 
 libraries-override:
   #barrio theme
-  varbase_bs4/global-styling: false
-  varbase_bs4/global-scripts: false
-  varbase_bs4/bootstrap-styles: false
+  vartheme_bs4/global-styling: false
+  vartheme_bs4/global-scripts: false
+  vartheme_bs4/bootstrap-styles: false
 
-  varbase_bs4/vartheme_bs4-styles:
+  vartheme_bs4/vartheme_bs4-styles:
     css:
       component:
         #css/components/ajax.component.css: css/components/ajax.component.css
@@ -89,7 +89,7 @@ libraries-override:
         css/maintenance-page.css: css/maintenance-page.css
     dependencies:
       - system/maintenance
-      - varbase_bs4/global-styling
+      - vartheme_bs4/global-styling
 
   # vartheme_bs4/node:
   #   css:

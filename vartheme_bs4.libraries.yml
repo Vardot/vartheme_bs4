@@ -2,7 +2,7 @@
 #          vartheme/framework = vartheme_bs4/bootstrap-styles
 #                             + vartheme_bs4/bootstrap-override-styles
 #                             + vartheme_bs4/bootstrap-scripts
-#                             + vartheme_bs4/varbase_bs4-styles
+#                             + vartheme_bs4/vartheme_bs4-styles
 #                             + vartheme_bs4/global-styles
 #                             + vartheme_bs4/global-scripts
 
@@ -198,7 +198,7 @@ maintenance_page:
       css/maintenance-page.css: {}
   dependencies:
     - system/maintenance
-    - varbase_bs4/global-styling
+    - vartheme_bs4/global-styling
 
 node:
   css:
