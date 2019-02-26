@@ -175,7 +175,6 @@ dropbutton:
   css:
     component:
       css/components/dropbutton.component.css: {}
-      css/components/dropbutton.css: { weight: -10 }
 
 file:
   css:
@@ -195,7 +194,7 @@ indented:
 maintenance_page:
   css:
     theme:
-      css/maintenance-page.css: {}
+      css/theme/maintenance-page.css: {}
   dependencies:
     - system/maintenance
     - vartheme_bs4/global-styling
@@ -223,7 +222,6 @@ verticaltabs:
       css/components/vertical-tabs.css: {}
 
 # icons
-
 material_design_icons:
   css:
     component:

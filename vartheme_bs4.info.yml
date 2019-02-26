@@ -1,7 +1,6 @@
-name: Varbase bootstrap 4 theme
+name: 'Vartheme BS4'
 type: theme
-description: 'Varbase bootstrap 4 theme.'
-# version: VERSION
+description: 'Base theme for Vardot standard websites. Based on Bootstrap 4 framework SASS css'
 core: 8.x
 base theme: bootstrap_barrio
 
@@ -22,9 +21,9 @@ libraries:
   #- vartheme_bs4/roboto
 
 libraries-override:
-  #barrio theme
+  # Barrio theme
   bootstrap_barrio/global-styling: false
-  #barrio components
+  # Barrio components
   bootstrap_barrio/verticaltabs: vartheme_bs4/verticaltabs
   bootstrap_barrio/tabs: vartheme_bs4/tabs
   bootstrap_barrio/sidebar-collapse: vartheme_bs4/sidebar-collapse
@@ -37,7 +36,7 @@ libraries-override:
   bootstrap_barrio/book-navigation: vartheme_bs4/book-navigation
   bootstrap_barrio/affix: vartheme_bs4/affix
 
-  #varbase overrides
+  # Varbase module compnents overrides
   varbase_bootstrap_paragraphs/vbp-colors:
     css:
       theme:

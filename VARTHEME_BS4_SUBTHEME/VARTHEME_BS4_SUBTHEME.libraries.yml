@@ -93,7 +93,7 @@ bootstrap-scripts:
     - core/jquery
     - core/drupal
 
-# Varbase styles library.
+# Vartheme styles library.
 vartheme_bs4-styles:
   css:
     component:
@@ -113,7 +113,7 @@ vartheme_bs4-styles:
     theme:
       css/theme/betterlogin.theme.css: {}
 
-# Varbase styles library.
+# Vartheme styles library.
 vartheme_bs4-scripts:
   js:
    js/attributes.js: {}

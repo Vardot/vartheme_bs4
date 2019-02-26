@@ -1,0 +1,99 @@
+// Maintenance page custom style.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions"; // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/variables"; // Bootstrap variables.
+@import "../../node_modules/bootstrap/scss/mixins";    // Bootstrap mixins.
+@import "../variables";                                // Vartheme variables.
+@import "../mixins";                                   // Vartheme mixins.
+@import "../typography";                               // Vartheme typography.
+// -----------------------------------------------------------------------------
+
+body.maintenance-page {
+  background-color: #fff;
+  color: #000;
+}
+
+.maintenance-page {
+
+  #page-wrapper {
+    background: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 0;
+    min-height: 0;
+    border: 1px solid #ddd;
+    margin-top: 40px;
+  }
+
+  #page {
+    margin: 10px;
+  }
+
+  #main-wrapper {
+    min-height: inherit;
+  }
+
+  #header {
+    width: auto;
+  }
+
+  #main {
+    margin: 0;
+  }
+
+  .content .section {
+    padding: 0 0 0 10px; /* LTR */
+  }
+
+  #header {
+    background-color: #fff;
+    background-image: none;
+  }
+
+  .site-branding-text {
+    margin-bottom: 50px;
+    margin-left: 0; /* LTR */
+    padding-top: 20px;
+    font-size: 90%;
+  }
+
+  .site-branding-text,
+  .site-branding-text a,
+  .site-branding-text a:hover,
+  .site-branding-text a:focus {
+    color: #777;
+  }
+
+  .page-title {
+    line-height: 1em;
+    margin-top: 0;
+  }
+
+  @media all and (min-width: 800px) {
+    #page-wrapper {
+      width: 800px;
+    }
+
+    #header div.section,
+    #main {
+      width: 700px;
+    }
+  }
+
+  @media all and (min-width: 600px) { /* @TODO find the proper breakpoint */
+    #page {
+      margin: 20px 40px 40px;
+    }
+  }
+}
+[dir="rtl"] .maintenance-page {
+  .content .section {
+    padding-left: 0;
+    padding-right: 10px;
+  }
+
+  .site-branding-text {
+    margin-right: 0;
+  }
+}
+

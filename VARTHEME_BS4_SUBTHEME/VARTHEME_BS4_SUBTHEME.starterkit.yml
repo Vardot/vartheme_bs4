@@ -1,7 +1,6 @@
-name: Varbase bootstrap 4 subtheme
+name: 'Vartheme BS4 Sub-Theme (SASS)'
 type: theme
-description: 'Varbase bootstrap 4 subtheme.'
-# version: VERSION
+description: 'Uses the Bootstrap 4 framework SASS source files and must be compiled (not for beginners).'
 core: 8.x
 base theme: vartheme_bs4
 
@@ -86,10 +85,10 @@ libraries-override:
   vartheme_bs4/maintenance_page:
     css:
       theme:
-        css/maintenance-page.css: css/maintenance-page.css
+        css/theme/maintenance-page.css: css/theme/maintenance-page.css
     dependencies:
       - system/maintenance
-      - vartheme_bs4/global-styling
+      - VARTHEME_BS4_SUBTHEME/global-styling
 
   # vartheme_bs4/node:
   #   css:
