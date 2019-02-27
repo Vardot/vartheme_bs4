@@ -1,0 +1,4 @@
+# Schema for the configuration files of the Vartheme BS4.
+vartheme_bs4.settings:
+  type: theme_settings
+  label: 'Vartheme BS4 settings'

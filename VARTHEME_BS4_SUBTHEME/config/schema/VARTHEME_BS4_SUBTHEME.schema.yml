@@ -1,5 +1,4 @@
-# Schema for the configuration files of the Bootstrap SASS Subtheme.
-
+# Schema for the configuration files of the VARTHEME_BS4_SUBTHEME.
 VARTHEME_BS4_SUBTHEME.settings:
   type: theme_settings
-  label: 'Vartheme bootstrap 4 subtheme settings'
+  label: 'VARTHEME_BS4_SUBTHEME settings'
