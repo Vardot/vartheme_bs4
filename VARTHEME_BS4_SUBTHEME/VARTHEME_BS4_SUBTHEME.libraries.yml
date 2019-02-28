@@ -150,7 +150,6 @@ global-scripts:
   dependencies:
     - core/jquery
     - core/drupal
-    - vartheme_bs4/global-scripts
 
 
 # VARTHEME_BS4_SUBTHEME Varbase Bootstrap Paragraphs colors theme.
