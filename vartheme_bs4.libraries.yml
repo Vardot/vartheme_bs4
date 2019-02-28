@@ -79,19 +79,19 @@ bootstrap-styles-rtl:
 # Bootstrap scripts library.
 bootstrap-scripts:
   js:
-    js/bootstrap/alert.js: {}
-    js/bootstrap/button.js: {}
-    js/bootstrap/carousel.js: {}
-    js/bootstrap/collapse.js: {}
-    js/bootstrap/dropdown.js: {}
-    js/bootstrap/index.js: {}
-    js/bootstrap/modal.js: {}
-    js/bootstrap/popover.js: {}
-    js/bootstrap/scrollspy.js: {}
-    js/bootstrap/tab.js: {}
-    js/bootstrap/toast.js: {}
-    js/bootstrap/tooltip.js: {}
-    js/bootstrap/util.js: {}
+    js/bootstrap/bootstrap.min.js: {}
+#    js/bootstrap/alert.js: {}
+#    js/bootstrap/button.js: {}
+#    js/bootstrap/carousel.js: {}
+#    js/bootstrap/collapse.js: {}
+#    js/bootstrap/dropdown.js: {}
+#    js/bootstrap/modal.js: {}
+#    js/bootstrap/popover.js: {}
+#    js/bootstrap/scrollspy.js: {}
+#    js/bootstrap/tab.js: {}
+#    js/bootstrap/toast.js: {}
+#    js/bootstrap/tooltip.js: {}
+#    js/bootstrap/util.js: {}
     js/popper/popper.min.js: {}
   dependencies:
     - core/jquery

@@ -17,14 +17,14 @@ const paths = {
       carousel: './node_modules/bootstrap/js/dist/carousel.js',
       collapse: './node_modules/bootstrap/js/dist/collapse.js',
       dropdown: './node_modules/bootstrap/js/dist/dropdown.js',
-      index: './node_modules/bootstrap/js/dist/index.js',
       modal: './node_modules/bootstrap/js/dist/modal.js',
       popover: './node_modules/bootstrap/js/dist/popover.js',
       scrollspy: './node_modules/bootstrap/js/dist/scrollspy.js',
       tab: './node_modules/bootstrap/js/dist/tab.js',
       toast: './node_modules/bootstrap/js/dist/toast.js',
       tooltip: './node_modules/bootstrap/js/dist/tooltip.js',
-      util: './node_modules/bootstrap/js/dist/util.js'
+      util: './node_modules/bootstrap/js/dist/util.js',
+      full_bootstrap: './node_modules/bootstrap/dist/js/bootstrap.min.js'
     },
     bootstrap_dest: './js/bootstrap',
     popper: './node_modules/popper.js/dist/umd/popper.min.js',
@@ -60,14 +60,14 @@ function move_bootstrap_js_files () {
         paths.js.bootstrap.carousel,
         paths.js.bootstrap.collapse,
         paths.js.bootstrap.dropdown,
-        paths.js.bootstrap.index,
         paths.js.bootstrap.modal,
         paths.js.bootstrap.popover,
         paths.js.bootstrap.scrollspy,
         paths.js.bootstrap.tab,
         paths.js.bootstrap.toast,
         paths.js.bootstrap.tooltip,
-        paths.js.bootstrap.util
+        paths.js.bootstrap.util,
+        paths.js.bootstrap.full_bootstrap
      ])
     .pipe(gulp.dest(paths.js.bootstrap_dest))
     .pipe(browserSync.stream())
