@@ -6,13 +6,11 @@
     float: right !important;
     -webkit-box-ordinal-group: 21 !important;
     -webkit-order: 20 !important;
-        -ms-flex-order: 20 !important;
             order: 20 !important; }
   .align2left {
     float: left !important;
     -webkit-box-ordinal-group: 0 !important;
     -webkit-order: -1 !important;
-        -ms-flex-order: -1 !important;
             order: -1 !important; }
   .align2left.wrapper {
     padding-left: 35px; } }
@@ -30,7 +28,6 @@
   height: 100%;
   text-align: left;
   -webkit-align-self: center;
-      -ms-flex-item-align: center;
           align-self: center; }
 
 .wrapper > div {
@@ -42,13 +39,11 @@
     float: left !important;
     -webkit-box-ordinal-group: 0 !important;
     -webkit-order: -1 !important;
-        -ms-flex-order: -1 !important;
             order: -1 !important; }
   [dir="rtl"] .align2left {
     float: right !important;
     -webkit-box-ordinal-group: 21 !important;
     -webkit-order: 20 !important;
-        -ms-flex-order: 20 !important;
             order: 20 !important; } }
 
 [dir="rtl"] .wrapper {

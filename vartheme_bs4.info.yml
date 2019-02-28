@@ -1,58 +1,10 @@
-name: 'Vartheme BS4'
-type: theme
-description: 'Base theme for Vardot standard websites. Based on Bootstrap 4 framework SASS css'
 core: 8.x
+type: theme
 base theme: bootstrap_barrio
 
-libraries:
-# Bootstrap styles and scripts libraries.
-  - vartheme_bs4/bootstrap-styles
-  - vartheme_bs4/bootstrap-scripts
-# vartheme_bs4 styles and scripts libraries.
-  - vartheme_bs4/vartheme_bs4-styles
-  - vartheme_bs4/vartheme_bs4-scripts
-# Global styles and scripts libraries.
-  - vartheme_bs4/global-styles
-  - vartheme_bs4/global-scripts
-# Icons
-  #- vartheme_bs4/material_design_icons
-  #- vartheme_bs4/fontawesome
-# Fonts
-  #- vartheme_bs4/roboto
-
-libraries-override:
-  # Barrio theme
-  bootstrap_barrio/global-styling: false
-  # Barrio components
-  bootstrap_barrio/verticaltabs: vartheme_bs4/verticaltabs
-  bootstrap_barrio/tabs: vartheme_bs4/tabs
-  bootstrap_barrio/sidebar-collapse: vartheme_bs4/sidebar-collapse
-  bootstrap_barrio/node: vartheme_bs4/node
-  bootstrap_barrio/maintenance_page: vartheme_bs4/maintenance_page
-  bootstrap_barrio/indented: vartheme_bs4/indented
-  bootstrap_barrio/form: vartheme_bs4/form
-  bootstrap_barrio/file: vartheme_bs4/file
-  bootstrap_barrio/dropbutton: vartheme_bs4/dropbutton
-  bootstrap_barrio/book-navigation: vartheme_bs4/book-navigation
-  bootstrap_barrio/affix: vartheme_bs4/affix
-
-  # Varbase module compnents overrides
-  varbase_bootstrap_paragraphs/vbp-colors:
-    css:
-      theme:
-        css/theme/vbp-colors.theme.css: css/theme/vbp-colors.theme.css
-  vbp_text_and_image/vbp_text_and_image_default:
-    css:
-      layout:
-        css/layout/vbp_text_and_image_default.layout.css: css/layout/vbp_text_and_image_default.layout.css
-  varbase_media/varbase_video_player:
-    css:
-      theme:
-        css/theme/varbase-video-player.theme.css: css/theme/varbase-video-player.theme.css
-  varbase_heroslider_media/general-styling:
-    css:
-      theme:
-        css/theme/varbase-heroslider-media.theme.css: css/theme/varbase-heroslider-media.theme.css
+name: 'Vartheme BS4'
+type: theme
+description: 'Base theme for Varbase standard websites. Based on Bootstrap 4 framework SASS css'
 
 regions:
   navigation: 'Navigation'
@@ -67,3 +19,117 @@ regions:
   footer: 'Footer'
   page_top: 'Page top'
   page_bottom: 'Page bottom'
+
+libraries:
+  # Bootstrap styles and scripts libraries.
+  - vartheme_bs4/bootstrap-styles
+  - vartheme_bs4/bootstrap-scripts
+
+  # Global styles and scripts libraries.
+  - vartheme_bs4/global-styles
+  - vartheme_bs4/global-scripts
+  
+  # Vartheme BS4 Varbase Bootstrap Paragraphs colors theme.
+  - vartheme_bs4/vbp-colors
+
+  # Vartheme BS4 Better Login theme.
+  - vartheme_bs4/betterlogin
+
+  # Icons: Uncomment the following if you want to use icons.
+  #- vartheme_bs4/material_design_icons
+  #- vartheme_bs4/fontawesome
+
+  # Fonts: Uncomment the following if you want to use the roboto font.
+  #- vartheme_bs4/roboto
+
+libraries-override:
+  # Barrio global styling theme.
+  bootstrap_barrio/global-styling: false
+
+  # Barrio components overrieds.
+  bootstrap_barrio/verticaltabs: vartheme_bs4/verticaltabs
+  bootstrap_barrio/tabs: vartheme_bs4/tabs
+  bootstrap_barrio/sidebar-collapse: vartheme_bs4/sidebar-collapse
+  bootstrap_barrio/node: vartheme_bs4/node
+  bootstrap_barrio/maintenance_page: vartheme_bs4/maintenance_page
+  bootstrap_barrio/indented: vartheme_bs4/indented
+  bootstrap_barrio/form: vartheme_bs4/form
+  bootstrap_barrio/file: vartheme_bs4/file
+  bootstrap_barrio/dropbutton: vartheme_bs4/dropbutton
+  bootstrap_barrio/book-navigation: vartheme_bs4/book-navigation
+  bootstrap_barrio/affix: vartheme_bs4/affix
+
+  # Varbase module compnents overrides in Vartheme BS4.
+  varbase_bootstrap_paragraphs/vbp-colors: vartheme_bs4/vbp-colors
+  betterlogin/betterlogin_css: vartheme_bs4/betterlogin
+  
+  varbase_heroslider_media/general-styling:
+    css:
+      theme:
+        css/theme/varbase-heroslider-media.theme.css: css/theme/varbase-heroslider-media.theme.css
+
+  vbp_text_and_image/vbp_text_and_image_default:
+    css:
+      layout:
+        css/layout/vbp_text_and_image_default.layout.css: css/layout/vbp_text_and_image_default.layout.css
+
+ckeditor_stylesheets:
+  # Base
+  - css/base/bootstrap.base.css
+  - css/base/vartheme_bs4.base.css
+  # Components
+  - css/components/affix.component.css
+  - css/components/ajax.component.css
+  - css/components/alerts.component.css
+  - css/components/autocomplete.component.css
+  - css/components/book.component.css
+  - css/components/book-navigation.component.css
+  - css/components/breadcrumb.component.css
+  - css/components/bs-callouts.component.css
+  - css/components/comments.component.css
+  - css/components/contextual.component.css
+  - css/components/details.component.css
+  - css/components/dropbutton.component.css
+  - css/components/feed-icon.component.css
+  - css/components/field.component.css
+  - css/components/file.component.css
+  - css/components/form.component.css
+  - css/components/header.component.css
+  - css/components/help.component.css
+  - css/components/icons.component.css
+  - css/components/image-button.component.css
+  - css/components/indented.component.css
+  - css/components/item-list.component.css
+  - css/components/list-group.component.css
+  - css/components/navbar.admin.component.css
+  - css/components/navbar.component.css
+  - css/components/node.component.css
+  - css/components/node-preview.component.css
+  - css/components/page.component.css
+  - css/components/progress-bar.component.css
+  - css/components/search-form.component.css
+  - css/components/shortcut.component.css
+  - css/components/sidebar.component.css
+  - css/components/sidebar-collapse.component.css
+  - css/components/site-footer.component.css
+  - css/components/skip-link.component.css
+  - css/components/table.component.css
+  - css/components/tabledrag.component.css
+  - css/components/tableselect.component.css
+  - css/components/tablesort.component.css
+  - css/components/tablesort-indicator.component.css
+  - css/components/tabs.component.css
+  - css/components/textarea.component.css
+  - css/components/ui-dialog.component.css
+  - css/components/ui-widget.component.css
+  - css/components/user.component.css
+  - css/components/varicons.component.css
+  - css/components/vb-tags.component.css
+  - css/components/vertical-tabs.component.css
+  - css/components/views.component.css
+  # Layout
+  - css/layout/edge2edge.layout.css
+  - css/layout/equal-height.layout.css
+  # Theme
+  - css/theme/content.theme.css
+  - css/theme/vbp-colors.theme.css

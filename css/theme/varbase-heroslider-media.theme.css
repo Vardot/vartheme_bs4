@@ -151,3 +151,8 @@
       font-size: 17pt;
       -webkit-background-size: 100px 100px;
               background-size: 100px; } }
+
+body .hero_slider {
+  color: #fff;
+  margin-bottom: 40px;
+  position: relative; }

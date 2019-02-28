@@ -8,7 +8,7 @@
 @import "../typography";                  // VARTHEME_BS4_SUBTHEME typography.
 // -----------------------------------------------------------------------------
 
-// Insert your vartheme footer custom LESS styling.
+// Insert your VARTHEME_BS4_SUBTHEME footer custom SASS styling.
 
 .footer-wrapper {
   background-color: $footer-wrapper-bg;
@@ -17,22 +17,44 @@
     border: 0;
     padding-top: 0;
     padding-bottom: 0;
-    margin-top: 45px;
+    margin-top: ($spacer * 5);
 
-    section[id$="-copyright"] {
-      float: left;
-      padding: 17px 0 17px 0;
-      font-size: 12px;
+    section.region-footer {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
 
-      > div {
-        padding: 14px 0 10px 0;
-        }
+      @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+        flex-flow: row;
       }
 
-    ul.nav {
-      li {
-        display: inline-block;
-        list-style: none;
+      div[id$="-copyright"] {
+        flex-flow: column;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        padding: $spacer $spacer 0 $spacer;
+        font-size: 12px;
+      }
+
+      .menu--footer {
+        padding: $spacer 0;
+        font-size: 12px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+
+        ul.nav {
+          display: flex;
+          flex-flow: row;
+          justify-content: center;
+          flex-wrap: wrap;
+          padding: $spacer $spacer 0 $spacer;
+
+          li {
+            padding: 0 $spacer;
+          }
+        }
       }
     }
   }

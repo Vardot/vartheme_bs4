@@ -9,14 +9,14 @@
 // -----------------------------------------------------------------------------
 
 body.maintenance-page {
-  background-color: #fff;
-  color: #000;
+  background-color: $body-bg;
+  color: $body-color;
 }
 
 .maintenance-page {
 
   #page-wrapper {
-    background: #fff;
+    background: $body-bg;
     margin-left: auto;
     margin-right: auto;
     min-width: 0;

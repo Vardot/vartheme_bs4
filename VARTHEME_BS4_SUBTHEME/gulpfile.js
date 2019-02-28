@@ -1,6 +1,5 @@
 let gulp = require('gulp'),
   sass = require('gulp-sass'),
-  sourcemaps = require('gulp-sourcemaps'),
   postcss = require('gulp-postcss'),
   autoprefixer = require('autoprefixer'),
   browserSync = require('browser-sync').create()
@@ -12,14 +11,29 @@ const paths = {
     watch: 'scss/**/*/*.scss'
   },
   js: {
-    bootstrap: './node_modules/bootstrap/dist/js/bootstrap.min.js',
-    popper: 'node_modules/popper.js/dist/umd/popper.min.js',
-    dest: './js'
+    bootstrap: {
+      alert: './node_modules/bootstrap/js/dist/alert.js',
+      button: './node_modules/bootstrap/js/dist/button.js',
+      carousel: './node_modules/bootstrap/js/dist/carousel.js',
+      collapse: './node_modules/bootstrap/js/dist/collapse.js',
+      dropdown: './node_modules/bootstrap/js/dist/dropdown.js',
+      index: './node_modules/bootstrap/js/dist/index.js',
+      modal: './node_modules/bootstrap/js/dist/modal.js',
+      popover: './node_modules/bootstrap/js/dist/popover.js',
+      scrollspy: './node_modules/bootstrap/js/dist/scrollspy.js',
+      tab: './node_modules/bootstrap/js/dist/tab.js',
+      toast: './node_modules/bootstrap/js/dist/toast.js',
+      tooltip: './node_modules/bootstrap/js/dist/tooltip.js',
+      util: './node_modules/bootstrap/js/dist/util.js'
+    },
+    bootstrap_dest: './js/bootstrap',
+    popper: './node_modules/popper.js/dist/umd/popper.min.js',
+    popper_dest: './js/popper'
   }
 }
 
 // Compile sass into CSS & auto-inject into browsers
-function styles () {
+function compile () {
   return gulp.src([paths.scss.src])
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([autoprefixer({
@@ -27,7 +41,7 @@ function styles () {
         'Chrome >= 35',
         'Firefox >= 38',
         'Edge >= 12',
-        'Explorer >= 10',
+        'Explorer >= 11',
         'iOS >= 8',
         'Safari >= 8',
         'Android 2.3',
@@ -38,26 +52,44 @@ function styles () {
     .pipe(browserSync.stream())
 }
 
-// Move the javascript files into our js folder
-function js () {
-  return gulp.src([paths.js.bootstrap, paths.js.popper])
-    .pipe(gulp.dest(paths.js.dest))
+// Move the Bootstrap JavaScript files into our js/bootstrap folder.
+function move_bootstrap_js_files () {
+  return gulp.src([
+        paths.js.bootstrap.alert,
+        paths.js.bootstrap.button,
+        paths.js.bootstrap.carousel,
+        paths.js.bootstrap.collapse,
+        paths.js.bootstrap.dropdown,
+        paths.js.bootstrap.index,
+        paths.js.bootstrap.modal,
+        paths.js.bootstrap.popover,
+        paths.js.bootstrap.scrollspy,
+        paths.js.bootstrap.tab,
+        paths.js.bootstrap.toast,
+        paths.js.bootstrap.tooltip,
+        paths.js.bootstrap.util
+     ])
+    .pipe(gulp.dest(paths.js.bootstrap_dest))
     .pipe(browserSync.stream())
 }
 
-// Static Server + watching scss/html files
-function serve () {
-//  browserSync.init({
-//    proxy: 'http://yourdomain.com',
-//  })
-
-  gulp.watch([paths.scss.watch], styles).on('change', browserSync.reload)
+// Move the Popper JavaScript files into our js/popper folder.
+function move_popper_js_files () {
+  return gulp.src([paths.js.popper])
+    .pipe(gulp.dest(paths.js.popper_dest))
+    .pipe(browserSync.stream())
 }
 
-const build = gulp.series(styles, gulp.parallel(js, serve))
+// Watching scss files
+function watch () {
+  gulp.watch([paths.scss.watch], compile)
+}
 
-exports.styles = styles
-exports.js = js
-exports.serve = serve
+const build = gulp.series(compile, move_bootstrap_js_files, move_popper_js_files, gulp.parallel(watch))
+
+exports.compile = compile
+exports.move_bootstrap_js_files = move_bootstrap_js_files
+exports.move_popper_js_files = move_popper_js_files
+exports.watch = watch
 
 exports.default = build

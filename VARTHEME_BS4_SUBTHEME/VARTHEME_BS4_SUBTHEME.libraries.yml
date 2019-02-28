@@ -1,11 +1,4 @@
-# Vartheme BS4 framework as which could be used to extend bootstrap/framework
-#          vartheme/framework = vartheme_bs4/bootstrap-styles
-#                             + vartheme_bs4/bootstrap-override-styles
-#                             + vartheme_bs4/bootstrap-scripts
-#                             + vartheme_bs4/vartheme_bs4-styles
-#                             + vartheme_bs4/global-styles
-#                             + vartheme_bs4/global-scripts
-
+# VARTHEME_BS4_SUBTHEME framework
 framework:
   css: {}
   js: {}
@@ -13,15 +6,10 @@ framework:
     - core/jquery
     - VARTHEME_BS4_SUBTHEME/bootstrap-styles
     - VARTHEME_BS4_SUBTHEME/bootstrap-scripts
-    - VARTHEME_BS4_SUBTHEME/vartheme_bs4-styles
-    - VARTHEME_BS4_SUBTHEME/vartheme_bs4-scripts
     - VARTHEME_BS4_SUBTHEME/global-styles
     - VARTHEME_BS4_SUBTHEME/global-scripts
 
-# Vartheme framework RTL as which could be used to extend bootstrap/framework
-#          vartheme/framework-rtl = vartheme_bs4/bootstrap-styles-rtl
-#                                 + vartheme_bs4/global-styles-rtl
-
+# VARTHEME_BS4_SUBTHEME framework RTL
 # framework-rtl:
 #   css: {}
 #   js: {}
@@ -29,6 +17,13 @@ framework:
 #     - core/jquery
 #     - VARTHEME_BS4_SUBTHEME/bootstrap-styles-rtl
 #     - VARTHEME_BS4_SUBTHEME/global-styles-rtl
+
+
+
+
+# ------------------------------------------------------------------------------
+# Bootstrap Barrio libraries.
+# ------------------------------------------------------------------------------
 
 # Bootstrap global styles library.
 bootstrap-styles:
@@ -74,98 +69,170 @@ bootstrap-styles:
       css/components/textarea.component.css: {}
       css/components/ui-dialog.component.css: {}
       css/components/ui-widget.component.css: {}
-      css/components/user.component.css: {}
+      css/components/user.component.css: { weight: -10 }
       css/components/vertical-tabs.component.css: {}
       css/components/views.component.css: {}
 
-# # Bootstrap global styles RTL library.
-# bootstrap-styles-rtl:
-#   css:
-#     base:
-#       css/rtl/base/bootstrap-rtl.base.css: {}
+# Bootstrap global styles RTL library.
+bootstrap-styles-rtl:
+  css:
+    base:
+      css/rtl/base/bootstrap-rtl.base.css: {}
 
-# bootstrap scripts library.
+# Bootstrap scripts library.
 bootstrap-scripts:
   js:
-    js/popper.min.js: {}
-    js/bootstrap.min.js: {}
+    js/bootstrap/alert.js: {}
+    js/bootstrap/button.js: {}
+    js/bootstrap/carousel.js: {}
+    js/bootstrap/collapse.js: {}
+    js/bootstrap/dropdown.js: {}
+    js/bootstrap/index.js: {}
+    js/bootstrap/modal.js: {}
+    js/bootstrap/popover.js: {}
+    js/bootstrap/scrollspy.js: {}
+    js/bootstrap/tab.js: {}
+    js/bootstrap/toast.js: {}
+    js/bootstrap/tooltip.js: {}
+    js/bootstrap/util.js: {}
+    js/popper/popper.min.js: {}
   dependencies:
     - core/jquery
     - core/drupal
+    
+# ------------------------------------------------------------------------------
+# VARTHEME_BS4_SUBTHEME libraries.
+# ------------------------------------------------------------------------------
 
-# Vartheme styles library.
-vartheme_bs4-styles:
+# VARTHEME_BS4_SUBTHEME global styles library.
+global-styles:
   css:
+    base:
+      css/base/vartheme_bs4.base.css: {}
+      css/base/VARTHEME_BS4_SUBTHEME.base.css: {}
     component:
       css/components/ajax.component.css: {}
       css/components/autocomplete.component.css: {}
       css/components/bs-callouts.component.css: {}
       css/components/navbar.admin.component.css: {}
       css/components/navbar.component.css: {}
-      css/components/progress-bar.component.css: {}
+      css/components/progress-bar.component.css: { weight: -10 }
       css/components/varicons.component.css: {}
       css/components/vb-tags.component.css: {}
     layout:
-      css/layout/aliases.layout.css: {}
       css/layout/edge2edge.layout.css: {}
-      css/layout/spacing.layout.css: {}
-      css/layout/vbp_text_and_image_default.layout.css: {}
-    theme:
-      css/theme/betterlogin.theme.css: {}
-
-# Vartheme styles library.
-vartheme_bs4-scripts:
-  js:
-   js/attributes.js: {}
-   js/theme.js: {}
-   js/misc/ajax.js: {}
-  dependencies:
-    - core/jquery
-
-# Vartheme global styles library.
-global-styles:
-  css:
-    base:
-      css/base/VARTHEME_BS4_SUBTHEME.base.css: {}
-    layout:
+      css/layout/equal-height.layout.css: {}
       css/layout/print.layout.css: {}
     theme:
       css/theme/header.theme.css: {}
       css/theme/content.theme.css: {}
       css/theme/footer.theme.css: {}
+      css/theme/betterlogin.theme.css: {}
   dependencies:
     - core/jquery
 
-# # Vartheme global (RTL) styles library.
-# global-styles-rtl:
-#   css:
-#     base:
-#       css/rtl/base/VARTHEME_BS4_SUBTHEME-rtl.base.css: {}
-#     theme:
-#       css/rtl/theme/header-rtl.theme.css: {}
-#       css/rtl/theme/content-rtl.theme.css: {}
-#       css/rtl/theme/footer-rtl.theme.css: {}
-#   dependencies:
-#     - core/jquery
+# VARTHEME_BS4_SUBTHEME global (RTL) styles library.
+#global-styles-rtl:
+#  css:
+#    base:
+#      css/rtl/base/vartheme_bs4-rtl.base.css: {}
+#    theme:
+#      css/rtl/theme/header-rtl.theme.css: {}
+#      css/rtl/theme/content-rtl.theme.css: {}
+#      css/rtl/theme/footer-rtl.theme.css: {}
+#  dependencies:
+#    - core/jquery
 
-# Vartheme global scripts library.
+# VARTHEME_BS4_SUBTHEME global scripts library.
 global-scripts:
   js:
-    js/global.js: {}
+    js/scripts.js: {}
   dependencies:
     - core/jquery
     - core/drupal
+    - vartheme_bs4/global-scripts
 
-# Fonts
 
-roboto:
+# VARTHEME_BS4_SUBTHEME Varbase Bootstrap Paragraphs colors theme.
+vbp-colors:
+  css:
+    theme:
+      css/theme/vbp-colors.theme.css: {}
+
+# VARTHEME_BS4_SUBTHEME better login theme.
+betterlogin:
+  css:
+    theme:
+      css/theme/betterlogin.theme.css: {}
+
+affix:
+  js:
+    js/bootstrap_barrio/affix.js: {}
   css:
     component:
-      fonts/roboto.css: {}
-      //fonts.googleapis.com/css?family=Roboto|Roboto+Condensed:700: {}
+      css/components/affix.component.css: {}
+
+book-navigation:
+  css:
+    component:
+      css/components/book-navigation.component.css: {}
+
+breadcrumb:
+  css:
+    component:
+      css/components/breadcrumb.component.css: {}
+
+dropbutton:
+  css:
+    component:
+      css/components/dropbutton.component.css: {}
+
+file:
+  css:
+    component:
+      css/components/file.component.css: { weight: -10 }
+
+form:
+  css:
+    component:
+      css/components/form.component.css: {}
+
+indented:
+  css:
+    component:
+      css/components/indented.component.css: {}
+
+maintenance_page:
+  css:
+    theme:
+      css/theme/maintenance-page.theme.css: {}
+  dependencies:
+    - system/maintenance
+    - VARTHEME_BS4_SUBTHEME/global-styling
+
+node:
+  css:
+    component:
+      css/components/node.component.css: { weight: -10 }
+
+sidebar-collapse:
+  js:
+    js/bootstrap_barrio/sidebar-collapse.js: { external: true }
+  css:
+    component:
+      css/components/sidebar-collapse.component.css: {}
+
+tabs:
+  css:
+    component:
+      css/components/tabs.component.css: {}
+
+verticaltabs:
+  css:
+    component:
+      css/components/vertical-tabs.component.css: {}
 
 # icons
-
 material_design_icons:
   css:
     component:
