@@ -1,0 +1,62 @@
+// VARTHEME_BS4_SUBTHEME Varbase Bootstrap paragraphs text and image layout.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions"; // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/variables"; // Bootstrap variables.
+@import "../../node_modules/bootstrap/scss/mixins";    // Bootstrap mixins.
+@import "../variables";                                // Vartheme variables.
+@import "../mixins";                                   // Vartheme mixins.
+// -----------------------------------------------------------------------------
+
+@media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+  .align2right {
+    float: right !important;
+    order: 20 !important;
+  }
+  .align2left {
+    float: left !important;
+    order: -1 !important;
+  }
+  .align2left.wrapper {
+    padding-left: 35px;
+  }
+}
+
+@media screen and (max-width: map-get($grid-breakpoints, "xl")) {
+  .paragraph--type--text-and-image {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .paragraph--type--text-and-image > .row {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+}
+
+.wrapper {
+  display: table;
+  height: 100%;
+  text-align: left;
+  align-self: center;
+}
+
+.wrapper > div {
+	display: table-cell;
+  vertical-align: middle;
+}
+
+[dir="rtl"] {
+  @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+    .align2right {
+      float: left !important;
+      order: -1 !important;
+    }
+    .align2left {
+      float: right !important;
+      order: 20 !important;
+    }
+  }
+
+  .wrapper {
+    text-align: right;
+  }
+}

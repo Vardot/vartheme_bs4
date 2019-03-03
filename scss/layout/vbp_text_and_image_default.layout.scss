@@ -5,12 +5,7 @@
 @import "../../node_modules/bootstrap/scss/mixins";    // Bootstrap mixins.
 @import "../variables";                                // Vartheme variables.
 @import "../mixins";                                   // Vartheme mixins.
-@import "../typography";                               // Vartheme typography.
 // -----------------------------------------------------------------------------
-
-.row {
-  margin-bottom: 0px !important;
-}
 
 @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
   .align2right {
