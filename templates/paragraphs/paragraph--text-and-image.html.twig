@@ -101,24 +101,24 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
   {% if add_container %}<div class="container">{% endif %}
     <div class="row">
       <div class="{{- VBP.bp_width.value -}}">
-          {% if paragraph_title and paragraph_title_status %}<h2 class="text-center">{{- paragraph_title|striptags -}}</h2>{% endif %}
-          {# Check the Image position field. #}
-          {% set align = content.field_image_position['#items'].getString() %}
-          {% if align == "left"%}
-              {% set img_align = 'align2left' %}
-              {% set txt_align = 'align2right' %}
-          {% else %}
-              {% set img_align = 'align2right' %}
-              {% set txt_align = 'align2left' %}
-          {% endif %}
-
-          {% set image_attr = create_attribute() %}
-          {% set image_attr = image_attr.addClass('no-spacing').addClass(img_align) %}
-
-          {# Set text field attributes. #}
-          {% set text_attr = create_attribute() %}
-          {% set text_attr = text_attr.addClass(txt_align).addClass('wrapper') %}
         <div class="row">
+          {% if paragraph_title and paragraph_title_status %}<h2 class="text-center">{{- paragraph_title|striptags -}}</h2>{% endif %}
+            {# Check the Image position field. #}
+            {% set align = content.field_image_position['#items'].getString() %}
+            {% if align == "left"%}
+                {% set img_align = ['align2left', 'order-1 order-lg-1', 'm-0 p-0'] %}
+                {% set txt_align = ['align2right', 'order-2 order-lg-2', 'wrapper'] %}
+            {% else %}
+                {% set img_align = ['align2right', 'order-1 order-lg-2', 'm-0 p-0'] %}
+                {% set txt_align = ['align2left', 'order-2 order-1 order-lg-1', 'wrapper'] %}
+            {% endif %}
+
+            {% set image_attr = create_attribute() %}
+            {% set image_attr = image_attr.addClass(img_align) %}
+
+            {# Set text field attributes. #}
+            {% set text_attr = create_attribute() %}
+            {% set text_attr = text_attr.addClass(txt_align) %}
           <div{{ image_attr.addClass(col_1) }}>{{ content.field_image|render }}</div>
           <div{{ text_attr.addClass(col_2) }}>{{ content.field_text_content|render }}</div>
         </div>

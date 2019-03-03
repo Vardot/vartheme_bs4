@@ -41,7 +41,7 @@ function compile () {
         'Chrome >= 35',
         'Firefox >= 38',
         'Edge >= 12',
-        'Explorer >= 11',
+        'Explorer >= 10',
         'iOS >= 8',
         'Safari >= 8',
         'Android 2.3',

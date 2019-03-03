@@ -70,8 +70,8 @@ libraries-override:
 
   vbp_text_and_image/vbp_text_and_image_default:
     css:
-      layout:
-        css/layout/vbp_text_and_image_default.layout.css: css/layout/vbp_text_and_image_default.layout.css
+      theme:
+        css/default.css: css/layout/vbp_text_and_image_default.layout.css
 
 ckeditor_stylesheets:
   # Base

@@ -7,6 +7,7 @@
   margin-right: -50vw;
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 100vw;
+      -ms-flex: 0 0 100vw;
           flex: 0 0 100vw;
   max-width: none; }
   .bg-edge2edge:before {

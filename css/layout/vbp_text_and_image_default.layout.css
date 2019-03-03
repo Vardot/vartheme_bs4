@@ -1,47 +1,23 @@
-@media screen and (min-width: 992px) {
-  .align2right {
-    float: right !important;
-    -webkit-box-ordinal-group: 21 !important;
-    -webkit-order: 20 !important;
-            order: 20 !important; }
-  .align2left {
-    float: left !important;
-    -webkit-box-ordinal-group: 0 !important;
-    -webkit-order: -1 !important;
-            order: -1 !important; }
-  .align2left.wrapper {
-    padding-left: 35px; } }
+.paragraph--type--text-and-image .row {
+  margin-bottom: 0px !important; }
 
-@media screen and (max-width: 1200px) {
-  .paragraph--type--text-and-image {
-    margin-bottom: 20px;
-    text-align: center; }
-  .paragraph--type--text-and-image > .row {
-    margin-left: 0px !important;
-    margin-right: 0px !important; } }
-
-.wrapper {
-  display: table;
-  height: 100%;
-  text-align: left;
-  -webkit-align-self: center;
-          align-self: center; }
-
-.wrapper > div {
-  display: table-cell;
-  vertical-align: middle; }
+.paragraph--type--text-and-image .wrapper {
+  padding: 1rem; }
 
 @media screen and (min-width: 992px) {
-  [dir="rtl"] .align2right {
-    float: left !important;
-    -webkit-box-ordinal-group: 0 !important;
-    -webkit-order: -1 !important;
-            order: -1 !important; }
-  [dir="rtl"] .align2left {
-    float: right !important;
-    -webkit-box-ordinal-group: 21 !important;
-    -webkit-order: 20 !important;
-            order: 20 !important; } }
+  .paragraph--type--text-and-image .wrapper {
+    text-align: left; }
+  .paragraph--type--text-and-image .bg-edge2edge .align2left.wrapper {
+    padding-left: 5rem; }
+  .paragraph--type--text-and-image .bg-edge2edge .align2right.wrapper {
+    padding-right: 5rem; } }
 
-[dir="rtl"] .wrapper {
-  text-align: right; }
+@media screen and (min-width: 992px) {
+  [dir="rtl"] .paragraph--type--text-and-image .wrapper {
+    text-align: right; }
+  [dir="rtl"] .paragraph--type--text-and-image .bg-edge2edge .align2left.wrapper {
+    padding-left: 1rem;
+    padding-right: 5rem; }
+  [dir="rtl"] .paragraph--type--text-and-image .bg-edge2edge .align2right.wrapper {
+    padding-right: 1rem;
+    padding-left: 5rem; } }

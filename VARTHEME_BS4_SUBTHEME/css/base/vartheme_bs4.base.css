@@ -365,11 +365,14 @@ body.user-logged-in .btn.visible-admin {
 
 .justify-content-center {
   -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
   -webkit-justify-content: center !important;
           justify-content: center !important;
   display: -webkit-box;
+  display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -ms-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
           flex-wrap: wrap; }
 
