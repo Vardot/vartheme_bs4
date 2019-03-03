@@ -82,7 +82,23 @@ bootstrap-styles-rtl:
 # Bootstrap scripts library.
 bootstrap-scripts:
   js:
+    js/popper/popper.min.js: {}
     js/bootstrap/bootstrap.min.js: {}
+#
+#   Plugins can be included individually (using Bootstrap’s individual
+#   js/dist/*.js), or all at once using bootstrap.js or the minified
+#   bootstrap.min.js (don’t include both).
+#
+#     Alerts for dismissing
+#     Buttons for toggling states and checkbox/radio functionality
+#     Carousel for all slide behaviors, controls, and indicators
+#     Collapse for toggling visibility of content
+#     Dropdowns for displaying and positioning (also requires Popper.js)
+#     Modals for displaying, positioning, and scroll behavior
+#     Navbar for extending our Collapse plugin to implement responsive behavior
+#     Tooltips and popovers for displaying and positioning (also requires Popper.js)
+#     Scrollspy for scroll behavior and navigation updates
+#
 #    js/bootstrap/alert.js: {}
 #    js/bootstrap/button.js: {}
 #    js/bootstrap/carousel.js: {}
@@ -95,7 +111,6 @@ bootstrap-scripts:
 #    js/bootstrap/toast.js: {}
 #    js/bootstrap/tooltip.js: {}
 #    js/bootstrap/util.js: {}
-    js/popper/popper.min.js: {}
   dependencies:
     - core/jquery
     - core/drupal
