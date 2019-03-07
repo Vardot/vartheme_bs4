@@ -2,9 +2,9 @@ core: 8.x
 type: theme
 base theme: vartheme_bs4
 
-name: 'Vartheme BS4 Sub-Theme (SASS)'
+name: 'VARTHEME_BS4_SUBTHEME - Subtheme of Vartheme (Bootstrap 4 - SASS)'
 type: theme
-description: 'Uses the Bootstrap 4 framework SASS source files and must be compiled (not for beginners).'
+description: 'Based on Bootstrap 4 framework using SASS, and extending Vartheme (Bootstrap 4 - SASS).'
 
 regions:
   navigation: 'Navigation'
