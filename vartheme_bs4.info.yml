@@ -2,9 +2,9 @@ core: 8.x
 type: theme
 base theme: bootstrap_barrio
 
-name: 'Vartheme BS4'
+name: 'Vartheme (Bootstrap 4 - SASS)'
 type: theme
-description: 'Base theme for Varbase standard websites. Based on Bootstrap 4 framework SASS css'
+description: 'Base theme for Varbase standard websites. Based on Bootstrap 4 framework using SASS, and extending Barrio contrib theme.'
 
 regions:
   navigation: 'Navigation'
