@@ -143,11 +143,8 @@ if [[ ! -d "$theme_path/$theme_name" ]]; then
   mv ${theme_path}/${theme_name}/templates/video-embed-field/video-embed-iframe.html.twig-VARTHEME_BS4_SUBTHEME ${theme_path}/${theme_name}/templates/video-embed-field/video-embed-iframe.html.twig
 
 
-  # 7. Replace all VARTHEME_BS4_SUBTHEME with the machine name of your theme.
+  # 8. Replace all VARTHEME_BS4_SUBTHEME with the machine name of your theme.
   grep -rl 'VARTHEME_BS4_SUBTHEME' ${theme_path}/${theme_name} | xargs sed -i "s/VARTHEME_BS4_SUBTHEME/${theme_name}/g" ;
-
-  # 8. Replace all 'Vartheme BS4 Sub-Theme (SASS)' to the name of your theme.
-  grep -rl 'Vartheme BS4 Sub-Theme (SASS)' ${theme_path}/${theme_name} | xargs sed -i "s/Vartheme BS4 Sub-Theme (SASS)/${theme_name}/g" ;
 
 
   # 9. Install needed libraries
