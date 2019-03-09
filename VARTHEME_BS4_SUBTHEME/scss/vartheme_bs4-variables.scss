@@ -1,37 +1,15 @@
-//
-// Vartheme Variables ovarrides.
-// --------------------------------------------------
-
-
-// #############################################################################
-// Bootstrap library standard variables.
-// #############################################################################
-// All variables which are used in the default bootstrap library.
-// You can change them in Vartheme BS4 from the bootstrap-variables.sass
-//
-@import "bootstrap-variables"; // Bootstrap custom variables ovarrides for Vartheme BS4.
-
-
-// #############################################################################
-// Barrio custom variables.
-// #############################################################################
-// All needed custom variables for Bootstrap Barrio theme.
-// You can change them in Vartheme BS4 from the barrio-variables.sass
-//
-@import "barrio-variables"; // Barrio custom variables ovarrides for Vartheme BS4.
-
-
 // #############################################################################
 // Vartheme bs4 custom variables
 // #############################################################################
-// All needed custom Vartheme bs4 variables.
-//
+// All needed custom Vartheme bs4 variables
+// You can change them in VARTHEME_SUBTHEME in the vartheme_bs4-variables.sass
 //
 
 // View Mode Inventory (VMI).
 // -----------------------------------------------------------------------------
 $grid-gutter-width: 30px;
 $view-modes-padding: floor(($grid-gutter-width / 2));
+
 
 // Custom Varbase Hero slider media variables.
 // -----------------------------------------------------------------------------
@@ -66,14 +44,7 @@ $hero-min-height-sm: 600px;
 $hero-max-height-sm: 600px;
 
 
+
 // Footer wrapper background color.
 // -----------------------------------------------------------------------------
 $footer-wrapper-bg: #f2f2f2;
-
-
-// #############################################################################
-// VARTHEME_BS4_SUBTHEME custom needed variables
-// #############################################################################
-// Add custom needed VARTHEME_BS4_SUBTHEME variables.
-// In the generated VARTHEME_BS4_SUBTHEME not in Vartheme
-//
