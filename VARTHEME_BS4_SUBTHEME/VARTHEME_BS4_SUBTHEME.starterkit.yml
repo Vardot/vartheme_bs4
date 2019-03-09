@@ -29,11 +29,11 @@ libraries:
   - VARTHEME_BS4_SUBTHEME/global-styles
   - VARTHEME_BS4_SUBTHEME/global-scripts
 
-  # Vartheme BS4 Varbase Bootstrap Paragraphs colors theme.
-  - vartheme_bs4/vbp-colors
+  # VARTHEME_BS4_SUBTHEME Varbase Bootstrap Paragraphs colors style.
+  - VARTHEME_BS4_SUBTHEME/vbp-colors
 
-  # Vartheme BS4 Better Login theme.
-  - vartheme_bs4/betterlogin
+  # VARTHEME_BS4_SUBTHEME Better Login style.
+  - VARTHEME_BS4_SUBTHEME/betterlogin
 
   # Icons: Uncomment the following if you want to use icons.
   #- VARTHEME_BS4_SUBTHEME/material_design_icons
@@ -60,8 +60,8 @@ libraries-override:
   vartheme_bs4/verticaltabs: VARTHEME_BS4_SUBTHEME/verticaltabs
 
   # Varbase module compnents overrides in VARTHEME_BS4_SUBTHEME.
-  varbase_bootstrap_paragraphs/vbp-colors: VARTHEME_BS4_SUBTHEME/vbp-colors
-  betterlogin/betterlogin_css: VARTHEME_BS4_SUBTHEME/betterlogin
+  VARTHEME_BS4_SUBTHEME/vbp-colors: VARTHEME_BS4_SUBTHEME/vbp-colors
+  VARTHEME_BS4_SUBTHEME/betterlogin: VARTHEME_BS4_SUBTHEME/betterlogin
 
   varbase_heroslider_media/general-styling:
     css:
