@@ -15,7 +15,7 @@ use Drupal\Core\Template\Attribute;
  * Implements hook_theme_registry_alter().
  */
 function vartheme_bs4_theme_registry_alter(&$theme_registry) {
-  // Varbase media path.
+  // Varbase Bootstrap 4 path.
   $vartheme_bs4_path = Drupal::service('theme_handler')->getTheme('vartheme_bs4')->getPath();
   $theme_registry['entity_embed_container']['path'] = $vartheme_bs4_path . '/templates/entity-embed';
 
@@ -72,7 +72,7 @@ function vartheme_bs4_preprocess_html(&$variables) {
  * Implements hook_preprocess_page().
  */
 function vartheme_bs4_preprocess_page(&$variables) {
-  $variables['logo_print'] = \Drupal::request()->getBaseUrl() . '/' . drupal_get_path('theme', 'vartheme') . '/logo-print.png';
+  $variables['logo_print'] = \Drupal::request()->getBaseUrl() . '/' . drupal_get_path('theme', 'vartheme_bs4') . '/logo-print.png';
 }
 
 /**
