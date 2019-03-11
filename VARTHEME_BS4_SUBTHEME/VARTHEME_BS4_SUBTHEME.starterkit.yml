@@ -47,6 +47,8 @@ libraries-override:
   vartheme_bs4/bootstrap-scripts: false
   vartheme_bs4/global-styling: false
 #  vartheme_bs4/global-scripts: false
+  vartheme_bs4/vbp-colors: false
+  vartheme_bs4/betterlogin: false
 
   vartheme_bs4/breadcrumb: VARTHEME_BS4_SUBTHEME/breadcrumb
   vartheme_bs4/dropbutton: VARTHEME_BS4_SUBTHEME/dropbutton
@@ -60,8 +62,8 @@ libraries-override:
   vartheme_bs4/verticaltabs: VARTHEME_BS4_SUBTHEME/verticaltabs
 
   # Varbase module compnents overrides in VARTHEME_BS4_SUBTHEME.
-  VARTHEME_BS4_SUBTHEME/vbp-colors: VARTHEME_BS4_SUBTHEME/vbp-colors
-  VARTHEME_BS4_SUBTHEME/betterlogin: VARTHEME_BS4_SUBTHEME/betterlogin
+  varbase_bootstrap_paragraphs/vbp-colors: VARTHEME_BS4_SUBTHEME/vbp-colors
+  betterlogin/betterlogin_css: VARTHEME_BS4_SUBTHEME/betterlogin
 
   varbase_heroslider_media/general-styling:
     css:
