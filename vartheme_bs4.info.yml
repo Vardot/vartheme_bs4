@@ -28,6 +28,7 @@ libraries:
   # Global styles and scripts libraries.
   - vartheme_bs4/global-styles
   - vartheme_bs4/global-scripts
+  - vartheme_bs4/framework
   
   # Vartheme BS4 Varbase Bootstrap Paragraphs colors theme.
   - vartheme_bs4/vbp-colors

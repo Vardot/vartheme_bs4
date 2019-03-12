@@ -28,6 +28,7 @@ libraries:
   # VARTHEME_BS4_SUBTHEME Global styles and scripts libraries.
   - VARTHEME_BS4_SUBTHEME/global-styles
   - VARTHEME_BS4_SUBTHEME/global-scripts
+  - VARTHEME_BS4_SUBTHEME/framework
 
   # VARTHEME_BS4_SUBTHEME Varbase Bootstrap Paragraphs colors style.
   - VARTHEME_BS4_SUBTHEME/vbp-colors
@@ -43,9 +44,10 @@ libraries:
   #- VARTHEME_BS4_SUBTHEME/roboto   
 
 libraries-override:
+  vartheme_bs4/framework: false
   vartheme_bs4/bootstrap-styles: false
   vartheme_bs4/bootstrap-scripts: false
-  vartheme_bs4/global-styling: false
+  vartheme_bs4/global-styles: false
 #  vartheme_bs4/global-scripts: false
   vartheme_bs4/vbp-colors: false
   vartheme_bs4/betterlogin: false

@@ -22,12 +22,12 @@
         {% endif %}
       </div>
       <div id="middle-part">
-        {{ page.header|without('vartheme_bs4_local_tasks', 'vartheme_bs4_breadcrumbs', 'vartheme_bs4_local_actions', 'vartheme_bs4_page_title') }}
-        {% if (varbase.we_do_have_enabled_social_auth_modules.value) and (page.content.vartheme_bs4_socialauthlogin) %}
+        {{ page.header|without('VARTHEME_BS4_SUBTHEME_local_tasks', 'VARTHEME_BS4_SUBTHEME_breadcrumbs', 'VARTHEME_BS4_SUBTHEME_local_actions', 'VARTHEME_BS4_SUBTHEME_page_title') }}
+        {% if (varbase.we_do_have_enabled_social_auth_modules.value) and (page.content.VARTHEME_BS4_SUBTHEME_socialauthlogin) %}
           <h2 class="block-title"><span> {{ "Sign up with"|t }} </span></h2>
-          {{ page.content.vartheme_bs4_socialauthlogin }}
+          {{ page.content.VARTHEME_BS4_SUBTHEME_socialauthlogin }}
           <h2 class="block-title"><span> {{ "or"|t }} </span></h2>
-          {{ page.content|without('vartheme_bs4_socialauthlogin') }}
+          {{ page.content|without('VARTHEME_BS4_SUBTHEME_socialauthlogin') }}
         {% else %}
           <h2 class="block-title"><span> {{ title }} </span></h2>
           {{ page.content }}

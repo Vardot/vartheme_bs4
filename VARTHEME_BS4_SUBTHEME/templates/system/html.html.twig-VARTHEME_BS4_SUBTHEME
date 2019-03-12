@@ -64,7 +64,6 @@
     {# attache global styles RTL (right to left) if the html tag has dir=rtl #}
     {% if html_attributes['dir'] == 'rtl' %}
       {{ attach_library('VARTHEME_BS4_SUBTHEME/framework-rtl') }}
-      {{ attach_library('vartheme_bs4/framework-rtl') }}
     {%- endif -%}
     <js-placeholder token="{{ placeholder_token|raw }}">
   </head>
