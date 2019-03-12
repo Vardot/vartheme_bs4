@@ -10,13 +10,13 @@ framework:
     - VARTHEME_BS4_SUBTHEME/global-scripts
 
 # VARTHEME_BS4_SUBTHEME framework RTL
-# framework-rtl:
-#   css: {}
-#   js: {}
-#   dependencies:
-#     - core/jquery
-#     - VARTHEME_BS4_SUBTHEME/bootstrap-styles-rtl
-#     - VARTHEME_BS4_SUBTHEME/global-styles-rtl
+framework-rtl:
+  css: {}
+  js: {}
+  dependencies:
+    - core/jquery
+    - VARTHEME_BS4_SUBTHEME/bootstrap-styles-rtl
+    - VARTHEME_BS4_SUBTHEME/global-styles-rtl
 
 
 
@@ -147,17 +147,17 @@ global-styles:
     - core/jquery
 
 # VARTHEME_BS4_SUBTHEME global (RTL) styles library.
-#global-styles-rtl:
-#  css:
-#    base:
-#      css/rtl/base/vartheme_bs4-rtl.base.css: {}
-#      css/rtl/base/VARTHEME_BS4_SUBTHEME.base.css: {}
-#    theme:
-#      css/rtl/theme/header-rtl.theme.css: {}
-#      css/rtl/theme/content-rtl.theme.css: {}
-#      css/rtl/theme/footer-rtl.theme.css: {}
-#  dependencies:
-#    - core/jquery
+global-styles-rtl:
+  css:
+    base:
+      css/rtl/base/vartheme_bs4-rtl.base.css: {}
+      css/rtl/base/VARTHEME_BS4_SUBTHEME-rtl.base.css: {}
+    theme:
+      css/rtl/theme/header-rtl.theme.css: {}
+      css/rtl/theme/content-rtl.theme.css: {}
+      css/rtl/theme/footer-rtl.theme.css: {}
+  dependencies:
+    - core/jquery
 
 # VARTHEME_BS4_SUBTHEME global scripts library.
 global-scripts:
