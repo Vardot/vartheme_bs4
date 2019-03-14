@@ -6,92 +6,12 @@
 @import "../mixins";                      // VARTHEME_BS4_SUBTHEME mixins.
 // -----------------------------------------------------------------------------
 
-body.maintenance-page {
-  background-color: $body-bg;
-  color: $body-color;
-}
+// Insert your VARTHEME_BS4_SUBTHEME maintenance page custom SASS styling.
 
 .maintenance-page {
-
-  #page-wrapper {
-    background: $body-bg;
-    margin-left: auto;
-    margin-right: auto;
-    min-width: 0;
-    min-height: 0;
-    border: 1px solid #ddd;
-    margin-top: 40px;
-  }
-
-  #page {
-    margin: 10px;
-  }
-
-  #main-wrapper {
-    min-height: inherit;
-  }
-
-  #header {
-    width: auto;
-  }
-
-  #main {
-    margin: 0;
-  }
-
-  .content .section {
-    padding: 0 0 0 10px; /* LTR */
-  }
-
-  #header {
-    background-color: #fff;
-    background-image: none;
-  }
-
-  .site-branding-text {
-    margin-bottom: 50px;
-    margin-left: 0; /* LTR */
-    padding-top: 20px;
-    font-size: 90%;
-  }
-
-  .site-branding-text,
-  .site-branding-text a,
-  .site-branding-text a:hover,
-  .site-branding-text a:focus {
-    color: #777;
-  }
-
-  .page-title {
-    line-height: 1em;
-    margin-top: 0;
-  }
-
-  @media all and (min-width: 800px) {
-    #page-wrapper {
-      width: 800px;
-    }
-
-    #header div.section,
-    #main {
-      width: 700px;
-    }
-  }
-
-  @media all and (min-width: 600px) { /* @TODO find the proper breakpoint */
-    #page {
-      margin: 20px 40px 40px;
+  footer {
+    .footer-credits {
+      font-size: 12px;
     }
   }
 }
-[dir="rtl"] .maintenance-page {
-  .content .section {
-    padding-left: 0;
-    padding-right: 10px;
-  }
-
-  .site-branding-text {
-    margin-right: 0;
-  }
-}
-
