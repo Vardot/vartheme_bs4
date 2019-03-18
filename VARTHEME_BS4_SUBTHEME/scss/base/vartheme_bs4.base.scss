@@ -581,18 +581,6 @@ body.user-logged-in {
   }
 }
 
-// Justify content to center.
-.justify-content-center {
-  -webkit-box-pack: center!important;
-  -ms-flex-pack: center!important;
-  justify-content: center!important;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
 body.path-frontpage {
   h1.page-header {
     position: absolute;
