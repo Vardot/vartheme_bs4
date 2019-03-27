@@ -354,13 +354,19 @@ img {
 .maintenance-page #page {
   text-align: center; }
 
-.hidden-anonymous {
+.hidden-anonymous,
+.visible-admin,
+.visible-logged-in {
   display: none !important; }
 
-body.user-logged-in .visible-admin {
+body.user-logged-in .visible-admin,
+body.user-logged-in .visible-logged-in,
+body.user-logged-in .hidden-anonymous {
   display: inline-block !important; }
 
-body.user-logged-in .btn.visible-admin {
+body.user-logged-in .btn .visible-admin,
+body.user-logged-in .btn .visible-logged-in,
+body.user-logged-in .btn .hidden-anonymous {
   display: inline-block !important; }
 
 body.path-frontpage h1.page-header {

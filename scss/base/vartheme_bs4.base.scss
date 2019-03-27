@@ -565,19 +565,26 @@ img {
 }
 
 // Hide for anonymous users.
-.hidden-anonymous {
+.hidden-anonymous,
+.visible-admin,
+.visible-logged-in {
   display: none !important;
 }
 
-// Show only for admin users.
+// Show only for logged in users.
 body.user-logged-in {
-
-  .visible-admin {
+  .visible-admin,
+  .visible-logged-in,
+  .hidden-anonymous {
     display: inline-block !important;
   }
 
-  .btn.visible-admin {
-    display: inline-block !important;
+  .btn {
+    .visible-admin,
+    .visible-logged-in, 
+    .hidden-anonymous {
+      display: inline-block !important;
+    }
   }
 }
 
