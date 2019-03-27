@@ -24,61 +24,65 @@ function vartheme_bs4_form_system_theme_settings_alter(&$form, FormStateInterfac
     return;
   }
 
-  $form['email_logo'] = array(
+  // Email logo settings to be used with Varbase Email module.
+  $form['email_logo'] = [
     '#type'     => 'details',
     '#title'    => t('Email Logo'),
-    '#open' => false
-  );
-  $form['email_logo']['email_logo_default'] = array(
-      "#type" => "checkbox",
-      '#title'    => t('Use the logo supplied by the theme'),
-      "#default_value" => theme_get_setting('email_logo_default'),
-  );
+    '#open' => false,
+  ];
 
-  $form['email_logo']['email_logo_settings'] = array(
-      "#type" => "container",
-      '#states' => array(
-        "invisible" => array(
-          'input[name="email_logo_default"]' => array(
-            "checked" => TRUE
-          )
-        )
-      )
-  );
+  $form['email_logo']['email_logo_default'] = [
+    "#type" => "checkbox",
+    '#title'    => t('Use the logo supplied by the theme'),
+    "#default_value" => theme_get_setting('email_logo_default'),
+  ];
 
-  $form['email_logo']['email_logo_settings']["email_logo_path"] = array(
-      "#type" => "textfield",
-      "#title" => "Path to custom logo",
-      "#default_value" => theme_get_setting('email_logo_path'),
-      "#description" => t("Examples: <code>@external-file</code>", array("@external-file"=> "http://www.example.com/logo.png"))
-  );
+  $form['email_logo']['email_logo_settings'] = [
+    "#type" => "container",
+    '#states' => [
+      "invisible" => [
+        'input[name="email_logo_default"]' => [
+          "checked" => TRUE,
+        ],
+      ],
+    ]
+  ];
 
-  $form['email_logo']['email_logo_settings']["email_logo_upload"] = array(
-      '#type'     => 'managed_file',
-      "#title"    => t("Upload logo image"),
-      "#description" => t("If you don't have direct file access to the server, use this field to upload your logo."),
-      '#required' => FALSE,
-      '#upload_location' => file_default_scheme() . '://theme/email_logo/',
-      '#default_value' => theme_get_setting('email_logo_upload'),
-      '#upload_validators' => array(
-        'file_validate_extensions' => array('gif png jpg jpeg'),
-      ),
-  );
-  //Replace Barrio setting options with subtheme ones.
-  $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = array(
-      'bg-primary' => t('Primary'),
-      'bg-secondary' => t('Secondary'),
-      'bg-light' => t('Light'),
-      'bg-dark' => t('Dark'),
-      'bg-white' => t('White'),
-      'bg-transparent' => t('Transparent'),
-  );
-  $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = array(
-      'bg-primary' => t('Primary'),
-      'bg-secondary' => t('Secondary'),
-      'bg-light' => t('Light'),
-      'bg-dark' => t('Dark'),
-      'bg-white' => t('White'),
-      'bg-transparent' => t('Transparent'),
-  );
+  $form['email_logo']['email_logo_settings']["email_logo_path"] = [
+    "#type" => "textfield",
+    "#title" => "Path to custom logo",
+    "#default_value" => theme_get_setting('email_logo_path'),
+    "#description" => t("Examples: <code>@external-file</code>", ["@external-file"=> "http://www.example.com/logo.png"]),
+  ];
+
+  $form['email_logo']['email_logo_settings']["email_logo_upload"] = [
+    '#type'     => 'managed_file',
+    "#title"    => t("Upload logo image"),
+    "#description" => t("If you don't have direct file access to the server, use this field to upload your logo."),
+    '#required' => FALSE,
+    '#upload_location' => file_default_scheme() . '://theme/email_logo/',
+    '#default_value' => theme_get_setting('email_logo_upload'),
+    '#upload_validators' => [
+      'file_validate_extensions' => ['gif png jpg jpeg'],
+    ],
+  ];
+
+  // Replace Barrio setting options with subtheme ones.
+  $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = [
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  ];
+
+  $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = [
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  ];
 }
