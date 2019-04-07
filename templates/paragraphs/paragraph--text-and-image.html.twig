@@ -102,7 +102,7 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     <div class="row">
       <div class="{{- VBP.bp_width.value -}}">
         <div class="row">
-          {% if paragraph_title and paragraph_title_status %}<h2 class="text-center">{{- paragraph_title|striptags -}}</h2>{% endif %}
+          {% if paragraph_title and paragraph_title_status %}<h2 class="text-center">{% spaceless %}{{- paragraph_title|striptags -}}{% endspaceless %}</h2>{% endif %}
             {# Check the Image position field. #}
             {% set align = content.field_image_position['#items'].getString() %}
             {% if align == "left"%}
