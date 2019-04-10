@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display an oEmbed resource in an iframe.
+ *
+ * @ingroup themeable
+ */
+#}
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      iframe {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <script src="{{ base_path }}{{ varbase_heroslider_media_path }}/js/oembed-frame.heroslider.{{ provider }}.js"></script>
+  </head>
+  <body style="margin: 0">
+    {{ media|raw }}
+  </body>
+</html>
