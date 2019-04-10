@@ -32,7 +32,7 @@
       </div>
       <div id="bottom-part">
         <div class="back-link">
-          <a href="{{ url('<front>') }}"><span class="icon glyphicon glyphicon-home" aria-hidden="true"></span> {{ 'Back to'|t }}  {{ site_name }}</a>
+          <a href="{{ url('<front>') }}"><i class="fas fa-home" aria-hidden="true"></i> {{ 'Back to'|t }}  {{ site_name }}</a>
         </div>
       </div>
     </div>

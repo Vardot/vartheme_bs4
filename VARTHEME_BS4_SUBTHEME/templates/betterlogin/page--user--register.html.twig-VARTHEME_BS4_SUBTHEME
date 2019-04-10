@@ -36,11 +36,11 @@
       <div id="bottom-part">
       {% if not logged_in %}
         <div class="login-link">
-          <a href="{{ path('user.login') }}"><span class="icon glyphicon glyphicon-log-in" aria-hidden="true"></span> {{ 'Login'|t }}</a>
+          <a href="{{ path('user.login') }}"><i class="fas fa-sign-in-alt" aria-hidden="true"></i> {{ 'Login'|t }}</a>
         </div>
       {% endif %}
         <div class="back-link">
-          <a href="{{ url('<front>') }}"><span class="icon glyphicon glyphicon-home" aria-hidden="true"></span> {{ 'Back to'|t }}  {{ site_name }}</a>
+          <a href="{{ url('<front>') }}"><i class="fas fa-home" aria-hidden="true"></i> {{ 'Back to'|t }}  {{ site_name }}</a>
         </div>
       </div>
     </div>
