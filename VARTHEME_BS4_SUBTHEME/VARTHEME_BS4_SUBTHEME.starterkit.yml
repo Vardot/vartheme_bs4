@@ -3,7 +3,6 @@ type: theme
 base theme: vartheme_bs4
 
 name: 'VARTHEME_BS4_SUBTHEME - Subtheme of Vartheme (Bootstrap 4 - SASS)'
-type: theme
 description: 'Based on Bootstrap 4 framework using SASS, and extending Vartheme (Bootstrap 4 - SASS).'
 
 regions:
@@ -48,7 +47,7 @@ libraries-override:
   vartheme_bs4/bootstrap-styles: false
   vartheme_bs4/bootstrap-scripts: false
   vartheme_bs4/global-styles: false
-#  vartheme_bs4/global-scripts: false
+  vartheme_bs4/global-scripts: false
   vartheme_bs4/vbp-colors: false
   vartheme_bs4/betterlogin: false
 
