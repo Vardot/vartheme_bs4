@@ -1,5 +1,7 @@
 {
     "name": "vartheme_bs4",
+    "private": true,
+    "version": "8.6.0",
     "description": "Vartheme bootstrap 4 implementation",
     "main": "index.js",
     "scripts": {
