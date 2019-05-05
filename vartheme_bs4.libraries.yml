@@ -193,6 +193,11 @@ affix:
     component:
       css/components/affix.component.css: {}
 
+alerts:
+  css:
+    component:
+      css/components/alerts.component.css: {}
+
 book-navigation:
   css:
     component:
@@ -234,19 +239,19 @@ maintenance_page:
 node:
   css:
     component:
-      css/components/node.component.css: { weight: -10 }
+      css/components/node.css: { weight: -10 }
 
 sidebar-collapse:
   js:
-    js/bootstrap_barrio/sidebar-collapse.js: { external: true }
+    js/sidebar-collapse.js: { external: true }
   css:
     component:
-      css/components/sidebar-collapse.component.css: {}
+      css/components/sidebar-collapse.css: {}
 
 tabs:
   css:
     component:
-      css/components/tabs.component.css: {}
+      css/components/tabs.css: {}
 
 verticaltabs:
   css:

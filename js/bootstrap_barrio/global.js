@@ -51,9 +51,6 @@
         // init
         toggleAffix(ele, $(window), wrapper);
       });
-
-      $('.toast').toast('show');
-      
     }
   };
 
