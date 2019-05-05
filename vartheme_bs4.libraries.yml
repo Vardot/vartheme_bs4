@@ -239,19 +239,19 @@ maintenance_page:
 node:
   css:
     component:
-      css/components/node.css: { weight: -10 }
+      css/components/node.component.css: { weight: -10 }
 
 sidebar-collapse:
   js:
-    js/sidebar-collapse.js: { external: true }
+    js/bootstrap_barrio/sidebar-collapse.js: { external: true }
   css:
     component:
-      css/components/sidebar-collapse.css: {}
+      css/components/sidebar-collapse.component.css: {}
 
 tabs:
   css:
     component:
-      css/components/tabs.css: {}
+      css/components/tabs.component.css: {}
 
 verticaltabs:
   css:
