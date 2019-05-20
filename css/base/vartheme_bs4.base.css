@@ -394,3 +394,12 @@ pre {
 
 #tour.hidden.list-group {
   display: none; }
+
+.card-deck {
+  display: block; }
+
+.card .card-top-image {
+  max-width: 100%;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0; }

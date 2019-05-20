@@ -621,3 +621,15 @@ pre {
     display: none;
   }
 }
+
+// Fixed card deck and space under img card on IE.
+.card-deck {
+  display: block;
+}
+
+.card {
+  .card-top-image {
+    max-width: 100%;
+    flex-shrink: 0;
+  }
+}
