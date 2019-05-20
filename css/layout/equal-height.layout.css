@@ -23,32 +23,6 @@
         .equal-height .row > div[class*='col-'] article.node div.main-content div.card {
           height: 100%; }
 
-@media (max-width: 0) {
-  .equal-height-xs .row {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap; }
-    .equal-height-xs .row > div[class*='col-'] {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-              flex-direction: column; }
-      .equal-height-xs .row > div[class*='col-'] article.node {
-        height: 100%; }
-        .equal-height-xs .row > div[class*='col-'] article.node div.main-content {
-          height: 100%; }
-          .equal-height-xs .row > div[class*='col-'] article.node div.main-content div.card {
-            height: 100%; } }
-
 @media (min-width: 576px) {
   .equal-height-sm .row {
     display: -webkit-box;

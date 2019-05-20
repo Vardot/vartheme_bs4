@@ -28,30 +28,6 @@
   }
 }
 
-@media (max-width: map-get($grid-breakpoints, "xs")) {
-  .equal-height-xs {
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-
-      & > div[class*='col-'] {
-        display: flex;
-        flex-direction: column;
-
-        article.node {
-          height: 100%;
-          div.main-content {
-            height: 100%;
-            div.card {
-              height: 100%;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 @media (min-width: map-get($grid-breakpoints, "sm")) {
   .equal-height-sm {
     .row {
