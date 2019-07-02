@@ -156,6 +156,7 @@ global-styles-rtl:
       css/rtl/theme/header-rtl.theme.css: {}
       css/rtl/theme/content-rtl.theme.css: {}
       css/rtl/theme/footer-rtl.theme.css: {}
+      css/rtl/theme/betterlogin-rtl.theme.css: {}
   dependencies:
     - core/jquery
 

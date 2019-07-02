@@ -25,20 +25,22 @@
     max-width: 100%; }
   #auth-box .block-title {
     text-align: center;
-    background: #eeeeee;
+    background: #eee;
     height: 1px;
     margin: 30px 0; }
     #auth-box .block-title span {
-      background-color: #ffffff;
       text-transform: uppercase;
       font-size: 18px;
       padding: 0 10px;
       background: #fff;
-      padding: 10px;
       position: relative;
-      top: -20px; }
+      top: -30px; }
   #auth-box .user-login-form {
     text-align: left; }
+    #auth-box .user-login-form .form-checkbox {
+      margin-top: 0.5rem; }
+    #auth-box .user-login-form .option {
+      font-size: 1rem; }
   #auth-box .form-actions {
     text-align: center; }
   #auth-box .block-social-auth-login {
