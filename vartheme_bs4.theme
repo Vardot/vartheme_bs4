@@ -5,11 +5,11 @@
  * Functions to support theming in the SASS Starterkit subtheme.
  */
 
-use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\NodeInterface;
+use Drupal\node\Entity\Node;
 use Drupal\file\Entity\File;
 use Drupal\image\Entity\ImageStyle;
 use Drupal\views_bootstrap\ViewsBootstrap;
-use Drupal\Core\Template\Attribute;
 
 /**
  * Implements hook_theme_registry_alter().
@@ -27,20 +27,19 @@ function vartheme_bs4_theme_registry_alter(&$theme_registry) {
   ];
 
   foreach ($pages as $key => $template) {
-    $theme_registry[$key]['path'] = $vartheme_bs4_path  . '/templates/betterlogin';
+    $theme_registry[$key]['path'] = $vartheme_bs4_path . '/templates/betterlogin';
   }
 }
-
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
 function vartheme_bs4_theme_suggestions_page_alter(array &$suggestions, array $variables) {
   if ($node = \Drupal::routeMatch()->getParameter('node')) {
-    if(is_numeric($node)) {
-      $node = \Drupal\node\Entity\Node::load($node);
+    if (is_numeric($node)) {
+      $node = Node::load($node);
     }
-    if($node instanceof \Drupal\node\NodeInterface) {
+    if ($node instanceof NodeInterface) {
       array_splice($suggestions, 1, 0, 'page__' . $node->bundle());
     }
   }
@@ -52,7 +51,7 @@ function vartheme_bs4_theme_suggestions_page_alter(array &$suggestions, array $v
 function vartheme_bs4_preprocess_page_title(&$variables) {
 
   // Hide page title for the front page and let screen readers only see it.
-  if(\Drupal::service('path.matcher')->isFrontPage()) {
+  if (\Drupal::service('path.matcher')->isFrontPage()) {
     $variables['title_attributes']['class'][] = 'page-title';
     $variables['title_attributes']['class'][] = 'sr-only';
   }
@@ -79,7 +78,7 @@ function vartheme_bs4_preprocess_page(&$variables) {
  * Implements hook_preprocess_paragraph().
  */
 function vartheme_bs4_preprocess_paragraph(&$variables) {
-  $file_path = null;
+  $file_path = NULL;
   if (isset($variables['paragraph']->bp_image_field)
     && isset($variables['paragraph']->bp_image_field->target_id)) {
 
@@ -99,7 +98,7 @@ function vartheme_bs4_preprocess_paragraph(&$variables) {
     }
   }
 
-  $width_value = null;
+  $width_value = NULL;
   if (isset($variables['paragraph']->bp_width)
     && isset($variables['paragraph']->bp_width->value)) {
 
@@ -115,14 +114,12 @@ function vartheme_bs4_preprocess_paragraph(&$variables) {
     'bg-edge2edge' => 'bg-edge2edge col-12',
   ];
 
-
   $width = 'col-12';
   if (isset($width_map[$width_value])) {
     $width = $width_map[$width_value];
   }
 
-
-  $custom_paragraph_classes_value = null;
+  $custom_paragraph_classes_value = NULL;
   if (isset($variables['paragraph']->bp_classes)
       && isset($variables['paragraph']->bp_classes->value)) {
     $custom_paragraph_classes_value = $variables['paragraph']->bp_classes->value;
@@ -181,10 +178,9 @@ function vartheme_bs4_preprocess_views_bootstrap_grid(array &$vars) {
   $vars['attributes']['class'][] = 'grid';
   $options = $view->style_plugin->options;
   $options['automatic_width'] = ['default' => TRUE];
-  $horizontal = ($options['alignment'] === 'horizontal');
 
-  if(isset($options["col_xs"])){
-    $options["col_xs"] = str_replace("xs-","",$options["col_xs"]);
+  if (isset($options["col_xs"])) {
+    $options["col_xs"] = str_replace("xs-", "", $options["col_xs"]);
   }
 
   foreach (['xs', 'sm', 'md', 'lg'] as $size) {

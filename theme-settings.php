@@ -1,15 +1,16 @@
 <?php
+
 /**
  * @file
  * theme-settings.php
  *
- * Provides theme settings for Bootstrap Barrio based themes when admin theme is not.
+ * Provides theme settings for Bootstrap Barrio based themes when admin
+ * theme is not.
  *
  * @see ./includes/settings.inc
  */
 
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Url;
 
 /**
  * Implements hook_form_FORM_ID_alter().
@@ -28,7 +29,7 @@ function vartheme_bs4_form_system_theme_settings_alter(&$form, FormStateInterfac
   $form['email_logo'] = [
     '#type'     => 'details',
     '#title'    => t('Email Logo'),
-    '#open' => false,
+    '#open' => FALSE,
   ];
 
   $form['email_logo']['email_logo_default'] = [
@@ -45,14 +46,14 @@ function vartheme_bs4_form_system_theme_settings_alter(&$form, FormStateInterfac
           "checked" => TRUE,
         ],
       ],
-    ]
+    ],
   ];
 
   $form['email_logo']['email_logo_settings']["email_logo_path"] = [
     "#type" => "textfield",
     "#title" => "Path to custom logo",
     "#default_value" => theme_get_setting('email_logo_path'),
-    "#description" => t("Examples: <code>@external-file</code>", ["@external-file"=> "http://www.example.com/logo.png"]),
+    "#description" => t("Examples: <code>@external-file</code>", ["@external-file" => "http://www.example.com/logo.png"]),
   ];
 
   $form['email_logo']['email_logo_settings']["email_logo_upload"] = [

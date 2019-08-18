@@ -4,6 +4,7 @@ base theme: vartheme_bs4
 
 name: 'VARTHEME_BS4_SUBTHEME - Subtheme of Vartheme (Bootstrap 4 - SASS)'
 description: 'Based on Bootstrap 4 framework using SASS, and extending Vartheme (Bootstrap 4 - SASS).'
+project: vartheme_bs4
 
 regions:
   navigation: 'Navigation'

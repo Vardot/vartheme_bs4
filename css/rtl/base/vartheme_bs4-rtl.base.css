@@ -1,5 +1,5 @@
-@import url(//fonts.googleapis.com/earlyaccess/droidarabickufi.css);
-[dir="rtl"] .justify-content-center.nav-pills > li + li {
+/* Insert your Bootstrap (RTL) overrides for bootstrap-rtl library. */
+@import url(//fonts.googleapis.com/earlyaccess/droidarabickufi.css); [dir="rtl"] .justify-content-center.nav-pills > li + li {
   margin-left: inherit;
 }
 

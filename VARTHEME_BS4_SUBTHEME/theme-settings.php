@@ -1,15 +1,16 @@
 <?php
+
 /**
  * @file
  * theme-settings.php
  *
- * Provides theme settings for Bootstrap Barrio based themes when admin theme is not.
+ * Provides theme settings for Bootstrap Barrio based themes when admin theme
+ * is not.
  *
  * @see ./includes/settings.inc
  */
 
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Url;
 
 /**
  * Implements hook_form_FORM_ID_alter().
@@ -28,7 +29,7 @@ function VARTHEME_BS4_SUBTHEME_form_system_theme_settings_alter(&$form, FormStat
   $form['email_logo'] = [
     '#type'     => 'details',
     '#title'    => t('Email Logo'),
-    '#open' => false,
+    '#open' => FALSE,
   ];
 
   $form['email_logo']['email_logo_default'] = [
@@ -52,19 +53,19 @@ function VARTHEME_BS4_SUBTHEME_form_system_theme_settings_alter(&$form, FormStat
     "#type" => "textfield",
     "#title" => "Path to custom logo",
     "#default_value" => theme_get_setting('email_logo_path'),
-    "#description" => t("Examples: <code>@external-file</code>", ["@external-file"=> "http://www.example.com/logo.png"])
+    "#description" => t("Examples: <code>@external-file</code>", ["@external-file" => "http://www.example.com/logo.png"]),
   ];
 
   $form['email_logo']['email_logo_settings']["email_logo_upload"] = [
-      '#type'     => 'managed_file',
-      "#title"    => t("Upload logo image"),
-      "#description" => t("If you don't have direct file access to the server, use this field to upload your logo."),
-      '#required' => FALSE,
-      '#upload_location' => file_default_scheme() . '://theme/email_logo/',
-      '#default_value' => theme_get_setting('email_logo_upload'),
-      '#upload_validators' => [
-        'file_validate_extensions' => ['gif png jpg jpeg'],
-      ],
+    '#type'     => 'managed_file',
+    "#title"    => t("Upload logo image"),
+    "#description" => t("If you don't have direct file access to the server, use this field to upload your logo."),
+    '#required' => FALSE,
+    '#upload_location' => file_default_scheme() . '://theme/email_logo/',
+    '#default_value' => theme_get_setting('email_logo_upload'),
+    '#upload_validators' => [
+      'file_validate_extensions' => ['gif png jpg jpeg'],
+    ],
   ];
 
   // Replace Barrio setting options with subtheme ones.
