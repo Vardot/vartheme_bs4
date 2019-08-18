@@ -1,14 +1,17 @@
 .ui-widget-overlay {
   background: #000;
-  opacity: 0.7; }
+  opacity: 0.7;
+}
 
 .ui-dialog {
-  border-radius: 0; }
+  border-radius: 0;
+}
 
 .ui-dialog input,
 .ui-dialog select,
 .ui-dialog textarea {
-  font-size: 1rem; }
+  font-size: 1rem;
+}
 
 .ui-dialog .button {
   background-color: #fff;
@@ -26,4 +29,5 @@
   font-weight: normal;
   text-align: center;
   padding: 0.250em 1.063em;
-  border-radius: 1em; }
+  border-radius: 1em;
+}

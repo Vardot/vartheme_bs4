@@ -34,8 +34,15 @@ const paths = {
 
 // Compile sass into CSS & auto-inject into browsers
 function compile () {
+  var sassOptions = {
+    outputStyle: 'expanded',
+    indentType: 'space',
+    indentWidth: 2,
+    linefeed: 'lf'
+  };
+
   return gulp.src([paths.scss.src])
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(postcss([autoprefixer({
       browsers: [
         'Chrome >= 35',
