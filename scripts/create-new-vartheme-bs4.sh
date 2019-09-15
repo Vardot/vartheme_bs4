@@ -36,23 +36,23 @@ current_path=$(pwd);
 drupal_root="$current_path";
 
 if [[ "${drupal_root: -1}" == "/" ]]; then
-  drupal_root="${drupal_root::-1}";
+  drupal_root="${drupal_root:0:${#drupal_root}-1}";
 fi
 
 if [[ "${drupal_root: -35}" == "themes/contrib/vartheme_bs4/scripts" ]]; then
-  drupal_root="${drupal_root::-35}";
+  drupal_root="${drupal_root:0:${#drupal_root}-35}";
 fi
 
 if [[ "${drupal_root: -27}" == "themes/contrib/vartheme_bs4" ]]; then
-  drupal_root="${drupal_root::-27}";
+  drupal_root="${drupal_root:0:${#drupal_root}-27}";
 fi
 
 if [[ "${drupal_root: -6}" == "themes" ]]; then
-  drupal_root="${drupal_root::-6}";
+  drupal_root="${drupal_root:0:${#drupal_root}-6}";
 fi
 
 if [[ "${drupal_root: -1}" == "/" ]]; then
-  drupal_root="${drupal_root::-1}";
+  drupal_root="${drupal_root:0:${#drupal_root}-1}";
 fi
 
 echo "Current path: $current_path";
