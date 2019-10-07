@@ -9,7 +9,6 @@ use Drupal\node\NodeInterface;
 use Drupal\node\Entity\Node;
 use Drupal\file\Entity\File;
 use Drupal\image\Entity\ImageStyle;
-use Drupal\views_bootstrap\ViewsBootstrap;
 
 /**
  * Implements hook_theme_registry_alter().
@@ -173,21 +172,9 @@ function vartheme_bs4_preprocess_paragraph(&$variables) {
  *   - rows: The raw row data.
  */
 function vartheme_bs4_preprocess_views_bootstrap_grid(array &$vars) {
-  $view = $vars['view'];
-  $vars['id'] = ViewsBootstrap::getUniqueId($view);
-  $vars['attributes']['class'][] = 'grid';
-  $options = $view->style_plugin->options;
-  $options['automatic_width'] = ['default' => TRUE];
 
-  if (isset($options["col_xs"])) {
-    $options["col_xs"] = str_replace("xs-", "", $options["col_xs"]);
+  if (isset($vars['options']) && isset($vars['options']["col_xs"])) {
+    $vars['options']["col_xs"] = str_replace("xs-", "", $vars['options']["col_xs"]);
   }
-
-  foreach (['xs', 'sm', 'md', 'lg'] as $size) {
-    $vars["col_" . $size] = $options["col_" . $size];
-    // Get the value from the size sting.
-    $vars['sizes'][$size] = ViewsBootstrap::getColSize($options["col_" . $size]);
-  }
-  $vars['options'] = $options;
 
 }
