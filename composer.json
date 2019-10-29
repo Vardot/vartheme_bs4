@@ -42,6 +42,12 @@
       "npm-asset"
     ],
     "enable-patching": true,
-    "composer-exit-on-patch-failure": true
+    "composer-exit-on-patch-failure": true,
+    "patches": {
+      "drupal/bootstrap_barrio": {
+        "Issue #2979503: AJAXed Views Exposed Filter refreshing entire page instead of views-content":
+        "https://www.drupal.org/files/issues/2019-10-28/2979503-AJAX-views-exposed-filter-refreshing.patch"
+      }
+    }
   }
 }
