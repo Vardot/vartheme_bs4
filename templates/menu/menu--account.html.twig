@@ -32,17 +32,25 @@
     {% if menu_level == 0 %}
       <ul{{ attributes.addClass('nav') }}>
         {% for item in items %}
-          {% set link_classes = [
-            'nav-link',
-            item.in_active_trail ? 'active',
+          {% set classes = [
+            'nav-item',
+            item.is_expanded ? 'menu-item--expanded',
+            item.is_collapsed ? 'menu-item--collapsed',
+            item.in_active_trail ? 'menu-item--active-trail',
           ] %}
-          {% if item.url.getOption('attributes') is not null %}
-            {% set link_attributes =  create_attribute(item.url.getOption('attributes')).addClass(link_classes) %}
-          {% else %}
-            {% set link_attributes =  create_attribute({'class': link_classes}) %}
-          {% endif %}
+          <li{{ item.attributes.addClass(classes) }}>
+            {% set link_classes = [
+              'nav-link',
+              item.in_active_trail ? 'active',
+            ] %}
+            {% if item.url.getOption('attributes') is not null %}
+              {% set link_attributes =  create_attribute(item.url.getOption('attributes')).addClass(link_classes) %}
+            {% else %}
+              {% set link_attributes =  create_attribute({'class': link_classes}) %}
+            {% endif %}
 
-          {{ link(item.title, item.url, link_attributes) }}
+            {{ link(item.title, item.url, link_attributes) }}
+          </li>
         {% endfor %}
       </ul>
     {% endif %}
