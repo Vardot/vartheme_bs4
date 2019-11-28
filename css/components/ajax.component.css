@@ -7,8 +7,8 @@
   top: 50%;
   right: 6px;
   -webkit-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .throbber-added {
@@ -22,8 +22,8 @@
   right: 14px;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .btn .ajax-throbber::before {

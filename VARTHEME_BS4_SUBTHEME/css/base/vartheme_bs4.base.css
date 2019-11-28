@@ -142,13 +142,11 @@ div.image-widget-data {
   margin-bottom: 0;
 }
 
-.radio:first-child,
-.checkbox:first-child {
+.radio:first-child, .checkbox:first-child {
   margin-top: 0;
 }
 
-.radio:last-child,
-.checkbox:last-child {
+.radio:last-child, .checkbox:last-child {
   margin-bottom: 0;
 }
 
@@ -243,13 +241,13 @@ ul.pagination li > a.progress-disabled {
 @keyframes adjust-hue {
   0% {
     -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    transform: rotate(359deg);
+         -o-transform: rotate(359deg);
+            transform: rotate(359deg);
   }
 }
 
@@ -533,6 +531,6 @@ pre {
 .card .card-top-image {
   max-width: 100%;
   -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
 }

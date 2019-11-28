@@ -7,8 +7,8 @@
   margin-right: -50vw !important;
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 100vw;
-  -ms-flex: 0 0 100vw;
-  flex: 0 0 100vw;
+      -ms-flex: 0 0 100vw;
+          flex: 0 0 100vw;
   max-width: none;
 }
 
