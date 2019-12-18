@@ -5,7 +5,7 @@
   background-image: url(../../images/required.svg);
   background-repeat: no-repeat;
   -webkit-background-size: calc(1.5em + 0.75rem + 2px)/2 calc(1.5em + 0.75rem + 2px)/2;
-          background-size: calc(1.5em + 0.75rem + 2px)/2 calc(1.5em + 0.75rem + 2px)/2;
+  background-size: calc(1.5em + 0.75rem + 2px)/2 calc(1.5em + 0.75rem + 2px)/2;
   width: calc(1.5em + 0.75rem + 2px)/2;
   height: calc(1.5em + 0.75rem + 2px)/2;
   margin: 0 0.3em;
