@@ -101,7 +101,7 @@
       <div class="col-sm-12">
         {# Logo print #}
         {% if logo_print %}
-          <img class="logo pull-left d-none d-print-inline-block" src="{{ logo_print }}" />
+          <img class="logo pull-left d-none d-print-inline-block" src="{{ logo_print }}" alt="Logo print"/>
         {% endif %}
       </div>
     </div>
