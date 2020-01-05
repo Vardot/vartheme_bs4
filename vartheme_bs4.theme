@@ -70,7 +70,12 @@ function vartheme_bs4_preprocess_html(&$variables) {
  * Implements hook_preprocess_page().
  */
 function vartheme_bs4_preprocess_page(&$variables) {
+  // Add the pring logo.
   $variables['logo_print'] = \Drupal::request()->getBaseUrl() . '/' . drupal_get_path('theme', 'vartheme_bs4') . '/logo-print.png';
+
+  // Add the site name and slogan.
+  $variables['site_name'] = \Drupal::config('system.site')->get('name');
+  $variables['site_slogan'] = \Drupal::config('system.site')->get('slogan');
 }
 
 /**
