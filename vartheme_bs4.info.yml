@@ -32,6 +32,9 @@ libraries:
   
   # Vartheme BS4 Varbase Bootstrap Paragraphs colors theme.
   - vartheme_bs4/vbp-colors
+  
+  # Vartheme BS4 Varbase Layout Builder colors theme.
+  - vartheme_bs4/vlb-colors
 
   # Vartheme BS4 Better Login theme.
   - vartheme_bs4/betterlogin
@@ -63,8 +66,9 @@ libraries-override:
 
   # Varbase module compnents overrides in Vartheme BS4.
   varbase_bootstrap_paragraphs/vbp-colors: vartheme_bs4/vbp-colors
+  varbase_layout_builder/vlb-colors: vartheme_bs4/vlb-colors
   betterlogin/betterlogin_css: vartheme_bs4/betterlogin
-  
+
   varbase_heroslider_media/general-styling:
     css:
       theme:
@@ -135,3 +139,4 @@ ckeditor_stylesheets:
   # Theme
   - css/theme/content.theme.css
   - css/theme/vbp-colors.theme.css
+  - css/theme/vlb-colors.theme.css

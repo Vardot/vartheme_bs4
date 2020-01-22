@@ -15,7 +15,7 @@ body {
   text-align: right;
 
   .nav {
-    padding-#{$right}: 0;
+    padding-right: 0;
   }
 
   .navbar-nav .nav-item {
@@ -27,19 +27,19 @@ body {
   }
 
   .alert-dismissible {
-    padding-#{$left}: 4rem;
-    padding-#{$right}: 1.25rem;
+    padding-left: 4rem;
+    padding-right: 1.25rem;
   }
 
   .dropdown-menu {
-    #{$right}: 0;
-    #{$left}: auto;
+    right: 0;
+    left: auto;
     text-align: $right;
   }
 
   .checkbox label {
-    padding-#{$right}: 1.25rem;
-    padding-#{$left}: inherit;
+    padding-right: 1.25rem;
+    padding-left: inherit;
   }
 
   .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
@@ -57,8 +57,8 @@ body {
 
   .custom-control-label::after,
   .custom-control-label::before {
-    #{$right}: -25px;
-    #{$left}: auto;
+    right: -25px;
+    left: auto;
   }
 
   .custom-select {
@@ -101,20 +101,20 @@ body {
   }
 
   .custom-control {
-    margin-#{$left}: 1rem;
-    padding-#{$left}: inherit;
-    margin-#{$right}: inherit;
-    padding-#{$right}: $custom-control-spacer-x;
+    margin-left: 1rem;
+    padding-left: inherit;
+    margin-right: inherit;
+    padding-right: $custom-control-spacer-x;
   }
 
   .custom-control-indicator {
-    #{$right}: 0;
-    #{$left}: inherit;
+    right: 0;
+    left: inherit;
   }
 
   .custom-file-label::after {
-    #{$left}: -1px;
-    #{$right}: initial;
+    left: -1px;
+    right: initial;
     border-radius: .25rem 0 0 .25rem;
   }
 
@@ -122,13 +122,13 @@ body {
   .radio-inline,
   .checkbox input,
   .checkbox-inline input {
-    margin-#{$right}: -1.25rem;
-    margin-#{$left}: inherit;
+    margin-right: -1.25rem;
+    margin-left: inherit;
   }
 
   .list-group {
-    padding-#{$right}: 0;
-    padding-#{$left}: $list-group-item-padding-x;
+    padding-right: 0;
+    padding-left: $list-group-item-padding-x;
   }
 
   .close {
@@ -137,80 +137,80 @@ body {
 
   .modal-header .close {
     margin-top: - $grid-gutter-width;
-    margin-#{$right}: auto;
-    margin-#{$left}: - $grid-gutter-width;
+    margin-right: auto;
+    margin-left: - $grid-gutter-width;
     margin-bottom: - $grid-gutter-width;
   }
 
   .modal-footer > :not(:first-child) {
-    margin-#{$right}: .25rem;
+    margin-right: .25rem;
   }
 
   .alert-dismissible .close {
-    #{$left}: 0;
-    #{$right}: inherit;
+    left: 0;
+    right: inherit;
   }
 
   .dropdown-toggle::after {
-    margin-#{$left}: 0;
-    margin-#{$right}: .255em;
+    margin-left: 0;
+    margin-right: .255em;
   }
 
   .form-check-input {
-    margin-#{$left}: inherit;
-    margin-#{$right}: -1.25rem;
+    margin-left: inherit;
+    margin-right: -1.25rem;
   }
 
   .form-check-label {
-    padding-#{$right}: 1.25rem;
-    padding-#{$left}: inherit;
+    padding-right: 1.25rem;
+    padding-left: inherit;
   }
 
   .pagination .page-item:first-child .page-link {
-    border-top-#{$left}-radius: 0;
-    border-bottom-#{$left}-radius: 0;
-    border-top-#{$right}-radius: $border-radius;
-    border-bottom-#{$right}-radius: $border-radius;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
   }
 
   .pagination .page-item:last-child .page-link {
-    border-top-#{$right}-radius: 0;
-    border-bottom-#{$right}-radius: 0;
-    border-top-#{$left}-radius: $border-radius;
-    border-bottom-#{$left}-radius: $border-radius;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
   }
 
   .pagination-sm .page-item:first-child .page-link {
-    border-top-#{$right}-radius: $border-radius-sm;
-    border-bottom-#{$right}-radius: $border-radius-sm;
+    border-top-right-radius: $border-radius-sm;
+    border-bottom-right-radius: $border-radius-sm;
   }
 
   .pagination-sm .page-item:last-child .page-link {
-    border-top-#{$left}-radius: $border-radius-sm;
-    border-bottom-#{$left}-radius: $border-radius-sm;
+    border-top-left-radius: $border-radius-sm;
+    border-bottom-left-radius: $border-radius-sm;
   }
 
   .pagination-lg .page-item:first-child .page-link {
-    border-top-#{$right}-radius: $border-radius-lg;
-    border-bottom-#{$right}-radius: $border-radius-lg;
+    border-top-right-radius: $border-radius-lg;
+    border-bottom-right-radius: $border-radius-lg;
   }
 
   .pagination-lg .page-item:last-child .page-link {
-    border-top-#{$left}-radius: $border-radius-lg;
-    border-bottom-#{$left}-radius: $border-radius-lg;
+    border-top-left-radius: $border-radius-lg;
+    border-bottom-left-radius: $border-radius-lg;
   }
 
   .input-group > .custom-file:not(:last-child) .custom-file-label, .input-group > .custom-file:not(:last-child) .custom-file-label::after {
-    border-top-#{$left}-radius: 0;
-    border-bottom-#{$left}-radius: 0;
-    border-top-#{$right}-radius: $border-radius;
-    border-bottom-#{$right}-radius: $border-radius;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
   }
 
   @mixin make-col-offset($size, $columns: $grid-columns) {
     $num: $size / $columns;
-    margin-#{$left}: 0;
-    margin-#{$right}: if($num == 0, 0, percentage($num));
+    margin-left: 0;
+    margin-right: if($num == 0, 0, percentage($num));
   }
 
   @mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
@@ -240,36 +240,36 @@ body {
 
       @each $size, $length in $spacers {
         .mr#{$infix}-#{$size} {
-          margin-#{$right}: 0 !important;
-          margin-#{$left}: $length !important;
+          margin-right: 0 !important;
+          margin-left: $length !important;
         }
         .ml#{$infix}-#{$size} {
-          margin-#{$right}: $length !important;
-          margin-#{$left}: 0 !important;
+          margin-right: $length !important;
+          margin-left: 0 !important;
         }
       }
 
       @each $size, $length in $spacers {
         .pr#{$infix}-#{$size} {
-          padding-#{$right}: 0 !important;
-          padding-#{$left}: $length !important;
+          padding-right: 0 !important;
+          padding-left: $length !important;
         }
         .pl#{$infix}-#{$size} {
-          padding-#{$right}: $length !important;
-          padding-#{$left}: 0 !important;
+          padding-right: $length !important;
+          padding-left: 0 !important;
         }
       }
       .mr#{$infix}-auto {
-        margin-#{$right}: 0 !important;
-        margin-#{$left}: auto !important;
+        margin-right: 0 !important;
+        margin-left: auto !important;
       }
       .ml#{$infix}-auto {
-        margin-#{$right}: auto !important;
-        margin-#{$left}: 0 !important;
+        margin-right: auto !important;
+        margin-left: 0 !important;
       }
       .mx#{$infix}-auto {
-        margin-#{$right}: auto !important;
-        margin-#{$left}: auto !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
       }
     }
   }

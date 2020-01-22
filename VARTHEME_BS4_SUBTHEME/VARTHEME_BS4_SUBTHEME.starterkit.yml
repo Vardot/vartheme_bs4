@@ -32,6 +32,9 @@ libraries:
 
   # VARTHEME_BS4_SUBTHEME Varbase Bootstrap Paragraphs colors style.
   - VARTHEME_BS4_SUBTHEME/vbp-colors
+  
+  # VARTHEME_BS4_SUBTHEME Varbase Layout Builder colors style.
+  - VARTHEME_BS4_SUBTHEME/vlb-colors
 
   # VARTHEME_BS4_SUBTHEME Better Login style.
   - VARTHEME_BS4_SUBTHEME/betterlogin
@@ -50,6 +53,7 @@ libraries-override:
   vartheme_bs4/global-styles: false
   vartheme_bs4/global-scripts: false
   vartheme_bs4/vbp-colors: false
+  vartheme_bs4/vlb-colors: false
   vartheme_bs4/betterlogin: false
 
   vartheme_bs4/breadcrumb: VARTHEME_BS4_SUBTHEME/breadcrumb
@@ -66,6 +70,7 @@ libraries-override:
 
   # Varbase module compnents overrides in VARTHEME_BS4_SUBTHEME.
   varbase_bootstrap_paragraphs/vbp-colors: VARTHEME_BS4_SUBTHEME/vbp-colors
+  varbase_layout_builder/vlb-colors: VARTHEME_BS4_SUBTHEME/vlb-colors
   betterlogin/betterlogin_css: VARTHEME_BS4_SUBTHEME/betterlogin
 
   varbase_heroslider_media/general-styling:
@@ -139,3 +144,4 @@ ckeditor_stylesheets:
   # Theme
   - css/theme/content.theme.css
   - css/theme/vbp-colors.theme.css
+  - css/theme/vlb-colors.theme.css

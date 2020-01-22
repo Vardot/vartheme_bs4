@@ -1,6 +1,7 @@
 let gulp = require('gulp'),
   sass = require('gulp-sass'),
   postcss = require('gulp-postcss'),
+  csscomb = require('gulp-csscomb'),
   autoprefixer = require('autoprefixer'),
   browserSync = require('browser-sync').create()
 
@@ -42,6 +43,7 @@ function compile () {
   };
 
   return gulp.src([paths.scss.src])
+    .pipe(csscomb())
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(postcss([autoprefixer({
       browsers: [
