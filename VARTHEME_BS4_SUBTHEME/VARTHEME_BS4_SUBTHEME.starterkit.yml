@@ -38,13 +38,16 @@ libraries:
 
   # VARTHEME_BS4_SUBTHEME Better Login style.
   - VARTHEME_BS4_SUBTHEME/betterlogin
+  
+  # VARTHEME_BS4_SUBTHEME Varbase Media Hero Slider style.
+  - VARTHEME_BS4_SUBTHEME/heroslider
 
   # Icons: Uncomment the following if you want to use icons.
   #- VARTHEME_BS4_SUBTHEME/material_design_icons
   #- VARTHEME_BS4_SUBTHEME/fontawesome
 
   # Fonts: Uncomment the following if you want to use the roboto font.
-  #- VARTHEME_BS4_SUBTHEME/roboto   
+  #- VARTHEME_BS4_SUBTHEME/roboto
 
 libraries-override:
   vartheme_bs4/framework: false
@@ -55,6 +58,7 @@ libraries-override:
   vartheme_bs4/vbp-colors: false
   vartheme_bs4/vlb-colors: false
   vartheme_bs4/betterlogin: false
+  vartheme_bs4/heroslider: false
 
   vartheme_bs4/breadcrumb: VARTHEME_BS4_SUBTHEME/breadcrumb
   vartheme_bs4/dropbutton: VARTHEME_BS4_SUBTHEME/dropbutton
@@ -72,11 +76,7 @@ libraries-override:
   varbase_bootstrap_paragraphs/vbp-colors: VARTHEME_BS4_SUBTHEME/vbp-colors
   varbase_layout_builder/vlb-colors: VARTHEME_BS4_SUBTHEME/vlb-colors
   betterlogin/betterlogin_css: VARTHEME_BS4_SUBTHEME/betterlogin
-
-  varbase_heroslider_media/general-styling:
-    css:
-      theme:
-        css/theme/varbase-heroslider-media.theme.css: css/theme/varbase-heroslider-media.theme.css
+  varbase_heroslider_media/general-styling: VARTHEME_BS4_SUBTHEME/heroslider
 
   vbp_text_and_image/vbp_text_and_image_default:
     css:

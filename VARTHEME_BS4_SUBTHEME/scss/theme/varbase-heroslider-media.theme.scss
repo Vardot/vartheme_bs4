@@ -5,8 +5,63 @@
 @import "../variables";                   // VARTHEME_BS4_SUBTHEME variables.
 @import "../mixins";                      // VARTHEME_BS4_SUBTHEME mixins.
 // -----------------------------------------------------------------------------
-
 .varbase-heroslider-media {
+  position: relative;
+  overflow: hidden;
+
+  .slick-slide {
+    .slide__caption {
+      position: absolute;
+      left: 0;
+      bottom: 20%;
+      top: auto;
+      opacity: 0;
+      filter: alpha(opacity=0);
+      -webkit-transform: scale(.95);
+      transform: scale(.95);
+      -webkit-transition: opacity 1.25s cubic-bezier(.19,1,.22,1) 0s,-webkit-transform 0s cubic-bezier(.19,1,.22,1) 1.25s;
+      transition: opacity 1.25s cubic-bezier(.19,1,.22,1) 0s,-webkit-transform 0s cubic-bezier(.19,1,.22,1) 1.25s;
+      transition: transform 0s cubic-bezier(.19,1,.22,1) 1.25s,opacity 1.25s cubic-bezier(.19,1,.22,1) 0s;
+      transition: transform 0s cubic-bezier(.19,1,.22,1) 1.25s,opacity 1.25s cubic-bezier(.19,1,.22,1) 0s,-webkit-transform 0s cubic-bezier(.19,1,.22,1) 1.25s;
+    }
+
+    .img-responsive {
+      -webkit-transition: -webkit-transform 3s cubic-bezier(.19,1,.22,1) 0s;
+      transition: -webkit-transform 3s cubic-bezier(.19,1,.22,1) 0s;
+      transition: transform 3s cubic-bezier(.19,1,.22,1) 0s;
+      transition: transform 3s cubic-bezier(.19,1,.22,1) 0s,-webkit-transform 3s cubic-bezier(.19,1,.22,1) 0s;
+      -webkit-transform: scale(1.15);
+      transform: scale(1.15);
+    }
+
+    .unpublished {
+      padding: 0;
+      height: auto;
+    }
+  }
+
+  .slick-active {
+    .slide__caption {
+      opacity: 1;
+      filter: alpha(opacity=100);
+      -webkit-transition: opacity 1.25s cubic-bezier(.19,1,.22,1) .5s,-webkit-transform 1.25s cubic-bezier(.19,1,.22,1) 0.5s;
+      transition: opacity 1.25s cubic-bezier(.19,1,.22,1) .5s,-webkit-transform 1.25s cubic-bezier(.19,1,.22,1) 0.5s;
+      transition: transform 1.25s cubic-bezier(.19,1,.22,1) .5s,opacity 1.25s cubic-bezier(.19,1,.22,1) 0.5s;
+      transition: transform 1.25s cubic-bezier(.19,1,.22,1) .5s,opacity 1.25s cubic-bezier(.19,1,.22,1) .5s,-webkit-transform 1.25s cubic-bezier(.19,1,.22,1) 0.5s;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+
+    .img-responsive {
+      -webkit-transition: -webkit-transform 3s cubic-bezier(.19,1,.22,1) 0s;
+      transition: -webkit-transform 3s cubic-bezier(.19,1,.22,1) 0s;
+      transition: transform 3s cubic-bezier(.19,1,.22,1) 0s;
+      transition: transform 3s cubic-bezier(.19,1,.22,1) 0s,-webkit-transform 3s cubic-bezier(.19,1,.22,1) 0s;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+
   .slide__caption {
     .slide__title {
       a {
@@ -26,34 +81,27 @@
       border-radius: 50%;
     }
 
-    @media screen and (max-width: map-get($grid-breakpoints, "sm")) {
-      top: calc($hero-max-height-xs/2);
-      transform: translateY(-calc($hero-max-height-xs/2));
-    }
+    $top_max_value: $hero-max-height/2;
 
-    @media screen and (min-width: map-get($grid-breakpoints, "sm")) {
-      top: calc($hero-min-height-sm/2);
-      transform: translateY(-calc($hero-min-height-sm/2));
+    top: $hero-max-height;
+    transform: translateY(-$top_max_value);
+
+    @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+      $top_min_value: $hero-min-height-md/2;
+      top: $hero-min-height-md;
+      transform: translateY(-$top_min_value);
     }
 
   }
 
   .slick-prev {
-    left: $hero-arrow-gatter;
+    left: $hero-arrow-gutter;
     right: auto;
-  }
-  [dir="rtl"] .slick-prev {
-    right: $hero-arrow-gatter;
-    left: auto;
   }
 
   .slick-next {
-    right: $hero-arrow-gatter;
+    right: $hero-arrow-gutter;
     left: auto;
-  }
-  [dir="rtl"] .slick-next {
-    left: $hero-arrow-gatter;
-    right: auto;
   }
 
   .slide__link {
@@ -65,64 +113,68 @@
   }
 
   .node--type-varbase-heroslider-media {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
 
-    @media screen and (max-width: map-get($grid-breakpoints, "sm")) {
-      min-height: $hero-min-height-xs;
-      max-height: $hero-max-height-xs;
+    min-height: $hero-min-height;
+    max-height: $hero-max-height;
+    @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+      min-height: $hero-min-height-md;
+      max-height: $hero-max-height-md;
     }
 
-    @media screen and (min-width: map-get($grid-breakpoints, "sm")) {
-      min-height: $hero-min-height-sm;
-      max-height: $hero-max-height-sm;
+    .hero-slide-content-wrapper {
+      position: absolute;
+      z-index: 9;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .hero-slide-content {
-      .container {
-        .row {
-          background-color: $hero-content-background-color1;
-          background-color: $hero-content-background-color2;
-        }
-      }
-
-      .field {
-        padding: 1.2em;
-        color: $hero-title-text-color;
-      }
+      padding: $hero-container-v-padding;
 
       .field--name-node-title {
-        bottom: 30%;
-
         h2,
         h3 {
           margin: 0;
           padding: 0;
           color: $hero-title-text-color;
 
-          @media screen and (max-width: map-get($grid-breakpoints, "sm")) {
-            font-size: $hero-xlarge-title-font-size-xs;
-          }
+          @include font-size($hero-xlarge-title-font-size-xs);
 
           @media screen and (min-width: map-get($grid-breakpoints, "sm")) {
-            font-size: $hero-xlarge-title-font-size-sm;
+            @include font-size($hero-xlarge-title-font-size-sm);
           }
 
           @media screen and (min-width: map-get($grid-breakpoints, "md")) {
-            font-size: $hero-xlarge-title-font-size-md;
+            @include font-size($hero-xlarge-title-font-size-md);
           }
 
           @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
-            font-size: $hero-xlarge-title-font-size-lg;
+            @include font-size($hero-xlarge-title-font-size-lg);
+          }
+
+          @media screen and (min-width: map-get($grid-breakpoints, "xl")) {
+            @include font-size($hero-xlarge-title-font-size-xl);
           }
         }
       }
 
       .field--name-field-brief {
-        bottom: 20%;
+        margin-top: 1rem;
         color: $hero-brief-text-color;
       }
 
       .field--name-field-link {
-        bottom: 10%;
+        margin-top: 1rem;
 
         a {
           color: $hero-link-text-color;
@@ -140,70 +192,158 @@
     .field--name-field-media-single {
       overflow: hidden;
 
-      @media screen and (max-width: map-get($grid-breakpoints, "sm")) {
-        min-height: $hero-min-height-xs;
-        max-height: $hero-max-height-xs;
+      min-height: $hero-min-height;
+      max-height: $hero-max-height;
+      @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+        min-height: $hero-min-height-md;
+        max-height: $hero-max-height-md;
       }
 
-      @media screen and (min-width: map-get($grid-breakpoints, "sm")) {
-        min-height: $hero-min-height-sm;
-        max-height: $hero-max-height-sm;
+      .contextual-region{
+        position: unset;
       }
 
-      iframe,
-      video {
+      .varbase-video-player {
+        &.embed-responsive {
+          position: relative;
+          width: 100vw;
+          height: 130vh;
+          top: 50%;
+          left: 50%;
+          transform: translateY(-50%) translateX(-50%);
+          padding-bottom: 0;
+        }
+      }
+
+      .field--type-image {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
         width: 100%;
-        object-fit: cover;
-
-        @media screen and (max-width: map-get($grid-breakpoints, "sm")) {
-          top: floor(-($hero-max-height-xs / 2));
-        }
-
-        @media screen and (min-width: map-get($grid-breakpoints, "sm")) {
-          top: floor(-($hero-max-height-sm / 2));
-        }
+        height: 100%;
       }
 
       img {
+        top: 0;
+        left: 0;
         width: 100%;
-        object-fit: cover;
+      }
 
-        @media screen and (max-width: map-get($grid-breakpoints, "sm")) {
-          min-height: $hero-min-height-xs;
-          max-height: $hero-max-height-xs;
+      .media {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        img {
+          top: 0;
+          left: 0;
+          width: 100%;
         }
 
-        @media screen and (min-width: map-get($grid-breakpoints, "sm")) {
-          min-height: $hero-min-height-sm;
-          max-height: $hero-max-height-sm;
+        video {
+          top: 0;
+          left: 0;
+          width: 100%;
+        }
+
+        iframe {
+          top: 0;
+          left: 0;
+          width: 100%;
         }
       }
-    }
-  }
 
-  &> .view-empty {
-    background-color: $hero-empty-view-background;
-    padding: 385px 0 75px;
-    text-align: center;
-    color: #666;
-    background-repeat: no-repeat;
-    background-position: 50% 75px;
-    font-size: 20pt;
-    /* Icons made by DinosoftLabs (https://www.flaticon.com/authors/dinosoftlabs) from www.flaticon.com. And is licensed by CC 3.0 BY. */
-    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzMjEuNDk0IDMyMS40OTQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyMS40OTQgMzIxLjQ5NDsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIyNTZweCIgaGVpZ2h0PSIyNTZweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTY2Ljg4LDIwOC43NDd2NzcuNzVsNjcuMzY3LTM4LjgxN0w2Ni44OCwyMDguNzQ3eiBNODAuNzQ3LDIzMi44NTRsMjUuODEzLDE0LjkzM2wtMjUuODEzLDE0LjgyN1YyMzIuODU0eiIgZmlsbD0iI2E4YThhOCIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTAsMTczLjg2N3YxNDcuNjI3aDE4Ny43MzNWMTczLjg2N0gweiBNMTczLjg2NywzMDcuNjI3aC0xNjBWMTg3LjczNGgxNjBWMzA3LjYyN3oiIGZpbGw9IiNhOGE4YTgiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik02Ni44OCwwdjE2MC45NmgyNTQuNjEzVjBINjYuODh6IE0zMDcuNjI4LDE0Ny4wOTRIODAuNzQ3VjEzLjg2N2gyMjYuODhWMTQ3LjA5NHoiIGZpbGw9IiNhOGE4YTgiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0xNTkuMjU1LDIwLjY5NGMtMTEuOTQ3LDAtMjEuNzYsOS44MTMtMjEuNzYsMjEuNzZjMCwxMS45NDcsOS44MTMsMjEuNzYsMjEuNzYsMjEuNzZjMTEuOTQ2LDAsMjEuNzYtOS44MTMsMjEuNzYtMjEuNzYgICAgQzE4MS4wMTUsMzAuNTA3LDE3MS4yMDEsMjAuNjk0LDE1OS4yNTUsMjAuNjk0eiBNMTU5LjI1NSw1MC4zNDZjLTQuMzczLDAtNy44OTMtMy41Mi03Ljg5My03Ljg5M3MzLjUyLTcuODkzLDcuODkzLTcuODkzICAgIHM3Ljg5MywzLjUyLDcuODkzLDcuODkzUzE2My42MjgsNTAuMzQ2LDE1OS4yNTUsNTAuMzQ2eiIgZmlsbD0iI2E4YThhOCIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBvbHlnb24gcG9pbnRzPSIzMDkuNzYsMjkuOTc0IDI1MS43MzQsODUuNTQ3IDIxNy43MDgsNTIuOTA3IDE2Mi43NzUsMTA1LjQ5NCAxMjYuMTg3LDcwLjUwNyA2OS4wMTUsMTI1LjEyIDc4LjYxNCwxMzUuMTQ3ICAgICAxMjYuMTg3LDg5LjcwNyAxNjIuNzc1LDEyNC42OTQgMjE3LjcwOCw3Mi4xMDcgMjUxLjczNCwxMDQuNzQ3IDMxOS4zNjEsNDAgICAiIGZpbGw9IiNhOGE4YTgiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+      /* 1. No object-fit support: */
+      @media (max-aspect-ratio: #{"16/9"}) {
+        .varbase-video-player {
+          &.embed-responsive {
+            position: relative;
+            width: 240vw;
+            height: 140vh;
+            top: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            padding-bottom: 0 !important;
+            left: 50%;
+          }
+        }
+      }
+      /* 2. If supporting object-fit, overriding (1): */
+     @supports (object-fit: cover) {
+        img {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
 
-    @media all and (max-width: 750px) {
-      padding: 165px 0 75px;
-      background-position: 50% 13%;
-      font-size: 17pt;
-      background-size: 100px;
+          @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+            position: unset;
+          }
+        }
+
+        .media {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+
+          img {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+              position: unset;
+            }
+          }
+
+          video {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          iframe {
+            position: absolute;
+            left: 0;
+            object-fit: cover;
+          }
+        }
+      }
     }
   }
 }
 
-// Region hero slider.
-body .hero_slider {
-  color: $hero-title-text-color;
-  margin-bottom: 40px;
-  position: relative;
+[dir="rtl"] .varbase-heroslider-media {
+  .node--type-varbase-heroslider-media {
+    .field--name-field-media-single {
+      @media (max-aspect-ratio: #{"16/9"}) {
+        .varbase-video-player {
+          &.embed-responsive {
+            left: 0;
+            right: 0;
+            transform: translateY(-50%) translateX(0);
+          }
+        }
+      }
+    }
+  }
+
+  .slick-prev {
+    right: $hero-arrow-gutter;
+    left: auto;
+  }
+
+  .slick-next {
+    left: $hero-arrow-gutter;
+    right: auto;
+  }
 }
