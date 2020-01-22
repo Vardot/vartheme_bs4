@@ -40,7 +40,8 @@ libraries:
   - vartheme_bs4/betterlogin
   
   # Vartheme BS4 Varbase Media Hero Slider style.
-  - vartheme_bs4/heroslider
+  # Heroslider: Uncomment the following to use varbase heroslider styling.
+  #- vartheme_bs4/heroslider
 
   # Icons: Uncomment the following if you want to use icons.
   #- vartheme_bs4/material_design_icons
@@ -71,7 +72,9 @@ libraries-override:
   varbase_bootstrap_paragraphs/vbp-colors: vartheme_bs4/vbp-colors
   varbase_layout_builder/vlb-colors: vartheme_bs4/vlb-colors
   betterlogin/betterlogin_css: vartheme_bs4/betterlogin
-  varbase_heroslider_media/general-styling: vartheme_bs4/heroslider
+
+  # Heroslider: Uncomment the following to use varbase heroslider styling.
+  #  varbase_heroslider_media/general-styling: vartheme_bs4/heroslider
 
   vbp_text_and_image/vbp_text_and_image_default:
     css:

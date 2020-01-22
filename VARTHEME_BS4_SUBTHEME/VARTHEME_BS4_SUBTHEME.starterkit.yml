@@ -58,7 +58,9 @@ libraries-override:
   vartheme_bs4/vbp-colors: false
   vartheme_bs4/vlb-colors: false
   vartheme_bs4/betterlogin: false
-  vartheme_bs4/heroslider: false
+  # Heroslider: Uncomment the following to disable the vartheme_bs4/heroslider
+  #             Libraray if it was enabled in vartheme_bs4 heroslider styling.
+  # vartheme_bs4/heroslider: false
 
   vartheme_bs4/breadcrumb: VARTHEME_BS4_SUBTHEME/breadcrumb
   vartheme_bs4/dropbutton: VARTHEME_BS4_SUBTHEME/dropbutton
