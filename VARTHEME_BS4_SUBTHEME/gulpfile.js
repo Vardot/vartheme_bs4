@@ -43,7 +43,6 @@ function compile () {
   };
 
   return gulp.src([paths.scss.src])
-    .pipe(csscomb())
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(postcss([autoprefixer({
       browsers: [
@@ -57,6 +56,7 @@ function compile () {
         'Android >= 4',
         'Opera >= 12']
     })]))
+    .pipe(csscomb())
     .pipe(gulp.dest(paths.scss.dest))
     .pipe(browserSync.stream())
 }
