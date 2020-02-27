@@ -82,7 +82,7 @@ bootstrap-styles-rtl:
 # Bootstrap scripts library.
 bootstrap-scripts:
   js:
-    js/popper/popper.min.js: {}
+#    js/popper/popper.min.js: {} # use core/popperjs libraray in Drupal ^8.8.0 .
     js/bootstrap/bootstrap.min.js: {}
 #
 #   Plugins can be included individually (using Bootstrap’s individual
@@ -114,6 +114,7 @@ bootstrap-scripts:
   dependencies:
     - core/jquery
     - core/drupal
+    - core/popperjs
 
 # ------------------------------------------------------------------------------
 # VARTHEME_BS4_SUBTHEME libraries.
