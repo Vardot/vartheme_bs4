@@ -60,7 +60,7 @@ We may want to increase our maximum watched SASS files by
 $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ```
 
-Then we could run gulp compile ones to compile every time we want
+Then run gulp compile ones to compile every time we want.
 ```
 $ cd PROJECT_DIR_NAME/docroot/themes/custom/THEME_NAME
 $ gulp compile
@@ -69,7 +69,7 @@ $ gulp compile
 [11:22:33] Finished 'compile' after 2.54 s
 ```
 
-Or we could run gulp watch to keep watching for changes
+Or run gulp watch to keep watching for changes.
 
 ```
 $ cd PROJECT_DIR_NAME/docroot/themes/custom/THEME_NAME
