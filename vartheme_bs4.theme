@@ -207,11 +207,13 @@ function vartheme_bs4_library_info_alter(&$libraries, $extension) {
   // ---------------------------------------------------------------------.
   // Only for older versions of Drupal.
   // Less than 8.8.0.
-  if (version_compare(Drupal::VERSION, '8.8.0', '<')) {
+  if (version_compare(Drupal::VERSION, '8.8.0', 'lt')) {
     if ($extension == 'vartheme_bs4' && isset($libraries['bootstrap-scripts'])) {
-      $libraries['bootstrap-scripts']['js'][] = 'js/popper/popper.min.js';
-      if (isset($libraries['bootstrap-scripts']['dependencies']['core/popperjs'])) {
-        unset($libraries['bootstrap-scripts']['dependencies']['core/popperjs']);
+      $libraries['bootstrap-scripts']['js']['js/popper/popper.min.js'] = [];
+      foreach ($libraries['bootstrap-scripts']['dependencies'] as $dependency_index => $dependency) {
+        if ($dependency == 'core/popperjs') {
+          unset($libraries['bootstrap-scripts']['dependencies'][$dependency_index]);
+        }
       }
     }
   }
