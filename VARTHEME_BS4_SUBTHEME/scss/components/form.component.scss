@@ -26,3 +26,11 @@ form .filter-wrapper {
 form .form-type-textarea {
   margin-bottom: 0;
 }
+
+input[type=text] {
+  &::-ms-clear, &::-ms-reveal {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+}
