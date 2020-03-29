@@ -536,3 +536,7 @@ pre {
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
+
+select::-ms-expand {
+  display: none;
+}

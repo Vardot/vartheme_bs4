@@ -633,3 +633,7 @@ pre {
     flex-shrink: 0;
   }
 }
+ 
+select::-ms-expand {
+  display: none;
+}
