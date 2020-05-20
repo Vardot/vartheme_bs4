@@ -19,7 +19,14 @@ class VarthemeBs4Tests extends BrowserTestBase {
   /**
    * {@inheritdoc}
    */
-  protected $defaultTheme = 'bartik';
+  protected $defaultTheme = 'vartheme_bs4';
+
+  /**
+   * The profile to install as a basis for testing.
+   *
+   * @var string
+   */
+  protected $profile = 'standard';
 
   /**
    * {@inheritdoc}
@@ -42,15 +49,6 @@ class VarthemeBs4Tests extends BrowserTestBase {
    */
   protected function setUp() {
     parent::setUp();
-
-    $this->drupalLogin($this->rootUser);
-
-    \Drupal::service('theme_installer')->install(['vartheme_bs4']);
-
-    \Drupal::configFactory()
-      ->getEditable('system.theme')
-      ->set('default', 'vartheme_bs4')
-      ->save();
 
     ConfigurableLanguage::createFromLangcode('ar')->save();
     Cache::invalidateTags(['rendered', 'locale']);
