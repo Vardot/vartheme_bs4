@@ -9,4 +9,4 @@ build:
       run_tests.functional:
         types: 'PHPUnit-Functional'
         testgroups: 'vartheme_bs4'
-        suppress-deprecations: true
+        suppress-deprecations: false

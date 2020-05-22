@@ -80,7 +80,6 @@ class VarthemeBs4Tests extends BrowserTestBase {
     $assert_session->pageTextContains($this->t('Primary'));
     $assert_session->pageTextContains($this->t('SecondaryPlace'));
     $assert_session->pageTextContains($this->t('Footer'));
-    $assert_session->pageTextContains($this->t('Copyright'));
     $assert_session->pageTextContains($this->t('Footer menu'));
   }
 
