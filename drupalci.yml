@@ -1,6 +1,16 @@
 build:
   assessment:
     validate_codebase:
+      container_composer:
+        - 'require oomphinc/composer-installers-extender:~1.0'
+        - 'require cweagans/composer-patches:~1.0'
+        - 'require drupal/drupal-library-installer-plugin:^0.3'
+      container_command:
+        commands:
+          - 'cd ${SOURCE_DIR}'
+          - 'sudo -u www-data composer config extra.enable-patching true'
+          - 'sudo -u www-data composer config extra.composer-exit-on-patch-failure true'
+    validate_codebase:
       phplint:
       csslint:
       eslint:
