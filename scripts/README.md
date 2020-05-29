@@ -56,11 +56,14 @@ $ gulp
 ```
 
 We may want to increase our maximum watched SASS files by
+
 ```
-$ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+$ echo fs.inotify.max_user_watches=524288
+ | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ```
 
 Then run gulp compile ones to compile every time we want.
+
 ```
 $ cd PROJECT_DIR_NAME/docroot/themes/custom/THEME_NAME
 $ gulp compile
