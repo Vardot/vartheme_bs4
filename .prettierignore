@@ -1,0 +1,7 @@
+js/bootstrap/*.js
+js/bootstrap_barrio/*.js
+js/misc/*.js
+js/popper/*.js
+VARTHEME_BS4_SUBTHEME/js/bootstrap/*.js
+VARTHEME_BS4_SUBTHEME/js/bootstrap_barrio/*.js
+VARTHEME_BS4_SUBTHEME/js/popper/*.js
