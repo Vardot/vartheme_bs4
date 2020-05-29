@@ -18,6 +18,15 @@ $ apt install build-essential
 $ curl -L https://npmjs.com/install.sh | sh
 $ apt install npm
 ```
+Install Yarn
+
+```
+sudo apt update && sudo apt install yarn
+```
+or Install Yarn as a global by npm
+```
+npm install -g yarn
+```
 
 * 2. [Gulp](https://gulpjs.com) : Helps compiling SASS to CSS
 ```
