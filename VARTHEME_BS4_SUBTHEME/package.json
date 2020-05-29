@@ -20,9 +20,9 @@
     "lint:core-js": "node ./node_modules/eslint/bin/eslint.js .",
     "lint:core-js-passing": "node ./node_modules/eslint/bin/eslint.js --quiet --config=.eslintrc.passing.json .",
     "lint:core-js-stats": "node ./node_modules/eslint/bin/eslint.js --format=./scripts/js/eslint-stats-by-type.js .",
-    "lint:css": "stylelint \"**/*.css\"",
-    "lint:css-checkstyle": "stylelint \"**/*.css\" --custom-formatter ./node_modules/stylelint-checkstyle-formatter/index.js",
-    "prettier": "prettier --write \"./**/*.es6.js\""
+    "lint:css": "stylelint \"./css/**/*.css\"",
+    "lint:css-checkstyle": "stylelint \"./css/**/*.css\" --custom-formatter ./node_modules/stylelint-checkstyle-formatter/index.js",
+    "prettier": "prettier --write \"./js/**/*.es6.js\""
   },
   "devDependencies": {
     "browser-sync": "^2.24.7",
