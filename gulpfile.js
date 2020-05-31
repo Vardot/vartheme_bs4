@@ -44,18 +44,7 @@ function compile () {
 
   return gulp.src([paths.scss.src])
     .pipe(sass(sassOptions).on('error', sass.logError))
-    .pipe(postcss([autoprefixer({
-      browsers: [
-        'Chrome >= 35',
-        'Firefox >= 38',
-        'Edge >= 12',
-        'Explorer >= 10',
-        'iOS >= 8',
-        'Safari >= 8',
-        'Android 2.3',
-        'Android >= 4',
-        'Opera >= 12']
-    })]))
+    .pipe(postcss([autoprefixer()]))
     .pipe(csscomb())
     .pipe(gulp.dest(paths.scss.dest))
     .pipe(browserSync.stream())
