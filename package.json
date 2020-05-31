@@ -16,7 +16,7 @@
   ],
   "author": "Vardot",
   "scripts": {
-		"theme:init": "gulp",
+    "theme:init": "gulp",
     "theme:build": "gulp compile",
     "theme:watch": "gulp watch",
     "lint:core-js": "node ./node_modules/eslint/bin/eslint.js .",
