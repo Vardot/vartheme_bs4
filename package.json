@@ -19,14 +19,13 @@
     "theme:init": "gulp",
     "theme:build": "gulp compile",
     "theme:watch": "gulp watch",
+    "theme:create-sub-theme": "bash ./scripts/create-new-vartheme-bs4.sh",
     "lint:core-js": "node ./node_modules/eslint/bin/eslint.js .",
-    "lint:core-js-passing": "node ./node_modules/eslint/bin/eslint.js --quiet --config=.eslintrc.passing.json .",
-    "lint:core-js-stats": "node ./node_modules/eslint/bin/eslint.js --format=./scripts/js/eslint-stats-by-type.js .",
     "lint:css": "stylelint \"./css/**/*.css\"",
     "lint:css-checkstyle": "stylelint \"./css/**/*.css\" --custom-formatter ./node_modules/stylelint-checkstyle-formatter/index.js",
     "prettier": "prettier --write \"./js/**/*.es6.js\""
   },
-	"dependencies": {
+  "dependencies": {
     "bootstrap": "^4.5.0",
     "jquery": "^3.5.1",
     "popper.js": "^1.14.3"
