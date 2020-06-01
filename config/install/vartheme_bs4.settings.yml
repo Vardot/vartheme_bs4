@@ -59,7 +59,7 @@ bootstrap_barrio_google_fonts: ''
 bootstrap_barrio_icons: 'fontawesome'
 bootstrap_barrio_table_style: ''
 bootstrap_barrio_table_head: ''
-bootstrap_barrio_bootstrap_icons: 1
+bootstrap_barrio_bootstrap_icons: 0
 features:
   node_user_picture: true
   comment_user_picture: true
