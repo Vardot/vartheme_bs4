@@ -1,3 +1,14 @@
-//
 // Vartheme BS4 Mixins.
-// --------------------------------------------------
+// -----------------------------------------------------------------------------
+@import "mixins/rfs"; // RFS mixin.
+// Issue #3157982: Fix RFS SCSS library located in
+// Bootstrap 4.5.0 vendor which causing code standard notice for every
+// font-size use in Vartheme BS4 and generated Sub-theme
+// https://www.drupal.org/project/vartheme_bs4/issues/3157982
+// -----------------------------------------------------------------------------
+// Temp solution for this issue
+// Fix spaces before semicolon at set the calculated font-size part #154 #155
+// https://github.com/twbs/rfs/pull/155
+// It was fixed, committed in RFS 9.0.0
+// But latest Bootstrap 4.5 release still uses the RFS 8.x
+// -----------------------------------------------------------------------------

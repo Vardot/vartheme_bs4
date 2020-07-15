@@ -3,6 +3,7 @@ let gulp = require('gulp'),
   postcss = require('gulp-postcss'),
   csscomb = require('gulp-csscomb'),
   autoprefixer = require('autoprefixer'),
+  filter = require('gulp-filter'),
   browserSync = require('browser-sync').create()
 
 const paths = {
@@ -42,7 +43,11 @@ function compile () {
     linefeed: 'lf'
   };
 
+  // Filter mixins and variables not to be compiled to CSS.
+  const filterFiles = filter(['**', '!**/mixins/*.scss', '!mixins.scss', '!variables.scss']);
+
   return gulp.src([paths.scss.src])
+    .pipe(filterFiles)
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(postcss([autoprefixer()]))
     .pipe(csscomb())
