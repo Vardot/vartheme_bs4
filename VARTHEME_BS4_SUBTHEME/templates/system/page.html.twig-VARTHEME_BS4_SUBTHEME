@@ -108,15 +108,6 @@
   </div>
 </div>
 
-{# hero_slider #}
-{% if page.hero_slider %}
-{% block hero_slider %}
-  <div class="hero_slider mt-n4">
-    {{ page.hero_slider }}
-  </div>
-{% endblock %}
-{% endif %}
-
 {# Main #}
 {% block main %}
   <div role="main" class="main-container {{ container }} js-quickedit-main-content">
