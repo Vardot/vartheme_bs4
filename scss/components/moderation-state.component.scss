@@ -11,17 +11,58 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    padding-top: 1rem;
 
     fieldset {
       margin-right: 5rem;
 
       label {
         font-weight: bold;
+        float: left;
+        width: fit-content;
+        margin: 0 0.5rem 0 0; 
+      }
+      
+      &.form-item-moderation-state-0-state {
+        margin-top: -0.5rem;
+        label {
+          margin-top: 0.5rem;
+        }
       }
 
       .form-control {
         max-width: 20em;
+        float: left;
+        width: fit-content;
       }
     }
   }
+}
+[dir="rtl"] #edit-moderation-state-wrapper {
+  > div {
+
+    fieldset {
+      margin-right: 0;
+      margin-left: 5rem;
+
+      label {
+        float: right;
+        margin: 0 0 0 0.5rem;
+      }
+      
+      &.form-item-moderation-state-0-state {
+        label {
+          margin-top: 0.5rem;
+        }
+      }
+
+      .form-control {
+        float: right;
+      }
+    }
+  }
+}
+
+#edit-preview-toggle {
+  margin-top: 1rem;
 }

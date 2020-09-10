@@ -198,7 +198,7 @@ heroslider:
 moderation-state:
   css:
     component:
-      css/components/moderation-state.component: {}
+      css/components/moderation-state.component.css: {}
 
 # ------------------------------------------------------------------------------
 # Bootstrap Barrio components overrides.
