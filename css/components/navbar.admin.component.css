@@ -87,10 +87,10 @@ body.user-logged-in #admin-toolbar {
 }
 
 body.user-logged-in #admin-menu {
-  margin: 0;
-  padding: 0;
   position: fixed;
   z-index: 1600;
+  margin: 0;
+  padding: 0;
 }
 
 body.user-logged-in #admin-menu .dropdown li {
@@ -136,11 +136,11 @@ body.user-logged-in.navbar-is-fixed-top#navbar-administration.navbar-vertical.na
 
 [dir="rtl"] body.user-logged-in.toolbar-tray-open.toolbar-vertical .navbar.fixed-top,
 [dir="rtl"] body.user-logged-in.toolbar-tray-open.toolbar-vertical .navbar.sticky-top {
-  margin-left: 0px;
   margin-right: 241px;
+  margin-left: 0;
 }
 
 [dir="rtl"] body.user-logged-in.toolbar-tray-open.toolbar-vertical.navbar-is-fixed-bottom .navbar.fixed-bottom {
-  margin-left: 0px;
   margin-right: 241px;
+  margin-left: 0;
 }

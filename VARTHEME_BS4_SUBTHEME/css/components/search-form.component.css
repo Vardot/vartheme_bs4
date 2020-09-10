@@ -4,12 +4,12 @@ input[type="search"] {
 }
 
 header #search-block-form {
-  padding: 5px 15px;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
   -webkit-flex-flow: row wrap;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+  padding: 5px 15px;
 }
 
 #search-block-form {

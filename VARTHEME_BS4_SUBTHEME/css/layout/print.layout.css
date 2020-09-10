@@ -42,8 +42,8 @@
   /* Avoid page break inside the element (if possible) */
   .avoid-page-break-inside,
   .avoid-pbi {
-    page-break-inside: avoid;
     width: 3;
+    page-break-inside: avoid;
   }
   /* Hide link's href URL in print. */
   a[href]:after {
@@ -52,8 +52,8 @@
   *,
   *:before,
   *:after {
-    background: transparent !important;
     color: #000 !important;
+    background: transparent !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
     text-shadow: none !important;
