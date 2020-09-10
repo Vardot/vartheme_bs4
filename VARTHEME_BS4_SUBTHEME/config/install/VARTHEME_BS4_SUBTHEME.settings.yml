@@ -29,8 +29,8 @@ bootstrap_barrio_region_clean_hero_slider: 0
 bootstrap_barrio_region_class_hero_slider: 'row'
 bootstrap_barrio_region_clean_highlighted: 1
 bootstrap_barrio_region_class_highlighted: ''
-bootstrap_barrio_region_clean_help: 0
-bootstrap_barrio_region_class_help: 'row'
+bootstrap_barrio_region_clean_help: 1
+bootstrap_barrio_region_class_help: ''
 bootstrap_barrio_region_clean_content: 1
 bootstrap_barrio_region_class_content: ''
 bootstrap_barrio_region_clean_sidebar_first: 1
@@ -69,3 +69,8 @@ logo:
   use_default: true
 favicon:
   use_default: true
+bootstrap_barrio_navbar_top_class: ''
+bootstrap_barrio_navbar_class: ''
+email_logo_default: 0
+email_logo_path: ''
+email_logo_upload: {  }
