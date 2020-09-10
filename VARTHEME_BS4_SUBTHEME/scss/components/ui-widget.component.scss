@@ -6,4 +6,7 @@
 @import "../mixins";                      // VARTHEME_BS4_SUBTHEME mixins.
 // -----------------------------------------------------------------------------
 
-/* Insert your custom Visual styles for ui-widget component. */
+.ui-widget-overlay {
+  background: $black;
+  opacity: 0.7;
+}
