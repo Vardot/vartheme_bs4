@@ -1,0 +1,26 @@
+#edit-moderation-state-wrapper > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+#edit-moderation-state-wrapper > div fieldset {
+  margin-right: 5rem;
+}
+
+#edit-moderation-state-wrapper > div fieldset label {
+  font-weight: bold;
+}
+
+#edit-moderation-state-wrapper > div fieldset .form-control {
+  max-width: 20em;
+}

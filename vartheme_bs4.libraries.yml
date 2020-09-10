@@ -188,12 +188,18 @@ betterlogin:
   css:
     theme:
       css/theme/betterlogin.theme.css: {}
-      
+
 # Vartheme BS4 Varbase Media Hero slider theme.
 heroslider:
   css:
     theme:
       css/theme/varbase-heroslider-media.theme.css: {}
+
+# Vartheme BS4 moderation status theme.
+moderation-state:
+  css:
+    component:
+      css/components/moderation-state.component: {}
 
 # ------------------------------------------------------------------------------
 # Bootstrap Barrio components overrides.

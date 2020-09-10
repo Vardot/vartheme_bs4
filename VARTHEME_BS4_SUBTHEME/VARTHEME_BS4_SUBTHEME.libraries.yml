@@ -194,6 +194,11 @@ heroslider:
     theme:
       css/theme/varbase-heroslider-media.theme.css: {}
 
+# VARTHEME_BS4_SUBTHEME Moderation status component.
+moderation-state:
+  css:
+    component:
+      css/components/moderation-state.component: {}
 
 # ------------------------------------------------------------------------------
 # Bootstrap Barrio components overrides.

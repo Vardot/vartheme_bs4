@@ -206,3 +206,14 @@ function VARTHEME_BS4_SUBTHEME_library_info_alter(&$libraries, $extension) {
     }
   }
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function VARTHEME_BS4_SUBTHEME_form_alter(&$form, $form_state, $form_id) {
+  if (preg_match('/^node_.*._layout_builder_form$/', $form_id)
+    && isset($form['moderation_state'])) {
+    $form['moderation_state']['#attributes']['class'][] = 'well';
+    $form['#attached']['library'][] = 'VARTHEME_BS4_SUBTHEME/moderation-state';
+  }
+}

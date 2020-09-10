@@ -1,0 +1,27 @@
+// Moderation status style.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // VARTHEME_BS4_SUBTHEME variables.
+@import "../mixins";                      // VARTHEME_BS4_SUBTHEME mixins.
+// -----------------------------------------------------------------------------
+
+#edit-moderation-state-wrapper {
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    fieldset {
+      margin-right: 5rem;
+
+      label {
+        font-weight: bold;
+      }
+
+      .form-control {
+        max-width: 20em;
+      }
+    }
+  }
+}

@@ -74,6 +74,7 @@ libraries-override:
   vartheme_bs4/tabs: VARTHEME_BS4_SUBTHEME/tabs
   vartheme_bs4/verticaltabs: VARTHEME_BS4_SUBTHEME/verticaltabs
   vartheme_bs4/alerts: VARTHEME_BS4_SUBTHEME/alerts
+  vartheme_bs4/moderation-state: VARTHEME_BS4_SUBTHEME/moderation-state
 
   # Varbase module compnents overrides in VARTHEME_BS4_SUBTHEME.
   varbase_bootstrap_paragraphs/vbp-colors: VARTHEME_BS4_SUBTHEME/vbp-colors
