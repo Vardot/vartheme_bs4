@@ -2,25 +2,11 @@
 <ruleset name="drupal_core">
   <description>Default PHP CodeSniffer configuration for Drupal core.</description>
   <file>.</file>
-  <file>scripts/drupal.sh</file>
-  <file>scripts/password-hash.sh</file>
-  <file>scripts/rebuild_token_calculator.sh</file>
-  <file>scripts/run-tests.sh</file>
-  <file>scripts/update-countries.sh</file>
-  <arg name="extensions" value="inc,install,module,php,profile,test,theme,yml"/>
+  <arg name="extensions" value="php,module,inc,install,test,theme,scss,css,info,txt,md,yml"/>
 
-  <!--Exclude third party code.-->
-  <exclude-pattern>./assets/vendor/*</exclude-pattern>
   <!--Exclude folders used by common frontend tools. These folders match the file_scan_ignore_directories setting in default.settings.php-->
   <exclude-pattern>*/node_modules/*</exclude-pattern>
-  <exclude-pattern>*/bower_components/*</exclude-pattern>
-
-  <!--Exclude test files that are intentionally empty, or intentionally violate coding standards.-->
-  <exclude-pattern>./modules/system/tests/fixtures/HtaccessTest</exclude-pattern>
-
-  <!-- Exclude third-party code maintained within core that does not follow our standards. -->
-  <!-- @todo This rule may be removed when https://www.drupal.org/node/1848264 is resolved. -->
-  <exclude-pattern>./core/lib/Drupal/Component/Diff/</exclude-pattern>
+  <exclude-pattern>*/VARTHEME_BS4_SUBTHEME/node_modules/*</exclude-pattern>
 
   <!-- Only include specific sniffs that pass. This ensures that, if new sniffs are added, HEAD does not fail.-->
   <!-- Drupal sniffs -->
