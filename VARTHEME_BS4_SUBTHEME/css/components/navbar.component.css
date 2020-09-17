@@ -51,3 +51,7 @@
     left: 0;
   }
 }
+
+#navbar-main {
+  z-index: 1;
+}

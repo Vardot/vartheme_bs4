@@ -31,12 +31,12 @@
         display: flex;
         justify-content: center;
         padding: $spacer $spacer 0 $spacer;
-        font-size: 12px;
+        @include font-size(0.75rem);
       }
 
       .menu--footer {
         padding: $spacer 0;
-        font-size: 12px;
+        @include font-size(0.75rem);
         display: flex;
         flex-flow: column;
         justify-content: center;

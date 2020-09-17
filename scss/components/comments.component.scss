@@ -18,7 +18,7 @@
 }
 
 .field-node--comment {
-  font-size: $font-size-sm;
+  @include font-size($font-size-sm);
 }
 
 .comment {
@@ -34,7 +34,7 @@
 .comment__meta {
   padding: 0 30px 0 0;
   /* LTR */
-  font-size: $font-size-base;
+  @include font-size($font-size-base);
 }
 
 [dir="rtl"] .comment__meta {
@@ -65,7 +65,7 @@
 .comment__permalink {
   margin-bottom: 4px;
   color: #68696b;
-  font-size: $font-size-sm;
+  @include font-size($font-size-sm);
   line-height: 1.2;
   padding: 0 0.5em 0 0;
   /* LTR */
@@ -77,7 +77,7 @@
 }
 
 .comment__permalink {
-  font-size: $font-size-sm;
+  @include font-size($font-size-sm);
   line-height: 1.2;
 }
 
@@ -126,7 +126,7 @@
 .comment__content h3 {
   margin-top: 0.94em;
   margin-bottom: 0.45em;
-  font-size: $font-size-lg;
+  @include font-size($font-size-lg);
 }
 
 .comment__content nav {
@@ -150,7 +150,7 @@
 .comment .links-inline span {
   padding: 0 0.5em 0 0;
   /* LTR */
-  font-size: $font-size-base;
+  @include font-size($font-size-base);
 }
 
 [dir="rtl"] .comment .links-inline span {

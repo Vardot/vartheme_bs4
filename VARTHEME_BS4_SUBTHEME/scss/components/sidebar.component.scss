@@ -13,7 +13,7 @@
     padding: $spacer $spacer;
     margin: 0 0 $spacer;
     .content {
-      font-size: $font-size-base;
+      @include font-size($font-size-base);
       line-height: $line-height-sm;
     }
   }
@@ -22,7 +22,7 @@
     border-bottom: $border-width solid $border-color;
     padding-bottom: 5px;
     text-shadow: 0 $border-width 0 $white;
-    font-size: $font-size-lg;
+    @include font-size($font-size-lg);
     line-height: $headings-line-height;
   }
   tbody {

@@ -25,7 +25,7 @@
   border: $border-width solid $border-color;
   display: flex;
   flex-direction: row;
-  font-size: $font-size-sm;
+  @include font-size($font-size-sm);
 }
 [dir="rtl"] .vertical-tabs {
   flex-direction: row-reverse;

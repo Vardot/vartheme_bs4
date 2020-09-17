@@ -15,7 +15,7 @@
   box-shadow: 0 6px 12px rgba(0,0,0,.175);
   color: inherit;
   font-family: $font-family-base;
-  font-size: $font-size-base;
+  @include font-size($font-size-base);
   list-style: none;
   min-width: 160px;
   padding: 5px 0;

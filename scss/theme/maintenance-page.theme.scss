@@ -9,7 +9,7 @@
 .maintenance-page {
   footer {
     .footer-credits {
-      font-size: 12px;
+      @include font-size(0.75rem);
     }
   }
 }

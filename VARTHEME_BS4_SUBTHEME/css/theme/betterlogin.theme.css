@@ -4,14 +4,20 @@
 
 #auth-box #the-logo {
   margin: 0;
-  padding: 0 0 25px;
+  padding: 0 0 1.75rem;
   text-align: center;
 }
 
 #auth-box .title {
   margin: 0;
   padding: 0 0 15px;
-  font-size: 2em;
+  font-size: 2rem;
+}
+
+@media (max-width: 1200px) {
+  #auth-box .title {
+    font-size: calc(1.325rem + 0.9vw);
+  }
 }
 
 #auth-box #middle-part {
@@ -24,13 +30,13 @@
 }
 
 #auth-box .back-link {
-  padding: 15px 0 0;
+  padding: 1rem 0 0;
 }
 
 #auth-box #bottom-part {
-  padding: 15px 0 0;
+  padding: 1rem 0 0;
   text-align: center;
-  font-size: 13px;
+  font-size: 0.75rem;
 }
 
 #auth-box .user-form .form-control {
@@ -39,7 +45,7 @@
 
 #auth-box .block-title {
   height: 1px;
-  margin: 30px 0;
+  margin: 2rem 0;
   text-align: center;
   background: #eee;
 }
@@ -47,10 +53,10 @@
 #auth-box .block-title span {
   position: relative;
   top: -30px;
-  padding: 0 10px;
+  padding: 0 0.70rem;
   text-transform: uppercase;
   background: #fff;
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 #auth-box .user-login-form {

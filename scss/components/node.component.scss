@@ -7,7 +7,7 @@
 // -----------------------------------------------------------------------------
  
 .node__content {
-  font-size: $font-size-base;
+  @include font-size($font-size-base);
   margin-top: $spacer;
 }
 
@@ -34,7 +34,7 @@
 
 .node--view-mode-teaser .node__content {
   clear: none;
-  font-size: $font-size-base;
+  @include font-size($font-size-base);
   line-height: $line-height-base;
 }
 
@@ -42,7 +42,7 @@
 // Node metadata styles.
 
 .node__meta {
-  font-size: $font-size-sm;
+  @include font-size($font-size-sm);
   margin-bottom: -5px;
 }
 
@@ -65,7 +65,7 @@
 .node__links {
   text-align: right;
   /* LTR */
-  font-size: $font-size-base;
+  @include font-size($font-size-base);
 }
 
 [dir="rtl"] .node__links {

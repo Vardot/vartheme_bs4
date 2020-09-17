@@ -65,12 +65,12 @@
 
 .field--name-field-tags .field__label,
 .field--name-field-tags ul.links {
-  font-size: $font-size-sm;
+  @include font-size($font-size-sm);
 }
 
 .node--view-mode-teaser .field--name-field-tags .field__label,
 .node--view-mode-teaser .field--name-field-tags ul.links {
-  font-size: $font-size-sm;
+  @include font-size($font-size-sm);
 }
 
 .field--name-field-tags ul.links {

@@ -12,7 +12,7 @@
   input,
   select,
   textarea {
-    font-size: $font-size-base;
+    @include font-size($font-size-base);
   }
 
 }
