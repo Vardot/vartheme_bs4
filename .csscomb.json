@@ -218,6 +218,7 @@
       "-ms-transition-timing-function",
       "-o-transition-timing-function",
       "transition-timing-function",
+      "will-change",
       "-webkit-transition-duration",
       "-moz-transition-duration",
       "-ms-transition-duration",
