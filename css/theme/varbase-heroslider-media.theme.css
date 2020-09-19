@@ -174,69 +174,69 @@
   margin: 0;
   padding: 0;
   color: #fff;
-  font-size: 3.3rem;
+  font-size: calc(1.455rem + 2.46vw);
 }
 
-@media (max-width: 1200px) {
-  .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h2,
-  .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h3 {
-    font-size: calc(1.455rem + 2.46vw);
-  }
-}
-
-@media screen and (min-width: 576px) {
+@media (min-width: 1200px) {
   .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h2,
   .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h3 {
     font-size: 3.3rem;
   }
 }
 
-@media screen and (min-width: 576px) and (max-width: 1200px) {
+@media screen and (min-width: 576px) {
   .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h2,
   .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h3 {
     font-size: calc(1.455rem + 2.46vw);
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 576px) and (min-width: 1200px) {
   .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h2,
   .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h3 {
-    font-size: 3.5625rem;
+    font-size: 3.3rem;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) {
   .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h2,
   .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h3 {
     font-size: calc(1.48125rem + 2.775vw);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h2,
+  .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h3 {
+    font-size: 3.5625rem;
   }
 }
 
 @media screen and (min-width: 992px) {
   .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h2,
   .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h3 {
-    font-size: 3.5625rem;
+    font-size: calc(1.48125rem + 2.775vw);
   }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1200px) {
+@media screen and (min-width: 992px) and (min-width: 1200px) {
   .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h2,
   .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h3 {
-    font-size: calc(1.48125rem + 2.775vw);
+    font-size: 3.5625rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h2,
   .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h3 {
-    font-size: 3.5625rem;
+    font-size: calc(1.48125rem + 2.775vw);
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1200px) {
+@media screen and (min-width: 1200px) and (min-width: 1200px) {
   .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h2,
   .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h3 {
-    font-size: calc(1.48125rem + 2.775vw);
+    font-size: 3.5625rem;
   }
 }
 

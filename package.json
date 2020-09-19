@@ -29,7 +29,8 @@
   "dependencies": {
     "bootstrap": "^4.5.0",
     "jquery": "^3.5.1",
-    "popper.js": "^1.14.3"
+    "popper.js": "^1.14.3",
+		"rfs": "^9.0.3"
   },
   "devDependencies": {
     "browser-sync": "^2.24.7",

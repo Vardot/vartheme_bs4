@@ -323,13 +323,13 @@ legend {
   padding: 0;
   white-space: normal;
   color: inherit;
-  font-size: 1.5rem;
+  font-size: calc(1.275rem + 0.3vw);
   line-height: inherit;
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
   legend {
-    font-size: calc(1.275rem + 0.3vw);
+    font-size: 1.5rem;
   }
 }
 
@@ -392,49 +392,49 @@ h6,
 
 h1,
 .h1 {
-  font-size: 2.5rem;
+  font-size: calc(1.375rem + 1.5vw);
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
   h1,
   .h1 {
-    font-size: calc(1.375rem + 1.5vw);
+    font-size: 2.5rem;
   }
 }
 
 h2,
 .h2 {
-  font-size: 2rem;
+  font-size: calc(1.325rem + 0.9vw);
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
   h2,
   .h2 {
-    font-size: calc(1.325rem + 0.9vw);
+    font-size: 2rem;
   }
 }
 
 h3,
 .h3 {
-  font-size: 1.75rem;
+  font-size: calc(1.3rem + 0.6vw);
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
   h3,
   .h3 {
-    font-size: calc(1.3rem + 0.6vw);
+    font-size: 1.75rem;
   }
 }
 
 h4,
 .h4 {
-  font-size: 1.5rem;
+  font-size: calc(1.275rem + 0.3vw);
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
   h4,
   .h4 {
-    font-size: calc(1.275rem + 0.3vw);
+    font-size: 1.5rem;
   }
 }
 
@@ -454,50 +454,50 @@ h6,
 }
 
 .display-1 {
-  font-size: 6rem;
+  font-size: calc(1.725rem + 5.7vw);
   font-weight: 300;
   line-height: 1.2;
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
   .display-1 {
-    font-size: calc(1.725rem + 5.7vw);
+    font-size: 6rem;
   }
 }
 
 .display-2 {
-  font-size: 5.5rem;
+  font-size: calc(1.675rem + 5.1vw);
   font-weight: 300;
   line-height: 1.2;
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
   .display-2 {
-    font-size: calc(1.675rem + 5.1vw);
+    font-size: 5.5rem;
   }
 }
 
 .display-3 {
-  font-size: 4.5rem;
+  font-size: calc(1.575rem + 3.9vw);
   font-weight: 300;
   line-height: 1.2;
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
   .display-3 {
-    font-size: calc(1.575rem + 3.9vw);
+    font-size: 4.5rem;
   }
 }
 
 .display-4 {
-  font-size: 3.5rem;
+  font-size: calc(1.475rem + 2.7vw);
   font-weight: 300;
   line-height: 1.2;
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
   .display-4 {
-    font-size: calc(1.475rem + 2.7vw);
+    font-size: 3.5rem;
   }
 }
 
@@ -683,10 +683,6 @@ pre code {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 100%;
-  -ms-flex: 1 0 100%;
-  flex: 1 0 100%;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -6941,14 +6937,14 @@ a.badge-dark.focus {
   opacity: 0.5;
   color: #000;
   text-shadow: 0 1px 0 #fff;
-  font-size: 1.5rem;
+  font-size: calc(1.275rem + 0.3vw);
   font-weight: 700;
   line-height: 1;
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
   .close {
-    font-size: calc(1.275rem + 0.3vw);
+    font-size: 1.5rem;
   }
 }
 

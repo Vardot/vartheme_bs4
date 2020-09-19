@@ -11,12 +11,12 @@
 #auth-box .title {
   margin: 0;
   padding: 0 0 15px;
-  font-size: 2rem;
+  font-size: calc(1.325rem + 0.9vw);
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
   #auth-box .title {
-    font-size: calc(1.325rem + 0.9vw);
+    font-size: 2rem;
   }
 }
 

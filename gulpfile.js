@@ -4,7 +4,9 @@ let gulp = require('gulp'),
   csscomb = require('gulp-csscomb'),
   autoprefixer = require('autoprefixer'),
   filter = require('gulp-filter'),
-  browserSync = require('browser-sync').create()
+	rename = require('gulp-rename'),
+	del = require('del'),
+  browserSync = require('browser-sync').create();
 
 const paths = {
   scss: {
@@ -31,8 +33,12 @@ const paths = {
     bootstrap_dest: './js/bootstrap',
     popper: './node_modules/popper.js/dist/umd/popper.min.js',
     popper_dest: './js/popper'
-  }
-}
+  },
+	rfs: {
+		src: './node_modules/rfs/scss.scss',
+		dest: './scss/mixins'
+	}
+};
 
 // Compile sass into CSS & auto-inject into browsers
 function compile () {
@@ -52,11 +58,11 @@ function compile () {
     .pipe(postcss([autoprefixer()]))
     .pipe(csscomb())
     .pipe(gulp.dest(paths.scss.dest))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream());
 }
 
 // Move the Bootstrap JavaScript files into our js/bootstrap folder.
-function move_bootstrap_js_files () {
+function move_bootstrap_js_files() {
   return gulp.src([
         paths.js.bootstrap.alert,
         paths.js.bootstrap.button,
@@ -73,26 +79,50 @@ function move_bootstrap_js_files () {
         paths.js.bootstrap.full_bootstrap
      ])
     .pipe(gulp.dest(paths.js.bootstrap_dest))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream());
 }
 
 // Move the Popper JavaScript files into our js/popper folder.
-function move_popper_js_files () {
+function move_popper_js_files() {
   return gulp.src([paths.js.popper])
     .pipe(gulp.dest(paths.js.popper_dest))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream());
 }
 
-// Watching scss files
-function watch () {
-  gulp.watch([paths.scss.watch], compile)
+function copy_files() {
+  // Copy the rfs/scsss.scss file.
+  return gulp.src([paths.rfs.src])
+    .pipe(gulp.dest(paths.rfs.dest))
+		.pipe(browserSync.stream());
 }
 
-const build = gulp.series(compile, move_bootstrap_js_files, move_popper_js_files, gulp.parallel(watch))
+function rename_files() {
+  // Rename it to ./scss/mixins/rfs.scss.
+  return gulp.src("./scss/mixins/scss.scss")
+  .pipe(rename("rfs.scss"))
+  .pipe(gulp.dest("./scss/mixins"))
+	.pipe(browserSync.stream());
+}
 
-exports.compile = compile
-exports.move_bootstrap_js_files = move_bootstrap_js_files
-exports.move_popper_js_files = move_popper_js_files
-exports.watch = watch
+function clean_files() {
+  return del([
+    './scss/mixins/scss.scss'
+  ]);
+}
 
-exports.default = build
+// Watching scss files.
+function watch() {
+  gulp.watch([paths.scss.watch], compile);
+}
+
+const build = gulp.series(compile, move_bootstrap_js_files, move_popper_js_files, copy_files, rename_files, clean_files, gulp.parallel(watch));
+
+exports.compile = compile;
+exports.move_bootstrap_js_files = move_bootstrap_js_files;
+exports.move_popper_js_files = move_popper_js_files;
+exports.copy_files = copy_files;
+exports.rename_files = rename_files;
+exports.clean_files = clean_files;
+exports.watch = watch;
+
+exports.default = build;
