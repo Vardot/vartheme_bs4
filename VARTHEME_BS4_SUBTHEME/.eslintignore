@@ -1,4 +1,8 @@
-node_modules/**/*
+**/*.min.js
+**/gulpfile.js
+**/bootstrap
+**/node_modules
 js/bootstrap/*.js
 js/bootstrap_barrio/*.js
+js/misc/*.js
 js/popper/*.js

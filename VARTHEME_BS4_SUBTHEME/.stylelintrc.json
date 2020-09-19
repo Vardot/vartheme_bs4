@@ -423,12 +423,12 @@
     ],
     "plugin/no-browser-hacks": [true, {
       "browsers": [
-        "ie >= 10",
-        "edge >= 12",
-        "firefox >= 38",
+        "ie >= 9",
+        "edge >= 13",
+        "firefox >= 5",
         "opera >= 12",
-        "safari >= 8",
-        "chrome >= 35"
+        "safari >= 5",
+        "chrome >= 56"
       ]
     }],
     "property-no-unknown": null,
@@ -436,9 +436,16 @@
     "selector-pseudo-element-colon-notation": null,
     "shorthand-property-no-redundant-values": null,
     "string-quotes": "double",
-    "unit-whitelist": ["deg", "em", "ex", "ms", "rem", "%", "s", "px", "vw", "vh"]
+    "unit-whitelist": ["deg", "em", "ex", "ms", "rem", "%", "s", "px", "vw", "vh"],
+    "font-family-no-missing-generic-family-keyword": [true, {
+      "ignoreFontFamilies": [
+        "Font Awesome 5 Brands",
+        "Font Awesome 5 Free"
+      ]
+    }]
   },
   "ignoreFiles": [
-    "node_modules/**/*.css"
+    "**/vendor/**/*.css",
+    "**/*.min.css"
   ]
 }

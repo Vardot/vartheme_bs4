@@ -20,8 +20,8 @@
     "theme:init": "gulp",
     "theme:build": "gulp compile",
     "theme:watch": "gulp watch",
-    "lint:js": "node ./node_modules/eslint/bin/eslint.js .",
-    "lint:css": "stylelint \"./css/**/*.css\"",
+    "eslint": "node ./node_modules/eslint/bin/eslint.js --config=.eslintrc.json .",
+    "stylelint": "npx stylelint --config=.stylelintrc.json .",
     "prettier": "prettier --write \"./js/**/*.es6.js\"",
     "phpcs": "phpcs --standard=./.phpcs.xml .",
     "phpcbf": "phpcbf --standard=./.phpcs.xml ."

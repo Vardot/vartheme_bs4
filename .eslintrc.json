@@ -5,9 +5,7 @@
   ],
   "root": true,
   "env": {
-    "browser": true,
-    "es6": true,
-    "node": true
+    "browser": true
   },
   "globals": {
     "Drupal": true,
@@ -19,12 +17,12 @@
     "matchMedia": true,
     "Backbone": true,
     "Modernizr": true,
-    "Popper": true,
-    "Sortable": true,
     "CKEDITOR": true
   },
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": ["error", {
+      "trailingComma": "none"
+    }],
     "consistent-return": ["off"],
     "no-underscore-dangle": ["off"],
     "max-nested-callbacks": ["warn", 3],
@@ -42,6 +40,12 @@
       "requireReturn": false
     }],
     "no-unused-vars": ["warn"],
-    "operator-linebreak": ["error", "after", { "overrides": { "?": "ignore", ":": "ignore" } }]
+    "object-shorthand": 0,
+    "prefer-arrow-callback": 0,
+    "func-names": 0,
+    "no-use-before-define": 0,
+    "one-var": 0,
+    "operator-linebreak": ["error", "after", { "overrides": { "?": "ignore", ":": "ignore" } }],
+    "prefer-template": 0
   }
 }
