@@ -4,8 +4,8 @@ let gulp = require('gulp'),
   csscomb = require('gulp-csscomb'),
   autoprefixer = require('autoprefixer'),
   filter = require('gulp-filter'),
-	rename = require('gulp-rename'),
-	del = require('del'),
+  rename = require('gulp-rename'),
+  del = require('del'),
   browserSync = require('browser-sync').create();
 
 const paths = {
@@ -34,10 +34,10 @@ const paths = {
     popper: './node_modules/popper.js/dist/umd/popper.min.js',
     popper_dest: './js/popper'
   },
-	rfs: {
-		src: './node_modules/rfs/scss.scss',
-		dest: './scss/mixins'
-	}
+  rfs: {
+    src: './node_modules/rfs/scss.scss',
+    dest: './scss/mixins'
+  }
 };
 
 // Compile sass into CSS & auto-inject into browsers
@@ -93,7 +93,7 @@ function copy_files() {
   // Copy the rfs/scsss.scss file.
   return gulp.src([paths.rfs.src])
     .pipe(gulp.dest(paths.rfs.dest))
-		.pipe(browserSync.stream());
+    .pipe(browserSync.stream());
 }
 
 function rename_files() {
@@ -101,7 +101,7 @@ function rename_files() {
   return gulp.src("./scss/mixins/scss.scss")
   .pipe(rename("rfs.scss"))
   .pipe(gulp.dest("./scss/mixins"))
-	.pipe(browserSync.stream());
+  .pipe(browserSync.stream());
 }
 
 function clean_files() {
