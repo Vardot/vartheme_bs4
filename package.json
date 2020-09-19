@@ -20,13 +20,11 @@
     "theme:build": "gulp compile",
     "theme:watch": "gulp watch",
     "theme:create-sub-theme": "bash ./scripts/create-new-vartheme-bs4.sh",
-    "lint:core-js": "node ./node_modules/eslint/bin/eslint.js .",
-    "lint:css": "stylelint \"./css/**/*.css\"",
-    "lint:css-checkstyle": "stylelint \"./css/**/*.css\" --custom-formatter ./node_modules/stylelint-checkstyle-formatter/index.js",
+    "eslint": "node ./node_modules/eslint/bin/eslint.js --config=.eslintrc.json",
+    "stylelint": "npx stylelint --config .stylelintrc.json",
     "prettier": "prettier --write \"./js/**/*.es6.js\"",
-    "phpcs:standard": "phpcs --standard=Drupal --extensions=php,module,inc,install,test,theme,scss,css,info,txt,md,yml . --ignore=\"./node_modules/ , ./VARTHEME_BS4_SUBTHEME/node_modules/\"",
-    "phpcbf:standard": "phpcbf --standard=Drupal --extensions=php,module,inc,install,test,theme,scss,css,info,txt,md,yml . --ignore=\"./node_modules/ , ./VARTHEME_BS4_SUBTHEME/node_modules/\"",
-    "phpcs:practice": "phpcs --standard=DrupalPractice --extensions=php,module,inc,install,test,theme,scss,css,info,txt,md,yml . --ignore=\"./node_modules/ , ./VARTHEME_BS4_SUBTHEME/node_modules/\""
+    "phpcs": "phpcs --standard=./.phpcs.xml .",
+    "phpcbf": "phpcbf --standard=./.phpcs.xml ."
   },
   "dependencies": {
     "bootstrap": "^4.5.0",

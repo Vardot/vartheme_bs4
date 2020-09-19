@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ruleset name="drupal_core">
-  <description>Default PHP CodeSniffer configuration for Drupal core.</description>
-  <file>.</file>
+<ruleset name="custom_code">
+  <description>Default PHP CodeSniffer configuration for custom code.</description>
+  <arg name="extensions" value="inc,install,module,php,profile,test,theme,yml,css"/>
 
-  <arg name="extensions" value="php,module,inc,install,test,theme,scss,css,info,txt,md,yml"/>
-
+  <exclude-pattern>./assets/vendor/*</exclude-pattern>
   <!--Exclude folders used by common frontend tools. These folders match the file_scan_ignore_directories setting in default.settings.php-->
   <exclude-pattern>*/node_modules/*</exclude-pattern>
-
-  <!--Exclude test files that are intentionally empty, or intentionally violate coding standards.-->
-  <exclude-pattern>./modules/system/tests/fixtures/HtaccessTest</exclude-pattern>
+  <exclude-pattern>*/bower_components/*</exclude-pattern>
+  <!--Exclude minimized css.-->
+  <exclude-pattern>*/*.min.css</exclude-pattern>
 
   <!-- Only include specific sniffs that pass. This ensures that, if new sniffs are added, HEAD does not fail.-->
   <!-- Drupal sniffs -->
@@ -21,6 +20,7 @@
   </rule>
   <rule ref="Drupal.Classes.ClassCreateInstance"/>
   <rule ref="Drupal.Classes.ClassDeclaration"/>
+  <rule ref="Drupal.Classes.ClassFileName"/>
   <rule ref="Drupal.Classes.FullyQualifiedNamespace"/>
   <rule ref="Drupal.Classes.InterfaceName"/>
   <rule ref="Drupal.Classes.UnusedUseStatement"/>
@@ -47,7 +47,6 @@
     <exclude name="Drupal.Commenting.DocComment.TagsNotGrouped"/>
     <exclude name="Drupal.Commenting.DocComment.ParamGroup"/>
     <exclude name="Drupal.Commenting.DocComment.ShortSingleLine"/>
-    <exclude name="Drupal.Commenting.DocComment.TagGroupSpacing"/>
     <exclude name="Drupal.Commenting.DocComment.MissingShort"/>
   </rule>
   <rule ref="Drupal.Commenting.DocCommentStar"/>
@@ -130,12 +129,12 @@
   <rule ref="Drupal.WhiteSpace.ObjectOperatorSpacing"/>
   <rule ref="Drupal.WhiteSpace.OpenBracketSpacing"/>
   <rule ref="Drupal.WhiteSpace.OpenTagNewline"/>
-  <rule ref="Drupal.WhiteSpace.OperatorSpacing"/>
   <rule ref="Drupal.WhiteSpace.ScopeClosingBrace"/>
   <rule ref="Drupal.WhiteSpace.ScopeIndent"/>
 
   <!-- Drupal Practice sniffs -->
   <rule ref="DrupalPractice.Commenting.ExpectedException"/>
+  <rule ref="DrupalPractice.General.ExceptionT"/>
 
   <!-- Generic sniffs -->
   <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
@@ -318,6 +317,11 @@
     </properties>
   </rule>
   <rule ref="Squiz.WhiteSpace.LanguageConstructSpacing" />
+  <rule ref="Squiz.WhiteSpace.OperatorSpacing">
+    <properties>
+      <property name="ignoreNewlines" value="true"/>
+    </properties>
+  </rule>
   <rule ref="Squiz.WhiteSpace.SemicolonSpacing"/>
   <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace"/>
 

@@ -20,13 +20,11 @@
     "theme:init": "gulp",
     "theme:build": "gulp compile",
     "theme:watch": "gulp watch",
-    "lint:core-js": "node ./node_modules/eslint/bin/eslint.js .",
+    "lint:js": "node ./node_modules/eslint/bin/eslint.js .",
     "lint:css": "stylelint \"./css/**/*.css\"",
-    "lint:css-checkstyle": "stylelint \"./css/**/*.css\" --custom-formatter ./node_modules/stylelint-checkstyle-formatter/index.js",
     "prettier": "prettier --write \"./js/**/*.es6.js\"",
-    "phpcs:standard": "phpcs --standard=Drupal --extensions=php,module,inc,install,test,theme,scss,css,info,txt,md,yml . --ignore=./node_modules/",
-    "phpcbf:standard": "phpcbf --standard=Drupal --extensions=php,module,inc,install,test,theme,scss,css,info,txt,md,yml . --ignore=./node_modules/",
-    "phpcs:practice": "phpcs --standard=DrupalPractice --extensions=php,module,inc,install,test,theme,scss,css,info,txt,md,yml . --ignore=./node_modules/"
+    "phpcs": "phpcs --standard=./.phpcs.xml .",
+    "phpcbf": "phpcbf --standard=./.phpcs.xml ."
   },
   "dependencies": {
     "bootstrap": "^4.5.0",
