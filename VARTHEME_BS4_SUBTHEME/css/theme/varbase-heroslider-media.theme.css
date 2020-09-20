@@ -96,16 +96,16 @@
 
 .varbase-heroslider-media .slick-prev {
   right: auto;
-  left: 10px;
+  left: 0.63rem;
 }
 
 .varbase-heroslider-media .slick-next {
-  right: 10px;
+  right: 0.63rem;
   left: auto;
 }
 
 .varbase-heroslider-media .slide__link {
-  margin: 10px auto;
+  margin: 0.63rem auto;
 }
 
 .varbase-heroslider-media .slide__link a {
@@ -413,11 +413,11 @@
 }
 
 [dir="rtl"] .varbase-heroslider-media .slick-prev {
-  right: 10px;
+  right: 0.63rem;
   left: auto;
 }
 
 [dir="rtl"] .varbase-heroslider-media .slick-next {
   right: auto;
-  left: 10px;
+  left: 0.63rem;
 }
