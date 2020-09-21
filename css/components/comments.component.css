@@ -1,9 +1,9 @@
 #content .comment-wrapper h2 {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 #content .comment-wrapper h2.comment-form__title {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 .field-node--comment {
@@ -27,7 +27,13 @@
 }
 
 [dir="rtl"] .comment__meta {
-  padding: 0 0 0 30px;
+  padding: 0 0 0 calc(1.3125rem + 0.75vw);
+}
+
+@media (min-width: 1200px) {
+  [dir="rtl"] .comment__meta {
+    padding: 0 0 0 1.875rem;
+  }
 }
 
 .comment__attribution img {
@@ -44,13 +50,13 @@
 }
 
 .comment__author {
-  margin: 4px 0;
+  margin: 0.25rem 0;
   line-height: 1.2;
 }
 
 .comment__time,
 .comment__permalink {
-  margin-bottom: 4px;
+  margin-bottom: 0.25rem;
   padding: 0 0.5em 0 0;
   color: #68696b;
   font-size: 0.875rem;
@@ -65,7 +71,7 @@
 
 .comment__permalink {
   font-size: 0.875rem;
-  line-height: 1.2;
+  line-height: 1.2rem;
 }
 
 .comment__content:before {
@@ -92,7 +98,7 @@
   /* LTR */
   top: 1.25em;
   right: 100%;
-  margin-right: -1px;
+  margin-right: -0.0625;
   content: "";
   border-top: 1.25em solid transparent;
   border-right: 1.25em solid #fff;
@@ -105,7 +111,7 @@
   right: auto;
   left: 100%;
   margin-right: 0;
-  margin-left: -1px;
+  margin-left: -0.0625;
   border-right: none;
   border-left: 1.25em solid #fff;
 }
@@ -117,17 +123,29 @@
 }
 
 .comment__content nav {
-  padding-top: 1px;
+  padding-top: 0.0625;
 }
 
 .indented {
-  margin-left: 40px;
+  margin-left: calc(1.375rem + 1.5vw);
   /* LTR */
 }
 
+@media (min-width: 1200px) {
+  .indented {
+    margin-left: 2.5rem;
+  }
+}
+
 [dir="rtl"] .indented {
-  margin-right: 40px;
+  margin-right: calc(1.375rem + 1.5vw);
   margin-left: 0;
+}
+
+@media (min-width: 1200px) {
+  [dir="rtl"] .indented {
+    margin-right: 2.5rem;
+  }
 }
 
 .comment .links {
@@ -145,17 +163,17 @@
 }
 
 .comment--unpublished {
-  margin-right: 5px;
+  margin-right: 0.3125rem;
   /* LTR */
-  padding: 5px 2px 5px 5px;
+  padding: 0.3125rem 0.125 0.3125rem 0.3125rem;
   /* LTR */
   background: #7ecfff;
 }
 
 [dir="rtl"] .comment--unpublished {
   margin-right: 0;
-  margin-left: 5px;
-  padding: 5px 5px 5px 2px;
+  margin-left: 0.3125rem;
+  padding: 0.3125rem 0.3125rem 0.3125rem 0.125;
 }
 
 .unpublished .comment-text .comment-arrow {

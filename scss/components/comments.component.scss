@@ -1,4 +1,4 @@
-// Visual styles for comments in Bartik.
+// Visual styles for comments.
 // -----------------------------------------------------------------------------
 @import "../../node_modules/bootstrap/scss/functions"; // Bootstrap functions.
 @import "../../node_modules/bootstrap/scss/mixins";    // Bootstrap mixins.
@@ -8,13 +8,14 @@
  
 
 // This is required to win over specificity of #content h2
+#content .comment-wrapper {
+  h2 {
+    @include margin-bottom(1rem);
 
-#content .comment-wrapper h2 {
-  margin-bottom: 1em;
-}
-
-#content .comment-wrapper h2.comment-form__title {
-  margin-bottom: 1em;
+    &.comment-form__title {
+      @include margin-bottom(1rem);
+    }
+  }
 }
 
 .field-node--comment {
@@ -38,7 +39,7 @@
 }
 
 [dir="rtl"] .comment__meta {
-  padding: 0 0 0 30px;
+  @include padding(0 0 0 1.875rem);
 }
 
 .comment__attribution img {
@@ -57,16 +58,16 @@
 }
 
 .comment__author {
-  margin: 4px 0;
-  line-height: 1.2;
+  @include margin(0.25rem 0);
+  @include rfs(1.2, line-height);
 }
 
 .comment__time,
 .comment__permalink {
-  margin-bottom: 4px;
+  @include margin-bottom(0.25rem);
   color: #68696b;
   @include font-size($font-size-sm);
-  line-height: 1.2;
+  @include rfs(1.2, line-height);
   padding: 0 0.5em 0 0;
   /* LTR */
 }
@@ -78,7 +79,7 @@
 
 .comment__permalink {
   @include font-size($font-size-sm);
-  line-height: 1.2;
+  @include rfs(1.2rem, line-height);
 }
 
 .comment__content:before {
@@ -110,7 +111,7 @@
   border-right: $comment-spacer-x solid $white;
   /* LTR */
   border-bottom: $comment-spacer-y solid transparent;
-  margin-right: -1px;
+  @include margin-right(-0.0625);
   /* LTR */
 }
 
@@ -120,7 +121,7 @@
   border-right: none;
   border-left: $comment-spacer-x solid $white;
   margin-right: 0;
-  margin-left: -1px;
+  @include margin-left(-0.0625);
 }
 
 .comment__content h3 {
@@ -130,16 +131,16 @@
 }
 
 .comment__content nav {
-  padding-top: 1px;
+  @include padding-top(0.0625);
 }
 
 .indented {
-  margin-left: 40px;
+  @include margin-left(2.5rem);
   /* LTR */
 }
 
 [dir="rtl"] .indented {
-  margin-right: 40px;
+  @include margin-right(2.5rem);
   margin-left: 0;
 }
 
@@ -158,17 +159,17 @@
 }
 
 .comment--unpublished {
-  margin-right: 5px;
+  @include margin-right(0.3125rem);
   /* LTR */
-  padding: 5px 2px 5px 5px;
+  @include padding(0.3125rem 0.125 0.3125rem 0.3125rem);
   /* LTR */
   background: $accent-light;
 }
 
 [dir="rtl"] .comment--unpublished {
-  margin-left: 5px;
+  @include margin-left(0.3125rem);
   margin-right: 0;
-  padding: 5px 5px 5px 2px;
+  @include padding(0.3125rem 0.3125rem 0.3125rem 0.125);
 }
 
 // @todo: unpublished nodes have class .node--unpublished.
