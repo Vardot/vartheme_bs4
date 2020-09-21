@@ -8,21 +8,23 @@
 
 .js-form-managed-file {
   position: relative;
-  input[type='file'] + .varicon{
+  input[type='file'] + .varicon {
     position: absolute;
     top: 50%;
-    right: 6px;
+    @include rfs(0.375rem, right);
     transform: translateY(-50%);
   }
 }
-.throbber-added{
+
+.throbber-added {
   position: relative;
   padding-right: 50px;
   position: relative;
 }
+
 .btn .ajax-throbber {
   position: absolute;
-  right: 14px;
+  @include rfs(0.875rem, right);
   top: 50%;
   transform: translateY(-50%);
 

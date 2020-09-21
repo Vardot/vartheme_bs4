@@ -1,7 +1,7 @@
 .ui-autocomplete {
   z-index: 1000;
-  min-width: 160px;
-  padding: 5px 0;
+  min-width: calc(2.125rem + 10.5vw);
+  padding: 0.3125rem 0;
   list-style: none;
   text-align: left;
   color: inherit;
@@ -15,11 +15,17 @@
   font-size: 1rem;
 }
 
+@media (min-width: 1200px) {
+  .ui-autocomplete {
+    min-width: 10rem;
+  }
+}
+
 .ui-autocomplete .ui-menu-item {
   display: block;
   clear: both;
   margin: 0;
-  padding: 3px 20px;
+  padding: 0.1875rem 1.25rem;
   cursor: pointer;
   white-space: nowrap;
   text-decoration: none;

@@ -10,12 +10,11 @@
 
 // Common styles for all types.
 .bs-callout {
-  padding: 20px;
-  margin: 20px 0;
+  @include padding(1.25rem);
+  @include margin(1.25rem 0);
   border: 1px solid $gray-200;
   border-left-width: 5px;
-  border-radius: 3px;
-  border-radius: 3px;
+  @include rfs(0.1875rem, border-radius);
 
   &:before {
     content: " ";
@@ -28,7 +27,7 @@
 
   h4 {
     margin-top: 0;
-    margin-bottom: 5px;
+    @include margin-bottom(0.3125rem);
   }
 
   p:last-child {
@@ -36,13 +35,13 @@
   }
 
   code {
-    border-radius: 3px;
+    @include rfs(0.1875rem, border-radius);
   }
 }
 
 // Tighten up space between multiple callouts.
 .bs-callout + .bs-callout {
-  margin-top: -5px;
+  @include margin-top(-0.3125rem);
 }
 
 // Variations.

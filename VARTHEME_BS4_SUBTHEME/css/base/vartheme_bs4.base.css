@@ -271,7 +271,13 @@ td.radio {
 }
 
 .views-exposed-form .views-exposed-widget .btn {
-  margin-top: 1.8em;
+  margin-top: calc(1.305rem + 0.66vw);
+}
+
+@media (min-width: 1200px) {
+  .views-exposed-form .views-exposed-widget .btn {
+    margin-top: 1.8rem;
+  }
 }
 
 table .radio input[type="radio"],
@@ -331,42 +337,60 @@ td.module,
 }
 
 .book-toc > .dropdown-menu .dropdown-menu > li {
-  padding-left: 20px;
+  padding-left: 1.25rem;
 }
 
 .book-toc > .dropdown-menu .dropdown-menu > li > a {
-  margin-left: -40px;
-  padding-left: 60px;
+  margin-left: calc(1.375rem + 1.5vw);
+  padding-left: calc(1.445rem + 2.34vw);
+}
+
+@media (min-width: 1200px) {
+  .book-toc > .dropdown-menu .dropdown-menu > li > a {
+    margin-left: 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .book-toc > .dropdown-menu .dropdown-menu > li > a {
+    padding-left: 3.2rem;
+  }
 }
 
 #features-filter .form-item.form-type-checkbox {
-  padding-left: 20px;
+  padding-left: 1.25rem;
 }
 
 fieldset.features-export-component .panel-heading {
-  padding: 5px 10px;
+  padding: 0.3125rem 0.625rem;
 }
 
 fieldset.features-export-component .panel-heading a.panel-title {
-  margin: -5px -10px;
-  padding: 5px 10px;
+  margin: -0.3125rem -0.625rem;
+  padding: 0.3125rem 0.625rem;
   font-weight: 500;
 }
 
 fieldset.features-export-component .panel-body {
-  padding: 0 10px;
+  padding: 0 0.625rem;
 }
 
 div.features-export-list {
-  margin: -11px 0 10px;
-  padding: 0 10px;
+  margin: -0.6875rem 0 0.625rem;
+  padding: 0 0.625rem;
 }
 
 fieldset.features-export-component .component-select .form-type-checkbox {
   min-height: 0;
-  margin: 5px 5px 5px 0 !important;
-  padding: 3px 3px 3px 25px !important;
-  line-height: 1em;
+  margin: 0.3125rem 0.3125rem 0.3125rem 0 !important;
+  padding: 0.1875rem 0.1875rem 0.1875rem calc(1.28125rem + 0.375vw) !important;
+  line-height: 1rem;
+}
+
+@media (min-width: 1200px) {
+  fieldset.features-export-component .component-select .form-type-checkbox {
+    padding: 0.1875rem 0.1875rem 0.1875rem 1.5625rem !important;
+  }
 }
 
 fieldset.features-export-component .component-select .form-type-checkbox input[type=checkbox] {
@@ -375,9 +399,15 @@ fieldset.features-export-component .component-select .form-type-checkbox input[t
 
 div.features-export-list .form-type-checkbox {
   min-height: 0;
-  margin: 5px 5px 5px 0 !important;
-  padding: 3px 3px 3px 25px !important;
+  margin: 0.3125rem 0.3125rem 0.3125rem 0 !important;
+  padding: 0.1875rem 0.1875rem 0.1875rem calc(1.28125rem + 0.375vw) !important;
   line-height: 1em;
+}
+
+@media (min-width: 1200px) {
+  div.features-export-list .form-type-checkbox {
+    padding: 0.1875rem 0.1875rem 0.1875rem 1.5625rem !important;
+  }
 }
 
 div.features-export-list .form-type-checkbox input[type=checkbox] {
@@ -394,7 +424,7 @@ div.features-export-list .form-type-checkbox input[type=checkbox] {
 }
 
 .main-container .region.region-header .tabs {
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .form-type-password-confirm > * {
@@ -406,7 +436,7 @@ div.features-export-list .form-type-checkbox input[type=checkbox] {
 }
 
 .navigation-top-wrapper {
-  padding-top: 15px;
+  padding-top: 0.9375rem;
 }
 
 .cke_editable body {
@@ -444,8 +474,8 @@ dt {
 }
 
 dd {
-  margin-bottom: 20px;
-  margin-left: 10px;
+  margin-bottom: 1.25rem;
+  margin-left: 0.625rem;
 }
 
 img {
@@ -462,17 +492,23 @@ img {
 }
 
 .modal-content .panels-add-content-modal {
-  margin-left: 175px;
+  margin-left: calc(2.21875rem + 11.625vw);
   padding-left: 0;
   background: white;
 }
 
+@media (min-width: 1200px) {
+  .modal-content .panels-add-content-modal {
+    margin-left: 10.9375rem;
+  }
+}
+
 .modal-content .panels-add-content-modal .panels-modal-add-category {
-  margin-right: 5px;
+  margin-right: 0.3125rem;
 }
 
 .modal-content .panels-add-content-modal .panels-section-column-body {
-  padding: 0 10px;
+  padding: 0 0.625rem;
 }
 
 .maintenance-page #page {
@@ -511,15 +547,21 @@ body.path-frontpage h1.page-header {
 pre {
   display: block;
   margin: 0 0 10px;
-  padding: 9.5px;
+  padding: 0.59375rem;
   word-wrap: break-word;
   word-break: break-all;
   color: #333;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: #f5f5f5;
   font-size: 0.7rem;
-  line-height: 1.42857143;
+  line-height: calc(1.26786rem + 0.21429vw);
+}
+
+@media (min-width: 1200px) {
+  pre {
+    line-height: 1.42857rem;
+  }
 }
 
 #tour.hidden.list-group {

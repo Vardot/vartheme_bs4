@@ -5,7 +5,7 @@
 .js-form-managed-file input[type="file"] + .varicon {
   position: absolute;
   top: 50%;
-  right: 6px;
+  right: 0.375rem;
   -webkit-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -20,7 +20,7 @@
 .btn .ajax-throbber {
   position: absolute;
   top: 50%;
-  right: 14px;
+  right: 0.875rem;
   -webkit-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);

@@ -11,6 +11,6 @@
 }
 
 .region-breadcrumb {
-  padding: 0 15px 0.25em;
+  @include padding(0 0.9375rem 0.25rem);
   width: 100%;
 }

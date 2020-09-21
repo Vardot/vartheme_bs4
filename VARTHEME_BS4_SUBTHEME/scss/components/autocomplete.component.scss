@@ -1,4 +1,4 @@
-// jQuery UI autocomplete widget style overrides.
+// Autocomplete widget style overrides.
 // -----------------------------------------------------------------------------
 @import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
 @import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
@@ -17,8 +17,8 @@
   font-family: $font-family-base;
   @include font-size($font-size-base);
   list-style: none;
-  min-width: 160px;
-  padding: 5px 0;
+  @include rfs (10rem, min-width);
+  @include padding(0.3125rem 0);
   text-align: left;
   z-index: $zindex-dropdown;
 
@@ -30,10 +30,10 @@
     cursor: pointer;
     display: block;
     font-weight: normal;
-    line-height: $line-height-base;
+    @include rfs($line-height-base, line-height);
     margin: 0;
     outline: 0;
-    padding: 3px 20px;
+    padding: 0.1875rem 1.25rem;
     text-decoration: none;
     white-space: nowrap;
 
