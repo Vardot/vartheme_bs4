@@ -7,7 +7,7 @@
 // -----------------------------------------------------------------------------
 
 #navbar-top {
-  padding: 0 1rem;
+  @include padding(0 1rem);
 }
 
 #navbar-top.navbar-dark .nav-link:hover,
@@ -29,7 +29,7 @@
 }
 
 .navbar-brand .site-logo {
-  margin-right: 1rem;
+  @include margin-right(1rem);
 }
 
 @media (max-width: 33.9em) {

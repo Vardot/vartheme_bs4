@@ -19,8 +19,8 @@
 }
 
 form .filter-wrapper {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  @include padding-left(1rem);
+  @include padding-right(1rem);
 }
 
 form .form-type-textarea {

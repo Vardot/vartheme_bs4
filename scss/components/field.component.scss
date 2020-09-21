@@ -54,12 +54,12 @@
 .field--name-field-tags .field__label {
   font-weight: normal;
   margin: 0;
-  padding-right: 5px;
+  @include padding-right(0.3125rem);
   /* LTR */
 }
 
 [dir="rtl"] .field--name-field-tags .field__label {
-  padding-left: 5px;
+  @include padding-left(0.3125rem);
   padding-right: 0;
 }
 
