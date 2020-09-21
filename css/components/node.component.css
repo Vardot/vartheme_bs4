@@ -11,7 +11,7 @@
 
 .node--view-mode-teaser h2 {
   margin-top: 0;
-  padding-top: 0.5em;
+  padding-top: 0.5rem;
 }
 
 .node--view-mode-teaser.node--sticky {
@@ -28,14 +28,14 @@
 }
 
 .node__meta {
-  margin-bottom: -5px;
+  margin-bottom: -0.3125;
   font-size: 0.875rem;
 }
 
 .node__meta .field--name-field-user-picture img {
   float: left;
   /* LTR */
-  margin: 1px 1rem 0 0;
+  margin: 0.0625 1rem 0 0;
   /* LTR */
 }
 

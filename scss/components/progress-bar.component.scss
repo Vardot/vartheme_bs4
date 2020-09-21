@@ -1,4 +1,4 @@
-// Progress bar styles.
+// Progress bar component style.
 // -----------------------------------------------------------------------------
 @import "../../node_modules/bootstrap/scss/functions"; // Bootstrap functions.
 @import "../../node_modules/bootstrap/scss/mixins";    // Bootstrap mixins.
@@ -7,15 +7,15 @@
 // -----------------------------------------------------------------------------
 
 .progress-wrapper {
-  margin-bottom: $form-group-margin-bottom;
+  @include margin-bottom($form-group-margin-bottom);
 
   &:last-child .progress {
-    margin-bottom: 5px;
+    @include margin-bottom(0.3125rem);
   }
 
   .message {
     font-weight: 700;
-    margin-bottom: 5px;
+    @include margin-bottom(0.3125rem);
   }
 
   .progress-bar {
@@ -23,3 +23,4 @@
   }
 
 }
+

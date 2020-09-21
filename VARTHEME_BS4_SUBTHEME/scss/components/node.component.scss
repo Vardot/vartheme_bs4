@@ -1,4 +1,4 @@
-// Visual styles for Bootstrap Barrio's node component.
+// Node component style.
 // -----------------------------------------------------------------------------
 @import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
 @import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
@@ -8,60 +8,56 @@
  
 .node__content {
   @include font-size($font-size-base);
-  margin-top: $spacer;
+  @include margin-top($spacer);
 }
 
-
 // View mode teaser styles.
-
 .node--view-mode-teaser {
   border-bottom: $border-width solid $border-color;
-  margin-bottom: $spacer;
-  padding-bottom: $spacer;
+  @include margin-bottom($spacer);
+  @include padding-bottom($spacer);
 }
 
 .node--view-mode-teaser h2 {
   margin-top: 0;
-  padding-top: 0.5em;
+  @include padding-top(0.5rem);
 }
 
 .node--view-mode-teaser.node--sticky {
   background: #f9f9f9;
   background: rgba(0, 0, 0, 0.024);
   border: $border-width solid $border-color;
-  padding: 0 $spacer $spacer;
+  @include padding(0 $spacer $spacer);
 }
 
 .node--view-mode-teaser .node__content {
   clear: none;
   @include font-size($font-size-base);
-  line-height: $line-height-base;
+  @include rfs($line-height-base, line-height);
 }
 
 
 // Node metadata styles.
-
 .node__meta {
   @include font-size($font-size-sm);
-  margin-bottom: -5px;
+  @include margin-bottom(-0.3125);
 }
 
 .node__meta .field--name-field-user-picture img {
   float: left;
   /* LTR */
-  margin: 1px $spacer 0 0;
+  @include margin(0.0625 $spacer 0 0);
   /* LTR */
 }
 
 [dir="rtl"] .node__meta .field--name-field-user-picture img {
   float: right;
-  margin-left: $spacer;
+  @include margin-left($spacer);
   margin-right: 0;
 }
 
 
 // Node links styles.
-
 .node__links {
   text-align: right;
   /* LTR */
@@ -74,9 +70,8 @@
 
 
 // Unpublished node styles.
-
 .node--unpublished {
-  padding: $spacer $spacer 0;
+  @include padding($spacer $spacer 0);
 }
 
 .node--unpublished .comment-text .comment-arrow {

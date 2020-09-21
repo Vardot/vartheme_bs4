@@ -9,7 +9,7 @@ header #search-block-form {
   -webkit-box-orient: horizontal;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-  padding: 5px 15px;
+  padding: 0.3125rem 0.9375rem;
 }
 
 #search-block-form {

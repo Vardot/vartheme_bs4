@@ -1,11 +1,10 @@
-// Navbar styling.
+// Navbar component style.
 // -----------------------------------------------------------------------------
 @import "../../node_modules/bootstrap/scss/functions"; // Bootstrap functions.
 @import "../../node_modules/bootstrap/scss/mixins";    // Bootstrap mixins.
 @import "../variables";                                // Vartheme variables.
 @import "../mixins";                                   // Vartheme mixins.
 // -----------------------------------------------------------------------------
-
 
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {

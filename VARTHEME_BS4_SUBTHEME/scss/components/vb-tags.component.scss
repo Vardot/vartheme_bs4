@@ -1,4 +1,4 @@
-// Varbase bootstrap tags styling.
+// Varbase bootstrap tags component style.
 // --------------------------------------------------
 // vb-tags: Styles a list of tags, which much looks like the pager with
 //          rounded borders.
@@ -18,7 +18,7 @@
     > a,
     > span {
       display: inline-block;
-      padding: 5px 14px;
+      @include padding(0.3125rem 0.875rem);
       background-color: $pagination-bg;
       border: $pagination-border-width solid $pagination-border-color;
       border-radius: $border-radius;

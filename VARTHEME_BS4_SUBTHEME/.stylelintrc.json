@@ -446,6 +446,7 @@
   },
   "ignoreFiles": [
     "**/vendor/**/*.css",
-    "**/*.min.css"
+    "**/*.min.css",
+    "**/scss/**/*.scss"
   ]
 }

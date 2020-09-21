@@ -15,7 +15,13 @@
 }
 
 #edit-moderation-state-wrapper > div fieldset {
-  margin-right: 5rem;
+  margin-right: calc(1.625rem + 4.5vw);
+}
+
+@media (min-width: 1200px) {
+  #edit-moderation-state-wrapper > div fieldset {
+    margin-right: 5rem;
+  }
 }
 
 #edit-moderation-state-wrapper > div fieldset label {
@@ -45,7 +51,13 @@
 
 [dir="rtl"] #edit-moderation-state-wrapper > div fieldset {
   margin-right: 0;
-  margin-left: 5rem;
+  margin-left: calc(1.625rem + 4.5vw);
+}
+
+@media (min-width: 1200px) {
+  [dir="rtl"] #edit-moderation-state-wrapper > div fieldset {
+    margin-left: 5rem;
+  }
 }
 
 [dir="rtl"] #edit-moderation-state-wrapper > div fieldset label {

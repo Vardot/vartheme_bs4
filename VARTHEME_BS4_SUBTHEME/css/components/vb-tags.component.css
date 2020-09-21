@@ -16,7 +16,7 @@
 .vb-tags li > a,
 .vb-tags li > span {
   display: inline-block;
-  padding: 5px 14px;
+  padding: 0.3125rem 0.875rem;
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
   background-color: #fff;

@@ -1,4 +1,4 @@
-// Styles for Bootstrap Barrio's tables.
+// Tables component style.
 // -----------------------------------------------------------------------------
 @import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
 @import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
@@ -12,7 +12,7 @@
 }
 
 .sticky-header th {
-  padding: $table-cell-padding;
+  @include padding($table-cell-padding);
   vertical-align: top;
   border-top: $table-border-width solid $table-border-color;
 }

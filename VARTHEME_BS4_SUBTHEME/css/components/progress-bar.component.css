@@ -3,11 +3,11 @@
 }
 
 .progress-wrapper:last-child .progress {
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
 }
 
 .progress-wrapper .message {
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
   font-weight: 700;
 }
 

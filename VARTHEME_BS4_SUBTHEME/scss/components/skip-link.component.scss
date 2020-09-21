@@ -1,11 +1,11 @@
-// Styles for the skip link.
+// Skip link component style.
 // -----------------------------------------------------------------------------
 @import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
 @import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
 @import "../variables";                   // VARTHEME_BS4_SUBTHEME variables.
 @import "../mixins";                      // VARTHEME_BS4_SUBTHEME mixins.
 // -----------------------------------------------------------------------------
- 
+
 .skip-link {
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -14,14 +14,14 @@
   z-index: 50;
   background: $gray-700;
   @include font-size($font-size-base);
-  line-height: $line-height-lg;
-  padding: 1px $spacer 2px;
+  @include rfs($line-height-lg, line-height);
+  @include padding(0.0625rem $spacer 0.125rem);
   border-radius: 0 0 $border-radius-lg $border-radius-lg;
   border-bottom-width: 0;
   outline: 0;
-}
 
-.skip-link.visually-hidden.focusable:focus {
-  position: absolute !important;
-  color: $white;
+  .visually-hidden.focusable:focus {
+    position: absolute !important;
+    color: $white;
+  }
 }

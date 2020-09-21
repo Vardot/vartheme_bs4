@@ -1,4 +1,4 @@
-// ------------------ Sidebar ----------------- */
+// Sidebar component style.
 // -----------------------------------------------------------------------------
 @import "../../node_modules/bootstrap/scss/functions"; // Bootstrap functions.
 @import "../../node_modules/bootstrap/scss/mixins";    // Bootstrap mixins.
@@ -10,20 +10,20 @@
   .block {
     border-style: solid;
     border-width: $border-width;
-    padding: $spacer $spacer;
-    margin: 0 0 $spacer;
+    @include padding($spacer $spacer);
+    @include margin(0 0 $spacer);
     .content {
       @include font-size($font-size-base);
-      line-height: $line-height-sm;
+      @include rfs($line-height-sm, line-height);
     }
   }
   h2 {
     margin: 0 0 ($spacer * .5);
     border-bottom: $border-width solid $border-color;
-    padding-bottom: 5px;
+    @include padding-bottom(0.3125rem);
     text-shadow: 0 $border-width 0 $white;
     @include font-size($font-size-lg);
-    line-height: $headings-line-height;
+    @include rfs($headings-line-height, line-height);
   }
   tbody {
     border: none;
@@ -34,6 +34,6 @@
     border-bottom: $border-width solid $border-color;
   }
   nav ul.nav {
-    margin: 0 -($spacer);
+    @include margin(0 -($spacer));
   }
 }

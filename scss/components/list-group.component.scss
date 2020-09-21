@@ -1,4 +1,5 @@
-// List group.
+// List group component style.
+// -----------------------------------------------------------------------------
 // A list of links, grouped together.
 // -----------------------------------------------------------------------------
 @import "../../node_modules/bootstrap/scss/functions"; // Bootstrap functions.
@@ -6,12 +7,12 @@
 @import "../variables";                                // Vartheme variables.
 @import "../mixins";                                   // Vartheme mixins.
 // -----------------------------------------------------------------------------
- 
+
 .list-group__link {
   border-top: $border-width solid $border-color;
-  padding: $list-group-item-padding-y 0 0;
+  @include padding($list-group-item-padding-y 0 0);
 }
 
 .list-group__description {
-  margin: 0 0 $list-group-item-padding-y;
+  @include margin(0 0 $list-group-item-padding-y);
 }

@@ -1,5 +1,11 @@
 #auth-box {
-  padding: 1.875rem 0 0;
+  padding: calc(1.3125rem + 0.75vw) 0 0;
+}
+
+@media (min-width: 1200px) {
+  #auth-box {
+    padding: 1.875rem 0 0;
+  }
 }
 
 #auth-box #the-logo {
@@ -28,7 +34,7 @@
 
 #auth-box #middle-part {
   overflow: hidden;
-  padding: 15px;
+  padding: 0.9375rem;
   border-radius: 3px;
   background: #fff;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);

@@ -17,7 +17,13 @@ body th {
 
 body .alert-dismissible {
   padding-right: 1.25rem;
-  padding-left: 4rem;
+  padding-left: calc(1.525rem + 3.3vw);
+}
+
+@media (min-width: 1200px) {
+  body .alert-dismissible {
+    padding-left: 4rem;
+  }
 }
 
 body .dropdown-menu {
@@ -60,14 +66,20 @@ body .custom-select {
 body .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 body .input-group > .input-group-append:last-child > .input-group-text:not(:last-child),
 body .input-group > .input-group-append:not(:last-child) > .btn,
-body .input-group > .input-group-append:not(:last-child) > .input-group-text,
-body .input-group > .input-group-prepend > .btn,
-body .input-group > .input-group-prepend > .input-group-text {
+body .input-group > .input-group-append:not(:last-child) > .input-group-text {
   border-radius: 0 0.25rem 0.25rem 0;
 }
 
 body .input-group > .input-group-append > .btn,
-body .input-group > .input-group-append > .input-group-text,
+body .input-group > .input-group-append > .input-group-text {
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+body .input-group > .input-group-append > .btn,
+body .input-group > .input-group-append > .input-group-text {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
 body .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
 body .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child),
 body .input-group > .input-group-prepend:not(:first-child) > .btn,

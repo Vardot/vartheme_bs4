@@ -7,12 +7,12 @@
   color: #007bff;
 }
 
-.views-displays .secondary .form-submit {
-  font-size: 0.875rem;
-}
-
 .views-displays .tabs .action-list {
   padding: 0;
+}
+
+.views-displays .secondary .form-submit {
+  font-size: 0.875rem;
 }
 
 .views-filterable-options .filterable-option:nth-of-type(even) .form-type-checkbox {

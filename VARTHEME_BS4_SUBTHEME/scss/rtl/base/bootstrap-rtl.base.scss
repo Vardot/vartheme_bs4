@@ -27,8 +27,8 @@ body {
   }
 
   .alert-dismissible {
-    padding-left: 4rem;
-    padding-right: 1.25rem;
+    @include padding-left(4rem);
+    @include padding-right(1.25rem);
   }
 
   .dropdown-menu {
@@ -38,7 +38,7 @@ body {
   }
 
   .checkbox label {
-    padding-right: 1.25rem;
+    @include padding-right(1.25rem);
     padding-left: inherit;
   }
 
@@ -66,45 +66,61 @@ body {
     background: $custom-select-bg $custom-select-indicator no-repeat left $custom-select-padding-x center;
     background-size: $custom-select-bg-size;
   }
+  
+  .input-group {
+    > {
+      .input-group-append {
+        &:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+        &:last-child > .input-group-text:not(:last-child),
+        &:not(:last-child) > .btn,
+        &:not(:last-child) > .input-group-text {
+          border-radius: 0 $border-radius $border-radius 0;
+        }
 
-  .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
-  .input-group > .input-group-append:last-child > .input-group-text:not(:last-child),
-  .input-group > .input-group-append:not(:last-child) > .btn,
-  .input-group > .input-group-append:not(:last-child) > .input-group-text,
-  .input-group > .input-group-prepend > .btn,
-  .input-group > .input-group-prepend > .input-group-text {
-    border-radius: 0 $border-radius $border-radius 0;
-  }
+        > {
+          .btn,
+          .input-group-text {
+            border-radius: 0 $border-radius $border-radius 0;
+          }
 
-  .input-group > .input-group-append > .btn,
-  .input-group > .input-group-append > .input-group-text,
-  .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
-  .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child),
-  .input-group > .input-group-prepend:not(:first-child) > .btn,
-  .input-group > .input-group-prepend:not(:first-child) > .input-group-text {
-    border-radius: $border-radius 0 0 $border-radius;
-  }
+          .btn,
+          .input-group-text {
+            border-radius: $border-radius 0 0 $border-radius;
+          }
+        }
+      }
 
-  .input-group > .custom-select:not(:first-child),
-  .input-group > .form-control:not(:first-child) {
-    border-radius: $border-radius 0 0 $border-radius;
-  }
+      .input-group-prepend {
+        &:first-child > .btn:not(:first-child),
+        &:first-child > .input-group-text:not(:first-child),
+        &:not(:first-child) > .btn,
+        &:not(:first-child) > .input-group-text {
+          border-radius: $border-radius 0 0 $border-radius;
+        }
+      }
 
-  .input-group > .custom-select:not(:last-child),
-  .input-group > .form-control:not(:last-child) {
-    border-radius: 0 $border-radius $border-radius 0;
-  }
+      .custom-select:not(:first-child),
+      .form-control:not(:first-child) {
+        border-radius: $border-radius 0 0 $border-radius;
+      }
 
-  .input-group > .custom-select:not(:last-child):not(:first-child),
-  .input-group > .form-control:not(:last-child):not(:first-child) {
-    border-radius: 0;
+      .custom-select:not(:last-child),
+      .form-control:not(:last-child) {
+        border-radius: 0 $border-radius $border-radius 0;
+      }
+
+      .custom-select:not(:last-child):not(:first-child),
+      .form-control:not(:last-child):not(:first-child) {
+        border-radius: 0;
+      }
+    }
   }
 
   .custom-control {
-    margin-left: 1rem;
+    @include margin-left(1rem);
     padding-left: inherit;
     margin-right: inherit;
-    padding-right: $custom-control-spacer-x;
+    @include padding-right($custom-control-spacer-x);
   }
 
   .custom-control-indicator {
@@ -122,13 +138,13 @@ body {
   .radio-inline,
   .checkbox input,
   .checkbox-inline input {
-    margin-right: -1.25rem;
+    @include margin-right(-1.25rem);
     margin-left: inherit;
   }
 
   .list-group {
     padding-right: 0;
-    padding-left: $list-group-item-padding-x;
+    @include padding-left($list-group-item-padding-x);
   }
 
   .close {
@@ -158,11 +174,11 @@ body {
 
   .form-check-input {
     margin-left: inherit;
-    margin-right: -1.25rem;
+    @include margin-right(-1.25rem);
   }
 
   .form-check-label {
-    padding-right: 1.25rem;
+    @include padding-right(1.25rem);
     padding-left: inherit;
   }
 
