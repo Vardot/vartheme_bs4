@@ -4,13 +4,19 @@
 
 #auth-box #the-logo {
   margin: 0;
-  padding: 0 0 1.75rem;
+  padding: 0 0 calc(1.3rem + 0.6vw);
   text-align: center;
+}
+
+@media (min-width: 1200px) {
+  #auth-box #the-logo {
+    padding: 0 0 1.75rem;
+  }
 }
 
 #auth-box .title {
   margin: 0;
-  padding: 0 0 15px;
+  padding: 0 0 0.9375rem;
   font-size: calc(1.325rem + 0.9vw);
 }
 
@@ -45,18 +51,30 @@
 
 #auth-box .block-title {
   height: 1px;
-  margin: 2rem 0;
+  margin: calc(1.325rem + 0.9vw) 0;
   text-align: center;
   background: #eee;
 }
 
+@media (min-width: 1200px) {
+  #auth-box .block-title {
+    margin: 2rem 0;
+  }
+}
+
 #auth-box .block-title span {
   position: relative;
-  top: -30px;
-  padding: 0 0.70rem;
+  top: calc(-1.275rem - 0.3vw);
+  padding: 0 0.75rem;
   text-transform: uppercase;
   background: #fff;
   font-size: 1rem;
+}
+
+@media (min-width: 1200px) {
+  #auth-box .block-title span {
+    top: -1.5rem;
+  }
 }
 
 #auth-box .user-login-form {

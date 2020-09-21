@@ -12,12 +12,12 @@
   #the-logo {
     text-align: center;
     margin: 0;
-    padding: 0 0 1.75rem;
+    @include padding(0 0 1.75rem);
   }
 
   .title {
     margin: 0;
-    padding: 0 0 15px;
+    @include padding(0 0 15px);
     @include font-size(2rem);
   }
 
@@ -49,15 +49,15 @@
     text-align: center;
     background: #eee;
     height: 1px;
-    margin: 2rem 0;
+    @include margin(2rem 0);
 
     span {
       text-transform: uppercase;
       @include font-size(1rem);
-      padding: 0 0.70rem;
+      @include padding(0 0.75rem);
       background: #fff;
       position: relative;
-      top: -30px;
+      @include rfs(-1.5rem, top);
     }
   }
 
@@ -65,7 +65,7 @@
     text-align: left;
 
     .form-checkbox {
-      margin-top: 0.5rem;
+      @include margin-top(0.5rem);
     }
 
     .option {
