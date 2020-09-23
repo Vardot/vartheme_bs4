@@ -352,7 +352,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-
     -o-object-fit: cover;
     object-fit: cover;
   }
@@ -366,7 +365,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-
     -o-object-fit: cover;
     object-fit: cover;
   }
@@ -375,7 +373,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-
     -o-object-fit: cover;
     object-fit: cover;
   }
@@ -389,14 +386,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-
     -o-object-fit: cover;
     object-fit: cover;
   }
   .varbase-heroslider-media .node--type-varbase-heroslider-media .field--name-field-media-single .media iframe {
     position: absolute;
     left: 0;
-
     -o-object-fit: cover;
     object-fit: cover;
   }

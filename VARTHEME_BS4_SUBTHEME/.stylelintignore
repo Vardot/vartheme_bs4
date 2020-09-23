@@ -1,2 +1,17 @@
 node_modules/**/*.css
 scss/**/*.scss
+vendor/**/*.css
+**/*.min.css"
+node_modules/**/*.css
+scss/*
+images/*
+fonts/*
+js/*
+tests/*
+config/**/*.yml
+*.yml
+.*
+*.png
+*.svg
+*.ico
+*.json

@@ -400,6 +400,8 @@
       "outline-offset",
       "background",
       "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader",
+      "-o-object-fit",
+      "object-fit",
       "background-color",
       "background-image",
       "background-repeat",
