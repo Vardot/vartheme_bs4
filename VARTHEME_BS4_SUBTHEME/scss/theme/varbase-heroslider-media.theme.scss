@@ -120,6 +120,7 @@
 
     min-height: $hero-min-height;
     max-height: $hero-max-height;
+
     @media screen and (min-width: map-get($grid-breakpoints, "md")) {
       min-height: $hero-min-height-md;
       max-height: $hero-max-height-md;
@@ -194,6 +195,7 @@
 
       min-height: $hero-min-height;
       max-height: $hero-max-height;
+
       @media screen and (min-width: map-get($grid-breakpoints, "md")) {
         min-height: $hero-min-height-md;
         max-height: $hero-max-height-md;
@@ -278,10 +280,6 @@
           width: 100%;
           height: 100%;
           object-fit: cover;
-
-          @media screen and (min-width: map-get($grid-breakpoints, "md")) {
-            position: unset;
-          }
         }
 
         .media {
@@ -297,10 +295,6 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-
-            @media screen and (min-width: map-get($grid-breakpoints, "md")) {
-              position: unset;
-            }
           }
 
           video {
@@ -315,6 +309,20 @@
             position: absolute;
             left: 0;
             object-fit: cover;
+          }
+        }
+      }
+
+      @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+        @supports (object-fit: cover) {
+          img {
+            position: unset;
+          }
+
+          .media {
+            img {
+              position: unset;
+            }
           }
         }
       }
