@@ -223,8 +223,13 @@ function vartheme_bs4_library_info_alter(&$libraries, $extension) {
  * Implements hook_form_alter().
  */
 function vartheme_bs4_form_alter(&$form, $form_state, $form_id) {
-  if (preg_match('/^node_.*._layout_builder_form$/', $form_id)
-    && isset($form['moderation_state'])) {
+
+  if ($form_id == 'content_moderation_entity_moderation_form') {
+    $form['#attributes']['class'][] = 'well';
+  }
+
+  if ((preg_match('/^node_.*._layout_builder_form$/', $form_id)
+    && isset($form['moderation_state']))) {
     $form['moderation_state']['#attributes']['class'][] = 'well';
     $form['#attached']['library'][] = 'vartheme_bs4/moderation-state';
   }
