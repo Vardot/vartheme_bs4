@@ -16,46 +16,49 @@
   border-bottom: $border-width solid $border-color;
   @include margin-bottom($spacer);
   @include padding-bottom($spacer);
+  
+  h2 {
+    margin-top: 0;
+    @include padding-top(0.5rem);
+  }
+  
+  &.node--sticky {
+    background: #f9f9f9;
+    background: rgba(0, 0, 0, 0.024);
+    border: $border-width solid $border-color;
+    @include padding(0 $spacer $spacer);
+  }
+  
+  .node__content {
+    clear: none;
+    @include font-size($font-size-base);
+    @include rfs($line-height-base, line-height);
+  }
 }
-
-.node--view-mode-teaser h2 {
-  margin-top: 0;
-  @include padding-top(0.5rem);
-}
-
-.node--view-mode-teaser.node--sticky {
-  background: #f9f9f9;
-  background: rgba(0, 0, 0, 0.024);
-  border: $border-width solid $border-color;
-  @include padding(0 $spacer $spacer);
-}
-
-.node--view-mode-teaser .node__content {
-  clear: none;
-  @include font-size($font-size-base);
-  @include rfs($line-height-base, line-height);
-}
-
 
 // Node metadata styles.
 .node__meta {
   @include font-size($font-size-sm);
   @include margin-bottom(-0.3125);
-}
 
-.node__meta .field--name-field-user-picture img {
-  float: left;
-  /* LTR */
-  @include margin(0.0625 $spacer 0 0);
-  /* LTR */
+  .field--name-field-user-picture {
+    img {
+      float: left;
+      /* LTR */
+      @include margin(0.0625 $spacer 0 0);
+      /* LTR */
+    }
+  }
 }
-
-[dir="rtl"] .node__meta .field--name-field-user-picture img {
-  float: right;
-  @include margin-left($spacer);
-  margin-right: 0;
-}
-
+[dir="rtl"] .node__meta {
+  .field--name-field-user-picture {
+    img {
+      float: right;
+      @include margin-left($spacer);
+      margin-right: 0;
+    }
+  }
+} 
 
 // Node links styles.
 .node__links {
@@ -63,18 +66,16 @@
   /* LTR */
   @include font-size($font-size-base);
 }
-
 [dir="rtl"] .node__links {
   text-align: left;
 }
 
-
 // Unpublished node styles.
 .node--unpublished {
-  @include padding($spacer $spacer 0);
-}
-
-.node--unpublished .comment-text .comment-arrow {
-  border-left: $border-width solid #fff4f4;
-  border-right: $border-width solid #fff4f4;
+  .comment-text {
+    .comment-arrow {
+      border-left: $border-width solid #fff4f4;
+      border-right: $border-width solid #fff4f4;
+    }
+  }
 }

@@ -55,10 +55,6 @@
   text-align: left;
 }
 
-.node--unpublished {
-  padding: 1rem 1rem 0;
-}
-
 .node--unpublished .comment-text .comment-arrow {
   border-right: 1px solid #fff4f4;
   border-left: 1px solid #fff4f4;
