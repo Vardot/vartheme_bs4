@@ -13,6 +13,31 @@
   font-family: Arial, sans-serif;
 }
 
+.node-preview-container .form-type-select {
+  -webkit-flex-flow: row;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  margin: 0;
+}
+
+.node-preview-container select {
+  display: inline-block;
+  width: 10rem;
+}
+
+form#node-preview-form-select {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
 .node-preview-backlink {
   margin: 0;
   padding: 4px 1em 4px 0.6em;
@@ -31,6 +56,7 @@
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
   font-size: 0.9em;
   line-height: normal;
+  line-height: 1.8rem;
 }
 
 .node-preview-backlink:focus,
@@ -86,4 +112,14 @@
   background: url(../../../../misc/icons/000000/chevron-right.svg) right no-repeat, -webkit-gradient(linear, left top, left bottom, from(#0e69be), to(#2a93ef));
   background: url(../../../../misc/icons/000000/chevron-right.svg) right no-repeat, -o-linear-gradient(top, #0e69be, #2a93ef);
   background: url(../../../../misc/icons/000000/chevron-right.svg) right no-repeat, linear-gradient(to bottom, #0e69be, #2a93ef);
+}
+
+@media (min-width: 576px) {
+  .node-preview-container select {
+    width: 14rem;
+  }
+}
+
+.vartheme-node-preview-page .dialog-off-canvas-main-canvas {
+  margin-top: 4rem;
 }

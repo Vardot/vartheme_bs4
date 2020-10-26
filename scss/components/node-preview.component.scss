@@ -1,4 +1,4 @@
-// Node preivew component style.
+// Node preview component style.
 // -----------------------------------------------------------------------------
 @import "../../node_modules/bootstrap/scss/functions"; // Bootstrap functions.
 @import "../../node_modules/bootstrap/scss/mixins";    // Bootstrap mixins.
@@ -16,6 +16,21 @@
   z-index: 499;
   width: 100%;
   padding: 10px;
+
+  .form-type-select {
+    flex-flow: row;
+    margin: 0;
+  }
+
+  select {
+    width: 10rem;
+    display: inline-block;
+  }
+}
+
+form#node-preview-form-select {
+  display: flex;
+  justify-content: space-between;
 }
 
 .node-preview-backlink {
@@ -31,6 +46,7 @@
   margin: 0;
   padding: 4px 1em 4px 0.6em; /* LTR */
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+  line-height: 1.8rem;
 
   &:focus,
   &:hover {
@@ -72,5 +88,19 @@
   &:active {
     background: url(../../../../misc/icons/000000/chevron-right.svg) right no-repeat, -webkit-linear-gradient(top, #0e69be, #2a93ef);
     background: url(../../../../misc/icons/000000/chevron-right.svg) right no-repeat, linear-gradient(to bottom, #0e69be, #2a93ef);
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, "sm")) {
+  .node-preview-container {
+    select {
+      width: 14rem; 
+    }
+  }
+}
+
+.vartheme-node-preview-page {
+  .dialog-off-canvas-main-canvas {
+    margin-top: 4rem;
   }
 }
