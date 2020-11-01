@@ -31,13 +31,10 @@
     "oomphinc/composer-installers-extender": "~1.0",
     "cweagans/composer-patches": "~1.0",
     "drupal/drupal-library-installer-plugin": "^0.3",
-    "drupal/core": "^8.8.0 || ~9.0.0",
+    "drupal/core": "^9 || ~10.0.0",
     "drupal/bootstrap_barrio": "~5.0"
   },
   "extra": {
-    "branch-alias": {
-      "dev-8.x-6.x": "8.6.x-dev"
-    },
     "installer-types": [
       "bower-asset",
       "npm-asset"

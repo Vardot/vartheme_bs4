@@ -1,7 +1,7 @@
 {
   "name": "VARTHEME_BS4_SUBTHEME",
   "private": true,
-  "version": "8.6.0",
+  "version": "9.0.0",
   "description": "Vartheme bootstrap 4 sub theme implementation",
   "main": "index.js",
   "license": "GPL-2.0",
