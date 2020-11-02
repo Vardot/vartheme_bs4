@@ -62,7 +62,7 @@ class VarthemeBs4Tests extends BrowserTestBase {
 
     $this->drupalLogin($this->rootUser);
 
-    // Vartheme Claro blocks.
+    // Vartheme BS4 blocks.
     $this->drupalGet('/admin/structure/block/list/vartheme_bs4');
 
     $assert_session->pageTextContains($this->t('Site branding'));
@@ -72,7 +72,6 @@ class VarthemeBs4Tests extends BrowserTestBase {
     $assert_session->pageTextContains($this->t('Status messages'));
     $assert_session->pageTextContains($this->t('Page title'));
     $assert_session->pageTextContains($this->t('Tabs'));
-    $assert_session->pageTextContains($this->t('Media Hero Slider'));
     $assert_session->pageTextContains($this->t('Highlighted'));
     $assert_session->pageTextContains($this->t('Help'));
     $assert_session->pageTextContains($this->t('Content'));

@@ -14,7 +14,7 @@ regions:
   sidebar_second: 'Secondary'
   footer: 'Footer'
   page_top: 'Page top'
-  page_bottom: 'Page bottom'
+  page_bottom: 'Page bottom' 
 libraries:
   # Bootstrap styles and scripts libraries.
   - vartheme_bs4/bootstrap-styles
@@ -73,11 +73,6 @@ libraries-override:
 
   # Heroslider: Uncomment the following to use varbase heroslider styling.
   #  varbase_heroslider_media/general-styling: vartheme_bs4/heroslider
-
-  vbp_text_and_image/vbp_text_and_image_default:
-    css:
-      theme:
-        css/default.css: css/layout/vbp_text_and_image_default.layout.css
 
 ckeditor_stylesheets:
   # Base

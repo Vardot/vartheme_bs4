@@ -80,11 +80,6 @@ libraries-override:
   betterlogin/betterlogin_css: VARTHEME_BS4_SUBTHEME/betterlogin
   varbase_heroslider_media/general-styling: VARTHEME_BS4_SUBTHEME/heroslider
 
-  vbp_text_and_image/vbp_text_and_image_default:
-    css:
-      theme:
-        css/default.css: css/layout/vbp_text_and_image_default.layout.css
-
 ckeditor_stylesheets:
   # Base
   - css/base/bootstrap.base.css
