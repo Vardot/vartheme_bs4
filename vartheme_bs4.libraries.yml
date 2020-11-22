@@ -165,6 +165,7 @@ global-scripts:
   dependencies:
     - core/jquery
     - core/drupal
+    - core/drupal.ajax
 
 # ------------------------------------------------------------------------------
 # Vartheme BS4 Custom libraries.
