@@ -39,7 +39,6 @@ libraries:
   #- VARTHEME_BS4_SUBTHEME/fontawesome
   # Fonts: Uncomment the following if you want to use the roboto font.
   #- VARTHEME_BS4_SUBTHEME/roboto
-
 libraries-override:
   vartheme_bs4/framework: false
   vartheme_bs4/bootstrap-styles: false

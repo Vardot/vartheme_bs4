@@ -37,7 +37,6 @@ libraries:
   #- vartheme_bs4/fontawesome
   # Fonts: Uncomment the following if you want to use the roboto font.
   #- vartheme_bs4/roboto
-
 libraries-override:
   # Barrio global styling theme.
   bootstrap_barrio/global-styling: false
