@@ -18,33 +18,25 @@ regions:
   footer: 'Footer'
   page_top: 'Page top'
   page_bottom: 'Page bottom'
-
 libraries:
   # Bootstrap styles and scripts libraries.
   - VARTHEME_BS4_SUBTHEME/bootstrap-styles
   - VARTHEME_BS4_SUBTHEME/bootstrap-scripts
-
   # VARTHEME_BS4_SUBTHEME Global styles and scripts libraries.
   - VARTHEME_BS4_SUBTHEME/global-styles
   - VARTHEME_BS4_SUBTHEME/global-scripts
   - VARTHEME_BS4_SUBTHEME/framework
-
   # VARTHEME_BS4_SUBTHEME Varbase Bootstrap Paragraphs colors style.
   - VARTHEME_BS4_SUBTHEME/vbp-colors
-  
   # VARTHEME_BS4_SUBTHEME Varbase Layout Builder colors style.
   - VARTHEME_BS4_SUBTHEME/vlb-colors
-
   # VARTHEME_BS4_SUBTHEME Better Login style.
   - VARTHEME_BS4_SUBTHEME/betterlogin
-  
   # VARTHEME_BS4_SUBTHEME Varbase Media Hero Slider style.
   - VARTHEME_BS4_SUBTHEME/heroslider
-
   # Icons: Uncomment the following if you want to use icons.
   #- VARTHEME_BS4_SUBTHEME/material_design_icons
   #- VARTHEME_BS4_SUBTHEME/fontawesome
-
   # Fonts: Uncomment the following if you want to use the roboto font.
   #- VARTHEME_BS4_SUBTHEME/roboto
 
