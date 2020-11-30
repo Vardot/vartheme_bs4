@@ -14,7 +14,7 @@ regions:
   sidebar_second: 'Secondary'
   footer: 'Footer'
   page_top: 'Page top'
-  page_bottom: 'Page bottom' 
+  page_bottom: 'Page bottom'
 libraries:
   # Bootstrap styles and scripts libraries.
   - vartheme_bs4/bootstrap-styles
