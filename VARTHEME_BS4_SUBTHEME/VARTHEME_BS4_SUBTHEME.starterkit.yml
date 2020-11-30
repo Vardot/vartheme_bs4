@@ -8,7 +8,7 @@ core_version_requirement: ^9
 
 regions:
   navigation: 'Navigation'
-  navigation_collapsible: 'Navigation (Collapsible)'
+  navigation_collapsible: 'Navigation Collapsible'
   header: 'Top Bar'
   highlighted: 'Highlighted'
   help: 'Help'
