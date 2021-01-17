@@ -287,4 +287,4 @@ material_design_icons:
 fontawesome:
   css:
     component:
-      //use.fontawesome.com/releases/v5.0.13/css/all.css: {}
+      //use.fontawesome.com/releases/v5.15.2/css/all.css: {}
