@@ -1,0 +1,40 @@
+{#
+/**
+ * @file
+ * Preload assets.
+ *
+ * Available variables:
+ * - VARTHEME_BS4_SUBTHEME_path: Returns the path to the VARTHEME_BS4_SUBTHEME theme.
+ * - html_dir: contains the language direction. It will either be 'ltr' or 'rtl'.
+ */
+#}
+
+{#
+* NOTE: Change the logic in this file to match the need of your website.
+
+* Example of logic: 
+    - Multilingual websites may use a language selection for preloaded assets.
+    - Sections of the website may have a custom prelead assets for CSS/JS.
+*  --------------------------------------------------------------------------
+*  Have a look at "Preload critical assets to improve loading speed"
+*  https://web.dev/preload-critical-assets/
+*  for more ideas on what/when/where to use preload.
+#}
+
+{# Preload assets for all languages and all sections in the website. #}
+<link rel="preload" href="//use.fontawesome.com/releases/v5.0.13/css/all.css" as="style" crossorigin>
+
+{# Example: Preload assets only for LTR languages.
+* By adding more restraction or selection for what/when/where to use for preload.
+*  --------------------------------------------------------------------------
+{% if html_dir == 'ltr' %}
+  <link rel="preload" href="/{{ VARTHEME_BS4_SUBTHEME_path }}/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+{%- endif -%}
+*  --------------------------------------------------------------------------
+* Needs to add the font files in the right location for local fonts.
+#}
+
+{# Preload assets only for RTL languages. #}
+{%- if html_dir == 'rtl' -%}
+  <link rel="preload" href="//fonts.googleapis.com/earlyaccess/droidarabickufi.css" as="style" crossorigin>
+{%- endif -%}

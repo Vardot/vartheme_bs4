@@ -60,6 +60,10 @@ function vartheme_bs4_preprocess_page_title(&$variables) {
  * Implements hook_preprocess_html().
  */
 function vartheme_bs4_preprocess_html(&$variables) {
+
+  // The path for Vartheme BS4 theme in variables.
+  $variables['vartheme_bs4_path'] = drupal_get_path('theme', 'vartheme_bs4');
+
   // Add information about the number of sidebars.
   if (theme_get_setting('bootstrap_barrio_navbar_position')) {
     $variables['navbar_position'] = theme_get_setting('bootstrap_barrio_navbar_position');

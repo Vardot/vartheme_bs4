@@ -48,6 +48,10 @@ function VARTHEME_BS4_SUBTHEME_theme_suggestions_page_alter(array &$suggestions,
  * Implements hook_preprocess_html().
  */
 function VARTHEME_BS4_SUBTHEME_preprocess_html(&$variables) {
+
+  // The path for VARTHEME_BS4_SUBTHEME theme in variables.
+  $variables['VARTHEME_BS4_SUBTHEME_path'] = drupal_get_path('theme', 'VARTHEME_BS4_SUBTHEME');
+
   // Add information about the number of sidebars.
   if (theme_get_setting('bootstrap_barrio_navbar_position')) {
     $variables['navbar_position'] = theme_get_setting('bootstrap_barrio_navbar_position');

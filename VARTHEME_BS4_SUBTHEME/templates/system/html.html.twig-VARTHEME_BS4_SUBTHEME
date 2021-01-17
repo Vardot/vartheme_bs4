@@ -35,6 +35,7 @@
  *   content.
  * - $classes String of classes that can be used to style contextually through
  *   CSS.
+ * - VARTHEME_BS4_SUBTHEME_path: Returns the path to the VARTHEME_BS4_SUBTHEME theme.
  *
  * @ingroup templates
  *
@@ -60,11 +61,12 @@
     <head-placeholder token="{{ placeholder_token|raw }}">
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token|raw }}">
-    {# attache global styles RTL (right to left) if the html tag has dir=rtl #}
-    {% if html_attributes['dir'] == 'rtl' %}
+    {# Attache global styles RTL (right to left) if the html tag has dir=rtl #}
+    {%- if html_attributes['dir'] == 'rtl' -%}
       {{ attach_library('VARTHEME_BS4_SUBTHEME/framework-rtl') }}
     {%- endif -%}
     <js-placeholder token="{{ placeholder_token|raw }}">
+    {%- include '@VARTHEME_BS4_SUBTHEME/includes/preload.twig' with { VARTHEME_BS4_SUBTHEME_path: VARTHEME_BS4_SUBTHEME_path, html_dir: html_attributes['dir'] } only -%}
   </head>
   <body{{ attributes.addClass(body_classes) }}>
     <a href="#main-content" class="visually-hidden focusable skip-link">
