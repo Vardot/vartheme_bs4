@@ -1,0 +1,75 @@
+// Bootstrap Utilities 5 aliases for Bootstrap 4.
+// -----------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
+@import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
+@import "../variables";                   // VARTHEME_BS4_SUBTHEME variables.
+@import "../mixins";                      // VARTHEME_BS4_SUBTHEME mixins.
+// -----------------------------------------------------------------------------
+
+// Alias for .border-left BS4 class.
+.border-start {
+  border-left: $border-width $border-color !important;
+}
+
+// Alias for .border-left-0 BS4 class.
+.border-start-0 {
+  border-left: 0 !important;
+}
+
+// Alias for .border-right BS4 class.
+.border-end {
+  border-right: $border-width $border-color !important;
+}
+
+// Alias for .border-right-0 BS4 class.
+.border-end-0 {
+  border-right: 0 !important;
+}
+
+// Border widths.
+// ---------------------------------------------------------------
+.border-1 {
+  border-width: 1px !important;
+}
+
+.border-2 {
+  border-width: 2px !important;
+}
+
+.border-3 {
+  border-width: 3px !important;
+}
+
+.border-4 {
+  border-width: 4px !important;
+}
+
+.border-5 {
+  border-width: 5px !important;
+}
+
+// Rounded.
+// ---------------------------------------------------------------
+.rounded-1 {
+  border-radius: $border-radius-sm !important;
+}
+
+.rounded-2 {
+  border-radius: $border-radius !important;
+}
+
+.rounded-3 {
+  border-radius: $border-radius-lg !important;
+}
+
+// Alias for .rounded-left BS4 class.
+.rounded-start {
+  border-bottom-left-radius: $border-radius !important;
+  border-top-left-radius: $border-radius !important;
+}
+
+// Alias for .rounded-right BS4 class.
+.rounded-end {
+  border-top-right-radius: $border-radius !important;
+  border-bottom-right-radius: $border-radius !important;
+}
