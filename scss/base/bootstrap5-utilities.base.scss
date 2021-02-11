@@ -73,3 +73,101 @@
   border-top-right-radius: $border-radius !important;
   border-bottom-right-radius: $border-radius !important;
 }
+
+// Alias for .text-left BS4 class.
+.text-start {
+  text-align: left !important;
+}
+
+// Alias for .text-right BS4 class.
+.text-end {
+  text-align: right !important;
+}
+
+[dir="rtl"] {
+  // RTL Alias for .text-left BS4 class.
+  .text-start {
+    text-align: right !important;
+  }
+  
+  // RTL Alias for .text-right BS4 class.
+  .text-end {
+    text-align: left !important;
+  }
+}
+
+// Alias for on Margin and Padding for .ml, .mr, .pl, .pr with .ms, .me, .ps, .pe classes.
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $prop, $abbrev in (margin: m, padding: p) {
+      @each $size, $length in $spacers {
+        .#{$abbrev}e#{$infix}-#{$size} {
+          #{$prop}-right: $length !important;
+        }
+
+        .#{$abbrev}s#{$infix}-#{$size} {
+          #{$prop}-left: $length !important;
+        }
+      }
+    }
+
+    @each $size, $length in $spacers {
+      @if $size != 0 {
+        .me#{$infix}-n#{$size} {
+          margin-right: -$length !important;
+        }
+        .ms#{$infix}-n#{$size} {
+          margin-left: -$length !important;
+        }
+      }
+    }
+
+    .me#{$infix}-auto {
+      margin-right: auto !important;
+    }
+    .ms#{$infix}-auto {
+      margin-left: auto !important;
+    }
+  }
+}
+
+[dir="rtl"] {
+  // RTL Alias for on Margin and Padding for .ml, .mr, .pl, .pr with .ms, .me, .ps, .pe classes.
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+      @each $size, $length in $spacers {
+        .me#{$infix}-#{$size} {
+          margin-right: 0 !important;
+          margin-left: $length !important;
+        }
+        .ms#{$infix}-#{$size} {
+          margin-right: $length !important;
+          margin-left: 0 !important;
+        }
+      }
+
+      @each $size, $length in $spacers {
+        .pe#{$infix}-#{$size} {
+          padding-right: 0 !important;
+          padding-left: $length !important;
+        }
+        .ps#{$infix}-#{$size} {
+          padding-right: $length !important;
+          padding-left: 0 !important;
+        }
+      }
+      .mr#{$infix}-auto {
+        margin-right: 0 !important;
+        margin-left: auto !important;
+      }
+      .ms#{$infix}-auto {
+        margin-right: auto !important;
+        margin-left: 0 !important;
+      }
+    }
+  }
+}

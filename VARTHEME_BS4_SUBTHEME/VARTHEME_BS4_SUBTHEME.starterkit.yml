@@ -72,6 +72,7 @@ libraries-override:
 ckeditor_stylesheets:
   # Base
   - css/base/bootstrap.base.css
+  - css/base/bootstrap5-utilities.base.css
   - css/base/vartheme_bs4.base.css
   - css/base/VARTHEME_BS4_SUBTHEME.base.css
   # Components
