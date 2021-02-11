@@ -113,17 +113,6 @@
       }
     }
 
-    @each $size, $length in $spacers {
-      @if $size != 0 {
-        .me#{$infix}-n#{$size} {
-          margin-right: -$length !important;
-        }
-        .ms#{$infix}-n#{$size} {
-          margin-left: -$length !important;
-        }
-      }
-    }
-
     .me#{$infix}-auto {
       margin-right: auto !important;
     }
