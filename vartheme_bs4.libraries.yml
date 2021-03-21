@@ -179,12 +179,6 @@ vbp-colors:
     theme:
       css/theme/vbp-colors.theme.css: {}
 
-# Vartheme BS4 Varbase Layout Builder colors.
-vlb-colors:
-  css:
-    theme:
-      css/theme/vlb-colors.theme.css: {}
-
 # Vartheme BS4 better login theme.
 betterlogin:
   css:
