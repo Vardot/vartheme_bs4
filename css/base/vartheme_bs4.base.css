@@ -439,12 +439,9 @@ div.features-export-list .form-type-checkbox input[type=checkbox] {
   padding-top: 0.9375rem;
 }
 
-.cke_editable body {
-  background: white;
-}
-
-.cke_editable {
+body.cke_editable {
   padding: 10px;
+  background: white;
 }
 
 .field-collection-view {

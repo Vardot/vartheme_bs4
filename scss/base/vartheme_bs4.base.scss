@@ -491,12 +491,9 @@ div.features-export-list {
 }
 
 // CKEditor Improvements.
-.cke_editable body {
-  background: white;
-}
-
-.cke_editable {
+body.cke_editable {
   padding: 10px;
+  background: white;
 }
 
 .field-collection-view {
