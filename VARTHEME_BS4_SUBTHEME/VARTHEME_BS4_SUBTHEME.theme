@@ -121,7 +121,7 @@ function VARTHEME_BS4_SUBTHEME_preprocess_login_with(&$variables) {
         }
       }
 
-      $social_network_img_path_in_vartheme = $theme_path . '/images/' . $replaced_path_for_icons;
+      $social_network_img_path_in_vartheme = $replaced_path_for_icons;
 
       if (file_exists(DRUPAL_ROOT . '/' . $social_network_img_path_in_vartheme)) {
         $variables['social_networks'][$social_network_index]['img_path'] = $social_network_img_path_in_vartheme;
