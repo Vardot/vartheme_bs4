@@ -65,6 +65,9 @@ libraries-override:
   betterlogin/betterlogin_css: VARTHEME_BS4_SUBTHEME/betterlogin
   varbase_heroslider_media/general-styling: VARTHEME_BS4_SUBTHEME/heroslider
 
+  # Change the default social auth style and icons.
+  social_auth/auth-icons: VARTHEME_BS4_SUBTHEME/auth-icons 
+
 ckeditor_stylesheets:
   # Base
   - css/base/bootstrap.base.css

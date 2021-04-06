@@ -63,6 +63,9 @@ libraries-override:
   # Heroslider: Uncomment the following to use varbase heroslider styling.
   #  varbase_heroslider_media/general-styling: vartheme_bs4/heroslider
 
+  # Change the default social auth style and icons.
+  social_auth/auth-icons: vartheme_bs4/auth-icons 
+
 ckeditor_stylesheets:
   # Base
   - css/base/bootstrap.base.css

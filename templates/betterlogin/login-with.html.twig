@@ -1,0 +1,18 @@
+{{ attach_library('social_auth/auth-icons') }}
+
+<div class="social-auth">
+  {% for social_network_index, social_network in social_networks %}
+    <div class="social-network {{ social_network_index }}">
+      {% if destination %}
+        <a class="auth-link" href="{{ path(social_network.route) }}?destination={{ destination | url_encode }}">
+      {% else %}
+        <a class="auth-link" href="{{ path(social_network.route) }}">
+      {% endif %}
+        <img class="auth-icon"
+            src="{{ base_path }}{{ social_network.img_path }}"
+            alt="{{ 'Authenticate through @social_network_name' | t({'@social_network_name': social_network.name}) }}">
+        <span class="auth-name">{{ '@social_network_name' | t({'@social_network_name': social_network.name}) }}</span>
+      </a>
+    </div>
+  {% endfor %}
+</div>

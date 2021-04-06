@@ -1,0 +1,59 @@
+.social-auth {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.social-auth .social-network {
+  width: 44%;
+  margin: 8px;
+  padding: 12px 24px 12px 12px;
+  cursor: pointer;
+  -webkit-transition: color, -webkit-box-shadow 0.2s ease 0s;
+  -o-transition: box-shadow 0.2s ease 0s, color;
+  transition: color, -webkit-box-shadow 0.2s ease 0s;
+  transition: box-shadow 0.2s ease 0s, color;
+  transition: box-shadow 0.2s ease 0s, color, -webkit-box-shadow 0.2s ease 0s;
+  border-width: initial;
+  border-color: initial;
+  border-radius: 2px;
+  -webkit-border-image: initial;
+  -o-border-image: initial;
+  border-image: initial;
+  -webkit-box-shadow: 0 1px 4px rgba(26, 25, 43, 0.24) !important;
+  box-shadow: 0 1px 4px rgba(26, 25, 43, 0.24) !important;
+}
+
+.social-auth .auth-link {
+  text-decoration: none;
+  color: #4a495e;
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.social-auth .auth-link:hover,
+.social-auth .auth-link:active,
+.social-auth .auth-link:focus {
+  color: #145cc6;
+}
+
+.social-auth .auth-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 16px;
+}

@@ -282,3 +282,8 @@ fontawesome:
   css:
     component:
       //use.fontawesome.com/releases/v5.15.2/css/all.css: {}
+
+auth-icons:
+  css:
+    theme:
+      css/theme/auth-icons.theme.css: {}
