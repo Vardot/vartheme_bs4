@@ -117,7 +117,7 @@ function VARTHEME_BS4_SUBTHEME_preprocess_login_with(&$variables) {
       else {
         $split_path = explode('vartheme_bs4', $social_network['img_path']);
         if (isset($split_path[1])) {
-          $replaced_path_for_icons =  $theme_path . $split_path;
+          $replaced_path_for_icons =  $theme_path . $split_path[1];
         }
       }
 
