@@ -66,6 +66,10 @@ libraries-override:
   # Change the default social auth style and icons.
   social_auth/auth-icons: vartheme_bs4/auth-icons 
 
+libraries-extend:
+  node/drupal.node.preview:
+    - vartheme_bs4/drupal.node.preview
+
 ckeditor_stylesheets:
   # Base
   - css/base/bootstrap.base.css
@@ -98,7 +102,6 @@ ckeditor_stylesheets:
   - css/components/navbar.admin.component.css
   - css/components/navbar.component.css
   - css/components/node.component.css
-  - css/components/node-preview.component.css
   - css/components/page.component.css
   - css/components/progress-bar.component.css
   - css/components/search-form.component.css

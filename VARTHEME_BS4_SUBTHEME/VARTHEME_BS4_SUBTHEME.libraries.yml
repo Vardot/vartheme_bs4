@@ -52,7 +52,6 @@ bootstrap-styles:
       css/components/indented.component.css: {}
       css/components/item-list.component.css: {}
       css/components/list-group.component.css: {}
-      css/components/node-preview.component.css: {}
       css/components/node.component.css: {}
       css/components/page.component.css: {}
       css/components/search-form.component.css: {}
@@ -287,3 +286,8 @@ auth-icons:
   css:
     theme:
       css/theme/auth-icons.theme.css: {}
+
+drupal.node.preview:
+  css:
+    component:
+      css/components/node-preview.component.css: {}
