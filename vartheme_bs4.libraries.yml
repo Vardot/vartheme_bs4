@@ -49,7 +49,6 @@ bootstrap-styles:
       css/components/indented.component.css: {}
       css/components/item-list.component.css: {}
       css/components/list-group.component.css: {}
-      css/components/node.component.css: {}
       css/components/page.component.css: {}
       css/components/search-form.component.css: {}
       css/components/shortcut.component.css: {}
