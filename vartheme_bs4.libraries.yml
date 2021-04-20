@@ -34,7 +34,6 @@ bootstrap-styles:
       css/components/book-navigation.component.css: {}
       css/components/book.component.css: {}
       css/components/breadcrumb.component.css: {}
-      css/components/comments.component.css: {}
       css/components/contextual.component.css: {}
       css/components/details.component.css: {}
       css/components/dropbutton.component.css: {}
@@ -291,3 +290,8 @@ drupal.node.preview:
   css:
     component:
       css/components/node-preview.component.css: {}
+
+comments:
+  css:
+    component:
+      css/components/comments.component.css: {}

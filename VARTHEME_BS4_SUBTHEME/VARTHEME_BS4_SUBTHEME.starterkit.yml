@@ -69,6 +69,7 @@ libraries-override:
   social_auth/auth-icons: VARTHEME_BS4_SUBTHEME/auth-icons
 
   vartheme_bs4/drupal.node.preview: VARTHEME_BS4_SUBTHEME/drupal.node.preview
+  vartheme_bs4/comments: VARTHEME_BS4_SUBTHEME/comments
 
 ckeditor_stylesheets:
   # Base
@@ -85,7 +86,6 @@ ckeditor_stylesheets:
   - css/components/book-navigation.component.css
   - css/components/breadcrumb.component.css
   - css/components/bs-callouts.component.css
-  - css/components/comments.component.css
   - css/components/contextual.component.css
   - css/components/details.component.css
   - css/components/dropbutton.component.css
