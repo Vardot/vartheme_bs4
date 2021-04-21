@@ -128,7 +128,6 @@ global-styles:
       css/components/ajax.component.css: {}
       css/components/autocomplete.component.css: {}
       css/components/bs-callouts.component.css: {}
-      css/components/navbar.admin.component.css: {}
       css/components/navbar.component.css: {}
       css/components/progress-bar.component.css: { weight: -10 }
       css/components/varicons.component.css: {}
@@ -294,3 +293,8 @@ comments:
   css:
     component:
       css/components/comments.component.css: {}
+
+navbar.admin:
+  css:
+    component:
+      css/components/navbar.admin.component.css: {}

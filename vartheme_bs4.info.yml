@@ -69,6 +69,8 @@ libraries-override:
 libraries-extend:
   node/drupal.node.preview:
     - vartheme_bs4/drupal.node.preview
+  toolbar/toolbar:
+    - vartheme_bs4/navbar.admin
 
 ckeditor_stylesheets:
   # Base
@@ -98,7 +100,6 @@ ckeditor_stylesheets:
   - css/components/indented.component.css
   - css/components/item-list.component.css
   - css/components/list-group.component.css
-  - css/components/navbar.admin.component.css
   - css/components/navbar.component.css
   - css/components/node.component.css
   - css/components/page.component.css

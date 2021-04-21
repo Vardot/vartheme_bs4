@@ -70,6 +70,7 @@ libraries-override:
 
   vartheme_bs4/drupal.node.preview: VARTHEME_BS4_SUBTHEME/drupal.node.preview
   vartheme_bs4/comments: VARTHEME_BS4_SUBTHEME/comments
+  vartheme_bs4/navbar.admin: VARTHEME_BS4_SUBTHEME/navbar.admin
 
 ckeditor_stylesheets:
   # Base
@@ -100,7 +101,6 @@ ckeditor_stylesheets:
   - css/components/indented.component.css
   - css/components/item-list.component.css
   - css/components/list-group.component.css
-  - css/components/navbar.admin.component.css
   - css/components/navbar.component.css
   - css/components/node.component.css
   - css/components/page.component.css
