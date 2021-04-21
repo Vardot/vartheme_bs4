@@ -23,8 +23,6 @@ libraries:
   - vartheme_bs4/global-styles
   - vartheme_bs4/global-scripts
   - vartheme_bs4/framework
-  # Vartheme BS4 Varbase Bootstrap Paragraphs colors theme.
-  - vartheme_bs4/vbp-colors
   # Vartheme BS4 Better Login theme.
   - vartheme_bs4/betterlogin
   # Vartheme BS4 Varbase Media Hero Slider style.
@@ -129,5 +127,3 @@ ckeditor_stylesheets:
   - css/layout/equal-height.layout.css
   # Theme
   - css/theme/content.theme.css
-  - css/theme/vbp-colors.theme.css
-
