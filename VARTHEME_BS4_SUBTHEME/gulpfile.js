@@ -15,21 +15,7 @@ const paths = {
     watch: 'scss/**/*/*.scss'
   },
   js: {
-    bootstrap: {
-      alert: './node_modules/bootstrap/js/dist/alert.js',
-      button: './node_modules/bootstrap/js/dist/button.js',
-      carousel: './node_modules/bootstrap/js/dist/carousel.js',
-      collapse: './node_modules/bootstrap/js/dist/collapse.js',
-      dropdown: './node_modules/bootstrap/js/dist/dropdown.js',
-      modal: './node_modules/bootstrap/js/dist/modal.js',
-      popover: './node_modules/bootstrap/js/dist/popover.js',
-      scrollspy: './node_modules/bootstrap/js/dist/scrollspy.js',
-      tab: './node_modules/bootstrap/js/dist/tab.js',
-      toast: './node_modules/bootstrap/js/dist/toast.js',
-      tooltip: './node_modules/bootstrap/js/dist/tooltip.js',
-      util: './node_modules/bootstrap/js/dist/util.js',
-      full_bootstrap: './node_modules/bootstrap/dist/js/bootstrap.min.js'
-    },
+    bootstrap_src: './node_modules/bootstrap/js/dist/*.js',
     bootstrap_dest: './js/bootstrap',
     popper: './node_modules/popper.js/dist/umd/popper.min.js',
     popper_dest: './js/popper'
@@ -37,6 +23,12 @@ const paths = {
   rfs: {
     src: './node_modules/rfs/scss.scss',
     dest: './scss/mixins'
+  },
+  fontawesome: {
+    css_src: './node_modules/@fortawesome/fontawesome-free/css/all.min.css',
+    css_dest: './fonts/fontawesome-free/css',
+    webfonts_src: './node_modules/@fortawesome/fontawesome-free/webfonts/*',
+    webfonts_dest: './fonts/fontawesome-free/webfonts'
   }
 };
 
@@ -64,21 +56,27 @@ function compile () {
 // Move the Bootstrap JavaScript files into our js/bootstrap folder.
 function move_bootstrap_js_files() {
   return gulp.src([
-        paths.js.bootstrap.alert,
-        paths.js.bootstrap.button,
-        paths.js.bootstrap.carousel,
-        paths.js.bootstrap.collapse,
-        paths.js.bootstrap.dropdown,
-        paths.js.bootstrap.modal,
-        paths.js.bootstrap.popover,
-        paths.js.bootstrap.scrollspy,
-        paths.js.bootstrap.tab,
-        paths.js.bootstrap.toast,
-        paths.js.bootstrap.tooltip,
-        paths.js.bootstrap.util,
-        paths.js.bootstrap.full_bootstrap
+        paths.js.bootstrap_src
      ])
     .pipe(gulp.dest(paths.js.bootstrap_dest))
+    .pipe(browserSync.stream());
+}
+
+// Move the Font Awesome css file to the theme.
+function move_fontawesome_css_file() {
+  return gulp.src([
+        paths.fontawesome.css_src,
+     ])
+    .pipe(gulp.dest(paths.fontawesome.css_dest))
+    .pipe(browserSync.stream());
+}
+
+// Move the Font Awesome webfonts files to the theme.
+function move_fontawesome_webfonts_files() {
+  return gulp.src([
+        paths.fontawesome.webfonts_src,
+     ])
+    .pipe(gulp.dest(paths.fontawesome.webfonts_dest))
     .pipe(browserSync.stream());
 }
 
@@ -115,11 +113,13 @@ function watch() {
   gulp.watch([paths.scss.watch], compile);
 }
 
-const build = gulp.series(compile, move_bootstrap_js_files, move_popper_js_files, copy_files, rename_files, clean_files, gulp.parallel(watch));
+const build = gulp.series(compile, move_bootstrap_js_files, move_popper_js_files, move_fontawesome_css_file, move_fontawesome_webfonts_files, copy_files, rename_files, clean_files, gulp.parallel(watch));
 
 exports.compile = compile;
 exports.move_bootstrap_js_files = move_bootstrap_js_files;
 exports.move_popper_js_files = move_popper_js_files;
+exports.move_fontawesome_css_file = move_fontawesome_css_file;
+exports.move_fontawesome_webfonts_files = move_fontawesome_webfonts_files;
 exports.copy_files = copy_files;
 exports.rename_files = rename_files;
 exports.clean_files = clean_files;

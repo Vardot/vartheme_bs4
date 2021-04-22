@@ -278,7 +278,7 @@ material_design_icons:
 fontawesome:
   css:
     component:
-      //use.fontawesome.com/releases/v5.15.2/css/all.css: {}
+      fonts/fontawesome-free/css/all.min.css: {}
 
 auth-icons:
   css:

@@ -122,6 +122,7 @@ ckeditor_stylesheets:
   - css/components/vb-tags.component.css
   - css/components/vertical-tabs.component.css
   - css/components/views.component.css
+  - fonts/fontawesome-free/css/all.min.css
   # Layout
   - css/layout/edge2edge.layout.css
   - css/layout/equal-height.layout.css

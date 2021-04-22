@@ -28,9 +28,6 @@ libraries:
   - VARTHEME_BS4_SUBTHEME/betterlogin
   # VARTHEME_BS4_SUBTHEME Varbase Media Hero Slider style.
   - VARTHEME_BS4_SUBTHEME/heroslider
-  # Icons: Uncomment the following if you want to use icons.
-  #- VARTHEME_BS4_SUBTHEME/material_design_icons
-  #- VARTHEME_BS4_SUBTHEME/fontawesome
   # Fonts: Uncomment the following if you want to use the roboto font.
   #- VARTHEME_BS4_SUBTHEME/roboto
 libraries-override:
@@ -55,6 +52,7 @@ libraries-override:
   vartheme_bs4/tabs: VARTHEME_BS4_SUBTHEME/tabs
   vartheme_bs4/verticaltabs: VARTHEME_BS4_SUBTHEME/verticaltabs
   vartheme_bs4/alerts: VARTHEME_BS4_SUBTHEME/alerts
+  vartheme_bs4/fontawesome: VARTHEME_BS4_SUBTHEME/fontawesome
   vartheme_bs4/moderation-state: VARTHEME_BS4_SUBTHEME/moderation-state
 
   # Varbase module compnents overrides in VARTHEME_BS4_SUBTHEME.

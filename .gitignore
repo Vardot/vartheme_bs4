@@ -2,4 +2,7 @@
 node_modules
 /*/node_modules
 /css/mixins/
+js/bootstrap/index.js
+VARTHEME_BS4_SUBTHEME/js/bootstrap/index.js
 /VARTHEME_BS4_SUBTHEME/yarn.lock
+/VARTHEME_BS4_SUBTHEME/fonts/fontawesome-free
