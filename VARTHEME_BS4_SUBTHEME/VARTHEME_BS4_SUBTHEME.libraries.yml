@@ -53,7 +53,6 @@ bootstrap-styles:
       css/components/page.component.css: {}
       css/components/search-form.component.css: {}
       css/components/shortcut.component.css: {}
-      css/components/sidebar-collapse.component.css: {}
       css/components/sidebar.component.css: {}
       css/components/site-footer.component.css: {}
       css/components/skip-link.component.css: {}
@@ -248,7 +247,7 @@ node:
 
 sidebar-collapse:
   js:
-    js/bootstrap_barrio/sidebar-collapse.js: { external: true }
+    js/bootstrap_barrio/sidebar-collapse.js: {}
   css:
     component:
       css/components/sidebar-collapse.component.css: {}

@@ -99,7 +99,6 @@ ckeditor_stylesheets:
   - css/components/search-form.component.css
   - css/components/shortcut.component.css
   - css/components/sidebar.component.css
-  - css/components/sidebar-collapse.component.css
   - css/components/site-footer.component.css
   - css/components/skip-link.component.css
   - css/components/table.component.css

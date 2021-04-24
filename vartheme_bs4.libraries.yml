@@ -50,7 +50,6 @@ bootstrap-styles:
       css/components/page.component.css: {}
       css/components/search-form.component.css: {}
       css/components/shortcut.component.css: {}
-      css/components/sidebar-collapse.component.css: {}
       css/components/sidebar.component.css: {}
       css/components/site-footer.component.css: {}
       css/components/skip-link.component.css: {}
@@ -149,7 +148,6 @@ global-scripts:
   js:
     js/bootstrap_barrio/affix.js: {}
     js/bootstrap_barrio/global.js: {}
-    js/bootstrap_barrio/sidebar-collapse.js: {}
     js/misc/attributes.js: {}
     js/misc/theme.js: {}
     js/misc/ajax.js: {}
@@ -249,7 +247,7 @@ node:
 
 sidebar-collapse:
   js:
-    js/bootstrap_barrio/sidebar-collapse.js: { external: true }
+    js/bootstrap_barrio/sidebar-collapse.js: {}
   css:
     component:
       css/components/sidebar-collapse.component.css: {}
