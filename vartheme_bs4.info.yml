@@ -86,7 +86,6 @@ ckeditor_stylesheets:
   - css/components/bs-callouts.component.css
   - css/components/contextual.component.css
   - css/components/details.component.css
-  - css/components/dropbutton.component.css
   - css/components/feed-icon.component.css
   - css/components/field.component.css
   - css/components/file.component.css
