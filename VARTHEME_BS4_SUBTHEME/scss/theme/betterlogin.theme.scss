@@ -82,3 +82,13 @@
     text-align: center;
   }
 }
+
+[dir=rtl] #auth-box {
+  .user-login-form {
+    text-align: right;
+
+    .option {
+      padding-right: 0;
+    }
+  }
+}

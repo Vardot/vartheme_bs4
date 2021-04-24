@@ -137,7 +137,6 @@ global-styles:
       css/theme/header.theme.css: {}
       css/theme/content.theme.css: {}
       css/theme/footer.theme.css: {}
-      css/theme/betterlogin.theme.css: {}
   dependencies:
     - core/jquery
 
@@ -151,7 +150,6 @@ global-styles-rtl:
       css/rtl/theme/header-rtl.theme.css: {}
       css/rtl/theme/content-rtl.theme.css: {}
       css/rtl/theme/footer-rtl.theme.css: {}
-      css/rtl/theme/betterlogin-rtl.theme.css: {}
   dependencies:
     - core/jquery
 

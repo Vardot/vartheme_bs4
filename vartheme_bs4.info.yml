@@ -23,8 +23,6 @@ libraries:
   - vartheme_bs4/global-styles
   - vartheme_bs4/global-scripts
   - vartheme_bs4/framework
-  # Vartheme BS4 Better Login theme.
-  - vartheme_bs4/betterlogin
   # Vartheme BS4 Varbase Media Hero Slider style.
   # Heroslider: Uncomment the following to use varbase heroslider styling.
   #- vartheme_bs4/heroslider

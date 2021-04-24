@@ -102,3 +102,11 @@
 #auth-box .block-social-auth-login {
   text-align: center;
 }
+
+[dir=rtl] #auth-box .user-login-form {
+  text-align: right;
+}
+
+[dir=rtl] #auth-box .user-login-form .option {
+  padding-right: 0;
+}

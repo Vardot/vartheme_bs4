@@ -24,8 +24,6 @@ libraries:
   - VARTHEME_BS4_SUBTHEME/global-styles
   - VARTHEME_BS4_SUBTHEME/global-scripts
   - VARTHEME_BS4_SUBTHEME/framework
-  # VARTHEME_BS4_SUBTHEME Better Login style.
-  - VARTHEME_BS4_SUBTHEME/betterlogin
   # VARTHEME_BS4_SUBTHEME Varbase Media Hero Slider style.
   - VARTHEME_BS4_SUBTHEME/heroslider
   # Fonts: Uncomment the following if you want to use the roboto font.
@@ -36,7 +34,6 @@ libraries-override:
   vartheme_bs4/bootstrap-scripts: false
   vartheme_bs4/global-styles: false
   vartheme_bs4/global-scripts: false
-  vartheme_bs4/betterlogin: false
   # Heroslider: Uncomment the following to disable the vartheme_bs4/heroslider
   #             Libraray if it was enabled in vartheme_bs4 heroslider styling.
   # vartheme_bs4/heroslider: false
