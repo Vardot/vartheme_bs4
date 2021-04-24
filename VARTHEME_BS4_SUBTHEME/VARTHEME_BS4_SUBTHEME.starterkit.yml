@@ -110,14 +110,12 @@ ckeditor_stylesheets:
   - css/components/tableselect.component.css
   - css/components/tablesort.component.css
   - css/components/tablesort-indicator.component.css
-  - css/components/tabs.component.css
   - css/components/textarea.component.css
   - css/components/ui-dialog.component.css
   - css/components/ui-widget.component.css
   - css/components/user.component.css
   - css/components/varicons.component.css
   - css/components/vb-tags.component.css
-  - css/components/vertical-tabs.component.css
   - css/components/views.component.css
   # Layout
   - css/layout/edge2edge.layout.css
