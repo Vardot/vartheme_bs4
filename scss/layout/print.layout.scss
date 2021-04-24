@@ -14,19 +14,19 @@
 
   /* Insert page breaks after the element so that the next page is formatted as a left page */
   .left-page-break-after,
-  .left-pba{
+  .left-pba {
     page-break-after: left;
   }
 
   /* Insert page breaks after the element so that the next page is formatted as a right page */
   .right-page-break-after,
-  .right-pba{
+  .right-pba {
     page-break-after: right;
   }
 
   /* Always insert a page break before the element */
   .always-page-break-before,
-  .always-pbb{
+  .always-pbb {
     page-break-before: always;
   }
 
@@ -38,13 +38,13 @@
 
   /* Insert page breaks before the element so that the next page is formatted as a left page */
   .left-page-break-before,
-  .left-pbb{
+  .left-pbb {
     page-break-before: left;
   }
 
   /* Insert page breaks before the element so that the next page is formatted as a right page */
   .right-page-break-before,
-  .right-pbb{
+  .right-pbb {
     page-break-before: right;
   }
 

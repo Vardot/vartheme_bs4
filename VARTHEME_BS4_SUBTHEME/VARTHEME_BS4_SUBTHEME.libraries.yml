@@ -132,7 +132,7 @@ global-styles:
     layout:
       css/layout/edge2edge.layout.css: {}
       css/layout/equal-height.layout.css: {}
-      css/layout/print.layout.css: {}
+      css/layout/print.layout.css: { media: print }
     theme:
       css/theme/header.theme.css: {}
       css/theme/content.theme.css: {}
