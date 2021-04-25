@@ -1,12 +1,15 @@
 .book-navigation .menu {
   padding-top: 1rem;
   padding-bottom: 0;
+  border-top: 1px solid #dee2e6;
 }
 
 .book-navigation .book-pager {
   overflow: auto;
   margin: 0;
   padding: 0.5em 0;
+  border-top: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
 }
 
 .book-pager__item {

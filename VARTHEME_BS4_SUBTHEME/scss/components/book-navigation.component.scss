@@ -6,15 +6,20 @@
 @import "../mixins";                      // VARTHEME_BS4_SUBTHEME mixins.
 // -----------------------------------------------------------------------------
 
-.book-navigation .menu {
-  padding-bottom: 0;
-  @include padding-top(1rem);
-}
+.book-navigation {
+  .menu {
+    padding-bottom: 0;
+    @include padding-top(1rem);
+    border-top: 1px solid $border-color;
+  }
 
-.book-navigation .book-pager {
-  margin: 0;
-  overflow: auto;
-  @include padding(0.5em 0);
+  .book-pager {
+    margin: 0;
+    overflow: auto;
+    @include padding(0.5em 0);
+    border-bottom: 1px solid $border-color;
+    border-top: 1px solid $border-color;
+  }
 }
 
 .book-pager__item {
@@ -27,7 +32,6 @@
   text-align: left; /* LTR */
   width: 45%;
 }
-
 [dir="rtl"] .book-pager__item--previous {
   float: right;
   text-align: right;
@@ -43,7 +47,6 @@
   text-align: right; /* LTR */
   width: 45%;
 }
-
 [dir="rtl"] .book-pager__item--next {
   float: left;
   text-align: left;

@@ -40,6 +40,7 @@ libraries-override:
 
   vartheme_bs4/breadcrumb: VARTHEME_BS4_SUBTHEME/breadcrumb
   vartheme_bs4/dropbutton: VARTHEME_BS4_SUBTHEME/dropbutton
+  vartheme_bs4/book-navigation: VARTHEME_BS4_SUBTHEME/book-navigation
   vartheme_bs4/file: VARTHEME_BS4_SUBTHEME/file
   vartheme_bs4/form: VARTHEME_BS4_SUBTHEME/form
   vartheme_bs4/search-form: VARTHEME_BS4_SUBTHEME/search-form
@@ -76,8 +77,6 @@ ckeditor_stylesheets:
   - css/components/ajax.component.css
   - css/components/alerts.component.css
   - css/components/autocomplete.component.css
-  - css/components/book.component.css
-  - css/components/book-navigation.component.css
   - css/components/bs-callouts.component.css
   - css/components/contextual.component.css
   - css/components/details.component.css
