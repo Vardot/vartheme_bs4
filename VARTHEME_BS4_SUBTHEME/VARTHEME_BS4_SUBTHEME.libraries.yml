@@ -41,7 +41,6 @@ bootstrap-styles:
       css/components/details.component.css: {}
       css/components/feed-icon.component.css: {}
       css/components/field.component.css: {}
-      css/components/file.component.css: {}
       css/components/header.component.css: {}
       css/components/help.component.css: {}
       css/components/icons.component.css: {}
