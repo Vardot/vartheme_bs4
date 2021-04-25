@@ -110,7 +110,7 @@
   border-right: $comment-spacer-x solid $white;
   /* LTR */
   border-bottom: $comment-spacer-y solid transparent;
-  @include margin-right(-0.0625);
+  @include margin-right(-0.0625em);
   /* LTR */
 }
 
@@ -120,7 +120,7 @@
   border-right: none;
   border-left: $comment-spacer-x solid $white;
   margin-right: 0;
-  @include margin-left(-0.0625);
+  @include margin-left(-0.0625rem);
 }
 
 .comment__content h3 {
@@ -130,7 +130,7 @@
 }
 
 .comment__content nav {
-  @include padding-top(0.0625);
+  @include padding-top(0.0625rem);
 }
 
 .indented {
