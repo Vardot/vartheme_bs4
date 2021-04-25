@@ -42,6 +42,7 @@ libraries-override:
   vartheme_bs4/dropbutton: VARTHEME_BS4_SUBTHEME/dropbutton
   vartheme_bs4/file: VARTHEME_BS4_SUBTHEME/file
   vartheme_bs4/form: VARTHEME_BS4_SUBTHEME/form
+  vartheme_bs4/search-form: VARTHEME_BS4_SUBTHEME/search-form
   vartheme_bs4/indented: VARTHEME_BS4_SUBTHEME/indented
   vartheme_bs4/maintenance_page: VARTHEME_BS4_SUBTHEME/maintenance_page
   vartheme_bs4/node: VARTHEME_BS4_SUBTHEME/node
@@ -84,7 +85,6 @@ ckeditor_stylesheets:
   - css/components/feed-icon.component.css
   - css/components/field.component.css
   - css/components/file.component.css
-  - css/components/form.component.css
   - css/components/header.component.css
   - css/components/help.component.css
   - css/components/icons.component.css
@@ -96,7 +96,6 @@ ckeditor_stylesheets:
   - css/components/node.component.css
   - css/components/page.component.css
   - css/components/progress-bar.component.css
-  - css/components/search-form.component.css
   - css/components/shortcut.component.css
   - css/components/sidebar.component.css
   - css/components/site-footer.component.css

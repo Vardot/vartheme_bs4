@@ -87,7 +87,6 @@ ckeditor_stylesheets:
   - css/components/feed-icon.component.css
   - css/components/field.component.css
   - css/components/file.component.css
-  - css/components/form.component.css
   - css/components/header.component.css
   - css/components/help.component.css
   - css/components/icons.component.css
@@ -99,7 +98,6 @@ ckeditor_stylesheets:
   - css/components/node.component.css
   - css/components/page.component.css
   - css/components/progress-bar.component.css
-  - css/components/search-form.component.css
   - css/components/shortcut.component.css
   - css/components/sidebar.component.css
   - css/components/site-footer.component.css
