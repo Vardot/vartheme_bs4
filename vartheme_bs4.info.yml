@@ -43,6 +43,7 @@ libraries-override:
   bootstrap_barrio/indented: vartheme_bs4/indented
   bootstrap_barrio/form: vartheme_bs4/form
   bootstrap_barrio/file: vartheme_bs4/file
+  bootstrap_barrio/breadcrumb: vartheme_bs4/breadcrumb
   bootstrap_barrio/dropbutton: vartheme_bs4/dropbutton
   bootstrap_barrio/book-navigation: vartheme_bs4/book-navigation
   bootstrap_barrio/affix: vartheme_bs4/affix
@@ -80,7 +81,6 @@ ckeditor_stylesheets:
   - css/components/autocomplete.component.css
   - css/components/book.component.css
   - css/components/book-navigation.component.css
-  - css/components/breadcrumb.component.css
   - css/components/bs-callouts.component.css
   - css/components/contextual.component.css
   - css/components/details.component.css
