@@ -75,7 +75,6 @@ ckeditor_stylesheets:
   - css/base/bootstrap5-utilities.base.css
   - css/base/vartheme_bs4.base.css
   # Components
-  - css/components/affix.component.css
   - css/components/ajax.component.css
   - css/components/alerts.component.css
   - css/components/autocomplete.component.css

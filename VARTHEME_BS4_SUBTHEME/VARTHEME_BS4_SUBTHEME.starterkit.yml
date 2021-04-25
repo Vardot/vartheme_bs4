@@ -49,6 +49,7 @@ libraries-override:
   vartheme_bs4/sidebar-collapse: VARTHEME_BS4_SUBTHEME/sidebar-collapse
   vartheme_bs4/tabs: VARTHEME_BS4_SUBTHEME/tabs
   vartheme_bs4/verticaltabs: VARTHEME_BS4_SUBTHEME/verticaltabs
+  vartheme_bs4/affix: VARTHEME_BS4_SUBTHEME/affix
   vartheme_bs4/alerts: VARTHEME_BS4_SUBTHEME/alerts
   vartheme_bs4/fontawesome: VARTHEME_BS4_SUBTHEME/fontawesome
   vartheme_bs4/moderation-state: VARTHEME_BS4_SUBTHEME/moderation-state
@@ -72,7 +73,6 @@ ckeditor_stylesheets:
   - css/base/vartheme_bs4.base.css
   - css/base/VARTHEME_BS4_SUBTHEME.base.css
   # Components
-  - css/components/affix.component.css
   - css/components/ajax.component.css
   - css/components/alerts.component.css
   - css/components/autocomplete.component.css
