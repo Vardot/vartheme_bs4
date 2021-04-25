@@ -29,7 +29,6 @@ bootstrap-styles:
       css/base/bootstrap.base.css: {}
       css/base/bootstrap5-utilities.base.css: {}
     component:
-      css/components/book.component.css: {}
       css/components/contextual.component.css: {}
       css/components/details.component.css: {}
       css/components/feed-icon.component.css: {}
