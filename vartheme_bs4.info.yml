@@ -88,7 +88,6 @@ ckeditor_stylesheets:
   - css/components/help.component.css
   - css/components/icons.component.css
   - css/components/image-button.component.css
-  - css/components/indented.component.css
   - css/components/item-list.component.css
   - css/components/list-group.component.css
   - css/components/navbar.component.css
