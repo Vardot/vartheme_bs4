@@ -33,7 +33,6 @@ bootstrap-styles:
       css/base/bootstrap5-utilities.base.css: {}
     component:
       css/components/affix.component.css: {}
-      css/components/alerts.component.css: {}
       css/components/book-navigation.component.css: {}
       css/components/book.component.css: {}
       css/components/contextual.component.css: {}
