@@ -1,6 +1,4 @@
 /* Insert your Bootstrap (RTL) overrides for bootstrap-rtl library. */
-/* Default Droid Arabi Kufi front by google api fornts . */
-@import url(//fonts.googleapis.com/earlyaccess/droidarabickufi.css);
 /* Justify content center. */
 [dir="rtl"] .justify-content-center.nav-pills > li + li {
   margin-left: inherit;

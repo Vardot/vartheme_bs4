@@ -137,6 +137,7 @@ global-styles-rtl:
       css/rtl/base/vartheme_bs4-rtl.base.css: {}
       css/rtl/base/VARTHEME_BS4_SUBTHEME-rtl.base.css: {}
     theme:
+      fonts/droid/arabic/kufi/css/droidarabickufi.css: {}
       css/rtl/theme/header-rtl.theme.css: {}
       css/rtl/theme/content-rtl.theme.css: {}
       css/rtl/theme/footer-rtl.theme.css: {}

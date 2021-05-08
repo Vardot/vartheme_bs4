@@ -54,5 +54,15 @@
 
 {# Preload assets only for RTL languages. #}
 {%- if html_dir == 'rtl' -%}
-  <link rel="preload" href="//fonts.googleapis.com/earlyaccess/droidarabickufi.css" as="style" crossorigin>
+  {# Preload Font Droid Arabic Kufi Regular #}
+  <link rel="preload" href="{{ VARTHEME_BS4_SUBTHEME_path }}/fonts/droid/arabic/kufi/webfonts/v6/DroidKufi-Bold.eot" as="font" type="font/eot" crossorigin="anonymous">
+  <link rel="preload" href="{{ VARTHEME_BS4_SUBTHEME_path }}/fonts/droid/arabic/kufi/webfonts/v6/DroidKufi-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="{{ VARTHEME_BS4_SUBTHEME_path }}/fonts/droid/arabic/kufi/webfonts/v6/DroidKufi-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="{{ VARTHEME_BS4_SUBTHEME_path }}/fonts/droid/arabic/kufi/webfonts/v6/DroidKufi-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+  {# Preload Font Droid Arabic Kufi Bold #}
+  <link rel="preload" href="{{ VARTHEME_BS4_SUBTHEME_path }}/fonts/droid/arabic/kufi/webfonts/v6/DroidKufi-Regular.eot" as="font" type="font/eot" crossorigin="anonymous">
+  <link rel="preload" href="{{ VARTHEME_BS4_SUBTHEME_path }}/fonts/droid/arabic/kufi/webfonts/v6/DroidKufi-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="{{ VARTHEME_BS4_SUBTHEME_path }}/fonts/droid/arabic/kufi/webfonts/v6/DroidKufi-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="{{ VARTHEME_BS4_SUBTHEME_path }}/fonts/droid/arabic/kufi/webfonts/v6/DroidKufi-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 {%- endif -%}
