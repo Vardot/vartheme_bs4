@@ -4,6 +4,7 @@
   "version": "8.6.0",
   "description": "Vartheme bootstrap 4 implementation",
   "license": "GPL-2.0",
+  "main": "gulpfile.js",
   "engines": {
     "yarn": ">= 1.6",
     "node": ">= 8.10"

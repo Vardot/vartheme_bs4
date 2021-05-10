@@ -3,8 +3,8 @@
   "private": true,
   "version": "8.6.0",
   "description": "Vartheme bootstrap 4 sub theme implementation",
-  "main": "index.js",
   "license": "GPL-2.0",
+  "main": "gulpfile.js",
   "engines": {
     "yarn": ">= 1.6",
     "node": ">= 8.10"
