@@ -509,7 +509,7 @@ body.cke_editable {
 #admin-menu-search {
   float: right;
   .form-control {
-    float: auto;
+    float: inherit;
   }
 }
 

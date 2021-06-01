@@ -459,7 +459,7 @@ body.cke_editable {
 }
 
 #admin-menu-search .form-control {
-  float: auto;
+  float: inherit;
 }
 
 .form-textarea-wrapper textarea {
