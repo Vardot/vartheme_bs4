@@ -1,16 +1,10 @@
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:basic:b858d97d-eaa5-4cfe-af6f-b92c21bbca95'
   module:
-    - block_class
     - block_content
   theme:
     - vartheme_bs4
-third_party_settings:
-  block_class:
-    classes: ''
 id: vartheme_bs4_copyright
 theme: vartheme_bs4
 region: footer
