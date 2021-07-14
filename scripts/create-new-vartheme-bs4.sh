@@ -82,6 +82,55 @@ else
   exit 1;
 fi
 
+if [[ ! -x "$(shell command -v sed)" ]]; then
+  echo 'sed does not exist. Please install it.';
+  echo ' -------------------------------- ';
+  echo '  sudo apt install -y sed';
+  exit 1;
+fi
+
+if [[ ! -x "$(shell command -v gawk)" ]]; then
+  echo 'gawk does not exist. Please install it.';
+  echo ' -------------------------------- ';
+  echo '  sudo apt install -y gawk';
+  exit 1;
+fi
+
+if [[ ! -x "$(shell command -v node)" ]]; then
+  echo 'node does not exist. Please install it.';
+  echo ' -------------------------------- ';
+  echo '  curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - ';
+  echo '  sudo apt update ';
+  echo '  sudo apt install nodejs ';
+  echo '  sudo apt install build-essential ';
+  exit 1;
+fi
+
+if [[ ! -x "$(shell command -v npm)" ]]; then
+  echo 'npm does not exist. Please install it.';
+  echo ' -------------------------------- ';
+  echo '  curl -L https://npmjs.com/install.sh | sudo -E bash - ';
+  echo '  sudo apt update ';
+  echo '  sudo apt install nodejs ';
+  echo '  sudo apt install npm ';
+  exit 1;
+fi
+
+if [[ ! -x "$(shell command -v yarn)" ]]; then
+  echo 'yarn does not exist. Please install it.';
+  echo ' -------------------------------- ';
+  echo '  sudo apt install yarn';
+  echo '  sudo npm install -g yarn';
+  exit 1;
+fi
+
+if [[ ! -x "$(shell command -v gulp)" ]]; then
+  echo 'gulp does not exist. Please install it.';
+  echo ' -------------------------------- ';
+  echo '  sudo npm install gulp-cli -g';
+  echo '  sudo npm install gulp -D';
+  exit 1;
+fi
 
 # Default themes creation path.
 theme_path=$drupal_root/$default_themes_creation_path;
@@ -154,7 +203,9 @@ if [[ ! -d "$theme_path/$theme_name" ]]; then
 
   # 12. Install needed libraries
   cd ${theme_path}/${theme_name};
+  yarn install
 
+  ## Initiation commands
   gulp move_bootstrap_js_files
   gulp move_popper_js_files
   gulp move_fontawesome_css_file
