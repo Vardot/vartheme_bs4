@@ -82,21 +82,21 @@ else
   exit 1;
 fi
 
-if [[ ! -x "$(shell command -v sed)" ]]; then
+if ! [ -x "$(command -v sed)" ]; then
   echo 'sed does not exist. Please install it.';
   echo ' -------------------------------- ';
   echo '  sudo apt install -y sed';
   exit 1;
 fi
 
-if [[ ! -x "$(shell command -v gawk)" ]]; then
+if ! [ -x "$(command -v gawk)" ]; then
   echo 'gawk does not exist. Please install it.';
   echo ' -------------------------------- ';
   echo '  sudo apt install -y gawk';
   exit 1;
 fi
 
-if [[ ! -x "$(shell command -v node)" ]]; then
+if ! [ -x "$(command -v node)" ]; then
   echo 'node does not exist. Please install it.';
   echo ' -------------------------------- ';
   echo '  curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - ';
@@ -106,7 +106,7 @@ if [[ ! -x "$(shell command -v node)" ]]; then
   exit 1;
 fi
 
-if [[ ! -x "$(shell command -v npm)" ]]; then
+if ! [ -x "$(command -v npm)" ]; then
   echo 'npm does not exist. Please install it.';
   echo ' -------------------------------- ';
   echo '  curl -L https://npmjs.com/install.sh | sudo -E bash - ';
@@ -116,7 +116,7 @@ if [[ ! -x "$(shell command -v npm)" ]]; then
   exit 1;
 fi
 
-if [[ ! -x "$(shell command -v yarn)" ]]; then
+if ! [ -x "$(command -v yarn)" ]; then
   echo 'yarn does not exist. Please install it.';
   echo ' -------------------------------- ';
   echo '  sudo apt install yarn';
@@ -124,7 +124,7 @@ if [[ ! -x "$(shell command -v yarn)" ]]; then
   exit 1;
 fi
 
-if [[ ! -x "$(shell command -v gulp)" ]]; then
+if ! [ -x "$(command -v gulp)" ]; then
   echo 'gulp does not exist. Please install it.';
   echo ' -------------------------------- ';
   echo '  sudo npm install gulp-cli -g';
