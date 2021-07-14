@@ -19,7 +19,7 @@
 # Helps with string replace and re-naming files.
 echo '                                            ';
 echo '--------------------------------------------';
-echo '  Install sed and awk';
+echo '  Install sed and gawk';
 echo '--------------------------------------------';
 echo '                                            ';
 sudo apt install -y sed gawk;
