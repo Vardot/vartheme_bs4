@@ -12,8 +12,6 @@ build:
           - composer require cweagans/composer-patches:~1.0
           - composer config extra.enable-patching true
           - composer config extra.composer-exit-on-patch-failure true
-          - composer require --dev phpspec/prophecy-phpunit:*
-          - composer require phpunit/phpunit:~9.0 --with-all-dependencies
           - composer config --json extra.installer-types '["npm-asset", "bower-asset"]'
           - composer config --unset extra.installer-paths.libraries\/\{\$name\}
           - composer config --json extra.installer-paths.libraries\/\{\$name\} '["type:drupal-library", "type:bower-asset", "type:npm-asset"]'
