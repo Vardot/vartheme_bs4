@@ -3,9 +3,9 @@
  * Behaviors for the VARTHEME_BS4_SUBTHEME theme.
  */
 
-(function($, _, Drupal) {
+(function ($, _, Drupal) {
   Drupal.behaviors.VARTHEME_BS4_SUBTHEME = {
-    attach: function() {
+    attach: function () {
       // VARTHEME_BS4_SUBTHEME JavaScript behaviors goes here.
     }
   };

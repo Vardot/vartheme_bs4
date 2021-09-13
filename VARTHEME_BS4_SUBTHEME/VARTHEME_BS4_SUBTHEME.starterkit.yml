@@ -1,21 +1,21 @@
 type: theme
 base theme: vartheme_bs4
-name: 'VARTHEME_BS4_SUBTHEME - Subtheme of Vartheme (Bootstrap 4 - SASS)'
-description: 'Based on Bootstrap 4 framework using SASS, and extending Vartheme (Bootstrap 4 - SASS).'
+name: "VARTHEME_BS4_SUBTHEME - Subtheme of Vartheme (Bootstrap 4 - SASS)"
+description: "Based on Bootstrap 4 framework using SASS, and extending Vartheme (Bootstrap 4 - SASS)."
 project: vartheme_bs4
 core_version_requirement: ^9
 regions:
-  navigation: 'Navigation'
-  navigation_collapsible: 'Navigation Collapsible'
-  header: 'Top Bar'
-  highlighted: 'Highlighted'
-  help: 'Help'
-  content: 'Content'
-  sidebar_first: 'Primary'
-  sidebar_second: 'Secondary'
-  footer: 'Footer'
-  page_top: 'Page top'
-  page_bottom: 'Page bottom'
+  navigation: "Navigation"
+  navigation_collapsible: "Navigation Collapsible"
+  header: "Top Bar"
+  highlighted: "Highlighted"
+  help: "Help"
+  content: "Content"
+  sidebar_first: "Primary"
+  sidebar_second: "Secondary"
+  footer: "Footer"
+  page_top: "Page top"
+  page_bottom: "Page bottom"
 libraries:
   # Bootstrap styles and scripts libraries.
   - VARTHEME_BS4_SUBTHEME/bootstrap-styles

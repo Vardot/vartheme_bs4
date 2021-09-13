@@ -2,6 +2,8 @@ node_modules/**/*.css
 scss/**/*.scss
 vendor/**/*.css
 **/*.min.css"
+css/base/bootstrap.base.css
+/templates/**/*.twig-VARTHEME_BS4_SUBTHEME
 scss/*
 images/*
 fonts/*

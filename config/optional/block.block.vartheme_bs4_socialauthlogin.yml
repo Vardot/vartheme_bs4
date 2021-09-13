@@ -10,7 +10,7 @@ dependencies:
     - vartheme_bs4
 third_party_settings:
   block_class:
-    classes: ''
+    classes: ""
 id: vartheme_bs4_socialauthlogin
 theme: vartheme_bs4
 region: content
@@ -19,12 +19,12 @@ provider: null
 plugin: social_auth_login
 settings:
   id: social_auth_login
-  label: 'Login with'
+  label: "Login with"
   provider: social_auth
-  label_display: '0'
+  label_display: "0"
 visibility:
   request_path:
     id: request_path
     pages: "/user/login\r\n/user/register"
     negate: false
-    context_mapping: {  }
+    context_mapping: {}

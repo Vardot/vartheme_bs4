@@ -106,18 +106,18 @@ function VARTHEME_BS4_SUBTHEME_form_alter(&$form, $form_state, $form_id) {
  * Implements hook_preprocess_login_with().
  */
 function VARTHEME_BS4_SUBTHEME_preprocess_login_with(&$variables) {
-  foreach($variables['social_networks'] as $social_network_index => $social_network) {
+  foreach ($variables['social_networks'] as $social_network_index => $social_network) {
     if (isset($social_network['img_path'])) {
-      $theme_path =   Drupal::service('theme_handler')->getTheme('VARTHEME_BS4_SUBTHEME')->getPath();
+      $theme_path = Drupal::service('theme_handler')->getTheme('VARTHEME_BS4_SUBTHEME')->getPath();
 
       $replaced_path_for_icons = '';
       if (strpos($social_network['img_path'], 'vartheme_bs4') === FALSE) {
-        $replaced_path_for_icons = str_replace('modules/contrib' , 'social_auth', $social_network['img_path']);
+        $replaced_path_for_icons = str_replace('modules/contrib', 'social_auth', $social_network['img_path']);
       }
       else {
         $split_path = explode('vartheme_bs4', $social_network['img_path']);
         if (isset($split_path[1])) {
-          $replaced_path_for_icons =  $theme_path . $split_path[1];
+          $replaced_path_for_icons = $theme_path . $split_path[1];
         }
       }
 

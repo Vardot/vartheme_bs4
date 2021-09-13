@@ -3,9 +3,9 @@
  * Behaviors for the vartheme bs4 theme.
  */
 
-(function($, _, Drupal) {
+(function ($, _, Drupal) {
   Drupal.behaviors.varthemeBS4 = {
-    attach: function() {
+    attach: function () {
       // Vartheme JavaScript behaviors goes here.
 
       // Move panels ipe tray padding buttom by it's outer height.
@@ -15,9 +15,7 @@
 
       // Fix toolbar top space load of the page.
       const toolbarTabOuterHeight =
-        $("#toolbar-bar")
-          .find(".toolbar-tab")
-          .outerHeight() || 0;
+        $("#toolbar-bar").find(".toolbar-tab").outerHeight() || 0;
       const toolbarTrayHorizontalOuterHeight =
         $(".is-active.toolbar-tray-horizontal").outerHeight() || 0;
       const topSpace = toolbarTabOuterHeight + toolbarTrayHorizontalOuterHeight;

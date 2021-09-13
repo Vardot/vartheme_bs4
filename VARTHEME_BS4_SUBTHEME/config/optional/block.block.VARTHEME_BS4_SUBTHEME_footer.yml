@@ -12,12 +12,12 @@ theme: VARTHEME_BS4_SUBTHEME
 region: footer
 weight: -5
 provider: null
-plugin: 'system_menu_block:footer'
+plugin: "system_menu_block:footer"
 settings:
-  id: 'system_menu_block:footer'
-  label: 'Footer menu'
+  id: "system_menu_block:footer"
+  label: "Footer menu"
   provider: system
-  label_display: '0'
+  label_display: "0"
   level: 1
   depth: 0
-visibility: {  }
+visibility: {}

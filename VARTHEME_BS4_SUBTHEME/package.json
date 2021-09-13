@@ -1,13 +1,12 @@
 {
   "name": "VARTHEME_BS4_SUBTHEME",
   "private": true,
-  "version": "9.0.0",
-  "description": "Vartheme bootstrap 4 sub theme implementation",
+  "description": "Vartheme Bootstrap 4 sub theme implementation",
   "license": "GPL-2.0",
   "main": "gulpfile.js",
   "engines": {
     "yarn": ">= 1.6",
-    "node": ">= 8.10"
+    "node": ">= 12.0"
   },
   "keywords": [
     "SASS",
@@ -20,10 +19,11 @@
     "theme:init": "gulp",
     "theme:build": "gulp compile",
     "theme:watch": "gulp watch",
-    "eslint": "node ./node_modules/eslint/bin/eslint.js --config=.eslintrc.json .",
-    "stylelint": "npx stylelint --config=.stylelintrc.json .",
     "phpcs": "phpcs --standard=./.phpcs.xml .",
-    "phpcbf": "phpcbf --standard=./.phpcs.xml ."
+    "phpcbf": "phpcbf --standard=./.phpcs.xml .",
+    "lint:yaml": "node ./node_modules/eslint/bin/eslint.js --config=.eslintrc.json --ext .yml .",
+    "lint:js": "node ./node_modules/eslint/bin/eslint.js --config=.eslintrc.json .",
+    "lint:css": "npx stylelint --config=.stylelintrc.json ."
   },
   "dependencies": {
     "bootstrap": "^4.6.0",
@@ -34,25 +34,32 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",
-    "babel-core": "^6.26.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.7.7",
     "babel-plugin-add-header-comment": "^1.0.3",
-    "babel-preset-env": "^1.4.0",
     "browser-sync": "^2.24.7",
-    "chalk": "^2.3.0",
-    "chokidar": "^2.0.0",
-    "chromedriver": "^75.1.0",
-    "cross-env": "^5.1.3",
+    "chalk": "^4.1.0",
+    "chokidar": "^3.3.1",
+    "chromedriver": "^87.0.0",
+    "cross-env": "^7.0.2",
+    "css.escape": "^1.5.1",
+    "dotenv-safe": "^8.2.0",
+    "es6-promise": "^4.2.8",
     "del": "^3.0.0",
-    "dotenv-safe": "^5.0.1",
-    "eslint": "^6.7.2",
+    "eslint": "^7.10.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jquery": "^1.5.1",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.10.0",
-    "eslint-plugin-react-hooks": "^1.7.0",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "eslint-plugin-yml": "^0.10.0",
+    "farbtastic": "https://github.com/mattfarina/farbtastic/archive/1.3u.tar.gz",
     "glob": "^7.1.2",
+    "joyride": "https://github.com/zurb/joyride/archive/refs/heads/v2.1.tar.gz",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-clean-css": "3.9.4",
@@ -66,19 +73,24 @@
     "gulp-scss-lint": "^1.0.0",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
+    "gulp-rtlcss": "^1.4.1",
     "merge-stream": "^1.0.1",
-    "minimist": "^1.2.2",
-    "mkdirp": "^0.5.1",
-    "nightwatch": "^1.2.1",
+    "mkdirp": "^1.0.4",
+    "nightwatch": "^1.6.3",
+    "normalize.css": "^8.0.1",
+    "picturefill": "^3.0.3",
     "postcss": "^7.0.18",
     "postcss-calc": "^7.0.1",
     "postcss-custom-properties": "^9.0.2",
-    "postcss-header": "^1.0.0",
+    "postcss-header": "^2.0.0",
     "postcss-import": "^12.0.1",
-    "prettier": "^1.14.0",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-pxtorem": "^5.1.1",
+    "postcss-url": "^8.0.0",
+    "prettier": "^2.1.2",
     "stylelint": "^13.0.0",
     "stylelint-checkstyle-formatter": "^0.1.1",
-    "stylelint-config-standard": "^19.0.0",
+    "stylelint-config-standard": "^20.0.0",
     "stylelint-no-browser-hacks": "^1.2.1",
     "stylelint-order": "^4.0.0"
   },
@@ -88,7 +100,7 @@
       "development": {
         "presets": [
           [
-            "env",
+            "@babel/preset-env",
             {
               "modules": "commonjs",
               "targets": {
@@ -101,7 +113,7 @@
       "legacy": {
         "presets": [
           [
-            "env",
+            "@babel/preset-env",
             {
               "modules": false
             }

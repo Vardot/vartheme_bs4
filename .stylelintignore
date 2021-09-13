@@ -1,10 +1,15 @@
 node_modules/**/*.css
 scss/**/*.scss
+fonts/*
+scripts/*
+css/base/bootstrap.base.css
+VARTHEME_BS4_SUBTHEME/css/base/bootstrap.base.css
 VARTHEME_BS4_SUBTHEME/node_modules/**/*.css
 VARTHEME_BS4_SUBTHEME/scss/**/*.scss
 VARTHEME_BS4_SUBTHEME/templates/**/*.twig-VARTHEME_BS4_SUBTHEME
+VARTHEME_BS4_SUBTHEME/fonts/*
 vendor/**/*.css
-**/*.min.css"
+**/*.min.css
 scss/*
 images/*
 fonts/*
@@ -17,4 +22,3 @@ config/**/*.yml
 *.svg
 *.ico
 *.json
-scripts/create-new-vartheme-bs4.sh

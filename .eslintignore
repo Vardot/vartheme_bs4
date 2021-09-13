@@ -13,3 +13,5 @@ VARTHEME_BS4_SUBTHEME/node_modules
 VARTHEME_BS4_SUBTHEME/js/bootstrap/*.js
 VARTHEME_BS4_SUBTHEME/js/bootstrap_barrio/*.js
 VARTHEME_BS4_SUBTHEME/js/popper/*.js
+drupalci.yml
+**/drupalci.yml

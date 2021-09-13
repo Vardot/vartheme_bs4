@@ -15,12 +15,12 @@ settings:
   id: local_tasks_block
   label: Tabs
   provider: core
-  label_display: '0'
+  label_display: "0"
   primary: true
   secondary: true
 visibility:
   request_path:
     id: request_path
-    pages: '/node/*'
+    pages: "/node/*"
     negate: true
-    context_mapping: {  }
+    context_mapping: {}
