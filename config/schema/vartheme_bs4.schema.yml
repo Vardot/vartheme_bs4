@@ -201,7 +201,7 @@ vartheme_bs4.settings:
     # Navbar.
     # ----------------------------
     bootstrap_barrio_navbar_container:
-      type: text
+      type: integer
       label: "Navbar width container"
     bootstrap_barrio_navbar_toggle:
       type: text

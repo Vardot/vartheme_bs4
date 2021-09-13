@@ -72,7 +72,7 @@ bootstrap_barrio_navbar_class: ""
 email_logo_default: 0
 email_logo_path: ""
 email_logo_upload: {}
-bootstrap_barrio_source: 0
+bootstrap_barrio_source: "0"
 bootstrap_barrio_image_fluid: false
 bootstrap_barrio_navbar_flyout: false
 bootstrap_barrio_navbar_slide: false
