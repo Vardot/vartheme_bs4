@@ -22,17 +22,10 @@ build:
           - cat composer.json
           - find ${SOURCE_DIR}/libraries | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"
       phplint: {  }
-      csslint:
-        halt-on-fail: false
-      eslint:
-        # A test must pass eslinting standards check in order to continue processing.
-        halt-on-fail: false
-      phpcs:
-        # phpcs will use core's specified version of Coder.
-        sniff-all-files: false
-        halt-on-fail: false
-      phpstan:
-        halt-on-fail: false
+      csslint: {  }
+      eslint: {  }
+      phpcs: {  }
+      phpstan: {  }
     testing:
       run_tests.javascript:
         types: 'PHPUnit-FunctionalJavascript'
