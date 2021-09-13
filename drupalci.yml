@@ -15,7 +15,10 @@ build:
         - require cweagans/composer-patches:~1.0
         - require --dev phpspec/prophecy-phpunit:^2
         - require phpunit/phpunit:~9.0 --with-all-dependencies
-        - require drupal/vartheme_claro:9.0.x-dev
+      container_command:
+        commands:
+          - cd ${SOURCE_DIR}
+          - sudo -u www-data composer require drupal/vartheme_claro:9.0.x-dev
     testing:
       run_tests.javascript:
         types: 'PHPUnit-FunctionalJavascript'
