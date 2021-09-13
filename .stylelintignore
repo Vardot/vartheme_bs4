@@ -1,4 +1,7 @@
 node_modules/**/*.css
+**/node_modules
+drupalci.yml
+**/drupalci.yml
 scss/**/*.scss
 scripts/*
 css/base/bootstrap.base.css

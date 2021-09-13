@@ -21,11 +21,11 @@ build:
           - composer require drupal/vartheme_claro:9.0.x-dev
           - cat composer.json
           - find ${SOURCE_DIR}/libraries | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"
-      phplint: {  }
-      csslint: {  }
-      eslint: {  }
-      phpcs: {  }
-      phpstan: {  }
+      phplint:
+      csslint:
+      eslint:
+      phpcs:
+      phpstan:
     testing:
       run_tests.javascript:
         types: 'PHPUnit-FunctionalJavascript'
