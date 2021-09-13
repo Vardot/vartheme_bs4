@@ -25,8 +25,6 @@ bootstrap_barrio_region_clean_navigation_collapsible: 0
 bootstrap_barrio_region_class_navigation_collapsible: row
 bootstrap_barrio_region_clean_header: 1
 bootstrap_barrio_region_class_header: ""
-bootstrap_barrio_region_clean_hero_slider: 0
-bootstrap_barrio_region_class_hero_slider: row
 bootstrap_barrio_region_clean_highlighted: 1
 bootstrap_barrio_region_class_highlighted: ""
 bootstrap_barrio_region_clean_help: 1
