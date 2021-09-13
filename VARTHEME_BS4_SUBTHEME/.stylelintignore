@@ -1,12 +1,13 @@
 node_modules/**/*.css
 scss/**/*.scss
 vendor/**/*.css
-**/*.min.css"
+**/*.min.css
 css/base/bootstrap.base.css
 /templates/**/*.twig-VARTHEME_BS4_SUBTHEME
 scss/*
 images/*
-fonts/*
+fonts/fontawesome-free/webfonts
+fonts/droid/webfonts
 js/*
 tests/*
 config/**/*.yml
@@ -16,3 +17,7 @@ config/**/*.yml
 *.svg
 *.ico
 *.json
+*.eot
+*.ttf
+*.woff
+*.woff2
