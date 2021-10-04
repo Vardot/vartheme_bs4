@@ -19,14 +19,18 @@ class VarthemeBs4Tests extends BrowserTestBase {
   /**
    * {@inheritdoc}
    */
+  protected $profile = 'standard';
+
+  /**
+   * {@inheritdoc}
+   */
   protected $defaultTheme = 'vartheme_bs4';
 
   /**
-   * The profile to install as a basis for testing.
-   *
-   * @var string
+   * {@inheritdoc}
    */
-  protected $profile = 'standard';
+  // phpcs:ignore
+  protected $strictConfigSchema = FALSE;
 
   /**
    * {@inheritdoc}
@@ -47,8 +51,14 @@ class VarthemeBs4Tests extends BrowserTestBase {
   /**
    * {@inheritdoc}
    */
-  protected function setUp() {
+  protected function setUp(): void {
     parent::setUp();
+
+    // Insall the Claro admin theme.
+    $this->container->get('theme_installer')->install(['claro']);
+
+    // Set the Claro theme as the default admin theme.
+    $this->config('system.theme')->set('admin', 'claro')->save();
 
     ConfigurableLanguage::createFromLangcode('ar')->save();
     Cache::invalidateTags(['rendered', 'locale']);
