@@ -14,9 +14,6 @@ build:
           - composer config --json extra.installer-types '["npm-asset", "bower-asset"]'
           - composer config --unset extra.installer-paths.libraries\/\{\$name\}
           - composer config --json extra.installer-paths.libraries\/\{\$name\} '["type:drupal-library", "type:bower-asset", "type:npm-asset"]'
-          - rm composer.lock
-          - composer require --dev phpspec/prophecy-phpunit:*
-          - composer require phpunit/phpunit:~9.0 --with-all-dependencies
           - cat composer.json
     testing:
       run_tests.javascript:
