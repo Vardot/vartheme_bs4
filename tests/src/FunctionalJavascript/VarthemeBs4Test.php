@@ -82,7 +82,9 @@ class VarthemeBs4Test extends WebDriverTestBase {
     $this->assertSession()->pageTextContains($this->t('Status messages'));
     $this->assertSession()->pageTextContains($this->t('Page title'));
     $this->assertSession()->pageTextContains($this->t('Tabs'));
-    $this->assertSession()->pageTextContains($this->t('Media Hero Slider'));
+    // Media Hero Slider retion was removed in:
+    // Issue #3159252: Remove the region "Media Hero Slider" from Vartheme BS4
+    // $this->assertSession()->pageTextContains($this->t('Media Hero Slider'));
     $this->assertSession()->pageTextContains($this->t('Highlighted'));
     $this->assertSession()->pageTextContains($this->t('Help'));
     $this->assertSession()->pageTextContains($this->t('Content'));
