@@ -20,4 +20,3 @@ build:
         types: 'PHPUnit-FunctionalJavascript'
         testgroups: "vartheme_bs4"
         suppress-deprecations: true
-        halt-on-fail: false

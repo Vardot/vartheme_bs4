@@ -1,8 +1,8 @@
 <?php
 
-namespace Drupal\Tests\vartheme_bs4\Functional;
+namespace Drupal\Tests\vartheme_bs4\FunctionalJavascript;
 
-use Drupal\Tests\BrowserTestBase;
+use Drupal\FunctionalJavascriptTests\WebDriverTestBase;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\language\Entity\ConfigurableLanguage;
 use Drupal\Core\Cache\Cache;
@@ -12,7 +12,7 @@ use Drupal\Core\Cache\Cache;
  *
  * @group vartheme_bs4
  */
-class VarthemeBs4Tests extends BrowserTestBase {
+class VarthemeBs4Tests extends WebDriverTestBase {
 
   use StringTranslationTrait;
 
@@ -72,7 +72,7 @@ class VarthemeBs4Tests extends BrowserTestBase {
 
     $this->drupalLogin($this->rootUser);
 
-    // Vartheme Claro blocks.
+    // Vartheme BS4 blocks.
     $this->drupalGet('/admin/structure/block/list/vartheme_bs4');
 
     $assert_session->pageTextContains($this->t('Site branding'));
