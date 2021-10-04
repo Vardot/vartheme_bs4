@@ -12,7 +12,7 @@ use Drupal\Core\Cache\Cache;
  *
  * @group vartheme_bs4
  */
-class VarthemeBs4Tests extends WebDriverTestBase {
+class VarthemeBs4Test extends WebDriverTestBase {
 
   use StringTranslationTrait;
 
@@ -68,29 +68,29 @@ class VarthemeBs4Tests extends WebDriverTestBase {
    * Check Vartheme BS4 blocks.
    */
   public function testCheckVarthemeBs4Blocks() {
-    $assert_session = $this->assertSession();
 
+    // Given that the root super user was logged in to the site.
     $this->drupalLogin($this->rootUser);
 
     // Vartheme BS4 blocks.
     $this->drupalGet('/admin/structure/block/list/vartheme_bs4');
 
-    $assert_session->pageTextContains($this->t('Site branding'));
-    $assert_session->pageTextContains($this->t('Main navigation'));
-    $assert_session->pageTextContains($this->t('Breadcrumbs'));
-    $assert_session->pageTextContains($this->t('Primary admin actions'));
-    $assert_session->pageTextContains($this->t('Status messages'));
-    $assert_session->pageTextContains($this->t('Page title'));
-    $assert_session->pageTextContains($this->t('Tabs'));
-    $assert_session->pageTextContains($this->t('Media Hero Slider'));
-    $assert_session->pageTextContains($this->t('Highlighted'));
-    $assert_session->pageTextContains($this->t('Help'));
-    $assert_session->pageTextContains($this->t('Content'));
-    $assert_session->pageTextContains($this->t('Main page content'));
-    $assert_session->pageTextContains($this->t('Primary'));
-    $assert_session->pageTextContains($this->t('SecondaryPlace'));
-    $assert_session->pageTextContains($this->t('Footer'));
-    $assert_session->pageTextContains($this->t('Footer menu'));
+    $this->assertSession()->pageTextContains($this->t('Site branding'));
+    $this->assertSession()->pageTextContains($this->t('Main navigation'));
+    $this->assertSession()->pageTextContains($this->t('Breadcrumbs'));
+    $this->assertSession()->pageTextContains($this->t('Primary admin actions'));
+    $this->assertSession()->pageTextContains($this->t('Status messages'));
+    $this->assertSession()->pageTextContains($this->t('Page title'));
+    $this->assertSession()->pageTextContains($this->t('Tabs'));
+    $this->assertSession()->pageTextContains($this->t('Media Hero Slider'));
+    $this->assertSession()->pageTextContains($this->t('Highlighted'));
+    $this->assertSession()->pageTextContains($this->t('Help'));
+    $this->assertSession()->pageTextContains($this->t('Content'));
+    $this->assertSession()->pageTextContains($this->t('Main page content'));
+    $this->assertSession()->pageTextContains($this->t('Primary'));
+    $this->assertSession()->pageTextContains($this->t('SecondaryPlace'));
+    $this->assertSession()->pageTextContains($this->t('Footer'));
+    $this->assertSession()->pageTextContains($this->t('Footer menu'));
   }
 
 }
