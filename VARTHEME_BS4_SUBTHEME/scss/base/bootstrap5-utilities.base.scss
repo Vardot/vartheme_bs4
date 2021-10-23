@@ -6,6 +6,8 @@
 @import "../mixins";                      // VARTHEME_BS4_SUBTHEME mixins.
 // -----------------------------------------------------------------------------
 
+@import "../../node_modules/bootstrap-borders-utilities/utilities/scss/border-color-variants.scss";
+
 // Alias for .border-left BS4 class.
 .border-start {
   border-left: $border-width $border-color !important;

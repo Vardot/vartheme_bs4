@@ -30,7 +30,8 @@
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
     "rfs": "^9.0.3",
-    "@fortawesome/fontawesome-free": "^5.15.3"
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "bootstrap-borders-utilities": "^1.0.2"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",
