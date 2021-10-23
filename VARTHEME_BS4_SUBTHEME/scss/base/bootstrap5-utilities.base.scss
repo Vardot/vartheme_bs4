@@ -6,6 +6,9 @@
 @import "../mixins";                      // VARTHEME_BS4_SUBTHEME mixins.
 // -----------------------------------------------------------------------------
 
+// Bootstrap Borders Utilities.
+// https://github.com/Vardot/bootstrap-borders-utilities
+// `yarn add bootstrap-borders-utilities` before compiling with `yarn theme:build`
 @import "../../node_modules/bootstrap-borders-utilities/utilities/scss/border-color-variants.scss";
 
 // Alias for .border-left BS4 class.
