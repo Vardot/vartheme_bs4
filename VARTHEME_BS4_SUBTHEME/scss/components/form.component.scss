@@ -14,9 +14,9 @@
     display: inline-block;
     background-image: url(../../images/required.svg);
     background-repeat: no-repeat;
-    background-size: calc(#{$input-height} / 6) calc(#{$input-height} / 6);
-    width: calc(#{$input-height} / 6);
-    height: calc(#{$input-height} / 6);
+    background-size: calc(#{$input-height} * .16666666666) calc(#{$input-height} * .16666666666);
+    width: calc(#{$input-height} * .16666666666);
+    height: calc(#{$input-height} * .16666666666);
     margin: 0 0.3em;
   }
 }

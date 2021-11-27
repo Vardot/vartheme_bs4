@@ -31,7 +31,7 @@
 // View Mode Inventory (VMI).
 // -----------------------------------------------------------------------------
 $grid-gutter-width: 30px;
-$view-modes-padding: floor(($grid-gutter-width / 2));
+$view-modes-padding: floor(($grid-gutter-width * .5));
 
 // Custom Varbase Hero slider media variables.
 // -----------------------------------------------------------------------------

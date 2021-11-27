@@ -1,14 +1,14 @@
 .form-required::after {
   display: inline-block;
-  width: calc(calc(1.5em + 0.75rem + 2px) / 6);
-  height: calc(calc(1.5em + 0.75rem + 2px) / 6);
+  width: calc(calc(1.5em + 0.75rem + 2px) * 0.16666666666);
+  height: calc(calc(1.5em + 0.75rem + 2px) * 0.16666666666);
   margin: 0 0.3em;
   content: "";
   vertical-align: super;
   background-image: url(../../images/required.svg);
   background-repeat: no-repeat;
-  -webkit-background-size: calc(calc(1.5em + 0.75rem + 2px) / 6) calc(calc(1.5em + 0.75rem + 2px) / 6);
-  background-size: calc(calc(1.5em + 0.75rem + 2px) / 6) calc(calc(1.5em + 0.75rem + 2px) / 6);
+  -webkit-background-size: calc(calc(1.5em + 0.75rem + 2px) * 0.16666666666) calc(calc(1.5em + 0.75rem + 2px) * 0.16666666666);
+  background-size: calc(calc(1.5em + 0.75rem + 2px) * 0.16666666666) calc(calc(1.5em + 0.75rem + 2px) * 0.16666666666);
 }
 
 form .filter-wrapper {

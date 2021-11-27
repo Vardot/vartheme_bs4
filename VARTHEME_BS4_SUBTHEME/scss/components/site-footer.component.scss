@@ -24,11 +24,11 @@
 .site-footer__bottom {
 
   .block {
-    margin: ($spacer / 2) 0;
+    margin: ($spacer * .5) 0;
   }
 
   .content {
-    padding: ($spacer / 2) 0;
+    padding: ($spacer * .5) 0;
     margin-top: 0;
   }
 }

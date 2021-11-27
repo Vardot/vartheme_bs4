@@ -172,8 +172,8 @@
 
 $gutters: (
   0: 0,
-  1: $grid-gutter-width / 4,
-  2: $grid-gutter-width / 2,
+  1: $grid-gutter-width * .25,
+  2: $grid-gutter-width * .5,
   3: $grid-gutter-width,
   4: $grid-gutter-width * 1.5,
   5: $grid-gutter-width * 3,
