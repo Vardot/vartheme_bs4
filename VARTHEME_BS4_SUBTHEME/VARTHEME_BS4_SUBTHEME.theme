@@ -48,7 +48,7 @@ function VARTHEME_BS4_SUBTHEME_theme_suggestions_page_alter(array &$suggestions,
 function VARTHEME_BS4_SUBTHEME_preprocess_html(&$variables) {
 
   // The path for VARTHEME_BS4_SUBTHEME theme in variables.
-  $variables['VARTHEME_BS4_SUBTHEME_path'] = \Drupal::request()->getBaseUrl() . '/' . drupal_get_path('theme', 'VARTHEME_BS4_SUBTHEME');
+  $variables['VARTHEME_BS4_SUBTHEME_path'] = \Drupal::request()->getBaseUrl() . '/' . \Drupal::service('extension.list.theme')->getPath('VARTHEME_BS4_SUBTHEME');
 
   // Add information about the number of sidebars.
   if (theme_get_setting('bootstrap_barrio_navbar_position')) {
@@ -61,7 +61,7 @@ function VARTHEME_BS4_SUBTHEME_preprocess_html(&$variables) {
  */
 function VARTHEME_BS4_SUBTHEME_preprocess_page(&$variables) {
   // Add the pring logo.
-  $variables['logo_print'] = \Drupal::request()->getBaseUrl() . '/' . drupal_get_path('theme', 'VARTHEME_BS4_SUBTHEME') . '/logo-print.png';
+  $variables['logo_print'] = \Drupal::request()->getBaseUrl() . '/' . \Drupal::service('extension.list.theme')->getPath('VARTHEME_BS4_SUBTHEME') . '/logo-print.png';
 
   // Add the site name and slogan.
   $variables['site_name'] = \Drupal::config('system.site')->get('name');
