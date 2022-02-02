@@ -3,56 +3,55 @@
    /* Always insert a page break after the element */
   .always-page-break-after,
   .always-pba {
-    page-break-after: always;
+    break-after: always;
   }
 
   /* Avoid page break after the element (if possible) */
   .avoid-page-break-after,
   .avoid-pba {
-    page-break-after: avoid;
+    break-after: avoid-page;
   }
 
   /* Insert page breaks after the element so that the next page is formatted as a left page */
   .left-page-break-after,
   .left-pba {
-    page-break-after: left;
+    break-after: left;
   }
 
   /* Insert page breaks after the element so that the next page is formatted as a right page */
   .right-page-break-after,
   .right-pba {
-    page-break-after: right;
+    break-after: right;
   }
 
   /* Always insert a page break before the element */
   .always-page-break-before,
   .always-pbb {
-    page-break-before: always;
+    break-before: always;
   }
 
   /* Avoid page break before the element (if possible) */
   .avoid-page-break-before,
   .avoid-pbb {
-    page-break-before: avoid;
+    break-before: avoid-page;
   }
 
   /* Insert page breaks before the element so that the next page is formatted as a left page */
   .left-page-break-before,
   .left-pbb {
-    page-break-before: left;
+    break-before: left;
   }
 
   /* Insert page breaks before the element so that the next page is formatted as a right page */
   .right-page-break-before,
   .right-pbb {
-    page-break-before: right;
+    break-before: right;
   }
 
   /* Avoid page break inside the element (if possible) */
   .avoid-page-break-inside,
   .avoid-pbi {
-    page-break-inside: avoid;
-    width: 3;
+    break-inside: avoid-page;
   }
 
   /* Hide link's href URL in print. */
