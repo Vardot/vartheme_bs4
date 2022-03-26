@@ -7,7 +7,7 @@ th.checkbox {
   text-align: center;
 }
 
-[dir="rtl"] td.checkbox,
-[dir="rtl"] th.checkbox {
+[dir=rtl] td.checkbox,
+[dir=rtl] th.checkbox {
   text-align: center;
 }

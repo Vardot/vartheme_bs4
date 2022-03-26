@@ -2,21 +2,16 @@
   position: relative;
   right: 50%;
   left: 50%;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 100vw;
-  -ms-flex: 0 0 100vw;
   flex: 0 0 100vw;
   width: 100vw;
   max-width: none;
   margin-right: -50vw !important;
   margin-left: -50vw !important;
 }
-
 .bg-edge2edge:before {
   display: table;
   content: " ";
 }
-
 .bg-edge2edge:after {
   clear: both;
 }

@@ -1,73 +1,60 @@
 #auth-box {
   padding: calc(1.3125rem + 0.75vw) 0 0;
 }
-
 @media (min-width: 1200px) {
   #auth-box {
     padding: 1.875rem 0 0;
   }
 }
-
 #auth-box #the-logo {
   margin: 0;
   padding: 0 0 calc(1.3rem + 0.6vw);
   text-align: center;
 }
-
 @media (min-width: 1200px) {
   #auth-box #the-logo {
     padding: 0 0 1.75rem;
   }
 }
-
 #auth-box .title {
   margin: 0;
   padding: 0 0 0.9375rem;
   font-size: calc(1.325rem + 0.9vw);
 }
-
 @media (min-width: 1200px) {
   #auth-box .title {
     font-size: 2rem;
   }
 }
-
 #auth-box #middle-part {
   overflow: hidden;
   padding: 0.9375rem;
   border-radius: 3px;
   background: #fff;
-  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
-
 #auth-box .back-link {
   padding: 1rem 0 0;
 }
-
 #auth-box #bottom-part {
   padding: 1rem 0 0;
   text-align: center;
   font-size: 0.75rem;
 }
-
 #auth-box .user-form .form-control {
   max-width: 100%;
 }
-
 #auth-box .block-title {
   height: 1px;
   margin: calc(1.325rem + 0.9vw) 0;
   text-align: center;
   background: #eee;
 }
-
 @media (min-width: 1200px) {
   #auth-box .block-title {
     margin: 2rem 0;
   }
 }
-
 #auth-box .block-title span {
   position: relative;
   top: calc(-1.275rem - 0.3vw);
@@ -76,29 +63,23 @@
   background: #fff;
   font-size: 1rem;
 }
-
 @media (min-width: 1200px) {
   #auth-box .block-title span {
     top: -1.5rem;
   }
 }
-
 #auth-box .user-login-form {
   text-align: left;
 }
-
 #auth-box .user-login-form .form-checkbox {
   margin-top: 0.5rem;
 }
-
 #auth-box .user-login-form .option {
   font-size: 1rem;
 }
-
 #auth-box .form-actions {
   text-align: center;
 }
-
 #auth-box .block-social-auth-login {
   text-align: center;
 }
@@ -106,7 +87,6 @@
 [dir=rtl] #auth-box .user-login-form {
   text-align: right;
 }
-
 [dir=rtl] #auth-box .user-login-form .option {
   padding-right: 0;
 }

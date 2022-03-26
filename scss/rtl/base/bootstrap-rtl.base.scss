@@ -1,5 +1,6 @@
 // Bootstrap RTL base.
 // -----------------------------------------------------------------------------
+@use 'sass:math';
 @import "../../../node_modules/bootstrap/scss/functions"; // Bootstrap functions.
 @import "../../../node_modules/bootstrap/scss/mixins";    // Bootstrap mixins.
 @import "../../variables";                            // Vartheme variables.
@@ -224,7 +225,7 @@ body {
   }
 
   @mixin make-col-offset($size, $columns: $grid-columns) {
-    $num: $size / $columns;
+    $num: math.div($size, $columns);
     margin-left: 0;
     margin-right: if($num == 0, 0, percentage($num));
   }

@@ -36,7 +36,7 @@ sudo apt install -y sed gawk;
  Helps getting more development tools and the **Bootstrap** and **popper** packages. 
 
 ```
-curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_17.x | sudo -E bash -
 sudo apt update
 sudo apt install nodejs
 sudo apt install build-essential

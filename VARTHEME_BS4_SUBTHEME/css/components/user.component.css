@@ -4,8 +4,6 @@
 }
 
 .password-strength__indicator {
-  -webkit-transition: width 0.5s ease-out;
-  -o-transition: width 0.5s ease-out;
   transition: width 0.5s ease-out;
   background-color: #28a745;
 }
@@ -53,8 +51,8 @@
   margin: 0;
 }
 
-[dir="rtl"] .confirm-parent,
-[dir="rtl"] .password-parent {
+[dir=rtl] .confirm-parent,
+[dir=rtl] .password-parent {
   clear: right;
 }
 
@@ -76,7 +74,6 @@
   border-radius: 0.3rem;
   background: white;
 }
-
 @media (min-width: 1200px) {
   .page-user-login main .region-content,
   .page-user-password main .region-content {

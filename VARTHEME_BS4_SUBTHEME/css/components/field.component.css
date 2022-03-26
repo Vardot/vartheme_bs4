@@ -5,7 +5,7 @@
   /* LTR */
 }
 
-[dir="rtl"] .field--type-entity-reference .field__label {
+[dir=rtl] .field--type-entity-reference .field__label {
   padding-right: 0;
   padding-left: 0.3rem;
 }
@@ -24,7 +24,7 @@
   white-space: nowrap;
 }
 
-[dir="rtl"] .field--type-entity-reference ul.links li {
+[dir=rtl] .field--type-entity-reference ul.links li {
   float: right;
   padding: 0 0 0 1rem;
 }
@@ -34,7 +34,6 @@
     clear: both;
   }
 }
-
 .field--type-image a {
   border-bottom: none;
 }
@@ -50,7 +49,7 @@
   /* LTR */
 }
 
-[dir="rtl"] .field--name-field-tags .field__label {
+[dir=rtl] .field--name-field-tags .field__label {
   padding-right: 0;
   padding-left: 0.3125rem;
 }
@@ -78,7 +77,7 @@
   white-space: nowrap;
 }
 
-[dir="rtl"] .field--name-field-tags ul.links li {
+[dir=rtl] .field--name-field-tags ul.links li {
   float: right;
   padding: 0 0 0 1rem;
 }

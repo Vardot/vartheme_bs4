@@ -8,7 +8,7 @@
   /* LTR */
 }
 
-[dir="rtl"] .file {
+[dir=rtl] .file {
   padding-right: 1.5rem;
   padding-left: inherit;
   background-position: right center;

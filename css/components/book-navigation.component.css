@@ -3,7 +3,6 @@
   padding-bottom: 0;
   border-top: 1px solid #dee2e6;
 }
-
 .book-navigation .book-pager {
   overflow: auto;
   margin: 0;
@@ -24,7 +23,7 @@
   text-align: left;
 }
 
-[dir="rtl"] .book-pager__item--previous {
+[dir=rtl] .book-pager__item--previous {
   float: right;
   text-align: right;
 }
@@ -42,7 +41,7 @@
   text-align: right;
 }
 
-[dir="rtl"] .book-pager__item--next {
+[dir=rtl] .book-pager__item--next {
   float: left;
   text-align: left;
 }

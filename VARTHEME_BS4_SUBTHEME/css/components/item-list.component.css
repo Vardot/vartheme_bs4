@@ -5,7 +5,7 @@
   /* LTR */
 }
 
-[dir="rtl"] .item-list ul {
+[dir=rtl] .item-list ul {
   padding: 0;
 }
 
@@ -16,7 +16,7 @@
   /* LTR */
 }
 
-[dir="rtl"] .item-list ul li {
+[dir=rtl] .item-list ul li {
   /* This is needed to reset [dir="rtl"] styles in item-list.theme.css */
   margin: 0;
   padding: 0.75rem 0 0 1.25rem;
@@ -24,7 +24,7 @@
 
 .item-list .item-list__comma-list,
 .item-list .item-list__comma-list li,
-[dir="rtl"] .item-list .item-list__comma-list,
-[dir="rtl"] .item-list .item-list__comma-list li {
+[dir=rtl] .item-list .item-list__comma-list,
+[dir=rtl] .item-list .item-list__comma-list li {
   padding: 0;
 }

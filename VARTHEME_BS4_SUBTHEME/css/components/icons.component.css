@@ -5,7 +5,7 @@
   /* LTR */
 }
 
-[dir="rtl"] .icon-help {
+[dir=rtl] .icon-help {
   padding: 1px 1.5rem 1px 0;
   background-position: 100% 50%;
 }

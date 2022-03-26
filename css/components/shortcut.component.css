@@ -9,7 +9,7 @@
   margin: 0;
 }
 
-[dir="rtl"] .shortcut-wrapper .page-title {
+[dir=rtl] .shortcut-wrapper .page-title {
   float: right;
 }
 
@@ -20,7 +20,7 @@
   border-bottom: none;
 }
 
-[dir="rtl"] .shortcut-action {
+[dir=rtl] .shortcut-action {
   margin-right: 0.5em;
   margin-left: 0;
 }

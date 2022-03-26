@@ -1,16 +1,13 @@
 .views-displays .tabs .open > a {
   border-radius: 0.3rem 0.3rem 0 0;
 }
-
 .views-displays .tabs .open > a:hover,
 .views-displays .tabs .open > a:focus {
   color: #007bff;
 }
-
 .views-displays .tabs .action-list {
   padding: 0;
 }
-
 .views-displays .secondary .form-submit {
   font-size: 0.875rem;
 }
@@ -22,7 +19,6 @@
 .views-ui-display-tab-actions .dropbutton .form-submit {
   color: #0056b3;
 }
-
 .views-ui-display-tab-actions .dropbutton .form-submit:hover,
 .views-ui-display-tab-actions .dropbutton .form-submit:focus {
   color: #007bff;

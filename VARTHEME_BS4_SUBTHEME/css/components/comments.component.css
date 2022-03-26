@@ -1,7 +1,6 @@
 #content .comment-wrapper h2 {
   margin-bottom: 1rem;
 }
-
 #content .comment-wrapper h2.comment-form__title {
   margin-bottom: 1rem;
 }
@@ -16,7 +15,7 @@
   vertical-align: top;
 }
 
-[dir="rtl"] .comment {
+[dir=rtl] .comment {
   direction: rtl;
 }
 
@@ -26,12 +25,11 @@
   font-size: 1rem;
 }
 
-[dir="rtl"] .comment__meta {
+[dir=rtl] .comment__meta {
   padding: 0 0 0 calc(1.3125rem + 0.75vw);
 }
-
 @media (min-width: 1200px) {
-  [dir="rtl"] .comment__meta {
+  [dir=rtl] .comment__meta {
     padding: 0 0 0 1.875rem;
   }
 }
@@ -64,7 +62,7 @@
   /* LTR */
 }
 
-[dir="rtl"] .comment__time,
+[dir=rtl] .comment__time,
 .comment__permalink {
   padding: 0 0 0 0.5em;
 }
@@ -86,7 +84,7 @@
   border-bottom: 1.25em solid transparent;
 }
 
-[dir="rtl"] .comment__content:before {
+[dir=rtl] .comment__content:before {
   right: auto;
   left: 100%;
   border-right: none;
@@ -107,7 +105,7 @@
   /* LTR */
 }
 
-[dir="rtl"] .comment__content:after {
+[dir=rtl] .comment__content:after {
   right: auto;
   left: 100%;
   margin-right: 0;
@@ -130,20 +128,18 @@
   margin-left: calc(1.375rem + 1.5vw);
   /* LTR */
 }
-
 @media (min-width: 1200px) {
   .indented {
     margin-left: 2.5rem;
   }
 }
 
-[dir="rtl"] .indented {
+[dir=rtl] .indented {
   margin-right: calc(1.375rem + 1.5vw);
   margin-left: 0;
 }
-
 @media (min-width: 1200px) {
-  [dir="rtl"] .indented {
+  [dir=rtl] .indented {
     margin-right: 2.5rem;
   }
 }
@@ -158,7 +154,7 @@
   font-size: 1rem;
 }
 
-[dir="rtl"] .comment .links-inline span {
+[dir=rtl] .comment .links-inline span {
   padding: 0 0 0 0.5em;
 }
 
@@ -170,7 +166,7 @@
   background: #7ecfff;
 }
 
-[dir="rtl"] .comment--unpublished {
+[dir=rtl] .comment--unpublished {
   margin-right: 0;
   margin-left: 0.3125rem;
   padding: 0.3125rem 0.3125rem 0.3125rem 0.125;
@@ -195,7 +191,7 @@
   /* LTR */
 }
 
-[dir="rtl"] .comment--unpublished .comment__content:after,
-[dir="rtl"] .node--unpublished .comment__content:after {
+[dir=rtl] .comment--unpublished .comment__content:after,
+[dir=rtl] .node--unpublished .comment__content:after {
   border-left-color: #7ecfff;
 }

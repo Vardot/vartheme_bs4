@@ -4,62 +4,31 @@
   height: 28px;
   content: " ";
   background-image: url("../../images/icons/refresh.svg");
-  -webkit-background-size: 28px 28px;
   background-size: 28px 28px;
 }
-
 .varicon.varicon-spin:before {
   -webkit-animation-name: spin;
   -moz-animation-name: spin;
   -ms-animation-name: spin;
-  -o-animation-name: spin;
   animation-name: spin;
   -webkit-animation-duration: 4000ms;
   -moz-animation-duration: 4000ms;
   -ms-animation-duration: 4000ms;
-  -o-animation-duration: 4000ms;
   animation-duration: 4000ms;
   -webkit-animation-timing-function: linear;
   -moz-animation-timing-function: linear;
   -ms-animation-timing-function: linear;
-  -o-animation-timing-function: linear;
   animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
   -ms-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-
-@-webkit-keyframes spin {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-@-o-keyframes spin {
-  from {
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes spin {
   from {
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
