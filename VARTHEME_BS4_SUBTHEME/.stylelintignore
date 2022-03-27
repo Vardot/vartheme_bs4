@@ -21,3 +21,12 @@ config/**/*.yml
 *.ttf
 *.woff
 *.woff2
+*.make
+*.md
+*.po
+*.xml
+*.js
+*.install
+*.profile
+*.lock
+package

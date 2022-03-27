@@ -36,9 +36,11 @@ const paths = {
 function compile () {
   var sassOptions = {
     outputStyle: 'expanded',
+    indented: true,
     indentType: 'space',
     indentWidth: 2,
-    linefeed: 'lf'
+    linefeed: 'lf',
+    sourceMap: false
   };
 
   // Filter mixins and variables not to be compiled to CSS.

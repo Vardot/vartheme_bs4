@@ -5,8 +5,8 @@
 
 (function ($, _, Drupal) {
   Drupal.behaviors.VARTHEME_BS4_SUBTHEME = {
-    attach: function () {
+    attach() {
       // VARTHEME_BS4_SUBTHEME JavaScript behaviors goes here.
-    }
+    },
   };
 })(window.jQuery, window._, window.Drupal);
