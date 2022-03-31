@@ -31,7 +31,7 @@ echo '--------------------------------------------';
 echo '  Install npm and nodejs';
 echo '--------------------------------------------';
 echo '                                            ';
-curl -sL https://deb.nodesource.com/setup_17.x | sudo -E bash - ;
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash - ;
 sudo apt update ;
 sudo apt install -y nodejs ;
 sudo apt install -y build-essential ;

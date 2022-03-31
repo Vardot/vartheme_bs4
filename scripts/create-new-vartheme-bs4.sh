@@ -99,7 +99,7 @@ fi
 if ! [ -x "$(command -v node)" ]; then
   echo 'node does not exist. Please install it.';
   echo ' -------------------------------- ';
-  echo '  curl -sL https://deb.nodesource.com/setup_17.x | sudo -E bash - ';
+  echo '  curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash - ';
   echo '  sudo apt update ';
   echo '  sudo apt install nodejs ';
   echo '  sudo apt install build-essential ';
