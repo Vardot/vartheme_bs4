@@ -65,7 +65,7 @@
 
           {# Content #}
           {% block content %}
-            <a id="main-content"></a>
+            <a href="#main-content" id="main-content"></a>
             {{ page.content }}
           {% endblock %}
         </div>
