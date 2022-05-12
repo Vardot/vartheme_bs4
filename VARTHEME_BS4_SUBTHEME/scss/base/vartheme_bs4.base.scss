@@ -1,4 +1,4 @@
-// Varbase BS4 base from bootstrap library 
+// Varbase BS4 base from bootstrap library
 // -----------------------------------------------------------------------------
 @import "../../node_modules/bootstrap/scss/functions";  // Bootstrap functions.
 @import "../../node_modules/bootstrap/scss/mixins";     // Bootstrap mixins.
@@ -578,7 +578,7 @@ body.user-logged-in {
 
   .btn {
     .visible-admin,
-    .visible-logged-in, 
+    .visible-logged-in,
     .hidden-anonymous {
       display: inline-block !important;
     }
@@ -630,7 +630,13 @@ pre {
     flex-shrink: 0;
   }
 }
- 
+
 select::-ms-expand {
   display: none;
+}
+
+.dialog-off-canvas-main-canvas {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }

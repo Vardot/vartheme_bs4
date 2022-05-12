@@ -1,9 +1,9 @@
 /* Insert your VARTHEME_BS4_SUBTHEME footer custom SASS styling. */
 .footer-wrapper {
+  margin-top: auto;
   background-color: #f2f2f2;
 }
 .footer-wrapper .footer {
-  margin-top: 5rem;
   padding-top: 0;
   padding-bottom: 0;
   border: 0;
