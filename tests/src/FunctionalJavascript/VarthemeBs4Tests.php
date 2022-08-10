@@ -47,7 +47,7 @@ class VarthemeBs4Tests extends WebDriverTestBase {
   /**
    * {@inheritdoc}
    */
-  protected function setUp() {
+  protected function setUp(): void {
     parent::setUp();
 
     ConfigurableLanguage::createFromLangcode('ar')->save();
