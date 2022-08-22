@@ -1,11 +1,9 @@
 .shortcut-wrapper {
-  margin: 2.2em 0 1.1em 0;
-  /* Same as usual .page-title margin. */
+  margin: 2.2em 0 1.1em 0; /* Same as usual .page-title margin. */
 }
 
 .shortcut-wrapper .page-title {
-  float: left;
-  /* LTR */
+  float: left; /* LTR */
   margin: 0;
 }
 
@@ -14,8 +12,7 @@
 }
 
 .shortcut-action {
-  margin-left: 0.5em;
-  /* LTR */
+  margin-left: 0.5em; /* LTR */
   padding-top: 0.35em;
   border-bottom: none;
 }

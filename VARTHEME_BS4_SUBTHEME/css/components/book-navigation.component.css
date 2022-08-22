@@ -18,9 +18,8 @@
 }
 
 .book-pager__item--previous {
-  /* LTR */
   width: 45%;
-  text-align: left;
+  text-align: left; /* LTR */
 }
 
 [dir=rtl] .book-pager__item--previous {
@@ -34,11 +33,9 @@
 }
 
 .book-pager__item--next {
-  float: right;
-  /* LTR */
+  float: right; /* LTR */
   width: 45%;
-  /* LTR */
-  text-align: right;
+  text-align: right; /* LTR */
 }
 
 [dir=rtl] .book-pager__item--next {

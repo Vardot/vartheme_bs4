@@ -28,8 +28,7 @@
 }
 
 .js .dropbutton-multiple .dropbutton-widget .dropbutton-action a {
-  margin-right: 0;
-  /* LTR */
+  margin-right: 0; /* LTR */
 }
 
 [dir=rtl].js .dropbutton-multiple .dropbutton-widget .dropbutton-action a {

@@ -9,27 +9,23 @@
     position: relative;
     transition: all 0.25s ease-out;
   }
-
   .row-offcanvas-right .sidebar-offcanvas {
     right: -41.6%;
   }
   .row-offcanvas-right.active {
     right: 41.6%;
   }
-
   .row-offcanvas-left .sidebar-offcanvas {
     left: -41.6%;
   }
   .row-offcanvas-left.active {
     left: 41.6%;
   }
-
   .sidebar-offcanvas {
     position: absolute;
     top: 0;
     width: 41.6%;
   }
-
   #sidebar_first {
     padding-top: 0;
   }

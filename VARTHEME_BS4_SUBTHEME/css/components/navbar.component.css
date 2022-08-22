@@ -13,7 +13,6 @@
     right: 0;
     left: auto;
   }
-
   [dir=rtl] .navbar-nav.ml-sm-auto .dropdown-menu {
     right: auto;
     left: 0;
@@ -24,7 +23,6 @@
     right: 0;
     left: auto;
   }
-
   [dir=rtl] .navbar-nav.ml-md-auto .dropdown-menu {
     right: auto;
     left: 0;
@@ -35,7 +33,6 @@
     right: 0;
     left: auto;
   }
-
   [dir=rtl] .navbar-nav.ml-lg-auto .dropdown-menu {
     right: auto;
     left: 0;
@@ -46,7 +43,6 @@
     right: 0;
     left: auto;
   }
-
   [dir=rtl] .navbar-nav.ml-xl-auto .dropdown-menu {
     right: auto;
     left: 0;
