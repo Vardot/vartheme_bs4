@@ -39,7 +39,7 @@
 // Node metadata styles.
 .node__meta {
   @include font-size($font-size-sm);
-  @include margin-bottom(-0.3125);
+  @include margin-bottom(-0.3125rem);
 
   .field--name-field-user-picture {
     img {

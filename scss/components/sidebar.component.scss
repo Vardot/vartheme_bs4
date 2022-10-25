@@ -34,6 +34,6 @@
     border-bottom: $border-width solid $border-color;
   }
   nav ul.nav {
-    @include margin(0 -($spacer));
+    @include margin(0 (-($spacer)));
   }
 }

@@ -25,7 +25,7 @@
 }
 
 .node__meta {
-  margin-bottom: -0.3125;
+  margin-bottom: -0.3125rem;
   font-size: 0.875rem;
 }
 .node__meta .field--name-field-user-picture img {
