@@ -13,6 +13,7 @@
   flex-flow: column;
   justify-content: center;
 }
+
 @media screen and (min-width: 992px) {
   .footer-wrapper .footer section.region-footer {
     flex-flow: row;

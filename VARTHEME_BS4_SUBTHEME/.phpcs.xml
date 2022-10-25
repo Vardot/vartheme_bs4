@@ -8,6 +8,9 @@
   <exclude-pattern>*/node_modules/*</exclude-pattern>
   <exclude-pattern>*/bower_components/*</exclude-pattern>
   <exclude-pattern>*/VARTHEME_BS4_SUBTHEME.theme</exclude-pattern>
+  <exclude-pattern>./js/bootstrap/bootstrap.min.js</exclude-pattern>
+  <exclude-pattern>./js/popper/popper.min.js</exclude-pattern>
+
   <!--Exclude minimized css.-->
   <exclude-pattern>*/*.min.css</exclude-pattern>
 

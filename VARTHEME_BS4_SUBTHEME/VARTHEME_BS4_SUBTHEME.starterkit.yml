@@ -35,7 +35,7 @@ libraries-override:
   vartheme_bs4/global-styles: false
   vartheme_bs4/global-scripts: false
   # Heroslider: Uncomment the following to disable the vartheme_bs4/heroslider
-  #             Libraray if it was enabled in vartheme_bs4 heroslider styling.
+  #             Library if it was enabled in vartheme_bs4 heroslider styling.
   # vartheme_bs4/heroslider: false
 
   vartheme_bs4/breadcrumb: VARTHEME_BS4_SUBTHEME/breadcrumb
@@ -55,7 +55,7 @@ libraries-override:
   vartheme_bs4/fontawesome: VARTHEME_BS4_SUBTHEME/fontawesome
   vartheme_bs4/moderation-state: VARTHEME_BS4_SUBTHEME/moderation-state
 
-  # Varbase module compnents overrides in VARTHEME_BS4_SUBTHEME.
+  # Varbase module components overrides in VARTHEME_BS4_SUBTHEME.
   varbase_bootstrap_paragraphs/vbp-colors: VARTHEME_BS4_SUBTHEME/vbp-colors
   betterlogin/betterlogin_css: VARTHEME_BS4_SUBTHEME/betterlogin
   varbase_heroslider_media/general-styling: VARTHEME_BS4_SUBTHEME/heroslider

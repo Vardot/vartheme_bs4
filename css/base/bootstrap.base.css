@@ -1,5 +1,4 @@
-@charset "UTF-8";
-:root {
+@charset "UTF-8"; :root {
   --blue: #007bff;
   --breakpoint-lg: 992px;
   --breakpoint-md: 768px;

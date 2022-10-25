@@ -28,11 +28,15 @@
     };
     var data = this.getData();
     for (name in data) {
-      if (!data.hasOwnProperty(name)) continue;
+      if (!data.hasOwnProperty(name)) { continue;
+      }
       value = data[name];
-      if (_.isFunction(value)) value = value();
-      if (_.isObject(value)) value = _.values(value);
-      if (_.isArray(value)) value = value.join(' ');
+      if (_.isFunction(value)) { value = value();
+      }
+      if (_.isObject(value)) { value = _.values(value);
+      }
+      if (_.isArray(value)) { value = value.join(' ');
+      }
       output += ' ' + checkPlain(name) + '="' + checkPlain(value) + '"';
     }
     return output;
@@ -49,11 +53,15 @@
     var name, value;
     var data = this.getData();
     for (name in data) {
-      if (!data.hasOwnProperty(name)) continue;
+      if (!data.hasOwnProperty(name)) { continue;
+      }
       value = data[name];
-      if (_.isFunction(value)) value = value();
-      if (_.isObject(value)) value = _.values(value);
-      if (_.isArray(value)) value = value.join(' ');
+      if (_.isFunction(value)) { value = value();
+      }
+      if (_.isObject(value)) { value = _.values(value);
+      }
+      if (_.isArray(value)) { value = value.join(' ');
+      }
       object[name] = value;
     }
     return object;
@@ -82,10 +90,10 @@
    *   An attribute name to check.
    *
    * @return {boolean}
-   *   TRUE or FALSE
+   *   true or false
    */
   Attributes.prototype.exists = function (name) {
-    return this.data[name] !== void(0) && this.data[name] !== null;
+    return this.data[name] !== void(0) && this.data[name] !== NULL;
   };
 
   /**
@@ -100,7 +108,8 @@
    *   A specific attribute value, passed by reference.
    */
   Attributes.prototype.get = function (name, defaultValue) {
-    if (!this.exists(name)) this.data[name] = defaultValue;
+    if (!this.exists(name)) { this.data[name] = defaultValue;
+    }
     return this.data[name];
   };
 
@@ -130,7 +139,7 @@
    *   The class(es) to search for.
    *
    * @return {boolean}
-   *   TRUE or FALSE
+   *   true or false
    */
   Attributes.prototype.hasClass = function (className) {
     className = this.sanitizeClasses(Array.prototype.slice.call(arguments));
@@ -220,7 +229,8 @@
    * @chainable
    */
   Attributes.prototype.remove = function (name) {
-    if (this.exists(name)) delete this.data[name];
+    if (this.exists(name)) { delete this.data[name];
+    }
     return this;
   };
 
@@ -348,7 +358,7 @@
       identifier = identifier.replace('__', '#DOUBLE_UNDERSCORE#');
     }
 
-    identifier = identifier.replace(Object.keys(filter), Object.keys(filter).map(function(key) { return filter[key]; }));
+    identifier = identifier.replace(Object.keys(filter), Object.keys(filter).map(function (key) { return filter[key]; }));
 
     if (filter['__'] === void 0) {
       identifier = identifier.replace('#DOUBLE_UNDERSCORE#', '__');

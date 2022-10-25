@@ -31,6 +31,7 @@
     margin-left: 0;
   }
 }
+
 @media (max-width: 47.9em) {
   .navbar-toggleable-sm .navbar-nav .nav-item + .nav-item,
   .navbar-toggleable-xs.collapse.in .navbar-nav .nav-item {

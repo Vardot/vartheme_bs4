@@ -24,6 +24,7 @@
   -ms-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
+
 @keyframes spin {
   from {
     transform: rotate(0deg);

@@ -74,6 +74,7 @@
   border-radius: 0.3rem;
   background: white;
 }
+
 @media (min-width: 1200px) {
   .page-user-login main .region-content,
   .page-user-password main .region-content {

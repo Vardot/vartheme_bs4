@@ -89,7 +89,6 @@
     }
   };
 
-
   /**
    * Handler for the form redirection completion.
    *
@@ -166,7 +165,7 @@
 
     // Remove any response-specific settings so they don't get used on the next
     // call by mistake.
-    this.settings = null;
+    this.settings = NULL;
   };
 
 })(jQuery, this, Drupal, drupalSettings);

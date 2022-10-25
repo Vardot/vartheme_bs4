@@ -64,7 +64,7 @@ bootstrap-styles-rtl:
 # Bootstrap scripts library.
 bootstrap-scripts:
   js:
-    #    js/popper/popper.min.js: {} # use core/popperjs libraray in Drupal ^8.8.0 .
+    #    js/popper/popper.min.js: {} # use core/popperjs library in Drupal ^8.8.0 .
     js/bootstrap/bootstrap.min.js: {}
   #
   #   Plugins can be included individually (using Bootstrap’s individual
@@ -79,7 +79,7 @@ bootstrap-scripts:
   #     Modals for displaying, positioning, and scroll behavior
   #     Navbar for extending our Collapse plugin to implement responsive behavior
   #     Tooltips and popovers for displaying and positioning (also requires Popper.js)
-  #     Scrollspy for scroll behavior and navigation updates
+  #     Scroll spy for scroll behavior and navigation updates
   #
   #    js/bootstrap/alert.js: {}
   #    js/bootstrap/button.js: {}

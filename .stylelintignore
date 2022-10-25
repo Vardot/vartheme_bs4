@@ -39,3 +39,4 @@ config/**/*.yml
 *.profile
 *.lock
 package
+*.twig

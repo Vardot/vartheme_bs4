@@ -28,6 +28,7 @@
 [dir=rtl] .comment__meta {
   padding: 0 0 0 calc(1.3125rem + 0.75vw);
 }
+
 @media (min-width: 1200px) {
   [dir=rtl] .comment__meta {
     padding: 0 0 0 1.875rem;
@@ -128,6 +129,7 @@
   margin-left: calc(1.375rem + 1.5vw);
   /* LTR */
 }
+
 @media (min-width: 1200px) {
   .indented {
     margin-left: 2.5rem;
@@ -138,6 +140,7 @@
   margin-right: calc(1.375rem + 1.5vw);
   margin-left: 0;
 }
+
 @media (min-width: 1200px) {
   [dir=rtl] .indented {
     margin-right: 2.5rem;

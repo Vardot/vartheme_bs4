@@ -34,7 +34,7 @@ libraries-override:
   # Barrio global styling theme.
   bootstrap_barrio/global-styling: false
 
-  # Barrio components overrieds.
+  # Barrio components overrides.
   bootstrap_barrio/verticaltabs: vartheme_bs4/verticaltabs
   bootstrap_barrio/tabs: vartheme_bs4/tabs
   bootstrap_barrio/sidebar-collapse: vartheme_bs4/sidebar-collapse
@@ -53,7 +53,7 @@ libraries-override:
   # Content Moderation overrides.
   content_moderation/content_moderation: vartheme_bs4/moderation-state
 
-  # Varbase module compnents overrides in Vartheme BS4.
+  # Varbase module components overrides in Vartheme BS4.
   varbase_bootstrap_paragraphs/vbp-colors: vartheme_bs4/vbp-colors
   betterlogin/betterlogin_css: vartheme_bs4/betterlogin
 

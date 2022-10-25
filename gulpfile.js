@@ -33,7 +33,7 @@ const paths = {
 };
 
 // Compile sass into CSS & auto-inject into browsers
-function compile () {
+function compile() {
   var sassOptions = {
     outputStyle: 'expanded',
     indented: true,

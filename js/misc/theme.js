@@ -7,7 +7,8 @@
   /**
    * Fallback for theming an icon if the Icon API module is not installed.
    */
-  if (!Drupal.icon) Drupal.icon = { bundles: {} };
+  if (!Drupal.icon) { Drupal.icon = { bundles: {} };
+  };
   if (!Drupal.theme.icon || Drupal.theme.prototype.icon) {
     $.extend(Drupal.theme, /** @lends Drupal.theme */ {
       /**
@@ -23,7 +24,8 @@
        * @returns {string}
        */
       icon: function (bundle, icon, attributes) {
-        if (!Drupal.icon.bundles[bundle]) return '';
+        if (!Drupal.icon.bundles[bundle]) { return '';
+        }
         attributes = Attributes.create(attributes).addClass('icon').set('aria-hidden', 'true');
         icon = Drupal.icon.bundles[bundle](icon, attributes);
         return '<span' + attributes + '></span>';
