@@ -211,6 +211,9 @@
           position: relative;
           width: 100vw;
           height: 130vh;
+          @media screen and (min-width: map-get($grid-breakpoints, "xl")) {
+            height: auto;
+          }
           top: 50%;
           left: 50%;
           transform: translateY(-50%) translateX(-50%);
@@ -266,6 +269,9 @@
             position: relative;
             width: 240vw;
             height: 140vh;
+            @media screen and (min-width: map-get($grid-breakpoints, "xl")) {
+              height: auto;
+            }
             top: 50%;
             transform: translateY(-50%) translateX(-50%);
             padding-bottom: 0 !important;
