@@ -93,7 +93,7 @@
    *   true or false
    */
   Attributes.prototype.exists = function (name) {
-    return this.data[name] !== void(0) && this.data[name] !== NULL;
+    return this.data[name] !== void(0) && this.data[name] !== null;
   };
 
   /**

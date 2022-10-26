@@ -165,7 +165,7 @@
 
     // Remove any response-specific settings so they don't get used on the next
     // call by mistake.
-    this.settings = NULL;
+    this.settings = null;
   };
 
 })(jQuery, this, Drupal, drupalSettings);

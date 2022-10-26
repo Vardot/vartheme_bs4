@@ -42,7 +42,7 @@
     "browser-sync": "~2",
     "chalk": "^4.1.0",
     "chokidar": "^3.3.1",
-    "chromedriver": "^98.0.1",
+    "chromedriver": "^107",
     "cross-env": "^7.0.2",
     "del": "~3",
     "dotenv-safe": "^8.2.0",
