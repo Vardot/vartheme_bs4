@@ -493,7 +493,7 @@ hr {
 
 small,
 .small {
-  font-size: 80%;
+  font-size: 0.875em;
   font-weight: 400;
 }
 
@@ -533,7 +533,7 @@ mark,
 .blockquote-footer {
   display: block;
   color: #6c757d;
-  font-size: 80%;
+  font-size: 0.875em;
 }
 .blockquote-footer::before {
   content: "— ";
@@ -2110,7 +2110,7 @@ textarea.form-control {
   width: 100%;
   margin-top: 0.25rem;
   color: #28a745;
-  font-size: 80%;
+  font-size: 0.875em;
 }
 
 .valid-tooltip {
@@ -2227,7 +2227,7 @@ textarea.form-control.is-valid {
   width: 100%;
   margin-top: 0.25rem;
   color: #dc3545;
-  font-size: 80%;
+  font-size: 0.875em;
 }
 
 .invalid-tooltip {

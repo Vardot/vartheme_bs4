@@ -1,5 +1,5 @@
 //
-// VARTHEME_BS4_SUBTHEME Variables ovarrides.
+// VARTHEME_BS4_SUBTHEME Variables overrides.
 // --------------------------------------------------
 
 
@@ -9,8 +9,8 @@
 // All variables which are used in the default bootstrap library.
 // You can change them in VARTHEME_BS4_SUBTHEME for the bootstrap-variables.sass
 //
-@import "bootstrap-variables"; // Bootstrap custom variables ovarrides in VARTHEME_BS4_SUBTHEME.
-
+@import "bootstrap-variables"; // Bootstrap custom variables overrides in VARTHEME_BS4_SUBTHEME.
+@import "../node_modules/bootstrap/scss/variables"; // Bootstrap standard variables.
 
 // #############################################################################
 // Barrio custom variables.
@@ -18,7 +18,7 @@
 // All needed custom variables for Bootstrap Barrio theme.
 // You can change them in VARTHEME_BS4_SUBTHEME in the bootstrap-variables.sass
 //
-@import "barrio-variables"; // Barrio custom variables ovarrides in VARTHEME_BS4_SUBTHEME.
+@import "barrio-variables"; // Barrio custom variables overrides in VARTHEME_BS4_SUBTHEME.
 
 
 // #############################################################################
@@ -27,7 +27,7 @@
 // All needed custom Vartheme bs4 variables
 // You can change them in VARTHEME_BS4_SUBTHEME in the vartheme_bs4-variables.sass
 //
-@import "vartheme_bs4-variables"; // Vartheme BS4 custom variables ovarrides in VARTHEME_BS4_SUBTHEME.
+@import "vartheme_bs4-variables"; // Vartheme BS4 custom variables overrides in VARTHEME_BS4_SUBTHEME.
 
 
 // #############################################################################
