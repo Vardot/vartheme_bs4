@@ -18,6 +18,7 @@
     left: 0;
   }
 }
+
 @media (min-width: 768px) {
   .navbar-nav.ml-md-auto .dropdown-menu {
     right: 0;
@@ -28,6 +29,7 @@
     left: 0;
   }
 }
+
 @media (min-width: 992px) {
   .navbar-nav.ml-lg-auto .dropdown-menu {
     right: 0;
@@ -38,6 +40,7 @@
     left: 0;
   }
 }
+
 @media (min-width: 1200px) {
   .navbar-nav.ml-xl-auto .dropdown-menu {
     right: 0;

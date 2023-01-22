@@ -1,6 +1,7 @@
 #auth-box {
   padding: calc(1.3125rem + 0.75vw) 0 0;
 }
+
 @media (min-width: 1200px) {
   #auth-box {
     padding: 1.875rem 0 0;
@@ -11,6 +12,7 @@
   padding: 0 0 calc(1.3rem + 0.6vw);
   text-align: center;
 }
+
 @media (min-width: 1200px) {
   #auth-box #the-logo {
     padding: 0 0 1.75rem;
@@ -21,6 +23,7 @@
   padding: 0 0 0.9375rem;
   font-size: calc(1.325rem + 0.9vw);
 }
+
 @media (min-width: 1200px) {
   #auth-box .title {
     font-size: 2rem;
@@ -50,6 +53,7 @@
   text-align: center;
   background: #eee;
 }
+
 @media (min-width: 1200px) {
   #auth-box .block-title {
     margin: 2rem 0;
@@ -63,6 +67,7 @@
   background: #fff;
   font-size: 1rem;
 }
+
 @media (min-width: 1200px) {
   #auth-box .block-title span {
     top: -1.5rem;
