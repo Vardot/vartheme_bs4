@@ -31,7 +31,7 @@
     "oomphinc/composer-installers-extender": "~2.0",
     "cweagans/composer-patches": "~1.0",
     "drupal/core": "~9.0 || ~10.0",
-    "drupal/bootstrap_barrio": "~5.1.0"
+    "drupal/bootstrap_barrio": "5.1.8"
   },
   "extra": {
     "installer-types": [
@@ -39,6 +39,12 @@
       "npm-asset"
     ],
     "enable-patching": true,
-    "composer-exit-on-patch-failure": true
+    "composer-exit-on-patch-failure": true,
+    "patches": {
+      "drupal/bootstrap_barrio": {
+        "Issue #3343090: Fix Additional uncaught exception thrown while handling exception for The 'core_version_requirement' constraint (^9.4 || ^10) requires the 'core' key not be set":
+        "https://www.drupal.org/files/issues/2023-02-20/3343090-3.patch"
+      }
+    }
   }
 }
