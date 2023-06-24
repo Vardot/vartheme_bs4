@@ -35,7 +35,6 @@
     height: 100%;
   }
 }
-
 @media (min-width: 768px) {
   .equal-height-md .row {
     display: flex;
@@ -55,7 +54,6 @@
     height: 100%;
   }
 }
-
 @media (min-width: 992px) {
   .equal-height-lg .row {
     display: flex;
@@ -75,7 +73,6 @@
     height: 100%;
   }
 }
-
 @media (min-width: 1200px) {
   .equal-height-xl .row {
     display: flex;
