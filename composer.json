@@ -30,7 +30,7 @@
     "composer/installers": "~2.0",
     "oomphinc/composer-installers-extender": "~2.0",
     "cweagans/composer-patches": "~1.0",
-    "drupal/core": "~9.5.0 || ~10.1.0",
+    "drupal/core": "~9.5.0 || ~10",
     "drupal/bootstrap_barrio": "~5.1.0"
   },
   "extra": {
