@@ -184,6 +184,10 @@ affix:
   css:
     component:
       css/components/affix.component.css: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
 
 alerts:
   css:

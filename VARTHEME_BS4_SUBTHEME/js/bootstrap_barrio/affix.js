@@ -4,7 +4,7 @@
  * https://www.codeply.com/users/skelly
  *
  */
- (function ($, Drupal) {
+ (function (Drupal, $, once) {
 
   'use strict';
 
@@ -26,9 +26,8 @@
 
       };
 
-      $('[data-toggle="affix"]').once().each(function () {
-        var ele = $(this),
-            wrapper = $('<div></div>');
+      once('VARTHEME_BS4_SUBTHEME_affix', '[data-toggle="affix"]', context).forEach(function () {
+        var ele = $(this), wrapper = $('<div></div>');
 
         ele.before(wrapper);
         $(window).on('scroll resize', function () {
@@ -40,4 +39,4 @@
       });
     }
   }
-})(jQuery, Drupal);
+})(Drupal, jQuery, once);
