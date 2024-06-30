@@ -15,16 +15,11 @@
 #edit-moderation-state-wrapper .entity-moderation-form,
 #content-moderation-entity-moderation-form .entity-moderation-form {
   list-style: none;
-  -webkit-margin-after: 0;
-  -webkit-margin-before: 0;
   margin-block-end: 0;
   margin-block-start: 0;
-  -webkit-margin-end: 0;
   margin-inline-end: 0;
   margin-inline-start: 0;
-  -webkit-margin-start: 0;
   padding-inline-start: 0;
-  -webkit-padding-start: 0;
 }
 #edit-moderation-state-wrapper .entity-moderation-form__item,
 #content-moderation-entity-moderation-form .entity-moderation-form__item {

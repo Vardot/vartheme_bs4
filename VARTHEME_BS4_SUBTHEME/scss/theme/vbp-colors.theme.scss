@@ -90,6 +90,6 @@ $vbp_foreground_color_05: #ffffff; // White
 @include vbp_colors;
 
 // Add support for drupal off canvas editor and the layout builder settings try.
-#drupal-off-canvas {
+#drupal-off-canvas-wrapper {
   @include vbp_colors;
 }
