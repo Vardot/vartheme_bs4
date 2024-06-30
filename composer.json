@@ -23,10 +23,8 @@
     }
   },
   "require": {
-    "drupal/core": "~10",
-    "vardot/varbase-patches": "~9",
-    "vardot/entity-definition-update-manager": "~1",
-    "vardot/module-installer-factory": "~1",
+    "drupal/core": "~10.3.0 || ~11.0.0",
+    "vardot/varbase-patches": "~9 || ~11",
     "drupal/bootstrap_barrio": "~5.1.0"
   }
 }
