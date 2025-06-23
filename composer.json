@@ -23,7 +23,7 @@
     }
   },
   "require": {
-    "drupal/core": "~10.4.0 || ~11.1.0",
+    "drupal/core": "~10.5.0 || ~11.2.0",
     "vardot/varbase-patches": "~9",
     "drupal/bootstrap_barrio": "~5.1.0"
   }
