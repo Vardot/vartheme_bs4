@@ -4,7 +4,6 @@
   "type": "drupal-theme",
   "homepage": "https://www.drupal.org/project/vartheme_bs4",
   "license": "GPL-2.0-or-later",
-  "minimum-stability": "dev",
   "authors": [
     {
       "name": "Vardot",
@@ -15,12 +14,6 @@
   "support": {
     "issues": "http://drupal.org/project/issues/vartheme_bs4",
     "source": "http://cgit.drupalcode.org/vartheme_bs4"
-  },
-  "repositories": {
-    "drupal": {
-      "type": "composer",
-      "url": "https://packages.drupal.org/8"
-    }
   },
   "require": {
     "drupal/core": "~10.5.0 || ~11.2.0",
