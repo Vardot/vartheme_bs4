@@ -16,7 +16,7 @@
     "source": "http://cgit.drupalcode.org/vartheme_bs4"
   },
   "require": {
-    "drupal/core": "~10.5.0 || ~11.2.0",
+    "drupal/core": "~10.6.0 || ~11.3.0",
     "vardot/varbase-patches": "~9",
     "drupal/bootstrap_barrio": "~5.1.0"
   }
