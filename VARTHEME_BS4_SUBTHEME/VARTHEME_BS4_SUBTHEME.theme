@@ -7,6 +7,7 @@
 
 use Drupal\node\NodeInterface;
 use Drupal\node\Entity\Node;
+use Drupal\Core\Extension\ThemeSettingsProvider;
 
 /**
  * Implements hook_theme_registry_alter().
@@ -51,8 +52,8 @@ function VARTHEME_BS4_SUBTHEME_preprocess_html(&$variables) {
   $variables['VARTHEME_BS4_SUBTHEME_path'] = \Drupal::request()->getBaseUrl() . '/' . \Drupal::service('extension.list.theme')->getPath('VARTHEME_BS4_SUBTHEME');
 
   // Add information about the number of sidebars.
-  if (theme_get_setting('bootstrap_barrio_navbar_position')) {
-    $variables['navbar_position'] = theme_get_setting('bootstrap_barrio_navbar_position');
+  if (\Drupal::service(ThemeSettingsProvider::class)->getSetting('bootstrap_barrio_navbar_position')) {
+    $variables['navbar_position'] = \Drupal::service(ThemeSettingsProvider::class)->getSetting('bootstrap_barrio_navbar_position');
   }
 }
 

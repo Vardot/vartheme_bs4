@@ -1,23 +1,22 @@
 {
-  "name": "drupal/vartheme_bs4",
-  "description": "A SASS base theme for Varbase standard websites. Based on Barrio (Bootstrap 4) theme.",
-  "type": "drupal-theme",
-  "homepage": "https://www.drupal.org/project/vartheme_bs4",
-  "license": "GPL-2.0-or-later",
-  "authors": [
-    {
-      "name": "Vardot",
-      "homepage": "https://www.drupal.org/vardot",
-      "role": "Maintainer"
+    "name": "drupal/vartheme_bs4",
+    "description": "A SASS base theme for Varbase standard websites. Based on Barrio (Bootstrap 4) theme.",
+    "type": "drupal-theme",
+    "homepage": "https://www.drupal.org/project/vartheme_bs4",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Vardot",
+            "homepage": "https://www.drupal.org/vardot",
+            "role": "Maintainer"
+        }
+    ],
+    "support": {
+        "issues": "http://drupal.org/project/issues/vartheme_bs4",
+        "source": "http://cgit.drupalcode.org/vartheme_bs4"
+    },
+    "require": {
+        "drupal/core": "~11.3.0",
+        "drupal/bootstrap_barrio": "~5.1.0"
     }
-  ],
-  "support": {
-    "issues": "http://drupal.org/project/issues/vartheme_bs4",
-    "source": "http://cgit.drupalcode.org/vartheme_bs4"
-  },
-  "require": {
-    "drupal/core": "~10.6.0 || ~11.3.0",
-    "vardot/varbase-patches": "~9",
-    "drupal/bootstrap_barrio": "~5.1.0"
-  }
 }

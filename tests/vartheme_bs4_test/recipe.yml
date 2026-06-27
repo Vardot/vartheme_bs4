@@ -1,0 +1,10 @@
+name: 'Vartheme BS4 Test'
+description: 'Provisions a Standard site with Vartheme (Bootstrap 4 - SASS) as the default theme for the automated tests.'
+type: 'Testing'
+install:
+  - vartheme_bs4
+config:
+  actions:
+    system.theme:
+      simpleConfigUpdate:
+        default: vartheme_bs4
