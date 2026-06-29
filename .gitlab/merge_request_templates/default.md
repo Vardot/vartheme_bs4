@@ -1,4 +1,4 @@
-### Checkpoints
+### Remaining tasks
 - [x] File an issue about this project
 - [x] Addition/Change/Update/Fix to this project
 - [ ] Testing to ensure no regression
@@ -7,9 +7,9 @@
 - [ ] User Guide Documentation support on feature change/addition
 - [ ] UX/UI designer responsibilities
 - [ ] Accessibility and Readability
-- [ ] Code review by maintainers
+- [ ] Code review from 1 Varbase core team member
 - [ ] Full testing and approval
 - [ ] Credit contributors
 - [ ] Review with the product owner
-- [ ] Update Release Notes
+- [ ] Update Release Notes and Update Helper on new feature change/addition
 - [ ] Release

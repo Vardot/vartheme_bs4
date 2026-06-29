@@ -19,8 +19,14 @@
 - [ ] Full testing and approval
 - [ ] Credit contributors
 - [ ] Review with the product owner
-- [ ] Update Release Notes
+- [ ] Update Release Notes and Update Helper on new feature change/addition
 - [ ] Release
+
+### [Varbase update type](https://docs.varbase.vardot.com/developers/updating-varbase/handling-configuration-updates#change-or-update-types)
+- [x] No Update
+- [ ] Optional Update
+- [ ] Forced Update
+- [ ] Forced Update if Unchanged
 
 ### API changes
 * N/A

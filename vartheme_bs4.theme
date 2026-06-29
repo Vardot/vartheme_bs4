@@ -3,77 +3,131 @@
 /**
  * @file
  * Functions to support Vartheme BS4 theme.
- *
- * Hook logic lives in \Drupal\vartheme_bs4\Hook\VarthemeBs4Hooks
- * (Drupal 11 OOP hooks); the procedural functions below are kept as
- * #[LegacyHook] shims for backward compatibility.
  */
 
-use Drupal\Core\Hook\Attribute\LegacyHook;
-use Drupal\vartheme_bs4\Hook\VarthemeBs4Hooks;
+use Drupal\node\NodeInterface;
+use Drupal\node\Entity\Node;
 
 /**
  * Implements hook_theme_registry_alter().
  */
-#[LegacyHook]
 function vartheme_bs4_theme_registry_alter(&$theme_registry) {
-  \Drupal::classResolver(VarthemeBs4Hooks::class)->themeRegistryAlter($theme_registry);
+  // Varbase Bootstrap 4 path.
+  $vartheme_bs4_path = Drupal::service('theme_handler')->getTheme('vartheme_bs4')->getPath();
+  $theme_registry['entity_embed_container']['path'] = $vartheme_bs4_path . '/templates/entity-embed';
+
+  $pages = [
+    'page__user__login' => 'page--user--login',
+    'page__user__register' => 'page--user--register',
+    'page__user__password' => 'page--user--password',
+    'page__user__reset' => 'page--user--reset',
+  ];
+
+  foreach ($pages as $key => $template) {
+    $theme_registry[$key]['path'] = $vartheme_bs4_path . '/templates/betterlogin';
+  }
 }
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
-#[LegacyHook]
 function vartheme_bs4_theme_suggestions_page_alter(array &$suggestions, array $variables) {
-  \Drupal::classResolver(VarthemeBs4Hooks::class)->themeSuggestionsPageAlter($suggestions, $variables);
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    if (is_numeric($node)) {
+      $node = Node::load($node);
+    }
+    if ($node instanceof NodeInterface) {
+      array_splice($suggestions, 1, 0, 'page__' . $node->bundle());
+    }
+  }
 }
 
 /**
  * Implements hook_preprocess_page_title().
  */
-#[LegacyHook]
 function vartheme_bs4_preprocess_page_title(&$variables) {
-  \Drupal::classResolver(VarthemeBs4Hooks::class)->preprocessPageTitle($variables);
+
+  // Hide page title for the front page and let screen readers only see it.
+  if (\Drupal::service('path.matcher')->isFrontPage()) {
+    $variables['title_attributes']['class'][] = 'page-title';
+    $variables['title_attributes']['class'][] = 'sr-only';
+  }
 }
 
 /**
  * Implements hook_preprocess_html().
  */
-#[LegacyHook]
 function vartheme_bs4_preprocess_html(&$variables) {
-  \Drupal::classResolver(VarthemeBs4Hooks::class)->preprocessHtml($variables);
+
+  // The path for Vartheme BS4 theme in variables.
+  $variables['vartheme_bs4_path'] = \Drupal::request()->getBaseUrl() . '/' . \Drupal::service('extension.list.theme')->getPath('vartheme_bs4');
+
+  // Add information about the number of sidebars.
+  if (theme_get_setting('bootstrap_barrio_navbar_position')) {
+    $variables['navbar_position'] = theme_get_setting('bootstrap_barrio_navbar_position');
+  }
 }
 
 /**
  * Implements hook_preprocess_page().
  */
-#[LegacyHook]
 function vartheme_bs4_preprocess_page(&$variables) {
-  \Drupal::classResolver(VarthemeBs4Hooks::class)->preprocessPage($variables);
+  // Add the pring logo.
+  $variables['logo_print'] = \Drupal::request()->getBaseUrl() . '/' . \Drupal::service('extension.list.theme')->getPath('vartheme_bs4') . '/logo-print.png';
+
+  // Add the site name and slogan.
+  $variables['site_name'] = \Drupal::config('system.site')->get('name');
+  $variables['site_slogan'] = \Drupal::config('system.site')->get('slogan');
 }
 
 /**
  * Prepares variables for views grid templates.
  *
  * Default template: views-bootstrap-grid.html.twig.
+ *
+ * @param array $vars
+ *   An associative array containing:
+ *   - view: A ViewExecutable object.
+ *   - rows: The raw row data.
  */
-#[LegacyHook]
 function vartheme_bs4_preprocess_views_bootstrap_grid(array &$vars) {
-  \Drupal::classResolver(VarthemeBs4Hooks::class)->preprocessViewsBootstrapGrid($vars);
+
+  if (isset($vars['options']) && isset($vars['options']["col_xs"])) {
+    $vars['options']["col_xs"] = str_replace("xs-", "", $vars['options']["col_xs"]);
+  }
+
 }
 
 /**
  * Implements hook_form_alter().
  */
-#[LegacyHook]
 function vartheme_bs4_form_alter(&$form, $form_state, $form_id) {
-  \Drupal::classResolver(VarthemeBs4Hooks::class)->formAlter($form, $form_state, $form_id);
+
+  if ($form_id == 'content_moderation_entity_moderation_form') {
+    $form['#attributes']['class'][] = 'card card-body bg-light';
+  }
+
+  if ((preg_match('/^node_.*._layout_builder_form$/', $form_id)
+    && isset($form['moderation_state']))) {
+    $form['moderation_state']['#attributes']['class'][] = 'card card-body bg-light';
+    $form['#attached']['library'][] = 'vartheme_bs4/moderation-state';
+  }
 }
 
 /**
  * Implements hook_preprocess_login_with().
  */
-#[LegacyHook]
 function vartheme_bs4_preprocess_login_with(&$variables) {
-  \Drupal::classResolver(VarthemeBs4Hooks::class)->preprocessLoginWith($variables);
+  foreach ($variables['social_networks'] as $social_network_index => $social_network) {
+    if (isset($social_network['img_path'])) {
+      $theme_path = Drupal::service('theme_handler')->getTheme('vartheme_bs4')->getPath();
+
+      $replaced_path_for_icons = str_replace('modules/contrib', 'social_auth', $social_network['img_path']);
+      $social_network_img_path_in_vartheme = $theme_path . '/images/' . $replaced_path_for_icons;
+
+      if (file_exists(DRUPAL_ROOT . '/' . $social_network_img_path_in_vartheme)) {
+        $variables['social_networks'][$social_network_index]['img_path'] = $social_network_img_path_in_vartheme;
+      }
+    }
+  }
 }
