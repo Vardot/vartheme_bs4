@@ -19,5 +19,13 @@
         "drupal/core": "~10.6.0",
         "vardot/varbase-patches": "~9",
         "drupal/bootstrap_barrio": "~5.1.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "oomphinc/composer-installers-extender": true,
+            "cweagans/composer-patches": true,
+            "vardot/varbase-patches": true
+        }
     }
 }

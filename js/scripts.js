@@ -8,7 +8,8 @@
     attach() {
       // Vartheme JavaScript behaviors goes here.
 
-      // Move panels ipe tray padding buttom by it's outer height.
+      // Move panels ipe tray padding bottom by it's outer height.
+      // eslint-disable-next-line no-jquery/no-css
       $('#panels-ipe-tray')
         .parent('body')
         .css('padding-bottom', $('#panels-ipe-tray').outerHeight());
@@ -19,6 +20,7 @@
       const toolbarTrayHorizontalOuterHeight =
         $('.is-active.toolbar-tray-horizontal').outerHeight() || 0;
       const topSpace = toolbarTabOuterHeight + toolbarTrayHorizontalOuterHeight;
+      // eslint-disable-next-line no-jquery/no-css
       $('body').css({ 'padding-top': topSpace });
     },
   };

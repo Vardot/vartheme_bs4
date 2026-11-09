@@ -14,7 +14,7 @@
 
 * Example of logic: 
     - Multilingual websites may use a language selection for preloaded assets.
-    - Sections of the website may have a custom prelead assets for CSS/JS.
+    - Sections of the website may have a custom preload assets for CSS/JS.
 *  --------------------------------------------------------------------------
 *  Have a look at "Preload critical assets to improve loading speed"
 *  https://web.dev/preload-critical-assets/
@@ -43,7 +43,7 @@
 <link rel="preload" href="{{ VARTHEME_BS4_SUBTHEME_path }}/fonts/fontawesome-free/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
 {# Example: Preload assets only for LTR languages.
-* By adding more restraction or selection for what/when/where to use for preload.
+* By adding more restriction or selection for what/when/where to use for preload.
 *  --------------------------------------------------------------------------
 {% if html_dir == 'ltr' %}
   <link rel="preload" href="{{ VARTHEME_BS4_SUBTHEME_path }}/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">

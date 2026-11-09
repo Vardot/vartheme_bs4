@@ -1,3 +1,8 @@
+# Compiled from scss/ by gulp, and vendored font CSS.
+css/
+fonts/
+VARTHEME_BS4_SUBTHEME/css/
+VARTHEME_BS4_SUBTHEME/fonts/
 node_modules/**/*.css
 **/node_modules
 drupalci.yml

@@ -90,7 +90,7 @@ function move_popper_js_files() {
 }
 
 function copy_files() {
-  // Copy the rfs/scsss.scss file.
+  // Copy the rfs/scss.scss file.
   return gulp.src([paths.rfs.src])
     .pipe(gulp.dest(paths.rfs.dest))
     .pipe(browserSync.stream());

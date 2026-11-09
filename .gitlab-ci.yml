@@ -1,0 +1,48 @@
+################################################################################
+# GitLab CI: the standard drupal/gitlab_templates pipeline.
+# https://project.pages.drupalcode.org/gitlab_templates/
+#
+# The lint jobs (composer-lint, cspell, eslint, phpcs, phpstan, stylelint) keep
+# the template default, advisory, as this branch has not been linted before.
+# The composer build and phpunit gate the pipeline.
+################################################################################
+include:
+  - project: $_GITLAB_TEMPLATES_REPO
+    ref: $_GITLAB_TEMPLATES_REF
+    file:
+      - "/includes/include.drupalci.main.yml"
+      - "/includes/include.drupalci.variables.yml"
+      - "/includes/include.drupalci.workflows.yml"
+
+variables:
+  # The branch declares core ~10.6.0; it is tested on the latest Drupal 10.6.
+  DRUPAL_CORE: "10.6.9"
+  IGNORE_PROJECT_DRUPAL_CORE_VERSION: "1"
+  # No yarn.lock is committed; Yarn 4 would refuse to create one in CI.
+  YARN_ENABLE_IMMUTABLE_INSTALLS: "false"
+  # The project .eslintrc.json extends airbnb-base, which CI cannot resolve,
+  # so lint with Drupal core's config.
+  _ESLINT_EXTRA: "--quiet --no-eslintrc --config=$CI_PROJECT_DIR/$_WEB_ROOT/core/.eslintrc.passing.json"
+  # css/ is compiled from scss/; fonts/, the Bootstrap, Barrio and Popper JS
+  # and the RFS mixin are vendored. cspell and stylelint ignore them. The
+  # project .stylelintrc.json needs packages CI does not have, so use core's.
+  _CSPELL_IGNORE_PATHS: "css/**, fonts/**, js/bootstrap/**, js/bootstrap_barrio/**, js/misc/**, js/popper/**, scss/mixins/rfs.scss, VARTHEME_BS4_SUBTHEME/css/**, VARTHEME_BS4_SUBTHEME/fonts/**, VARTHEME_BS4_SUBTHEME/js/bootstrap/**, VARTHEME_BS4_SUBTHEME/js/bootstrap_barrio/**, VARTHEME_BS4_SUBTHEME/js/popper/**, VARTHEME_BS4_SUBTHEME/scss/mixins/rfs.scss"
+  _STYLELINT_EXTRA: "--allow-empty-input --config=$CI_PROJECT_DIR/$_WEB_ROOT/core/.stylelintrc.json"
+
+composer:
+  variables:
+    # The template's composer job sets DRUPAL_CORE itself, which overrides the
+    # global value above, so the pin has to be on the job.
+    DRUPAL_CORE: "10.6.9"
+
+.composer-base:
+  variables:
+    # Drupal core's own Yarn 4.9.1 would read the project .yarnrc.yml (Yarn >= 4.14 keys) too.
+    YARN_RC_FILENAME: .yarnrc.core.yml
+    YARN_NODE_LINKER: node-modules
+
+stylelint:
+  variables:
+    # Drupal core's own Yarn 4.9.1 would read the project .yarnrc.yml (Yarn >= 4.14 keys) too.
+    YARN_RC_FILENAME: .yarnrc.core.yml
+    YARN_NODE_LINKER: node-modules

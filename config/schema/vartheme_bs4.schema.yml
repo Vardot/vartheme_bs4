@@ -419,7 +419,7 @@ vartheme_bs4.settings:
       label: "Path to custom logo"
     email_logo_upload:
       type: sequence
-      lable: "Upload logo image"
+      label: "Upload logo image"
       sequence:
         type: integer
         label: "fids"
