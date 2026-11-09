@@ -8,3 +8,12 @@ VARTHEME_BS4_SUBTHEME/js/bootstrap/index.js
 /VARTHEME_BS4_SUBTHEME/yarn.lock
 /VARTHEME_BS4_SUBTHEME/yarn-error.log
 /VARTHEME_BS4_SUBTHEME/fonts/fontawesome-free
+
+# JavaScript lockfiles are not committed: installs resolve from package.json
+# (packageManager yarn@4.18.1, engines).
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+
+# Yarn 4 install state and caches.
+.yarn/
